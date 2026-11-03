@@ -32,23 +32,31 @@ def parse_args() -> argparse.Namespace:
         required=True,
         help="Output path for the JSON test result",
     )
+    parser.add_argument(
+        "--duration",
+        default="-",
+        help="Duration before unplugging (e.g. ~10 detik, ~30 detik, ~2 menit)",
+    )
+    parser.add_argument(
+        "--scan-fix",
+        default="-",
+        help="Whether Windows Scan and Fix prompt appeared (Ya / Tidak)",
+    )
     return parser.parse_args()
 
 
-def detect_journal_files(db_dir: str) -> List[str]:
-    journals = []
+def detect_storage_files(db_dir: str) -> Tuple[List[str], List[str]]:
+    rollback_journals = []
+    wal_files = []
     if not os.path.exists(db_dir):
-        return journals
+        return rollback_journals, wal_files
     for fname in os.listdir(db_dir):
         lower = fname.lower()
-        if (
-            lower.endswith("-journal")
-            or "-mj" in lower
-            or lower.endswith("-wal")
-            or lower.endswith("-shm")
-        ):
-            journals.append(fname)
-    return journals
+        if lower.endswith("-wal") or lower.endswith("-shm"):
+            wal_files.append(fname)
+        elif lower.endswith("-journal") or "-mj" in lower:
+            rollback_journals.append(fname)
+    return rollback_journals, wal_files
 
 
 def read_last_host_seq(host_log_path: str) -> Optional[int]:
@@ -98,9 +106,11 @@ def main() -> None:
 
     failures: List[str] = []
 
-    journal_files_before = detect_journal_files(db_dir)
+    journal_files_before, wal_files_before = detect_storage_files(db_dir)
     hot_journal_detected = len(journal_files_before) > 0
-    print(f"[STEP 1] Pre-open journal files detected: {hot_journal_detected} {journal_files_before}")
+    if wal_files_before:
+        failures.append(f"Pelanggaran D-01: file WAL terdeteksi: {wal_files_before}")
+    print(f"[STEP 1] Pre-open rollback journal files: {hot_journal_detected} {journal_files_before} (WAL files: {wal_files_before})")
 
     core_db_path = os.path.join(db_dir, "core_test.db")
     memory_db_path = os.path.join(db_dir, "memory_test.db")
@@ -118,6 +128,7 @@ def main() -> None:
             "failures": failures,
             "hot_journal_detected": hot_journal_detected,
             "journal_files_before_open": journal_files_before,
+            "wal_files_before_open": wal_files_before,
         }
         with open(out_path, "w", encoding="utf-8") as f:
             json.dump(result, f, indent=2)
@@ -150,12 +161,26 @@ def main() -> None:
     core_min = core_min or 0
     mem_min = mem_min or 0
 
+    if core_count == 0 or core_min != 1:
+        failures.append(f"core_test.db events MIN(seq)={core_min}, expected 1")
+    if core_count != (core_max - core_min + 1):
+        failures.append(
+            f"core_test.db events COUNT={core_count} does not match MAX - MIN + 1 ({core_max - core_min + 1})"
+        )
+
+    if mem_count == 0 or mem_min != 1:
+        failures.append(f"memory_test.db entries MIN(seq)={mem_min}, expected 1")
+    if mem_count != (mem_max - mem_min + 1):
+        failures.append(
+            f"memory_test.db entries COUNT={mem_count} does not match MAX - MIN + 1 ({mem_max - mem_min + 1})"
+        )
+
     equal_max_seq = (core_max == mem_max)
     if not equal_max_seq:
         failures.append(
             f"Cross-database sequence mismatch: core MAX(seq)={core_max} vs memory MAX(seq)={mem_max}"
         )
-    print(f"[STEP 4] MAX(seq) comparison -> core: {core_max}, memory: {mem_max} (equal: {equal_max_seq})")
+    print(f"[STEP 4] Sequence stats -> core MIN={core_min} MAX={core_max} COUNT={core_count} | mem MIN={mem_min} MAX={mem_max} COUNT={mem_count} (equal MAX: {equal_max_seq})")
 
     cur.execute(
         """
@@ -237,17 +262,21 @@ def main() -> None:
 
     conn.close()
 
-    journal_files_after = detect_journal_files(db_dir)
+    journal_files_after, wal_files_after = detect_storage_files(db_dir)
 
     passed = (len(failures) == 0)
 
     result_data = {
         "run_id": args.run_id,
         "timestamp": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
+        "duration": args.duration,
+        "prompt_scan_fix": args.scan_fix,
         "passed": passed,
         "hot_journal_detected": hot_journal_detected,
         "journal_files_before_open": journal_files_before,
         "journal_files_after_check": journal_files_after,
+        "wal_files_before_open": wal_files_before,
+        "wal_files_after_check": wal_files_after,
         "integrity_check": {
             "core": "ok" if core_ok else core_errs,
             "memory": "ok" if mem_ok else mem_errs,

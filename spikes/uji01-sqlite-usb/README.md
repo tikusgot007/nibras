@@ -22,6 +22,7 @@ Dokumen ini memandu pelaksanaan **Uji #1 Fase 0** proyek **Nibras**: menguji ket
 
 - `writer.py`: Menulis transaksi berkesinambungan secara atomik ke dua database (`core_test.db` dan `memory_test.db` via `ATTACH`) dengan payload BLOB dan checksum SHA-256. Setiap commit sukses dicatat ke log di PC host.
 - `checker.py`: Memeriksa keberadaan hot journal sebelum dibuka, membuka database dengan mode read-write untuk memicu rollback otomatis, menjalankan `integrity_check` penuh, memastikan `MAX(seq)` konsisten, mendeteksi celah sequence, memverifikasi seluruh checksum baris, menguji FTS5, dan membandingkan transaksi dengan host log.
+- `summarize.py`: Membaca seluruh file JSON hasil uji di folder `results/` lalu mencetak tabel ringkasan format Markdown yang siap disalin ke laporan hasil.
 
 ---
 
@@ -49,13 +50,25 @@ python spikes/uji01-sqlite-usb/checker.py \
   --db-dir "<drive_usb>:\uji01_db" \
   --host-log "<path_pc_host>\host_tx.log" \
   --run-id "run-01" \
-  --out "results/run-01.json"
+  --out "results/run-01.json" \
+  [--duration "~10 detik"] \
+  [--scan-fix "Tidak"]
 ```
 
 - `--db-dir` (wajib): Direktori database di USB.
 - `--host-log` (wajib): Path file log di PC host.
 - `--run-id` (wajib): Penanda nomor run (misal `run-01`).
 - `--out` (wajib): Path file JSON output hasil evaluasi.
+- `--duration` (opsional): Durasi sebelum cabut (misal `~10 detik`).
+- `--scan-fix` (opsional): Kemunculan prompt Windows Scan and Fix (`Ya` / `Tidak`).
+
+### `summarize.py`
+
+```bash
+python spikes/uji01-sqlite-usb/summarize.py [--dir "results"]
+```
+
+- `--dir` (opsional, default: `results`): Direktori penyimpanan file JSON hasil pemeriksaan. Output dicetak sebagai tabel Markdown ke stdout.
 
 ---
 

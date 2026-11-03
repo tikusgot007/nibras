@@ -120,11 +120,17 @@ def main() -> None:
 
     conn = sqlite3.connect(core_db_path, isolation_level=None)
 
-    conn.execute("PRAGMA journal_mode=DELETE;")
+    main_journal_mode = conn.execute("PRAGMA journal_mode=DELETE;").fetchone()[0]
+    if str(main_journal_mode).lower() != "delete":
+        sys.stderr.write(f"ERROR: main journal_mode is '{main_journal_mode}', expected 'delete'.\n")
+        sys.exit(1)
     conn.execute("PRAGMA synchronous=FULL;")
 
     conn.execute("ATTACH DATABASE ? AS mem;", (memory_db_path,))
-    conn.execute("PRAGMA mem.journal_mode=DELETE;")
+    mem_journal_mode = conn.execute("PRAGMA mem.journal_mode=DELETE;").fetchone()[0]
+    if str(mem_journal_mode).lower() != "delete":
+        sys.stderr.write(f"ERROR: mem journal_mode is '{mem_journal_mode}', expected 'delete'.\n")
+        sys.exit(1)
     conn.execute("PRAGMA mem.synchronous=FULL;")
 
     conn.execute(
