@@ -125,7 +125,7 @@ def main() -> None:
         sys.exit(1)
 
     conn = sqlite3.connect(core_db_path)
-    conn.execute(f"ATTACH DATABASE '{memory_db_path}' AS mem;")
+    conn.execute("ATTACH DATABASE ? AS mem;", (memory_db_path,))
     print("[STEP 2] Databases opened in read-write mode (automatic rollback engaged).")
 
     core_ok, core_errs = check_integrity(conn, "main")
@@ -187,7 +187,7 @@ def main() -> None:
     cur.execute("SELECT seq, payload, checksum FROM main.events ORDER BY seq;")
     events_corrupted = 0
     events_verified = 0
-    for seq_val, payload_val, expected_chk in cur.fetchall():
+    for seq_val, payload_val, expected_chk in cur:
         events_verified += 1
         actual_chk = hashlib.sha256(payload_val).hexdigest()
         if actual_chk != expected_chk:
@@ -196,7 +196,7 @@ def main() -> None:
     cur.execute("SELECT seq, text, checksum FROM mem.entries ORDER BY seq;")
     entries_corrupted = 0
     entries_verified = 0
-    for seq_val, text_val, expected_chk in cur.fetchall():
+    for seq_val, text_val, expected_chk in cur:
         entries_verified += 1
         actual_chk = hashlib.sha256(text_val.encode("utf-8")).hexdigest()
         if actual_chk != expected_chk:

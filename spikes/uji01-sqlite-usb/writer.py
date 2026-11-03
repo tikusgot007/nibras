@@ -123,7 +123,7 @@ def main() -> None:
     conn.execute("PRAGMA journal_mode=DELETE;")
     conn.execute("PRAGMA synchronous=FULL;")
 
-    conn.execute(f"ATTACH DATABASE '{memory_db_path}' AS mem;")
+    conn.execute("ATTACH DATABASE ? AS mem;", (memory_db_path,))
     conn.execute("PRAGMA mem.journal_mode=DELETE;")
     conn.execute("PRAGMA mem.synchronous=FULL;")
 
