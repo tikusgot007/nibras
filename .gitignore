@@ -1,0 +1,39 @@
+# Secrets & credentials
+.env
+.env.*
+*.vault
+
+# Database & file runtime (termasuk hasil uji)
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+*.sqlite
+*.sqlite3
+
+# Folder runtime Nibras
+Data/
+Temp/
+Backups/
+
+# Log mentah hasil uji (laporan .md tetap di-commit)
+*.log
+results/**/*.json
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+
+# Build
+build/
+dist/
+
+# OS / editor
+Thumbs.db
+desktop.ini
+.DS_Store
+.vscode/
+.idea/
