@@ -59,21 +59,29 @@ def detect_storage_files(db_dir: str) -> Tuple[List[str], List[str]]:
     return rollback_journals, wal_files
 
 
-def read_last_host_seq(host_log_path: str) -> Optional[int]:
+def read_host_log_info(host_log_path: str) -> Tuple[Optional[int], Optional[bool]]:
     if not os.path.exists(host_log_path):
-        return None
+        return None, None
     last_seq: Optional[int] = None
+    last_fts5_enabled: Optional[bool] = None
     with open(host_log_path, "r", encoding="utf-8", errors="replace") as f:
         for line in f:
             line = line.strip()
-            if not line or line.startswith("#"):
+            if not line:
+                continue
+            if line.startswith("#"):
+                if line.startswith("# fts5_enabled:"):
+                    parts = line.split(":", 1)
+                    if len(parts) > 1:
+                        val = parts[1].strip().lower()
+                        last_fts5_enabled = (val in ("true", "1", "yes"))
                 continue
             try:
                 val = int(line)
                 last_seq = val
             except ValueError:
                 continue
-    return last_seq
+    return last_seq, last_fts5_enabled
 
 
 def check_integrity(conn: sqlite3.Connection, db_name: str) -> Tuple[bool, List[str]]:
@@ -233,7 +241,7 @@ def main() -> None:
         failures.append(f"Checksum mismatch in memory_test.db: {entries_corrupted} corrupted rows")
     print(f"[STEP 6] Checksums verified -> events: {events_verified} (corrupted: {events_corrupted}), entries: {entries_verified} (corrupted: {entries_corrupted})")
 
-    last_host_seq = read_last_host_seq(host_log_path)
+    last_host_seq, fts_enabled = read_host_log_info(host_log_path)
     if last_host_seq is None:
         last_host_seq = 0
 
@@ -243,7 +251,7 @@ def main() -> None:
         failures.append(
             f"Lost committed transactions exceeded limit: {lost_transactions} lost (host_log={last_host_seq}, db={max_db_seq}, max allowed is 1)"
         )
-    print(f"[STEP 7] Host log comparison -> host last_seq: {last_host_seq}, DB max_seq: {max_db_seq}, lost: {lost_transactions}")
+    print(f"[STEP 7] Host log comparison -> host last_seq: {last_host_seq}, DB max_seq: {max_db_seq}, lost: {lost_transactions} (fts_enabled: {fts_enabled})")
 
     cur.execute("SELECT 1 FROM mem.sqlite_master WHERE type='table' AND name='entries_fts';")
     has_fts = cur.fetchone() is not None
@@ -271,6 +279,7 @@ def main() -> None:
         "timestamp": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
         "duration": args.duration,
         "prompt_scan_fix": args.scan_fix,
+        "fts_enabled": fts_enabled,
         "passed": passed,
         "hot_journal_detected": hot_journal_detected,
         "journal_files_before_open": journal_files_before,

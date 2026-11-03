@@ -80,8 +80,12 @@ def main() -> None:
         run_id = r.get("run_id", "-")
         duration = r.get("duration", "-")
 
-        fts_val = r.get("integrity_check", {}).get("fts5", "not_configured")
-        fts_opt = "Tidak" if fts_val == "not_configured" else "Ya"
+        fts_enabled = r.get("fts_enabled")
+        if fts_enabled is not None:
+            fts_opt = "Ya" if fts_enabled else "Tidak"
+        else:
+            fts_val = r.get("integrity_check", {}).get("fts5", "not_configured")
+            fts_opt = "Tidak" if fts_val == "not_configured" else "Ya"
 
         hot_j = "Ya" if r.get("hot_journal_detected") else "Tidak"
         integ = format_integrity(r.get("integrity_check", {}))
