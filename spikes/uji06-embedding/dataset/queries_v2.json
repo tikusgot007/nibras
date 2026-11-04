@@ -1,0 +1,1612 @@
+[
+ {
+  "id": "qv2001",
+  "query": "Dimas minum kopinya kayak gimana?",
+  "type": "id-id",
+  "relevant_ids": [
+   "g01a"
+  ]
+ },
+ {
+  "id": "qv2002",
+  "query": "Istri Dimas suka minum kopi apa?",
+  "type": "id-id",
+  "relevant_ids": [
+   "g01b"
+  ]
+ },
+ {
+  "id": "qv2003",
+  "query": "Dimas berhenti ngopi jam berapa?",
+  "type": "id-id",
+  "relevant_ids": [
+   "g01c"
+  ]
+ },
+ {
+  "id": "qv2004",
+  "query": "Aira sekolah di mana?",
+  "type": "id-id",
+  "relevant_ids": [
+   "g03a"
+  ]
+ },
+ {
+  "id": "qv2005",
+  "query": "Siapa yang nganterin Aira ke sekolah?",
+  "type": "id-id",
+  "relevant_ids": [
+   "g03b"
+  ]
+ },
+ {
+  "id": "qv2006",
+  "query": "Les piano Aira jadwalnya kapan?",
+  "type": "id-id",
+  "relevant_ids": [
+   "g03c"
+  ]
+ },
+ {
+  "id": "qv2007",
+  "query": "Mobil Brio diservis di bengkel mana?",
+  "type": "id-id",
+  "relevant_ids": [
+   "g04c"
+  ]
+ },
+ {
+  "id": "qv2008",
+  "query": "Dimas pakai tema apa di editornya?",
+  "type": "id-id",
+  "relevant_ids": [
+   "g05c"
+  ]
+ },
+ {
+  "id": "qv2009",
+  "query": "Frontend internal pakai framework apa?",
+  "type": "id-id",
+  "relevant_ids": [
+   "g06c"
+  ]
+ },
+ {
+  "id": "qv2010",
+  "query": "Deploy toko ke server produksi hari apa?",
+  "type": "id-id",
+  "relevant_ids": [
+   "g07b"
+  ]
+ },
+ {
+  "id": "qv2011",
+  "query": "Standup tim jam berapa?",
+  "type": "id-id",
+  "relevant_ids": [
+   "g08a"
+  ]
+ },
+ {
+  "id": "qv2012",
+  "query": "Review mingguan sama klien kapan?",
+  "type": "id-id",
+  "relevant_ids": [
+   "g08b"
+  ]
+ },
+ {
+  "id": "qv2013",
+  "query": "Dimas alergi makanan apa?",
+  "type": "id-id",
+  "relevant_ids": [
+   "g09a"
+  ]
+ },
+ {
+  "id": "qv2014",
+  "query": "Sari nggak boleh makan apa karena alergi?",
+  "type": "id-id",
+  "relevant_ids": [
+   "g09b"
+  ]
+ },
+ {
+  "id": "qv2015",
+  "query": "Sari biasanya tidur jam berapa?",
+  "type": "id-id",
+  "relevant_ids": [
+   "g10b"
+  ]
+ },
+ {
+  "id": "qv2016",
+  "query": "HP lama Dimas sekarang dipakai siapa?",
+  "type": "id-id",
+  "relevant_ids": [
+   "g11b"
+  ]
+ },
+ {
+  "id": "qv2017",
+  "query": "Laptop Aira itu laptop apa?",
+  "type": "id-id",
+  "relevant_ids": [
+   "g12b"
+  ]
+ },
+ {
+  "id": "qv2018",
+  "query": "Foto keluarga di-backup kapan?",
+  "type": "id-id",
+  "relevant_ids": [
+   "g13a"
+  ]
+ },
+ {
+  "id": "qv2019",
+  "query": "Database produksi di-backup jam berapa?",
+  "type": "id-id",
+  "relevant_ids": [
+   "g13c"
+  ]
+ },
+ {
+  "id": "qv2020",
+  "query": "Dimas dengerin musik apa waktu coding?",
+  "type": "id-id",
+  "relevant_ids": [
+   "g14a"
+  ]
+ },
+ {
+  "id": "qv2021",
+  "query": "Dulu pernah jalan-jalan sama keluarga ke kota apa?",
+  "type": "id-id",
+  "relevant_ids": [
+   "g15a"
+  ]
+ },
+ {
+  "id": "qv2022",
+  "query": "Dimas mancing di mana?",
+  "type": "id-id",
+  "relevant_ids": [
+   "g16b"
+  ]
+ },
+ {
+  "id": "qv2023",
+  "query": "Gaji Dimas masuk tanggal berapa?",
+  "type": "id-id",
+  "relevant_ids": [
+   "g17a"
+  ]
+ },
+ {
+  "id": "qv2024",
+  "query": "Klien kedua Dimas namanya apa?",
+  "type": "id-id",
+  "relevant_ids": [
+   "g18b"
+  ]
+ },
+ {
+  "id": "qv2025",
+  "query": "Batas waktu setor pajak tahunan sampai kapan?",
+  "type": "id-id",
+  "relevant_ids": [
+   "g19a"
+  ]
+ },
+ {
+  "id": "qv2026",
+  "query": "Dokumentasi proyek ditulis bahasa apa?",
+  "type": "id-id",
+  "relevant_ids": [
+   "g20b"
+  ]
+ },
+ {
+  "id": "qv2027",
+  "query": "Rebase boleh nggak di branch bersama?",
+  "type": "id-id",
+  "relevant_ids": [
+   "g21c"
+  ]
+ },
+ {
+  "id": "qv2028",
+  "query": "Database buat development pakai apa?",
+  "type": "id-id",
+  "relevant_ids": [
+   "g22b"
+  ]
+ },
+ {
+  "id": "qv2029",
+  "query": "Domain dibeli di mana?",
+  "type": "id-id",
+  "relevant_ids": [
+   "g23b"
+  ]
+ },
+ {
+  "id": "qv2030",
+  "query": "Makanan favorit Dimas apa?",
+  "type": "id-id",
+  "relevant_ids": [
+   "g24a"
+  ]
+ },
+ {
+  "id": "qv2031",
+  "query": "Dokter keluarga Dimas siapa?",
+  "type": "id-id",
+  "relevant_ids": [
+   "g27a"
+  ]
+ },
+ {
+  "id": "qv2032",
+  "query": "Rumah Dimas ada di mana?",
+  "type": "id-id",
+  "relevant_ids": [
+   "g28a"
+  ]
+ },
+ {
+  "id": "qv2033",
+  "query": "Sari lagi baca novel apa?",
+  "type": "id-id",
+  "relevant_ids": [
+   "g30b"
+  ]
+ },
+ {
+  "id": "qv2034",
+  "query": "Password boleh disimpan di catatan teks nggak?",
+  "type": "id-id",
+  "relevant_ids": [
+   "g35b"
+  ]
+ },
+ {
+  "id": "qv2035",
+  "query": "Dimas pakai sepatu nomor berapa?",
+  "type": "id-id",
+  "relevant_ids": [
+   "g38a"
+  ]
+ },
+ {
+  "id": "qv2036",
+  "query": "Ulang tahun Dimas tanggal berapa?",
+  "type": "id-id",
+  "relevant_ids": [
+   "g39a"
+  ]
+ },
+ {
+  "id": "qv2037",
+  "query": "Dimas salat Jumat di mana?",
+  "type": "id-id",
+  "relevant_ids": [
+   "g43a"
+  ]
+ },
+ {
+  "id": "qv2038",
+  "query": "Pas hujan gede begini Dimas ngerjain tugas kantor di mana?",
+  "type": "id-id",
+  "relevant_ids": [
+   "g44b"
+  ]
+ },
+ {
+  "id": "qv2039",
+  "query": "Dimas mau belajar apa tahun ini?",
+  "type": "id-id",
+  "relevant_ids": [
+   "g51a"
+  ]
+ },
+ {
+  "id": "qv2040",
+  "query": "Dimas kuliah di mana?",
+  "type": "id-id",
+  "relevant_ids": [
+   "s083"
+  ]
+ },
+ {
+  "id": "qv2041",
+  "query": "What breed is the user's cat?",
+  "type": "en-en",
+  "relevant_ids": [
+   "g02a"
+  ]
+ },
+ {
+  "id": "qv2042",
+  "query": "What car does the user drive?",
+  "type": "en-en",
+  "relevant_ids": [
+   "g04a"
+  ]
+ },
+ {
+  "id": "qv2043",
+  "query": "What car does Sari drive?",
+  "type": "en-en",
+  "relevant_ids": [
+   "g04b"
+  ]
+ },
+ {
+  "id": "qv2044",
+  "query": "Which code editor does the user use?",
+  "type": "en-en",
+  "relevant_ids": [
+   "g05a"
+  ]
+ },
+ {
+  "id": "qv2045",
+  "query": "What editor is used for quick server edits?",
+  "type": "en-en",
+  "relevant_ids": [
+   "g05b"
+  ]
+ },
+ {
+  "id": "qv2046",
+  "query": "What is the main backend language?",
+  "type": "en-en",
+  "relevant_ids": [
+   "g06a"
+  ]
+ },
+ {
+  "id": "qv2047",
+  "query": "What triggers a new deploy of the billing service?",
+  "type": "en-en",
+  "relevant_ids": [
+   "g07c"
+  ]
+ },
+ {
+  "id": "qv2048",
+  "query": "When are meetings avoided for deep work?",
+  "type": "en-en",
+  "relevant_ids": [
+   "g08c"
+  ]
+ },
+ {
+  "id": "qv2049",
+  "query": "What does Aira drink since she is lactose intolerant?",
+  "type": "en-en",
+  "relevant_ids": [
+   "g09c"
+  ]
+ },
+ {
+  "id": "qv2050",
+  "query": "What time does the user usually wake up?",
+  "type": "en-en",
+  "relevant_ids": [
+   "g10a"
+  ]
+ },
+ {
+  "id": "qv2051",
+  "query": "What phone does the user have?",
+  "type": "en-en",
+  "relevant_ids": [
+   "g11a"
+  ]
+ },
+ {
+  "id": "qv2052",
+  "query": "What laptop is used for work?",
+  "type": "en-en",
+  "relevant_ids": [
+   "g12a"
+  ]
+ },
+ {
+  "id": "qv2053",
+  "query": "What graphics card does the home desktop have?",
+  "type": "en-en",
+  "relevant_ids": [
+   "g12c"
+  ]
+ },
+ {
+  "id": "qv2054",
+  "query": "Where is the project code mirrored?",
+  "type": "en-en",
+  "relevant_ids": [
+   "g13b"
+  ]
+ },
+ {
+  "id": "qv2055",
+  "query": "Where does the user play badminton?",
+  "type": "en-en",
+  "relevant_ids": [
+   "g16a"
+  ]
+ },
+ {
+  "id": "qv2056",
+  "query": "What is the monthly savings target?",
+  "type": "en-en",
+  "relevant_ids": [
+   "g17b"
+  ]
+ },
+ {
+  "id": "qv2057",
+  "query": "What project is being built for the main client?",
+  "type": "en-en",
+  "relevant_ids": [
+   "g18a"
+  ]
+ },
+ {
+  "id": "qv2058",
+  "query": "What tax rate does the freelancer pay?",
+  "type": "en-en",
+  "relevant_ids": [
+   "g19b"
+  ]
+ },
+ {
+  "id": "qv2059",
+  "query": "How does the user prefer answers formatted?",
+  "type": "en-en",
+  "relevant_ids": [
+   "g20a"
+  ]
+ },
+ {
+  "id": "qv2060",
+  "query": "How many approvals does a pull request need?",
+  "type": "en-en",
+  "relevant_ids": [
+   "g21b"
+  ]
+ },
+ {
+  "id": "qv2061",
+  "query": "What database runs in production?",
+  "type": "en-en",
+  "relevant_ids": [
+   "g22a"
+  ]
+ },
+ {
+  "id": "qv2062",
+  "query": "Which VPS provider is used?",
+  "type": "en-en",
+  "relevant_ids": [
+   "g23a"
+  ]
+ },
+ {
+  "id": "qv2063",
+  "query": "How are SSL certificates renewed?",
+  "type": "en-en",
+  "relevant_ids": [
+   "g23c"
+  ]
+ },
+ {
+  "id": "qv2064",
+  "query": "What is Aira's favorite snack?",
+  "type": "en-en",
+  "relevant_ids": [
+   "g24c"
+  ]
+ },
+ {
+  "id": "qv2065",
+  "query": "Where does the family have dinner once a month?",
+  "type": "en-en",
+  "relevant_ids": [
+   "g25b"
+  ]
+ },
+ {
+  "id": "qv2066",
+  "query": "What supplement does Sari take every morning?",
+  "type": "en-en",
+  "relevant_ids": [
+   "g26b"
+  ]
+ },
+ {
+  "id": "qv2067",
+  "query": "How often are dentist checkups scheduled?",
+  "type": "en-en",
+  "relevant_ids": [
+   "g27b"
+  ]
+ },
+ {
+  "id": "qv2068",
+  "query": "What brand are the smart lights?",
+  "type": "en-en",
+  "relevant_ids": [
+   "g29a"
+  ]
+ },
+ {
+  "id": "qv2069",
+  "query": "What book is currently being read?",
+  "type": "en-en",
+  "relevant_ids": [
+   "g30a"
+  ]
+ },
+ {
+  "id": "qv2070",
+  "query": "What language is the user learning on Duolingo?",
+  "type": "en-en",
+  "relevant_ids": [
+   "g32a",
+   "s216"
+  ]
+ },
+ {
+  "id": "qv2071",
+  "query": "Apa ras kucing milik pengguna?",
+  "type": "id-en",
+  "relevant_ids": [
+   "g02a"
+  ]
+ },
+ {
+  "id": "qv2072",
+  "query": "Mobil apa yang dipakai pengguna?",
+  "type": "id-en",
+  "relevant_ids": [
+   "g04a"
+  ]
+ },
+ {
+  "id": "qv2073",
+  "query": "Mobil apa yang dikendarai Sari?",
+  "type": "id-en",
+  "relevant_ids": [
+   "g04b"
+  ]
+ },
+ {
+  "id": "qv2074",
+  "query": "Editor kode apa yang dipakai pengguna?",
+  "type": "id-en",
+  "relevant_ids": [
+   "g05a"
+  ]
+ },
+ {
+  "id": "qv2075",
+  "query": "Untuk edit cepat di server, pengguna pakai apa?",
+  "type": "id-en",
+  "relevant_ids": [
+   "g05b"
+  ]
+ },
+ {
+  "id": "qv2076",
+  "query": "Bahasa backend utama apa?",
+  "type": "id-en",
+  "relevant_ids": [
+   "g06a"
+  ]
+ },
+ {
+  "id": "qv2077",
+  "query": "Kapan staging billing service deploy otomatis?",
+  "type": "id-en",
+  "relevant_ids": [
+   "g07c"
+  ]
+ },
+ {
+  "id": "qv2078",
+  "query": "Jam berapa saja hindari meeting untuk fokus kerja?",
+  "type": "id-en",
+  "relevant_ids": [
+   "g08c"
+  ]
+ },
+ {
+  "id": "qv2079",
+  "query": "Aira minum apa karena nggak toleran laktosa?",
+  "type": "id-en",
+  "relevant_ids": [
+   "g09c"
+  ]
+ },
+ {
+  "id": "qv2080",
+  "query": "Pengguna biasanya bangun jam berapa?",
+  "type": "id-en",
+  "relevant_ids": [
+   "g10a"
+  ]
+ },
+ {
+  "id": "qv2081",
+  "query": "HP pengguna apa?",
+  "type": "id-en",
+  "relevant_ids": [
+   "g11a"
+  ]
+ },
+ {
+  "id": "qv2082",
+  "query": "Laptop kerja pengguna apa?",
+  "type": "id-en",
+  "relevant_ids": [
+   "g12a"
+  ]
+ },
+ {
+  "id": "qv2083",
+  "query": "GPU di desktop rumah apa?",
+  "type": "id-en",
+  "relevant_ids": [
+   "g12c"
+  ]
+ },
+ {
+  "id": "qv2084",
+  "query": "Kode proyek di-mirror di mana?",
+  "type": "id-en",
+  "relevant_ids": [
+   "g13b"
+  ]
+ },
+ {
+  "id": "qv2085",
+  "query": "Pengguna main bulutangkis di mana?",
+  "type": "id-en",
+  "relevant_ids": [
+   "g16a"
+  ]
+ },
+ {
+  "id": "qv2086",
+  "query": "Berapa persen target nabung bulanan?",
+  "type": "id-en",
+  "relevant_ids": [
+   "g17b"
+  ]
+ },
+ {
+  "id": "qv2087",
+  "query": "Proyek apa yang dikerjakan untuk klien utama?",
+  "type": "id-en",
+  "relevant_ids": [
+   "g18a"
+  ]
+ },
+ {
+  "id": "qv2088",
+  "query": "Berapa pajak final yang dibayar freelancer?",
+  "type": "id-en",
+  "relevant_ids": [
+   "g19b"
+  ]
+ },
+ {
+  "id": "qv2089",
+  "query": "Pengguna suka jawaban dalam format apa?",
+  "type": "id-en",
+  "relevant_ids": [
+   "g20a"
+  ]
+ },
+ {
+  "id": "qv2090",
+  "query": "Berapa approval minimal buat merge PR?",
+  "type": "id-en",
+  "relevant_ids": [
+   "g21b"
+  ]
+ },
+ {
+  "id": "qv2091",
+  "query": "Database produksi pakai apa?",
+  "type": "id-en",
+  "relevant_ids": [
+   "g22a"
+  ]
+ },
+ {
+  "id": "qv2092",
+  "query": "Penyedia VPS yang dipakai apa?",
+  "type": "id-en",
+  "relevant_ids": [
+   "g23a"
+  ]
+ },
+ {
+  "id": "qv2093",
+  "query": "Gimana cara sertifikat SSL diperpanjang?",
+  "type": "id-en",
+  "relevant_ids": [
+   "g23c"
+  ]
+ },
+ {
+  "id": "qv2094",
+  "query": "Camilan favorit Aira apa?",
+  "type": "id-en",
+  "relevant_ids": [
+   "g24c"
+  ]
+ },
+ {
+  "id": "qv2095",
+  "query": "Makan malam keluarga sebulan sekali di mana?",
+  "type": "id-en",
+  "relevant_ids": [
+   "g25b"
+  ]
+ },
+ {
+  "id": "qv2096",
+  "query": "Suplemen apa yang diminum Sari setiap pagi?",
+  "type": "id-en",
+  "relevant_ids": [
+   "g26b"
+  ]
+ },
+ {
+  "id": "qv2097",
+  "query": "Berapa sering cek gigi ke dokter?",
+  "type": "id-en",
+  "relevant_ids": [
+   "g27b"
+  ]
+ },
+ {
+  "id": "qv2098",
+  "query": "Lampu pintar di rumah merek apa?",
+  "type": "id-en",
+  "relevant_ids": [
+   "g29a"
+  ]
+ },
+ {
+  "id": "qv2099",
+  "query": "Buku apa yang sedang dibaca sekarang?",
+  "type": "id-en",
+  "relevant_ids": [
+   "g30a"
+  ]
+ },
+ {
+  "id": "qv2100",
+  "query": "Bahasa apa yang sedang dipelajari pengguna lewat Duolingo?",
+  "type": "id-en",
+  "relevant_ids": [
+   "g32a",
+   "s216"
+  ]
+ },
+ {
+  "id": "qv2101",
+  "query": "How does Dimas take his coffee?",
+  "type": "en-id",
+  "relevant_ids": [
+   "g01a"
+  ]
+ },
+ {
+  "id": "qv2102",
+  "query": "What coffee does Dimas's wife like?",
+  "type": "en-id",
+  "relevant_ids": [
+   "g01b"
+  ]
+ },
+ {
+  "id": "qv2103",
+  "query": "Why did Dimas stop drinking coffee after 3pm?",
+  "type": "en-id",
+  "relevant_ids": [
+   "g01c"
+  ]
+ },
+ {
+  "id": "qv2104",
+  "query": "What school does Aira attend?",
+  "type": "en-id",
+  "relevant_ids": [
+   "g03a"
+  ]
+ },
+ {
+  "id": "qv2105",
+  "query": "Who takes Aira to school in the morning?",
+  "type": "en-id",
+  "relevant_ids": [
+   "g03b"
+  ]
+ },
+ {
+  "id": "qv2106",
+  "query": "When is Aira's piano lesson?",
+  "type": "en-id",
+  "relevant_ids": [
+   "g03c"
+  ]
+ },
+ {
+  "id": "qv2107",
+  "query": "Where does the Brio get serviced?",
+  "type": "en-id",
+  "relevant_ids": [
+   "g04c"
+  ]
+ },
+ {
+  "id": "qv2108",
+  "query": "What editor theme does Dimas use?",
+  "type": "en-id",
+  "relevant_ids": [
+   "g05c"
+  ]
+ },
+ {
+  "id": "qv2109",
+  "query": "What frontend framework does the team use?",
+  "type": "en-id",
+  "relevant_ids": [
+   "g06c"
+  ]
+ },
+ {
+  "id": "qv2110",
+  "query": "What day are production deploys for the shop app?",
+  "type": "en-id",
+  "relevant_ids": [
+   "g07b"
+  ]
+ },
+ {
+  "id": "qv2111",
+  "query": "What time is the daily standup?",
+  "type": "en-id",
+  "relevant_ids": [
+   "g08a"
+  ]
+ },
+ {
+  "id": "qv2112",
+  "query": "When is the weekly client review?",
+  "type": "en-id",
+  "relevant_ids": [
+   "g08b"
+  ]
+ },
+ {
+  "id": "qv2113",
+  "query": "What food must Dimas avoid?",
+  "type": "en-id",
+  "relevant_ids": [
+   "g09a"
+  ]
+ },
+ {
+  "id": "qv2114",
+  "query": "What is Sari allergic to?",
+  "type": "en-id",
+  "relevant_ids": [
+   "g09b"
+  ]
+ },
+ {
+  "id": "qv2115",
+  "query": "What time does Sari usually sleep?",
+  "type": "en-id",
+  "relevant_ids": [
+   "g10b"
+  ]
+ },
+ {
+  "id": "qv2116",
+  "query": "Who uses Dimas's old phone now?",
+  "type": "en-id",
+  "relevant_ids": [
+   "g11b"
+  ]
+ },
+ {
+  "id": "qv2117",
+  "query": "What laptop does Aira use?",
+  "type": "en-id",
+  "relevant_ids": [
+   "g12b"
+  ]
+ },
+ {
+  "id": "qv2118",
+  "query": "When is the family photo backup done?",
+  "type": "en-id",
+  "relevant_ids": [
+   "g13a"
+  ]
+ },
+ {
+  "id": "qv2119",
+  "query": "When is the production database backed up?",
+  "type": "en-id",
+  "relevant_ids": [
+   "g13c"
+  ]
+ },
+ {
+  "id": "qv2120",
+  "query": "What music does Dimas listen to while coding?",
+  "type": "en-id",
+  "relevant_ids": [
+   "g14a"
+  ]
+ },
+ {
+  "id": "qv2121",
+  "query": "Where did the family go on vacation last year?",
+  "type": "en-id",
+  "relevant_ids": [
+   "g15a"
+  ]
+ },
+ {
+  "id": "qv2122",
+  "query": "Where does Dimas go fishing?",
+  "type": "en-id",
+  "relevant_ids": [
+   "g16b"
+  ]
+ },
+ {
+  "id": "qv2123",
+  "query": "What day does the salary arrive?",
+  "type": "en-id",
+  "relevant_ids": [
+   "g17a"
+  ]
+ },
+ {
+  "id": "qv2124",
+  "query": "Who is the second client?",
+  "type": "en-id",
+  "relevant_ids": [
+   "g18b"
+  ]
+ },
+ {
+  "id": "qv2125",
+  "query": "What is the deadline for the annual tax report?",
+  "type": "en-id",
+  "relevant_ids": [
+   "g19a"
+  ]
+ },
+ {
+  "id": "qv2126",
+  "query": "What language is used for project documentation?",
+  "type": "en-id",
+  "relevant_ids": [
+   "g20b"
+  ]
+ },
+ {
+  "id": "qv2127",
+  "query": "Is rebasing allowed on shared branches?",
+  "type": "en-id",
+  "relevant_ids": [
+   "g21c"
+  ]
+ },
+ {
+  "id": "qv2128",
+  "query": "What database is used for local development?",
+  "type": "en-id",
+  "relevant_ids": [
+   "g22b"
+  ]
+ },
+ {
+  "id": "qv2129",
+  "query": "Where was the domain purchased?",
+  "type": "en-id",
+  "relevant_ids": [
+   "g23b"
+  ]
+ },
+ {
+  "id": "qv2130",
+  "query": "What is Dimas's favorite food?",
+  "type": "en-id",
+  "relevant_ids": [
+   "g24a"
+  ]
+ },
+ {
+  "id": "qv2131",
+  "query": "gw pake editor apa ya",
+  "type": "informal",
+  "relevant_ids": [
+   "g05a",
+   "g05c"
+  ]
+ },
+ {
+  "id": "qv2132",
+  "query": "istri gw demen ngopi apa",
+  "type": "informal",
+  "relevant_ids": [
+   "g01b"
+  ]
+ },
+ {
+  "id": "qv2133",
+  "query": "kenapa gw stop ngopi sore-sore",
+  "type": "informal",
+  "relevant_ids": [
+   "g01c"
+  ]
+ },
+ {
+  "id": "qv2134",
+  "query": "kucing gw jenis apa sih",
+  "type": "informal",
+  "relevant_ids": [
+   "g02a"
+  ]
+ },
+ {
+  "id": "qv2135",
+  "query": "mobil gw merek apa",
+  "type": "informal",
+  "relevant_ids": [
+   "g04a"
+  ]
+ },
+ {
+  "id": "qv2136",
+  "query": "editor buat edit cepet di server gw pake apa",
+  "type": "informal",
+  "relevant_ids": [
+   "g05b"
+  ]
+ },
+ {
+  "id": "qv2137",
+  "query": "bahasa backend gw apaan",
+  "type": "informal",
+  "relevant_ids": [
+   "g06a"
+  ]
+ },
+ {
+  "id": "qv2138",
+  "query": "kalo bikin script cepet gw pake bahasa apa",
+  "type": "informal",
+  "relevant_ids": [
+   "g06b"
+  ]
+ },
+ {
+  "id": "qv2139",
+  "query": "frontend internal gw pake apa",
+  "type": "informal",
+  "relevant_ids": [
+   "g06c"
+  ]
+ },
+ {
+  "id": "qv2140",
+  "query": "gw lg ngerjain proyek apa buat klien utama",
+  "type": "informal",
+  "relevant_ids": [
+   "g18a"
+  ]
+ },
+ {
+  "id": "qv2141",
+  "query": "jam brp standup gw",
+  "type": "informal",
+  "relevant_ids": [
+   "g08a"
+  ]
+ },
+ {
+  "id": "qv2142",
+  "query": "gw ga boleh makan apa",
+  "type": "informal",
+  "relevant_ids": [
+   "g09a"
+  ]
+ },
+ {
+  "id": "qv2143",
+  "query": "sari alergi apa ya",
+  "type": "informal",
+  "relevant_ids": [
+   "g09b"
+  ]
+ },
+ {
+  "id": "qv2144",
+  "query": "jam brp biasanya gw bangun",
+  "type": "informal",
+  "relevant_ids": [
+   "g10a"
+  ]
+ },
+ {
+  "id": "qv2145",
+  "query": "hp gw apaan",
+  "type": "informal",
+  "relevant_ids": [
+   "g11a"
+  ]
+ },
+ {
+  "id": "qv2146",
+  "query": "laptop kerja gw apa",
+  "type": "informal",
+  "relevant_ids": [
+   "g12a"
+  ]
+ },
+ {
+  "id": "qv2147",
+  "query": "spek desktop rumah gw gmn",
+  "type": "informal",
+  "relevant_ids": [
+   "g12c"
+  ]
+ },
+ {
+  "id": "qv2148",
+  "query": "foto keluarga gw di-backup kemana",
+  "type": "informal",
+  "relevant_ids": [
+   "g13a"
+  ]
+ },
+ {
+  "id": "qv2149",
+  "query": "gw main bulutangkis dimana",
+  "type": "informal",
+  "relevant_ids": [
+   "g16a"
+  ]
+ },
+ {
+  "id": "qv2150",
+  "query": "berapa persen target nabung gw tiap bulan",
+  "type": "informal",
+  "relevant_ids": [
+   "g17b"
+  ]
+ },
+ {
+  "id": "qv2151",
+  "query": "klien kedua gw siapa",
+  "type": "informal",
+  "relevant_ids": [
+   "g18b"
+  ]
+ },
+ {
+  "id": "qv2152",
+  "query": "deadline lapor pajak gw kapan",
+  "type": "informal",
+  "relevant_ids": [
+   "g19a"
+  ]
+ },
+ {
+  "id": "qv2153",
+  "query": "dokumentasi proyek gw pake bahasa apa",
+  "type": "informal",
+  "relevant_ids": [
+   "g20b"
+  ]
+ },
+ {
+  "id": "qv2154",
+  "query": "boleh ga rebase di branch bareng",
+  "type": "informal",
+  "relevant_ids": [
+   "g21c"
+  ]
+ },
+ {
+  "id": "qv2155",
+  "query": "db produksi gw pake apa",
+  "type": "informal",
+  "relevant_ids": [
+   "g22a"
+  ]
+ },
+ {
+  "id": "qv2156",
+  "query": "db buat development gw pake apa",
+  "type": "informal",
+  "relevant_ids": [
+   "g22b"
+  ]
+ },
+ {
+  "id": "qv2157",
+  "query": "vps gw di provider mana",
+  "type": "informal",
+  "relevant_ids": [
+   "g23a"
+  ]
+ },
+ {
+  "id": "qv2158",
+  "query": "domain gw beli dimana",
+  "type": "informal",
+  "relevant_ids": [
+   "g23b"
+  ]
+ },
+ {
+  "id": "qv2159",
+  "query": "makanan favorit gw apa",
+  "type": "informal",
+  "relevant_ids": [
+   "g24a"
+  ]
+ },
+ {
+  "id": "qv2160",
+  "query": "camilan favorit aira apaan",
+  "type": "informal",
+  "relevant_ids": [
+   "g24c"
+  ]
+ },
+ {
+  "id": "qv2161",
+  "query": "dokter keluarga gw siapa",
+  "type": "informal",
+  "relevant_ids": [
+   "g27a"
+  ]
+ },
+ {
+  "id": "qv2162",
+  "query": "berapa kali setahun cek gigi",
+  "type": "informal",
+  "relevant_ids": [
+   "g27b"
+  ]
+ },
+ {
+  "id": "qv2163",
+  "query": "lampu pintar rumah merek apa",
+  "type": "informal",
+  "relevant_ids": [
+   "g29a"
+  ]
+ },
+ {
+  "id": "qv2164",
+  "query": "buku apa yang gw lg baca",
+  "type": "informal",
+  "relevant_ids": [
+   "g30a"
+  ]
+ },
+ {
+  "id": "qv2165",
+  "query": "novel apa yang sari lg baca",
+  "type": "informal",
+  "relevant_ids": [
+   "g30b"
+  ]
+ },
+ {
+  "id": "qv2166",
+  "query": "gw belajar bahasa apa pake duolingo",
+  "type": "informal",
+  "relevant_ids": [
+   "g32a",
+   "s216"
+  ]
+ },
+ {
+  "id": "qv2167",
+  "query": "laporan mingguan ke klien gw kirim kapan",
+  "type": "informal",
+  "relevant_ids": [
+   "s066"
+  ]
+ },
+ {
+  "id": "qv2168",
+  "query": "progress belajar dimas taun ini soal rust & k8s gimana",
+  "type": "informal",
+  "relevant_ids": [
+   "g51a",
+   "s268",
+   "s269"
+  ]
+ },
+ {
+  "id": "qv2169",
+  "query": "guru piano aira siapa namanya",
+  "type": "informal",
+  "relevant_ids": [
+   "s281"
+  ]
+ },
+ {
+  "id": "qv2170",
+  "query": "siapa yang jemput aira kalo sari rapat guru",
+  "type": "informal",
+  "relevant_ids": [
+   "s283"
+  ]
+ },
+ {
+  "id": "qv2171",
+  "query": "Dimas minum kopinya kayak gmn ya",
+  "type": "typo",
+  "relevant_ids": [
+   "g01a"
+  ]
+ },
+ {
+  "id": "qv2172",
+  "query": "Kapan les pinao Aira",
+  "type": "typo",
+  "relevant_ids": [
+   "g03c"
+  ]
+ },
+ {
+  "id": "qv2173",
+  "query": "Jam brapa standpu tim?",
+  "type": "typo",
+  "relevant_ids": [
+   "g08a"
+  ]
+ },
+ {
+  "id": "qv2174",
+  "query": "Kapan revew mingguan ama klien?",
+  "type": "typo",
+  "relevant_ids": [
+   "g08b"
+  ]
+ },
+ {
+  "id": "qv2175",
+  "query": "Dimas alergy apa?",
+  "type": "typo",
+  "relevant_ids": [
+   "g09a"
+  ]
+ },
+ {
+  "id": "qv2176",
+  "query": "Sari alergi apaan ya, kcang?",
+  "type": "typo",
+  "relevant_ids": [
+   "g09b"
+  ]
+ },
+ {
+  "id": "qv2177",
+  "query": "Jam brapa Sari biasa tdur?",
+  "type": "typo",
+  "relevant_ids": [
+   "g10b"
+  ]
+ },
+ {
+  "id": "qv2178",
+  "query": "Hp lama Dimas skrng dipake sapa?",
+  "type": "typo",
+  "relevant_ids": [
+   "g11b"
+  ]
+ },
+ {
+  "id": "qv2179",
+  "query": "Laptop Aira itu laptop apaan?",
+  "type": "typo",
+  "relevant_ids": [
+   "g12b"
+  ]
+ },
+ {
+  "id": "qv2180",
+  "query": "Kapan backup photo keluarga dilakuin?",
+  "type": "typo",
+  "relevant_ids": [
+   "g13a"
+  ]
+ },
+ {
+  "id": "qv2181",
+  "query": "Database produski di-backup jam brp?",
+  "type": "typo",
+  "relevant_ids": [
+   "g13c"
+  ]
+ },
+ {
+  "id": "qv2182",
+  "query": "Musik apa yg didengerin Dimas pas ngoding?",
+  "type": "typo",
+  "relevant_ids": [
+   "g14a",
+   "s250"
+  ]
+ },
+ {
+  "id": "qv2183",
+  "query": "Liburan kluarga taun lalu kemana?",
+  "type": "typo",
+  "relevant_ids": [
+   "g15a"
+  ]
+ },
+ {
+  "id": "qv2184",
+  "query": "Dimas mancingnya dimna?",
+  "type": "typo",
+  "relevant_ids": [
+   "g16b"
+  ]
+ },
+ {
+  "id": "qv2185",
+  "query": "Gajian tanggal brapa?",
+  "type": "typo",
+  "relevant_ids": [
+   "g17a"
+  ]
+ },
+ {
+  "id": "qv2186",
+  "query": "Klien kedua namnya apa?",
+  "type": "typo",
+  "relevant_ids": [
+   "g18b"
+  ]
+ },
+ {
+  "id": "qv2187",
+  "query": "Kapan deadline lapor pajek tahunan?",
+  "type": "typo",
+  "relevant_ids": [
+   "g19a"
+  ]
+ },
+ {
+  "id": "qv2188",
+  "query": "Dokumentasi proyek pake bhsa apa?",
+  "type": "typo",
+  "relevant_ids": [
+   "g20b"
+  ]
+ },
+ {
+  "id": "qv2189",
+  "query": "Rebase boleh ga di branch bersma?",
+  "type": "typo",
+  "relevant_ids": [
+   "g21c"
+  ]
+ },
+ {
+  "id": "qv2190",
+  "query": "Db development pake apaan?",
+  "type": "typo",
+  "relevant_ids": [
+   "g22b"
+  ]
+ },
+ {
+  "id": "qv2191",
+  "query": "Domain dibeli dmna?",
+  "type": "typo",
+  "relevant_ids": [
+   "g23b"
+  ]
+ },
+ {
+  "id": "qv2192",
+  "query": "Makanan favorit Dimas apaa?",
+  "type": "typo",
+  "relevant_ids": [
+   "g24a"
+  ]
+ },
+ {
+  "id": "qv2193",
+  "query": "Nomor sepatu dimas brapa, yg buat lari jg sama ga?",
+  "type": "typo",
+  "relevant_ids": [
+   "g38a",
+   "s316"
+  ]
+ },
+ {
+  "id": "qv2194",
+  "query": "Gw suka dijawab kyk gmn sih, maunya yang gmn?",
+  "type": "typo",
+  "relevant_ids": [
+   "g20a",
+   "g45a"
+  ]
+ },
+ {
+  "id": "qv2195",
+  "query": "Brapa sring cek gigi ke dokter?",
+  "type": "typo",
+  "relevant_ids": [
+   "g27b"
+  ]
+ },
+ {
+  "id": "qv2196",
+  "query": "Lampu pintar di rumah merek apaan?",
+  "type": "typo",
+  "relevant_ids": [
+   "g29a"
+  ]
+ },
+ {
+  "id": "qv2197",
+  "query": "Buku apa yg sdg dibaca Sari?",
+  "type": "typo",
+  "relevant_ids": [
+   "g30b"
+  ]
+ },
+ {
+  "id": "qv2198",
+  "query": "Bahasa apa yg dipelajari pake duolingo?",
+  "type": "typo",
+  "relevant_ids": [
+   "g32a",
+   "s216"
+  ]
+ },
+ {
+  "id": "qv2199",
+  "query": "Laporan minggun ke klien dikirim kpn?",
+  "type": "typo",
+  "relevant_ids": [
+   "s066"
+  ]
+ },
+ {
+  "id": "qv2200",
+  "query": "Target blajar Dimas taun ini apa?",
+  "type": "typo",
+  "relevant_ids": [
+   "g51a"
+  ]
+ }
+]

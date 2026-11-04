@@ -47,3 +47,7 @@ desktop.ini
 *.bin
 !results/uji06-raw/
 !results/uji06-raw/*.json
+
+# Uji #6b: pengecualian JSON metrik mentah (statistik dataset Tahap 1)
+!results/uji06b-raw/
+!results/uji06b-raw/*.json

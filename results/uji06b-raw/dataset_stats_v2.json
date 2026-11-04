@@ -1,0 +1,60 @@
+{
+  "queries": 200,
+  "queries_by_type": {
+    "id-id": 40,
+    "en-en": 30,
+    "id-en": 30,
+    "en-id": 30,
+    "informal": 40,
+    "typo": 30
+  },
+  "similarity_buckets": {
+    "0% (semantik)": 64,
+    "26-50%": 62,
+    "1-25%": 74
+  },
+  "similarity_buckets_by_type": {
+    "id-id": {
+      "0% (semantik)": 4,
+      "26-50%": 23,
+      "1-25%": 13
+    },
+    "en-en": {
+      "1-25%": 11,
+      "0% (semantik)": 3,
+      "26-50%": 16
+    },
+    "id-en": {
+      "0% (semantik)": 19,
+      "1-25%": 10,
+      "26-50%": 1
+    },
+    "en-id": {
+      "0% (semantik)": 18,
+      "1-25%": 10,
+      "26-50%": 2
+    },
+    "informal": {
+      "1-25%": 16,
+      "0% (semantik)": 13,
+      "26-50%": 11
+    },
+    "typo": {
+      "0% (semantik)": 7,
+      "1-25%": 14,
+      "26-50%": 9
+    }
+  },
+  "semantic_queries": 64,
+  "semantic_pct": 32.0,
+  "over_50pct_queries": 0,
+  "over_50pct_examples": [],
+  "multi_label_queries": 9,
+  "multi_label_pct": 4.5,
+  "multi_label_by_type": {
+    "en-en": 1,
+    "id-en": 1,
+    "informal": 3,
+    "typo": 4
+  }
+}
