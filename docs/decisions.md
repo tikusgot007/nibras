@@ -4,11 +4,12 @@
 
 Dokumen ini adalah **sumber kebenaran desain** proyek Nibras. Setiap implementasi wajib mengikuti keputusan di sini. Jika implementasi perlu menyimpang, hentikan pekerjaan dan ajukan revisi keputusan. Jangan menyimpang diam-diam.
 
-**Status:** Desain MVP selesai. Tahap berikutnya adalah Fase 0 (prototipe uji risiko).
+**Status:** Desain MVP selesai. Fase 0 sedang berjalan (Uji #1 lulus).
 
 **Arti status:**
 - **Disetujui:** keputusan final.
 - **Perlu validasi:** keputusan final, tetapi harus dibuktikan di Fase 0.
+- **Tervalidasi:** keputusan sudah dibuktikan melalui uji Fase 0.
 - **Ditunda:** belum diputuskan dan akan dibahas pada topik terkait.
 
 ---
@@ -44,11 +45,11 @@ AI tidak boleh menurunkan risk level, termasuk ketika pengguna memerintahkannya.
 
 | ID | Keputusan | Status |
 |---|---|---|
-| D-01 | Data kerja ditulis langsung di USB. SQLite **tanpa WAL** (rollback journal), commit sering, backup atomik | Perlu validasi (Uji #1) |
+| D-01 | Data kerja ditulis langsung di USB. SQLite **tanpa WAL** (rollback journal), commit sering, backup atomik | Tervalidasi (Uji #1: 20/20 PASS) |
 | D-02 | Stack utama: Python dan PySide6, Portable Python Runtime, launcher `Nibras.exe` | Disetujui |
 | D-03 | Satu proses aplikasi. Skills dan tool berisiko dijalankan sebagai subprocess | Disetujui |
 | D-04 | Format USB **wajib NTFS** | Disetujui |
-| D-05 | Database dipisah per domain: `core.db`, `memory.db`, `conversations.db`, `index.db` | Disetujui |
+| D-05 | Database dipisah per domain: `core.db`, `memory.db`, `conversations.db`, `index.db` | Tervalidasi (Uji #1: atomisitas `ATTACH`) |
 | D-06 | Data terstruktur dan bervolume tinggi disimpan di database. Konten yang dibaca atau diedit manusia disimpan sebagai file. Perubahan file dideteksi dengan hash | Disetujui |
 | D-07 | Struktur folder USB: `App/`, `Data/`, `Backups/`, `Temp/`. Folder temp berada di USB dan dibersihkan saat startup dan shutdown | Disetujui |
 | D-08 | Exclusive file lock dari OS ditambah penanda sesi `clean_shutdown`. Pemulihan otomatis setelah shutdown tidak bersih. Tugas yang terputus ditandai *interrupted* | Disetujui |
@@ -350,7 +351,7 @@ Aturan ini hanya boleh **menaikkan** risk level, tidak pernah menurunkan.
 
 | # | Uji | Kriteria lulus | Keputusan terkait |
 |---|---|---|---|
-| 1 | Cabut USB saat SQLite sedang menulis, 20 kali | Tidak ada database rusak. Paling banyak hanya transaksi terakhir yang hilang | D-01, D-04, D-05 |
+| 1 | Cabut USB saat SQLite sedang menulis, 20 kali | Tidak ada database rusak. Paling banyak hanya transaksi terakhir yang hilang | D-01, D-04, D-05 — **LULUS** (lihat bagian 12) |
 | 2 | Waktu startup dari USB 3.x dan 2.0 | Di bawah 10 detik pada USB 3.x | D-02, D-12 |
 | 3 | Antivirus dan SmartScreen terhadap launcher | Tercatat, dan ada solusi untuk setiap blokir | D-12 |
 | 4 | Streaming respons sekitar 5.000 token di UI | UI tidak macet | D-11, D-16, D-50 |
@@ -369,6 +370,7 @@ Sebelum dipublikasikan luas, cek merek "Nibras" di PDKI untuk kelas 9 dan 42.
 
 ## 11. Risiko yang Masih Perlu Diuji (di luar Fase 0)
 
+- Perilaku USB lain, terutama USB murah. Uji #1 hanya mencakup satu model USB dan satu PC.
 - Wear USB akibat profil browser dan cache.
 - Jejak yang tertinggal di PC host (Prefetch, jump list, riwayat USB, cache Qt dan Python). Jejak ini tidak dapat dijamin hilang sepenuhnya.
 - ExecutionPolicy dan AppLocker di PC kantor.
@@ -377,8 +379,23 @@ Sebelum dipublikasikan luas, cek merek "Nibras" di PDKI untuk kelas 9 dan 42.
 
 ---
 
+## 12. Temuan dan Keputusan dari Hasil Fase 0
+
+### Uji #1: Ketahanan SQLite saat USB dicabut (LULUS)
+- **Hasil:** 20/20 PASS di NTFS dengan USB SanDisk 3.2 Gen1, Windows 11 Pro, SQLite 3.50.4. Total 25.403 transaksi.
+- **Tidak ada** kegagalan `integrity_check`, ketidaksamaan `MAX(seq)` antar-database, celah urutan, atau checksum rusak.
+- **Satu** transaksi yang sudah di-commit hilang (Run 08).
+- **Temuan penting:** dengan `synchronous=FULL`, commit baru dianggap berhasil setelah Windows menyatakan data tersimpan permanen. Hilangnya transaksi berarti **controller USB melaporkan data sudah tersimpan padahal masih berada di cache-nya.** Ini perilaku hardware. Konsekuensinya, **commit terakhir yang sudah "berhasil" tetap bisa hilang** jika USB dicabut.
+- Laporan lengkap: `results/uji01-sqlite-usb.md`.
+
+| ID | Keputusan | Status |
+|---|---|---|
+| D-54 | **Intent log untuk tindakan non-idempotent.** (1) Sebelum eksekusi, catat status `pending` lalu commit. (2) Jalankan tindakan. (3) Catat status `done`. (4) Saat recovery, tindakan yang masih berstatus `pending` **tidak pernah diulang otomatis**. Tindakan tersebut ditampilkan sebagai tugas *interrupted*, dan pengguna diminta memverifikasi. Memperkuat D-08 dan D-21 | Disetujui |
+
+---
+
 ## Aturan Perubahan Dokumen
 
-1. Keputusan baru diberi ID berikutnya (D-54, dan seterusnya).
+1. Keputusan baru diberi ID berikutnya (D-55, dan seterusnya).
 2. Keputusan yang direvisi **tidak dihapus**. Tandai sebagai *superseded oleh D-xx*, lalu tambahkan keputusan baru.
 3. Agen coding **tidak boleh** mengubah dokumen ini. Perubahan dilakukan melalui proses desain dan review.

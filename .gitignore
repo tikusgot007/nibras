@@ -27,9 +27,12 @@ __pycache__/
 venv/
 *.egg-info/
 
-# Build
+# Build (termasuk bundle runtime hasil build)
 build/
 dist/
+App/
+*.whl
+python-*-embed-*.zip
 
 # OS / editor
 Thumbs.db
