@@ -84,6 +84,12 @@ for ($i = 0; $i -ge 0 -and $i -lt $Runs; $i++) {
     $psi.CreateNoWindow = $true
     $psi.EnvironmentVariables["PYTHONDONTWRITEBYTECODE"] = "1"
     $psi.EnvironmentVariables["PYTHONNOUSERSITE"] = "1"
+    if ($psi.EnvironmentVariables.ContainsKey("PYTHONPATH")) {
+        $psi.EnvironmentVariables.Remove("PYTHONPATH")
+    }
+    if ($psi.EnvironmentVariables.ContainsKey("PYTHONHOME")) {
+        $psi.EnvironmentVariables.Remove("PYTHONHOME")
+    }
 
     $proc = [System.Diagnostics.Process]::Start($psi)
     $finished = $proc.WaitForExit($TimeoutSeconds * 1000)

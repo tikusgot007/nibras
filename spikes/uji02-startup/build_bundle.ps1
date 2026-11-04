@@ -136,8 +136,9 @@ if ($LASTEXITCODE -ne 0) {
 }
 
 if (!$NoPrecompile) {
-    Write-Host "[6/6] Precompiling bytecode (.py -> .pyc) across bundle..."
-    & python -m compileall -q "$pythonDir"
+    Write-Host "[6/6] Precompiling bytecode (.py -> .pyc) using bundled Python ($PythonVersion)..."
+    $bundlePythonExe = Join-Path $pythonDir "python.exe"
+    & "$bundlePythonExe" -m compileall -q "$pythonDir"
     if ($LASTEXITCODE -ne 0) {
         Write-Warning "compileall returned non-zero exit code: $LASTEXITCODE"
     } else {
