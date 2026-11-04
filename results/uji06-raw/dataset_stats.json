@@ -1,0 +1,36 @@
+{
+  "entries": 500,
+  "entries_by_lang": {
+    "id": 250,
+    "en": 149,
+    "mix": 101
+  },
+  "entries_by_category": {
+    "User Preferences": 84,
+    "Personal Context": 181,
+    "Workflows": 87,
+    "PC Information": 47,
+    "Projects": 57,
+    "Knowledge": 44
+  },
+  "hard_negative_groups": 60,
+  "queries": 200,
+  "queries_by_type": {
+    "id-id": 40,
+    "en-en": 30,
+    "id-en": 30,
+    "en-id": 30,
+    "informal": 40,
+    "typo": 30
+  },
+  "anti_leak_queries": 145,
+  "anti_leak_pct": 72.5,
+  "anti_leak_by_type": {
+    "id-id": "37/40",
+    "en-en": "30/30",
+    "id-en": "23/30",
+    "en-id": "21/30",
+    "informal": "20/40",
+    "typo": "14/30"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "model": "S",
+  "env": {
+    "os": "Linux-6.18.44-fc-v233-x86_64-with-glibc2.39",
+    "cpu": "x86_64",
+    "physical_cores": 4,
+    "logical_cores": 4,
+    "ram_gb": 15.7,
+    "python": "3.13.18",
+    "onnxruntime": "1.29.0",
+    "numpy": "2.5.3",
+    "tokenizers": "0.23.3",
+    "sqlite": "3.53.1"
+  },
+  "model_file_mb": 112.9,
+  "n_entries": 10000,
+  "load": {
+    "tokenizer_s": 0.6534,
+    "model_s": 0.7986
+  },
+  "index_mono": {
+    "n_entries": 10000,
+    "n_vectors": 10000,
+    "total_s": 29.37,
+    "per_entry_ms": 2.937,
+    "batch_size": 32
+  },
+  "index_bi": {
+    "n_entries": 10000,
+    "n_vectors": 20000,
+    "total_s": 58.41,
+    "per_entry_ms": 5.841,
+    "batch_size": 32
+  },
+  "query_ms": {
+    "median": 8.01,
+    "p95": 16.01,
+    "n": 200
+  },
+  "matrix_mb": {
+    "mono": 14.6,
+    "bi": 29.3
+  },
+  "ram_peak_mb": 581.8
+}

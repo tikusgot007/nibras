@@ -1,0 +1,320 @@
+s001|I|P|Dimas lebih suka teh tawar hangat di pagi hari sebelum sarapan.
+s002|I|C|Nomor plat motor Dimas D 4521 XYZ, pajak jatuh tempo bulan September.
+s003|I|C|Tetangga sebelah rumah bernama Pak Wahyu, ketua RT di blok C.
+s004|I|W|Laporan keuangan klien dibuat dalam format Excel setiap tanggal 28.
+s005|I|P|Dimas tidak suka pedas berlebihan, cukup level sedang.
+s006|I|C|Sekolah Aira mengadakan rapat orang tua setiap awal semester pada hari Sabtu.
+s007|I|S|Kabel LAN di ruang kerja rumah terhubung langsung ke switch di lemari.
+s008|I|J|Proyek dashboard logistik memakai peta dari OpenStreetMap, bukan Google Maps.
+s009|I|W|Estimasi pekerjaan selalu ditambah buffer 20 persen untuk revisi klien.
+s010|I|C|Kunci cadangan rumah dititipkan ke Bu Tini di sebelah kiri.
+s011|I|P|Dimas lebih suka mengerjakan tugas sulit di pagi hari sebelum jam 10.
+s012|I|K|Dimas sedang mempelajari pola desain CQRS untuk proyek berikutnya.
+s013|I|C|Ayah Sari bernama Pak Teguh, pensiunan guru matematika.
+s014|I|C|Anjing peliharaan tetangga sering menggonggong tengah malam, sudah dilaporkan ke RT.
+s015|I|W|Tagihan klien PT Maju Logistik jatuh tempo 14 hari setelah invoice dikirim.
+s016|I|S|Baterai laptop kerja mulai menggembung, perlu diganti bulan depan.
+s017|I|J|Fitur laporan PDF di aplikasi Toko Berkah memakai library dompdf.
+s018|I|P|Dimas tidak mau menerima telepon dari nomor tak dikenal saat jam kerja.
+s019|I|C|Cicilan motor lunas bulan Mei tahun lalu.
+s020|I|C|Aira bercita-cita menjadi dokter hewan.
+s021|I|W|Rapat dengan klien baru wajib didahului dokumen brief tertulis.
+s022|I|C|Tabungan haji atas nama Dimas dan Sari ada di Bank Syariah Indonesia.
+s023|I|P|Sari tidak suka film horor, lebih suka drama keluarga.
+s024|I|K|Dimas menonton kanal YouTube Fireship untuk mengikuti kabar teknologi.
+s025|I|S|Router cadangan disimpan di laci meja kerja bila internet utama mati.
+s026|I|C|Banjir kecil biasa terjadi di jalan depan perumahan saat hujan lebat.
+s027|I|W|Folder arsip proyek lama dikompres tiap akhir tahun lalu disimpan di NAS.
+s028|I|J|Aplikasi stok Toko Berkah menyimpan data barang di MySQL versi 8.
+s029|I|C|Asuransi kesehatan keluarga dari Allianz, premi dibayar tahunan bulan Januari.
+s030|I|P|Dimas tidak minum minuman bersoda sejak dua tahun lalu.
+s031|I|C|Sari bekerja sebagai guru Bahasa Inggris di SMP Negeri 5 Bandung.
+s032|I|C|Jam pulang Sari dari sekolah biasanya pukul tiga sore.
+s033|I|P|Dimas suka berjalan kaki sore di sekitar kompleks sambil mendengarkan podcast.
+s034|I|K|Podcast favorit Dimas tentang teknologi berbahasa Indonesia adalah Podkesmas.
+s035|I|W|Sebelum rilis fitur besar, Dimas selalu membuat catatan rollback.
+s036|I|J|Tema aplikasi Toko Berkah dibuat gelap karena kasir bekerja malam hari.
+s037|I|C|Warung langganan galon air isi ulang ada di depan gang, antar gratis.
+s038|I|C|Gas elpiji 3 kg dibeli di agen Pak Asep setiap dua minggu.
+s039|I|S|Printer thermal di toko Berkah terhubung lewat USB dan Bluetooth.
+s040|I|C|Pajak PBB rumah dibayar bulan Juli lewat aplikasi bank.
+s041|I|W|Dokumen kontrak klien ditandatangani secara digital lewat PrivyID.
+s042|I|P|Dimas menyimpan catatan harian di aplikasi Obsidian.
+s043|I|K|Dimas membaca ulang catatan mingguan setiap Minggu malam.
+s044|I|C|Mertua Dimas biasa datang membawa oleh-oleh bolu kukus dari Surabaya.
+s045|I|C|Aira punya sepeda lipat merah yang dipakai tiap Minggu pagi.
+s046|I|W|Pembayaran freelance dari klien luar negeri diterima lewat Wise.
+s047|I|J|Dashboard logistik menampilkan posisi truk setiap 30 detik.
+s048|I|J|Notifikasi keterlambatan truk dikirim lewat email dan WhatsApp ke dispatcher.
+s049|I|C|Kontak darurat keluarga adalah Mbak Ratna dan dr. Rizal.
+s050|I|C|Nomor rekening listrik rumah terdaftar atas nama almarhum ayah Dimas.
+s051|I|P|Sari menyukai bunga tulip, tapi di Bandung susah ditemukan.
+s052|I|C|Hadiah ulang tahun Aira tahun lalu adalah set alat lukis.
+s053|I|K|Dimas tertarik pada fotografi analog dan punya kamera Canon AE-1.
+s054|I|S|Rol film dikembangkan di studio kecil dekat Braga.
+s055|I|W|Dimas tidak menerima proyek dengan tenggat kurang dari dua minggu.
+s056|I|W|Revisi di luar kesepakatan awal dikenakan biaya tambahan per jam.
+s057|I|C|Anak tetangga, Kenzo, adalah teman bermain Aira.
+s058|I|C|Arisan keluarga besar Dimas diadakan setiap bulan ketiga di Garut.
+s059|I|P|Dimas suka bubur ayam tanpa seledri.
+s060|I|C|Sari rutin senam pagi di taman kompleks hari Minggu.
+s061|I|S|Colokan listrik ruang kerja dilengkapi UPS untuk menghindari mati mendadak.
+s062|I|S|Monitor kedua berukuran 27 inci dipasang vertikal untuk membaca kode.
+s063|I|J|Server staging Toko Berkah memakai Ubuntu dengan Nginx dan PHP-FPM.
+s064|I|J|Backup database Toko Berkah dikirim ke Google Drive pukul 23.00.
+s065|I|W|Dimas memakai Notion untuk mengelola tugas dan papan kanban proyek.
+s066|I|W|Laporan mingguan ke klien dikirim hari Jumat sebelum jam 5 sore.
+s067|I|K|Dimas mencatat istilah teknis baru dalam glosarium pribadi.
+s068|I|K|Buku referensi Python favorit Dimas adalah Fluent Python.
+s069|I|C|Pembantu paruh waktu datang setiap Senin dan Kamis pagi.
+s070|I|C|Biaya sekolah Aira per semester sebesar Rp3,5 juta.
+s071|I|P|Dimas lebih suka rapat singkat tanpa slide.
+s072|I|P|Sari suka berbelanja sayur segar di pasar tradisional hari Sabtu.
+s073|I|C|Es krim favorit Aira rasa stroberi.
+s074|I|C|Kolam ikan koi di halaman belakang dibersihkan sebulan sekali.
+s075|I|S|Pompa air rumah merek Shimizu, pernah diservis bulan Maret.
+s076|I|S|Water heater di kamar mandi utama sering mati sendiri, perlu dicek teknisi.
+s077|I|C|Teknisi AC langganan bernama Pak Dedi, nomor tersimpan di kontak.
+s078|I|C|AC kamar tidur dibersihkan setiap enam bulan.
+s079|I|W|Dimas menolak proyek yang melibatkan judi daring.
+s080|I|W|Kontrak kerja freelance minimal tiga bulan agar ada kepastian pendapatan.
+s081|I|J|Modul absensi karyawan Toko Berkah memakai sidik jari ZKTeco.
+s082|I|J|Fitur retur barang di aplikasi kasir wajib menyertakan alasan.
+s083|I|C|Dimas lulusan Teknik Informatika ITB angkatan 2008.
+s084|I|C|Sari lulusan Pendidikan Bahasa Inggris UPI.
+s085|I|P|Dimas ingin pensiun dini di usia 50 tahun.
+s086|I|K|Dana pensiun mandiri dikelola lewat reksa dana saham dan obligasi.
+s087|I|C|Dimas takut ketinggian, jadi menghindari wahana roller coaster.
+s088|I|C|Sari mudah mabuk perjalanan di jalan berkelok.
+s089|I|P|Dimas lebih suka tidur dengan kipas angin daripada AC.
+s090|I|P|Suhu AC kamar diatur 25 derajat bila dinyalakan.
+s091|I|C|Sampah rumah tangga diambil petugas kompleks setiap Selasa dan Sabtu.
+s092|I|C|Iuran keamanan kompleks Rp150 ribu per bulan.
+s093|I|W|Setiap awal bulan Dimas memeriksa semua langganan SaaS yang masih aktif.
+s094|I|W|Langganan yang tidak dipakai selama tiga bulan akan dibatalkan.
+s095|I|K|Dimas sedang menulis artikel blog tentang optimasi query PostgreSQL.
+s096|I|K|Blog pribadi Dimas dibuat dengan Astro dan di-hosting di Cloudflare Pages.
+s097|I|C|Ibu Dimas gemar berkebun dan menanam bunga melati.
+s098|I|C|Ulang tahun pernikahan orang tua Dimas jatuh pada bulan April.
+s099|I|P|Sari ingin membuka kelas les Bahasa Inggris untuk anak-anak di rumah.
+s100|I|J|Rencana pendanaan kelas les Sari berasal dari tabungan pribadi, bukan pinjaman.
+s101|I|W|Ruang kerja Dimas di rumah tidak boleh dimasuki saat pintunya tertutup.
+s102|I|P|Dimas biasanya makan malam bersama keluarga pukul tujuh.
+s103|I|C|Hari Minggu sore adalah waktu khusus keluarga tanpa gawai.
+s104|I|C|Aira dibatasi bermain gawai maksimal satu jam per hari.
+s105|I|C|Lampu teras dinyalakan otomatis pukul enam sore.
+s106|I|W|Kontak teknis di PT Maju Logistik adalah Mbak Dewi, bagian IT.
+s107|I|W|Pak Hendra lebih suka dihubungi lewat telepon, bukan chat.
+s108|I|J|Dashboard logistik harus mendukung bahasa Indonesia dan Inggris.
+s109|I|J|Peta rute truk menyimpan riwayat perjalanan selama 90 hari.
+s110|I|J|Fitur ekspor laporan dashboard logistik dalam format CSV dan PDF.
+s111|I|S|Pengisi daya cepat 65 watt dibawa ke mana-mana dalam tas laptop.
+s112|I|S|Tas laptop merek Eiger berwarna hitam, sudah dua tahun dipakai.
+s113|I|S|Mouse Logitech MX Master 3 dipakai untuk kerja sehari-hari.
+s114|I|S|Keyboard mekanik Keychron K2 dengan switch cokelat.
+s115|I|C|Dimas tidak bisa berenang jauh, hanya bisa gaya katak sebentar.
+s116|I|C|Aira sudah bisa berenang gaya bebas sejak usia enam tahun.
+s117|I|P|Dimas lebih suka film fiksi ilmiah dan thriller.
+s118|I|P|Film favorit Dimas sepanjang masa adalah Interstellar.
+s119|I|P|Sari menyukai serial Korea dan menonton akhir pekan.
+s120|I|K|Dimas membaca berita teknologi lewat agregator Hacker News tiap pagi.
+s121|I|W|Dimas mencatat jam kerja per proyek memakai aplikasi Toggl.
+s122|I|W|Laporan jam kerja bulanan dikirim bersamaan dengan invoice.
+s123|I|C|Dimas pernah dirawat karena demam berdarah pada tahun 2019.
+s124|I|C|Golongan darah Dimas O positif.
+s125|I|C|Golongan darah Sari A positif.
+s126|I|C|Golongan darah Aira B positif.
+s127|I|J|Rencana rilis versi pertama aplikasi kasir Toko Berkah adalah awal kuartal ketiga.
+s128|I|J|Pengujian pengguna aplikasi kasir dilakukan bersama dua kasir toko.
+s129|I|J|Masukan kasir menyebut tombol hapus terlalu dekat dengan tombol bayar.
+s130|I|C|Kontrakan di Jakarta untuk hari kerja disewa Dimas dengan harga Rp1,8 juta per bulan.
+s131|I|K|Dimas belajar dasar investasi saham lewat kursus gratis dari OJK.
+s132|I|C|Kartu BPJS Kesehatan keluarga dibayar lewat autodebet.
+s133|I|C|Pendamping belajar Aira di hari Senin adalah Dimas, hari Selasa adalah Sari.
+s134|I|P|Dimas menyukai hujan dan suara gemericiknya saat bekerja.
+s135|I|P|Kopi favorit Dimas berasal dari biji Gayo, disangrai medium.
+s136|I|S|Alat seduh kopi di rumah adalah V60 dan grinder manual.
+s137|I|C|Dimas membeli biji kopi dari roastery lokal di Cihapit.
+s138|I|C|Resolusi Dimas tahun ini adalah tidak lembur lebih dari dua kali sebulan.
+s139|I|C|Resolusi Sari tahun ini adalah menulis buku panduan belajar Bahasa Inggris.
+s140|I|C|Anggaran liburan keluarga per tahun sekitar Rp25 juta.
+s141|I|C|Penyakit asam lambung Dimas kambuh jika terlalu banyak minum kopi.
+s142|I|W|Dimas menetapkan batas satu pertemuan online maksimal 45 menit.
+s143|I|W|Notulen rapat dikirim ke peserta paling lambat sehari setelah rapat.
+s144|I|C|Dimas berlangganan koran digital Kompas untuk membaca berita ekonomi.
+s145|I|K|Istilah SOLID dijelaskan Dimas kepada juniornya lewat contoh nyata.
+s146|I|W|Dimas adalah mentor untuk dua pengembang junior dari komunitas Bandung.
+s147|I|W|Sesi mentoring dilakukan dua minggu sekali lewat video call.
+s148|I|C|Dimas ingin membangun rumah kedua di Lembang saat anak sudah besar.
+s149|I|C|Tanah di Lembang seluas 200 meter persegi sudah dibeli atas nama Sari.
+s150|I|C|Surat tanah dan sertifikat rumah disimpan di brankas bank.
+s151|I|C|Nomor kartu keluarga disimpan di folder terenkripsi, tidak boleh dicatat di chat.
+s152|I|C|Foto paspor dan KTP keluarga disimpan di brankas Bitwarden.
+s153|E|P|The user dislikes meetings that could have been an email.
+s154|E|P|Dimas drinks about three glasses of water before noon.
+s155|E|C|The family adopted a rescue dog named Bruno last winter.
+s156|E|C|Bruno needs a walk twice a day, morning and evening.
+s157|E|C|Annual vaccination for the pets is due every March.
+s158|E|W|The user invoices clients in IDR but accepts USD through Wise for overseas clients.
+s159|E|W|Overdue invoices get a reminder after seven days and a phone call after fourteen.
+s160|E|J|The fleet dashboard uses WebSockets for live truck positions.
+s161|E|J|The frontend of the fleet dashboard is built with Svelte and Tailwind.
+s162|E|J|Map tiles come from a self-hosted tile server to avoid API costs.
+s163|E|J|Alerts for speeding trucks trigger when speed exceeds 90 km/h.
+s164|E|J|The point-of-sale app for Toko Berkah stores prices in integer rupiah, never floats.
+s165|E|J|Receipts for Toko Berkah are printed on 58 mm thermal paper.
+s166|E|J|Barcode scanning in the POS uses a USB HID scanner acting as a keyboard.
+s167|E|P|The user prefers dark mode in every application.
+s168|E|P|Font preference is JetBrains Mono at size 13.
+s169|E|P|Prefers tabs over spaces only in Go code; spaces everywhere else.
+s170|E|P|Code review comments should be specific and include a suggested change.
+s171|E|W|The user writes design docs before any feature that takes more than three days.
+s172|E|W|Design docs live in Notion and are linked from the issue tracker.
+s173|E|W|Sprints are one week long and start on Monday.
+s174|E|W|Retrospectives happen every other Friday morning.
+s175|E|K|Recently studied the Raft consensus algorithm and implemented a toy version.
+s176|E|K|Reads one research paper from the ACM digital library every two weeks.
+s177|E|K|Favorite programming language to learn from is Elixir.
+s178|E|C|Dimas grew up in Garut before moving to Bandung for university.
+s179|E|C|Sari was born in Surabaya and moved to Bandung after marriage.
+s180|E|C|The couple met at a university alumni gathering in 2013.
+s181|E|C|They got married in 2015 in Surabaya.
+s182|E|C|Aira was born at Santosa Hospital in Bandung.
+s183|E|P|The user enjoys strong black tea in the afternoon.
+s184|E|P|Prefers cold showers in the morning.
+s185|E|S|The home server is a Raspberry Pi 5 running Pi-hole and Home Assistant.
+s186|E|S|The Raspberry Pi is powered through a small UPS to survive blackouts.
+s187|E|S|Home internet is a 100 Mbps Indihome plan with a static IP.
+s188|E|S|The backup internet line is a mobile hotspot from a Telkomsel SIM.
+s189|E|S|The office desk is a standing desk raised to 110 cm.
+s190|E|S|A second monitor, a Dell U2723QE, is connected via USB-C.
+s191|E|W|The user keeps a weekly time budget: 30 hours billable, 10 hours admin and learning.
+s192|E|W|Friday morning is reserved for invoicing and admin tasks.
+s193|E|J|Webhooks from the payment gateway are verified with an HMAC signature.
+s194|E|J|Payment gateway for Toko Berkah online orders is Midtrans.
+s195|E|J|Refunds are processed manually and require owner approval.
+s196|E|J|A nightly job reconciles sales totals against bank settlements.
+s197|E|K|The user keeps a personal wiki of troubleshooting steps for recurring server issues.
+s198|E|K|Learned that PostgreSQL VACUUM FULL locks the table and avoids it in production.
+s199|E|K|Prefers keyset pagination over OFFSET for large tables.
+s200|E|K|Uses EXPLAIN ANALYZE before adding any new index.
+s201|E|C|Aira's school bus picks her up at 6:45 am.
+s202|E|C|Aira has a library card at the Bandung city library.
+s203|E|C|The family doctor recommends a flu shot every October.
+s204|E|P|Sari prefers hiking over the beach on holidays.
+s205|E|P|Dimas prefers the beach and rarely goes to mountains.
+s206|E|C|The family visited Bali for their honeymoon in 2015.
+s207|E|C|They plan to visit the Netherlands one day to see the tulip fields.
+s208|E|W|Client calls with PT Maju Logistik are recorded with permission.
+s209|E|W|Meeting recordings are stored for 30 days and then deleted.
+s210|E|P|The user prefers receiving documents as PDF, not Word files.
+s211|E|P|Calendar invites should include a video link and an agenda.
+s212|E|C|Dimas prefers paying with QRIS at small shops.
+s213|E|C|Parking at the coworking space costs Rp3,000 per hour.
+s214|E|C|The coworking membership includes ten hours of meeting room use per month.
+s215|E|K|Studied the book Clean Architecture two years ago and now rereads selected chapters.
+s216|E|K|Keeps flashcards in Anki for Japanese kanji.
+s217|E|C|Dimas stopped playing mobile games to save time.
+s218|E|C|Weekend game night is Settlers of Catan with neighbors.
+s219|E|C|Board games are stored in the cabinet under the TV.
+s220|E|P|The user likes spicy food but avoids it when working late.
+s221|E|P|Dimas prefers sambal terasi over sambal bawang.
+s222|E|W|Contracts with Indonesian clients are written in Indonesian and signed with e-signature.
+s223|E|W|Contracts with foreign clients are written in English under Singapore law.
+s224|E|C|The family keeps an emergency bag with documents, cash, and a flashlight near the front door.
+s225|E|C|The emergency fund covers six months of expenses.
+s226|E|P|The user mutes the phone during family dinner.
+s227|E|P|Sari prefers handwritten notes over typing.
+s228|E|K|Dimas uses spaced repetition to memorize command-line shortcuts.
+s229|E|S|The shared family calendar is on Google Calendar with color-coded members.
+s230|E|S|Photos from Aira's school events are shared in a family album.
+s231|E|J|A side project is a small habit tracker app written in Flutter.
+s232|E|J|The habit tracker stores data locally and syncs through a self-hosted server.
+s233|E|J|The habit tracker has no ads and is free to use.
+s234|E|W|Uses Linear for issue tracking on personal projects.
+s235|E|W|Uses Jira for tracking tasks in PT Maju Logistik because the client requires it.
+s236|M|W|Meeting dengan PT Maju Logistik selalu pakai Google Meet, bukan Zoom.
+s237|M|W|Deploy ke production wajib lewat pipeline CI, jangan langsung SSH.
+s238|M|W|Kalau ada bug di staging, buat issue dulu baru fix di branch hotfix.
+s239|M|W|Code review minimal satu approval sebelum merge ke main.
+s240|M|W|Backup database di-run otomatis jam 2 pagi via cron.
+s241|M|J|Library untuk chart di dashboard logistik pakai Apache ECharts.
+s242|M|J|Endpoint /api/trucks harus support pagination dan filter by status.
+s243|M|J|Rate limit API dashboard 60 request per menit per user.
+s244|M|J|Token auth pakai JWT dengan expiry 15 menit dan refresh token 7 hari.
+s245|M|J|Fitur notifikasi di app Toko Berkah pakai Firebase Cloud Messaging.
+s246|M|J|Setup environment dev Toko Berkah pakai Docker Compose.
+s247|M|P|Dimas lebih suka pakai dark mode di semua app, termasuk terminal.
+s248|M|P|Font di terminal pakai Fira Code dengan ligature aktif.
+s249|M|P|Gw prefer jawaban yang to the point, tanpa basa-basi.
+s250|M|P|Kalau ngoding, Dimas suka dengerin playlist synthwave.
+s251|M|P|Dimas ngopi-nya pakai V60, bukan mesin espresso.
+s252|M|C|Aira lagi suka banget sama dinosaurus dan koleksi action figure T-Rex.
+s253|M|C|Weekend ini family trip ke Lembang naik mobil jam 8 pagi.
+s254|M|C|Reservasi hotel di Labuan Bajo sudah di-book lewat Agoda.
+s255|M|C|Tiket pesawat Labuan Bajo pakai maskapai Citilink, berangkat dari Bandara Husein.
+s256|M|C|Check-in hotel jam 2 siang, check-out jam 12 siang.
+s257|M|C|Anniversary dinner dibooking di restoran Sky Dining Bandung.
+s258|M|C|Hadiah ulang tahun Sari tahun ini voucher spa di Dago.
+s259|M|C|Sari request dibeliin tas kecil warna navy untuk ulang tahun.
+s260|M|C|Budget bulanan groceries sekitar Rp3 juta untuk 3 orang.
+s261|M|C|Cicilan KPR auto-debit tiap tanggal 5 dari rekening BCA.
+s262|M|C|Reminder bayar pajak motor di aplikasi Signal bulan September.
+s263|M|S|Smart TV Samsung di ruang keluarga support Netflix dan YouTube.
+s264|M|S|WiFi guest password diganti tiap 3 bulan.
+s265|M|S|Pi-hole di rumah udah block iklan di semua device.
+s266|M|S|Home Assistant punya automation lampu nyala jam 6 sore.
+s267|M|S|CCTV Imou bisa diakses dari app di HP lewat cloud.
+s268|M|K|Dimas lagi belajar Rust buat project CLI kecil.
+s269|M|K|Course Kubernetes di Udemy sudah selesai 40 persen.
+s270|M|K|Catatan belajar Docker disimpan di folder Knowledge di Obsidian.
+s271|M|K|Konsep eventual consistency dijelaskan Dimas pakai analogi kasir warung.
+s272|M|K|Cheat sheet Git di-print dan ditempel di dinding ruang kerja.
+s273|M|W|Standup update dikirim via Slack kalau Dimas tidak bisa join.
+s274|M|W|Invoice dibuat pakai template Google Docs lalu export jadi PDF.
+s275|M|W|Reminder invoice follow-up di-set di Google Calendar tiap Senin.
+s276|M|W|Kontrak klien baru wajib di-review lawyer langganan, Pak Fajar.
+s277|M|W|Project handover butuh dokumentasi README dan diagram arsitektur.
+s278|M|P|Dimas ga suka notifikasi push dari app belanja online.
+s279|M|P|Sari lebih suka dikirimin voice note daripada pesan panjang.
+s280|M|C|Les piano Aira diganti jadi online kalau hujan deras.
+s281|M|C|Guru piano Aira namanya Kak Sinta, tarif per bulan Rp600 ribu.
+s282|M|C|Aira ikut lomba menggambar tingkat kota bulan depan.
+s283|M|C|Jemput sekolah Aira kalau Sari ada rapat guru dilakukan Dimas.
+s284|M|C|Daycare darurat kalau keduanya sibuk ada di penitipan Ceria.
+s285|M|C|Perayaan ulang tahun Aira rencananya di rumah dengan tema dino.
+s286|M|W|Dimas ngecek email bisnis jam 9 pagi dan 4 sore saja.
+s287|M|W|Weekly report ke Pak Hendra dikirim via email bukan WA.
+s288|M|J|Server staging dashboard logistik di VPS Hetzner Singapore.
+s289|M|J|Monitoring pakai Uptime Kuma, alert masuk ke Telegram.
+s290|M|J|Log aplikasi dikirim ke Loki dan dilihat lewat Grafana.
+s291|M|J|Database dashboard logistik pakai PostgreSQL dengan ekstensi PostGIS.
+s292|M|J|Query geospasial dioptimasi dengan GiST index.
+s293|M|K|Alasan pakai PostGIS: butuh query radius dan polygon yang cepat.
+s294|M|P|Prefer Linux untuk dev, tapi Windows untuk gaming di desktop rumah.
+s295|M|S|Desktop rumah dual boot Windows 11 dan Ubuntu.
+s296|M|S|Storage SSD NVMe 1 TB di desktop rumah, sudah terisi 70 persen.
+s297|M|S|Backup laptop kerja pakai Restic ke Backblaze B2.
+s298|M|S|Restic jalan otomatis tiap malam jam 1 lewat systemd timer.
+s299|M|W|Password manager Bitwarden self-hosted pakai Vaultwarden di Raspberry Pi.
+s300|M|W|Hardware key YubiKey ada dua, satu dibawa satu disimpan di brankas.
+s301|M|C|Dimas baru ganti ban motor, masih garansi 6 bulan.
+s302|M|C|Servis motor rutin tiap 3 bulan di bengkel Pak Joko.
+s303|M|C|Oli motor pakai Shell Advance, ganti tiap 2.000 km.
+s304|M|C|Jadwal cek kesehatan tahunan Dimas di bulan Mei.
+s305|M|C|Dimas lagi diet, target turun 5 kg sebelum Desember.
+s306|M|C|Gula dibatasi, ganti pakai stevia di teh.
+s307|M|K|Dimas lagi nulis thread soal pengalaman migrasi dari MySQL ke Postgres.
+s308|M|K|Talk Dimas di meetup Python Bandung bahas FastAPI dan async.
+s309|M|K|Slide talk disimpan di Google Slides dengan tema minimalis.
+s310|M|P|Dimas ga mau dikontak vendor sales lewat WA.
+s311|M|P|Notifikasi email dari LinkedIn dimatikan semua.
+s312|M|C|Keluarga rutin ke Alun-Alun Bandung tiap malam Minggu pertama.
+s313|M|C|Kue ulang tahun biasanya pesan di toko Brownies Amanda.
+s314|M|C|Dimas hobi lari pagi 5 km tiap Minggu di Gasibu.
+s315|M|C|Target lari Dimas: ikut half marathon Bandung bulan Oktober.
+s316|M|C|Sepatu lari Dimas Nike Pegasus, ukuran 42.
+s317|M|W|Handover project lama ke Rudi sudah beres, dokumentasi di Notion.
+s318|M|W|Rudi bakal jadi backup kalau Dimas cuti lama.
+s319|M|W|Cuti tahunan Dimas diambil akhir Desember bareng liburan sekolah.
+s320|M|W|Deadline fitur laporan dashboard logistik jatuh di akhir kuartal.

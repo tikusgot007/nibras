@@ -1,0 +1,39 @@
+{
+  "env": {
+    "os": "Windows-11-10.0.26200-SP0",
+    "cpu": "Intel(R) Core(TM) i5-4460  CPU @ 3.20GHz",
+    "physical_cores": 4,
+    "logical_cores": 4,
+    "ram_gb": 31.9,
+    "python": "3.14.8",
+    "onnxruntime": "1.31.1",
+    "numpy": "2.5.4",
+    "tokenizers": "0.23.3",
+    "sqlite": "3.53.1"
+  },
+  "model_files_mb": {
+    "int8": 112.9,
+    "fp32": 448.5
+  },
+  "n_entries": 10000,
+  "load_int8": {
+    "tokenizer_s": 0.7551,
+    "model_s": 0.5425
+  },
+  "index_int8": {
+    "total_s": 260.33,
+    "per_entry_ms": 26.033,
+    "batch_size": 32
+  },
+  "query_int8_ms": {
+    "median": 26.0,
+    "p95": 44.56,
+    "n": 200
+  },
+  "matrix_mb": 14.6,
+  "load_fp32": {
+    "tokenizer_s": 0.8671,
+    "model_s": 1.1803
+  },
+  "ram_peak_mb": 1154.8
+}

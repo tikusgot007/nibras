@@ -1,0 +1,2002 @@
+[
+ {
+  "id": "g01a",
+  "text_alt": "Dimas likes black coffee without sugar."
+ },
+ {
+  "id": "g01b",
+  "text_alt": "Dimas's wife, Sari, likes coffee with milk and palm sugar (gula aren)."
+ },
+ {
+  "id": "g01c",
+  "text_alt": "Dimas stops drinking coffee after 3 pm because it makes it hard to sleep."
+ },
+ {
+  "id": "g02a",
+  "text_alt": "Kucing milik pengguna, Mochi, adalah kucing oranye belang berusia 3 tahun."
+ },
+ {
+  "id": "g02b",
+  "text_alt": "Tetangga punya kucing hitam bernama Luna yang sering main ke taman."
+ },
+ {
+  "id": "g02c",
+  "text_alt": "Mochi needs deworming medicine every three months."
+ },
+ {
+  "id": "g03a",
+  "text_alt": "Dimas's daughter, Aira, is in 2nd grade at SDN Cipaganti."
+ },
+ {
+  "id": "g03b",
+  "text_alt": "Aira leaves for school at 6:30, taken by Sari."
+ },
+ {
+  "id": "g03c",
+  "text_alt": "Aira's piano lesson is every Wednesday at 4 pm."
+ },
+ {
+  "id": "g04a",
+  "text_alt": "Pengguna mengendarai Honda Brio tahun 2019 warna silver."
+ },
+ {
+  "id": "g04b",
+  "text_alt": "Sari mengendarai Suzuki Ertiga putih untuk mengantar sekolah."
+ },
+ {
+  "id": "g04c",
+  "text_alt": "The Brio is serviced every 5,000 km at the Honda Soekarno-Hatta workshop."
+ },
+ {
+  "id": "g05a",
+  "text_alt": "Pengguna lebih suka VS Code dengan ekstensi Vim."
+ },
+ {
+  "id": "g05b",
+  "text_alt": "Untuk edit cepat di server, pengguna memakai nano, bukan vim."
+ },
+ {
+  "id": "g05c",
+  "text_alt": "Dimas uses the Dracula theme in all his editors."
+ },
+ {
+  "id": "g06a",
+  "text_alt": "Bahasa backend utama adalah Python 3.12 dengan FastAPI."
+ },
+ {
+  "id": "g06b",
+  "text_alt": "For quick scripts, Dimas uses Go, not Python."
+ },
+ {
+  "id": "g06c",
+  "text_alt": "Internal frontend tools use Svelte, not React."
+ },
+ {
+  "id": "g07a",
+  "text_alt": "The Nibras project is deployed from the fase0 branch first."
+ },
+ {
+  "id": "g07b",
+  "text_alt": "The shop app is deployed to the production server only on Tuesday nights."
+ },
+ {
+  "id": "g07c",
+  "text_alt": "Deploy staging untuk layanan billing berjalan otomatis setiap ada merge ke branch develop."
+ },
+ {
+  "id": "g08a",
+  "text_alt": "Team standup is at 9:30 every workday via Google Meet."
+ },
+ {
+  "id": "g08b",
+  "text_alt": "Weekly review with client Pak Hendra is every Thursday at 2 pm."
+ },
+ {
+  "id": "g08c",
+  "text_alt": "Tidak ada meeting pada Jumat sore; waktu itu disisihkan untuk deep work."
+ },
+ {
+  "id": "g09a",
+  "text_alt": "Dimas is allergic to shrimp; don't suggest seafood restaurants."
+ },
+ {
+  "id": "g09b",
+  "text_alt": "Sari is allergic to peanuts."
+ },
+ {
+  "id": "g09c",
+  "text_alt": "Aira tidak toleran laktosa dan minum susu oat."
+ },
+ {
+  "id": "g10a",
+  "text_alt": "Pengguna tidur sekitar jam 11 malam dan bangun jam 5.30 pagi."
+ },
+ {
+  "id": "g10b",
+  "text_alt": "Sari usually sleeps earlier, at 9 pm."
+ },
+ {
+  "id": "g10c",
+  "text_alt": "On weekends Dimas wakes up at 7, a bit later is fine."
+ },
+ {
+  "id": "g11a",
+  "text_alt": "HP pengguna adalah Pixel 8 dengan Android 15."
+ },
+ {
+  "id": "g11b",
+  "text_alt": "Dimas's old phone, a Samsung A52, is now used by Aira for studying."
+ },
+ {
+  "id": "g11c",
+  "text_alt": "Sari uses an iPhone 13."
+ },
+ {
+  "id": "g12a",
+  "text_alt": "Laptop kerja adalah ThinkPad T14 dengan RAM 32GB menjalankan Ubuntu 24.04."
+ },
+ {
+  "id": "g12b",
+  "text_alt": "Aira's laptop is a cheap Chromebook from school."
+ },
+ {
+  "id": "g12c",
+  "text_alt": "Desktop rumah menjalankan Windows 11 dengan Ryzen 5 dan RTX 3060."
+ },
+ {
+  "id": "g13a",
+  "text_alt": "Family photos are backed up to Google Photos and a 2TB external hard disk at the end of every month."
+ },
+ {
+  "id": "g13b",
+  "text_alt": "Kode proyek di-mirror ke GitHub dan instance Gitea self-hosted."
+ },
+ {
+  "id": "g13c",
+  "text_alt": "The production database is backed up automatically at 2 am to S3 and kept for 30 days."
+ },
+ {
+  "id": "g14a",
+  "text_alt": "Dimas listens to lo-fi while coding."
+ },
+ {
+  "id": "g14b",
+  "text_alt": "Sari suka pop Indonesia, terutama Tulus dan Raisa."
+ },
+ {
+  "id": "g14c",
+  "text_alt": "Aira likes children's songs and Disney movie soundtracks."
+ },
+ {
+  "id": "g15a",
+  "text_alt": "Last year's family vacation was to Yogyakarta for 4 days."
+ },
+ {
+  "id": "g15b",
+  "text_alt": "Rencana liburan keluarga bulan Juli nanti: Labuan Bajo selama 5 hari."
+ },
+ {
+  "id": "g15c",
+  "text_alt": "Dimas really wants to visit Japan during cherry blossom season, but there's no firm plan yet."
+ },
+ {
+  "id": "g16a",
+  "text_alt": "Pengguna main bulutangkis setiap Sabtu pagi di GOR Pajajaran."
+ },
+ {
+  "id": "g16b",
+  "text_alt": "Dimas goes fishing once a month at Situ Patenggang."
+ },
+ {
+  "id": "g16c",
+  "text_alt": "Sari attends a yoga class every Tuesday and Friday morning."
+ },
+ {
+  "id": "g17a",
+  "text_alt": "Monthly salary arrives on the 25th; the electricity bill is paid on the 10th."
+ },
+ {
+  "id": "g17b",
+  "text_alt": "Target tabungan bulanan adalah 20 persen dari pendapatan, disimpan di index fund."
+ },
+ {
+  "id": "g17c",
+  "text_alt": "The mortgage installment is Rp4.2 million per month, paid off in 2038."
+ },
+ {
+  "id": "g18a",
+  "text_alt": "Klien utama adalah PT Maju Logistik, mengerjakan dashboard pelacakan armada mereka."
+ },
+ {
+  "id": "g18b",
+  "text_alt": "The second client is Toko Berkah, for whom a POS and inventory system is being built."
+ },
+ {
+  "id": "g18c",
+  "text_alt": "Pak Hendra from PT Maju asks for the invoice to be sent on the 1st of every month."
+ },
+ {
+  "id": "g19a",
+  "text_alt": "The annual tax return must be filed by 31 March at the latest."
+ },
+ {
+  "id": "g19b",
+  "text_alt": "Pengguna adalah freelancer terdaftar dan membayar pajak final 0,5 persen dari pendapatan."
+ },
+ {
+  "id": "g19c",
+  "text_alt": "Withholding tax slips from clients are stored in the Tax folder on Google Drive."
+ },
+ {
+  "id": "g20a",
+  "text_alt": "Lebih suka jawaban dalam poin-poin singkat daripada paragraf panjang."
+ },
+ {
+  "id": "g20b",
+  "text_alt": "Project documentation is written in Indonesian, while code and comments are in English."
+ },
+ {
+  "id": "g20c",
+  "text_alt": "Pesan commit mengikuti format Conventional Commits."
+ },
+ {
+  "id": "g21a",
+  "text_alt": "The project's main branch is called main, not master."
+ },
+ {
+  "id": "g21b",
+  "text_alt": "Pull request butuh minimal satu approval sebelum merge."
+ },
+ {
+  "id": "g21c",
+  "text_alt": "Rebasing is forbidden on branches that have already been pushed and shared."
+ },
+ {
+  "id": "g22a",
+  "text_alt": "Database produksi adalah PostgreSQL 16 yang di-hosting di Supabase."
+ },
+ {
+  "id": "g22b",
+  "text_alt": "The local database for development uses SQLite to keep things lightweight."
+ },
+ {
+  "id": "g22c",
+  "text_alt": "The cache layer uses Redis with a default TTL of 10 minutes."
+ },
+ {
+  "id": "g23a",
+  "text_alt": "Penyedia VPS adalah Hetzner, instance CX22 di Singapura."
+ },
+ {
+  "id": "g23b",
+  "text_alt": "The domain was bought at Niagahoster and DNS is managed through Cloudflare."
+ },
+ {
+  "id": "g23c",
+  "text_alt": "Sertifikat SSL diperpanjang otomatis lewat Let's Encrypt."
+ },
+ {
+  "id": "g24a",
+  "text_alt": "Dimas's favorite food is nasi timbel with salted fish."
+ },
+ {
+  "id": "g24b",
+  "text_alt": "Sari's favorites are bakso and chicken noodles (mie ayam)."
+ },
+ {
+  "id": "g24c",
+  "text_alt": "Camilan favorit Aira adalah pisang goreng."
+ },
+ {
+  "id": "g25a",
+  "text_alt": "Dimas's regular lunch spot is Warung Bu Eha near the coworking space."
+ },
+ {
+  "id": "g25b",
+  "text_alt": "Tempat makan malam keluarga adalah Sate Hadori, setiap Minggu pertama tiap bulan."
+ },
+ {
+  "id": "g25c",
+  "text_alt": "Avoid Padang restaurants when watching cholesterol."
+ },
+ {
+  "id": "g26a",
+  "text_alt": "Dimas has high cholesterol; the doctor recommends regular exercise."
+ },
+ {
+  "id": "g26b",
+  "text_alt": "Sari minum suplemen vitamin D setiap pagi."
+ },
+ {
+  "id": "g26c",
+  "text_alt": "Aira's next booster immunization is scheduled for March."
+ },
+ {
+  "id": "g27a",
+  "text_alt": "The family doctor is dr. Amanda at Klinik Sehat Sentosa."
+ },
+ {
+  "id": "g27b",
+  "text_alt": "Kontrol gigi setiap enam bulan dengan Dr. Budi di Dago."
+ },
+ {
+  "id": "g27c",
+  "text_alt": "Dimas's eyesight is minus 2.5 and he changes glasses every two years."
+ },
+ {
+  "id": "g28a",
+  "text_alt": "The house is in Griya Asri housing complex, East Bandung, block C number 12."
+ },
+ {
+  "id": "g28b",
+  "text_alt": "Router WiFi adalah TP-Link Archer dan panel adminnya ada di 192.168.0.1."
+ },
+ {
+  "id": "g28c",
+  "text_alt": "The house electricity is PLN postpaid; the meter is next to the fence."
+ },
+ {
+  "id": "g29a",
+  "text_alt": "Lampu pintar merek Philips Hue, hanya dipasang di ruang tamu."
+ },
+ {
+  "id": "g29b",
+  "text_alt": "The home CCTV is an Imou brand, 3 cameras, with footage kept for 7 days."
+ },
+ {
+  "id": "g29c",
+  "text_alt": "The Roborock robot vacuum runs automatically at 10 am every day."
+ },
+ {
+  "id": "g30a",
+  "text_alt": "Sedang membaca buku Designing Data-Intensive Applications."
+ },
+ {
+  "id": "g30b",
+  "text_alt": "Sari is reading the novel Laut Bercerita by Leila S. Chudori."
+ },
+ {
+  "id": "g30c",
+  "text_alt": "Dimas prefers physical books over e-books."
+ },
+ {
+  "id": "g31a",
+  "text_alt": "Monthly groceries are done at Superindo on the first weekend of the month."
+ },
+ {
+  "id": "g31b",
+  "text_alt": "Belanja online kebanyakan di Tokopedia; menghindari Shopee setelah pengalaman refund yang buruk."
+ },
+ {
+  "id": "g31c",
+  "text_alt": "Aira's school supplies are bought at the Gramedia Merdeka store."
+ },
+ {
+  "id": "g32a",
+  "text_alt": "Pengguna belajar bahasa Jepang lewat Duolingo, 15 menit setiap hari."
+ },
+ {
+  "id": "g32b",
+  "text_alt": "Sari takes an online English course every Monday night."
+ },
+ {
+  "id": "g32c",
+  "text_alt": "Aira learns Sundanese at school as a local-content subject."
+ },
+ {
+  "id": "g33a",
+  "text_alt": "Zona waktu adalah WIB (UTC+7)."
+ },
+ {
+  "id": "g33b",
+  "text_alt": "Dimas sometimes works from Jakarta at the client's office, usually on Tuesdays."
+ },
+ {
+  "id": "g33c",
+  "text_alt": "Coworking space adalah Kolega di Jalan Riau, dibayar sebagai membership bulanan."
+ },
+ {
+  "id": "g34a",
+  "text_alt": "Work WhatsApp notifications are muted after 8 pm."
+ },
+ {
+  "id": "g34b",
+  "text_alt": "Pesan mendesak dari klien sebaiknya lewat telepon saja."
+ },
+ {
+  "id": "g34c",
+  "text_alt": "Email is checked twice a day: 9 am and 4 pm."
+ },
+ {
+  "id": "g35a",
+  "text_alt": "Memakai Bitwarden sebagai password manager dengan hardware key untuk 2FA."
+ },
+ {
+  "id": "g35b",
+  "text_alt": "Never store passwords in plain text notes."
+ },
+ {
+  "id": "g35c",
+  "text_alt": "The bank account uses a physical KeyBCA token."
+ },
+ {
+  "id": "g36a",
+  "text_alt": "The main account is at BCA; Aira's school savings account is at Bank Mandiri."
+ },
+ {
+  "id": "g36b",
+  "text_alt": "Kartu kredit adalah Jenius Visa, hanya dipakai untuk subscription online."
+ },
+ {
+  "id": "g36c",
+  "text_alt": "The emergency fund is kept in a money-market mutual fund on Bibit."
+ },
+ {
+  "id": "g37a",
+  "text_alt": "Paket Netflix standard dipakai bersama keluarga dan perpanjangan tanggal 5."
+ },
+ {
+  "id": "g37b",
+  "text_alt": "The Spotify Family subscription is paid by Sari."
+ },
+ {
+  "id": "g37c",
+  "text_alt": "Langganan ChatGPT Plus ditagih bulanan ke kartu perusahaan."
+ },
+ {
+  "id": "g38a",
+  "text_alt": "Dimas's shoe size is 42."
+ },
+ {
+  "id": "g38b",
+  "text_alt": "Sari wears size M clothes and size 38 shoes."
+ },
+ {
+  "id": "g38c",
+  "text_alt": "Ukuran seragam sekolah Aira adalah 8."
+ },
+ {
+  "id": "g39a",
+  "text_alt": "Dimas's birthday falls on 14 August."
+ },
+ {
+  "id": "g39b",
+  "text_alt": "Sari was born on 3 February."
+ },
+ {
+  "id": "g39c",
+  "text_alt": "Ulang tahun Aira tanggal 21 November; dia akan berusia 8 tahun."
+ },
+ {
+  "id": "g40a",
+  "text_alt": "Hari jadi pernikahan adalah 12 Juni."
+ },
+ {
+  "id": "g40b",
+  "text_alt": "The anniversary of Dimas's freelance business is 1 March."
+ },
+ {
+  "id": "g40c",
+  "text_alt": "The memorial for Dimas's late father is every 9 October."
+ },
+ {
+  "id": "g41a",
+  "text_alt": "Dimas's parents live in Garut."
+ },
+ {
+  "id": "g41b",
+  "text_alt": "Orang tua Sari tinggal di Surabaya dan berkunjung saat Lebaran."
+ },
+ {
+  "id": "g41c",
+  "text_alt": "Dimas's mother has a routine blood-pressure check every month."
+ },
+ {
+  "id": "g42a",
+  "text_alt": "Dimas's younger brother is Rizal, who works as a doctor in Makassar."
+ },
+ {
+  "id": "g42b",
+  "text_alt": "Kakak Sari, Andi, punya kedai kopi di Malang."
+ },
+ {
+  "id": "g42c",
+  "text_alt": "Dimas's older sister, Mbak Ratna, lives in Singapore and works at a bank."
+ },
+ {
+  "id": "g43a",
+  "text_alt": "Dimas prays Friday prayers at Masjid Al-Ikhlas near the house."
+ },
+ {
+  "id": "g43b",
+  "text_alt": "The women's Quran study group Sari attends is held once a week, on Saturday afternoons."
+ },
+ {
+  "id": "g43c",
+  "text_alt": "Aira ikut kelas mengaji di masjid dekat rumah setiap Minggu pagi."
+ },
+ {
+  "id": "g44a",
+  "text_alt": "Berangkat ke coworking space naik motor, sekitar 25 menit."
+ },
+ {
+  "id": "g44b",
+  "text_alt": "When it rains heavily, Dimas works from home."
+ },
+ {
+  "id": "g44c",
+  "text_alt": "Jalan Pasteur is badly jammed at 7 am."
+ },
+ {
+  "id": "g45a",
+  "text_alt": "Lebih suka jawaban yang menjelaskan alasannya secara singkat sebelum jawaban akhir."
+ },
+ {
+  "id": "g45b",
+  "text_alt": "Do not show emoji in answers."
+ },
+ {
+  "id": "g45c",
+  "text_alt": "If something is ambiguous, ask back first instead of guessing."
+ },
+ {
+  "id": "g46a",
+  "text_alt": "Nibras adalah asisten AI portabel yang berjalan dari flashdisk USB di Windows."
+ },
+ {
+  "id": "g46b",
+  "text_alt": "Nibras's stack: Python, PySide6, and SQLite without WAL."
+ },
+ {
+  "id": "g46c",
+  "text_alt": "Nibras uses the multilingual-e5-small embedding model for memory."
+ },
+ {
+  "id": "g47a",
+  "text_alt": "Layanan billing ditulis dalam Go dan dideploy di Fly.io."
+ },
+ {
+  "id": "g47b",
+  "text_alt": "The notification service uses RabbitMQ and Celery workers."
+ },
+ {
+  "id": "g47c",
+  "text_alt": "The API gateway uses Kong, rate limited to 100 requests per minute."
+ },
+ {
+  "id": "g48a",
+  "text_alt": "Pelacakan error memakai Sentry, dan alert masuk ke channel Telegram."
+ },
+ {
+  "id": "g48b",
+  "text_alt": "The metrics dashboard is in Grafana; the server is monitored with Prometheus."
+ },
+ {
+  "id": "g48c",
+  "text_alt": "On-call: if uptime drops below 99 percent, Dimas gets an automatic phone call."
+ },
+ {
+  "id": "g49a",
+  "text_alt": "Unit test memakai pytest dengan coverage minimal 80 persen."
+ },
+ {
+  "id": "g49b",
+  "text_alt": "End-to-end tests use Playwright and run before every release."
+ },
+ {
+  "id": "g49c",
+  "text_alt": "Load testing with k6 is only done on staging."
+ },
+ {
+  "id": "g50a",
+  "text_alt": "CI berjalan di GitHub Actions dan pipeline-nya memakan waktu sekitar 6 menit."
+ },
+ {
+  "id": "g50b",
+  "text_alt": "The Docker image is built with layer caching to make it faster."
+ },
+ {
+  "id": "g50c",
+  "text_alt": "The release tag format is v1.2.3, not plain 1.2.3."
+ },
+ {
+  "id": "g51a",
+  "text_alt": "This year's learning goal: the basics of Rust and Kubernetes."
+ },
+ {
+  "id": "g51b",
+  "text_alt": "Ingin mendapatkan sertifikasi AWS Solutions Architect Associate."
+ },
+ {
+  "id": "g51c",
+  "text_alt": "Dimas takes an online machine learning class every Saturday night."
+ },
+ {
+  "id": "g52a",
+  "text_alt": "Aira joins a swimming extracurricular every Friday afternoon."
+ },
+ {
+  "id": "g52b",
+  "text_alt": "Guru Aira adalah Bu Rina, dengan rapat orang tua-guru setiap semester."
+ },
+ {
+  "id": "g52c",
+  "text_alt": "Aira is afraid of the dark, so she sleeps with a night light."
+ },
+ {
+  "id": "g53a",
+  "text_alt": "The monstera plant in the living room is watered twice a week."
+ },
+ {
+  "id": "g53b",
+  "text_alt": "Pengguna menanam cabai dan kemangi di balkon."
+ },
+ {
+  "id": "g53c",
+  "text_alt": "Fertilizer for the ornamental plants is changed once a month."
+ },
+ {
+  "id": "g54a",
+  "text_alt": "Hidangan andalan Sari adalah rendang, dimasak setiap hari Minggu."
+ },
+ {
+  "id": "g54b",
+  "text_alt": "Dimas is good at making kampung-style fried rice."
+ },
+ {
+  "id": "g54c",
+  "text_alt": "The sambal matah recipe from his mother-in-law is saved in his notes."
+ },
+ {
+  "id": "g55a",
+  "text_alt": "Dimas's friend Bayu's wedding is on 18 December in Lembang."
+ },
+ {
+  "id": "g55b",
+  "text_alt": "Meetup Python Bandung diadakan setiap Kamis terakhir tiap bulan."
+ },
+ {
+  "id": "g55c",
+  "text_alt": "The 2008 high-school batch reunion is planned for January."
+ },
+ {
+  "id": "g56a",
+  "text_alt": "Dimas's heartburn medicine is antacid, taken when it hurts."
+ },
+ {
+  "id": "g56b",
+  "text_alt": "Aira punya alergi debu ringan, jadi kamarnya rutin disedot debu."
+ },
+ {
+  "id": "g56c",
+  "text_alt": "The paracetamol stock in the first-aid box is checked every 6 months."
+ },
+ {
+  "id": "g57a",
+  "text_alt": "Headphone yang dipakai adalah Sony WH-1000XM5."
+ },
+ {
+  "id": "g57b",
+  "text_alt": "Dimas's smartwatch is an Amazfit, used to track his runs."
+ },
+ {
+  "id": "g57c",
+  "text_alt": "Tablet keluarga adalah iPad generasi ke-9, kebanyakan dipakai Aira."
+ },
+ {
+  "id": "g58a",
+  "text_alt": "The printer at home is an Epson L3210."
+ },
+ {
+  "id": "g58b",
+  "text_alt": "Documents are scanned using the Adobe Scan app on the phone."
+ },
+ {
+  "id": "g58c",
+  "text_alt": "A Synology DS220 NAS stores backups, accessed through a VPN."
+ },
+ {
+  "id": "g59a",
+  "text_alt": "Lebih suka naik kereta daripada pesawat untuk perjalanan ke Jakarta (kereta cepat Whoosh)."
+ },
+ {
+  "id": "g59b",
+  "text_alt": "For trips to Garut, they drive via Nagreg."
+ },
+ {
+  "id": "g59c",
+  "text_alt": "Flight tickets are always booked through Traveloka."
+ },
+ {
+  "id": "g60a",
+  "text_alt": "Zakat is paid every Ramadan through Baznas."
+ },
+ {
+  "id": "g60b",
+  "text_alt": "Donasi bulanan ke panti asuhan setempat sebesar Rp500.000."
+ },
+ {
+  "id": "g60c",
+  "text_alt": "Dimas volunteers for a children's literacy program on the first week of every month."
+ },
+ {
+  "id": "s001",
+  "text_alt": "Dimas prefers warm unsweetened tea in the morning before breakfast."
+ },
+ {
+  "id": "s002",
+  "text_alt": "Dimas's motorbike plate number is D 4521 XYZ, with tax due in September."
+ },
+ {
+  "id": "s003",
+  "text_alt": "The next-door neighbor is Pak Wahyu, the RT head for block C."
+ },
+ {
+  "id": "s004",
+  "text_alt": "The client's financial report is made in Excel format on the 28th of every month."
+ },
+ {
+  "id": "s005",
+  "text_alt": "Dimas doesn't like excessive spiciness, medium level is enough."
+ },
+ {
+  "id": "s006",
+  "text_alt": "Aira's school holds a parents' meeting at the start of every semester, on a Saturday."
+ },
+ {
+  "id": "s007",
+  "text_alt": "The LAN cable in the home office connects directly to the switch in the cabinet."
+ },
+ {
+  "id": "s008",
+  "text_alt": "The logistics dashboard project uses maps from OpenStreetMap, not Google Maps."
+ },
+ {
+  "id": "s009",
+  "text_alt": "Work estimates always add a 20 percent buffer for client revisions."
+ },
+ {
+  "id": "s010",
+  "text_alt": "The spare house key is kept with Bu Tini next door on the left."
+ },
+ {
+  "id": "s011",
+  "text_alt": "Dimas prefers doing hard tasks in the morning before 10 am."
+ },
+ {
+  "id": "s012",
+  "text_alt": "Dimas is studying the CQRS design pattern for the next project."
+ },
+ {
+  "id": "s013",
+  "text_alt": "Sari's father is Pak Teguh, a retired math teacher."
+ },
+ {
+  "id": "s014",
+  "text_alt": "The neighbor's dog often barks at midnight; it has been reported to the RT."
+ },
+ {
+  "id": "s015",
+  "text_alt": "Invoices for client PT Maju Logistik are due 14 days after being sent."
+ },
+ {
+  "id": "s016",
+  "text_alt": "The work laptop's battery is starting to swell and needs replacing next month."
+ },
+ {
+  "id": "s017",
+  "text_alt": "The PDF report feature in the Toko Berkah app uses the dompdf library."
+ },
+ {
+  "id": "s018",
+  "text_alt": "Dimas doesn't want to take calls from unknown numbers during work hours."
+ },
+ {
+  "id": "s019",
+  "text_alt": "The motorbike installment was paid off last May."
+ },
+ {
+  "id": "s020",
+  "text_alt": "Aira dreams of becoming a veterinarian."
+ },
+ {
+  "id": "s021",
+  "text_alt": "Meetings with new clients must be preceded by a written brief document."
+ },
+ {
+  "id": "s022",
+  "text_alt": "The hajj savings account under Dimas and Sari's names is at Bank Syariah Indonesia."
+ },
+ {
+  "id": "s023",
+  "text_alt": "Sari doesn't like horror movies; she prefers family dramas."
+ },
+ {
+  "id": "s024",
+  "text_alt": "Dimas watches the Fireship YouTube channel to keep up with tech news."
+ },
+ {
+  "id": "s025",
+  "text_alt": "A backup router is kept in the desk drawer in case the main internet goes down."
+ },
+ {
+  "id": "s026",
+  "text_alt": "Minor flooding usually happens on the street in front of the housing complex during heavy rain."
+ },
+ {
+  "id": "s027",
+  "text_alt": "Old project archive folders are compressed at the end of each year and stored on the NAS."
+ },
+ {
+  "id": "s028",
+  "text_alt": "The Toko Berkah inventory app stores item data in MySQL version 8."
+ },
+ {
+  "id": "s029",
+  "text_alt": "The family health insurance is from Allianz, with the premium paid annually in January."
+ },
+ {
+  "id": "s030",
+  "text_alt": "Dimas has not drunk soda for two years."
+ },
+ {
+  "id": "s031",
+  "text_alt": "Sari works as an English teacher at SMP Negeri 5 Bandung."
+ },
+ {
+  "id": "s032",
+  "text_alt": "Sari usually finishes work at school at three in the afternoon."
+ },
+ {
+  "id": "s033",
+  "text_alt": "Dimas likes walking around the complex in the evening while listening to podcasts."
+ },
+ {
+  "id": "s034",
+  "text_alt": "Dimas's favorite Indonesian-language tech podcast is Podkesmas."
+ },
+ {
+  "id": "s035",
+  "text_alt": "Before a big feature release, Dimas always writes rollback notes."
+ },
+ {
+  "id": "s036",
+  "text_alt": "The Toko Berkah app theme is made dark because the cashier works at night."
+ },
+ {
+  "id": "s037",
+  "text_alt": "The regular refill water gallon shop is right in front of the alley, with free delivery."
+ },
+ {
+  "id": "s038",
+  "text_alt": "3 kg LPG gas canisters are bought from Pak Asep's shop every two weeks."
+ },
+ {
+  "id": "s039",
+  "text_alt": "The thermal printer at Toko Berkah connects via USB and Bluetooth."
+ },
+ {
+  "id": "s040",
+  "text_alt": "The property tax (PBB) is paid in July through the banking app."
+ },
+ {
+  "id": "s041",
+  "text_alt": "Client contract documents are signed digitally via PrivyID."
+ },
+ {
+  "id": "s042",
+  "text_alt": "Dimas keeps daily notes in the Obsidian app."
+ },
+ {
+  "id": "s043",
+  "text_alt": "Dimas rereads his weekly notes every Sunday night."
+ },
+ {
+  "id": "s044",
+  "text_alt": "Dimas's parents-in-law usually bring steamed sponge cake (bolu kukus) from Surabaya as a gift."
+ },
+ {
+  "id": "s045",
+  "text_alt": "Aira has a red folding bike she rides every Sunday morning."
+ },
+ {
+  "id": "s046",
+  "text_alt": "Freelance payments from overseas clients are received through Wise."
+ },
+ {
+  "id": "s047",
+  "text_alt": "The logistics dashboard shows truck positions every 30 seconds."
+ },
+ {
+  "id": "s048",
+  "text_alt": "Truck delay notifications are sent via email and WhatsApp to the dispatcher."
+ },
+ {
+  "id": "s049",
+  "text_alt": "The family's emergency contacts are Mbak Ratna and dr. Rizal."
+ },
+ {
+  "id": "s050",
+  "text_alt": "The electricity account number for the house is registered under Dimas's late father's name."
+ },
+ {
+  "id": "s051",
+  "text_alt": "Sari likes tulips, but they're hard to find in Bandung."
+ },
+ {
+  "id": "s052",
+  "text_alt": "Aira's birthday gift last year was a painting set."
+ },
+ {
+  "id": "s053",
+  "text_alt": "Dimas is interested in analog photography and owns a Canon AE-1 camera."
+ },
+ {
+  "id": "s054",
+  "text_alt": "Film rolls are developed at a small studio near Braga."
+ },
+ {
+  "id": "s055",
+  "text_alt": "Dimas doesn't take on projects with a deadline shorter than two weeks."
+ },
+ {
+  "id": "s056",
+  "text_alt": "Revisions outside the original agreement incur an extra hourly charge."
+ },
+ {
+  "id": "s057",
+  "text_alt": "The neighbor's child, Kenzo, is Aira's playmate."
+ },
+ {
+  "id": "s058",
+  "text_alt": "Dimas's extended family gathering (arisan) is held every third month in Garut."
+ },
+ {
+  "id": "s059",
+  "text_alt": "Dimas likes chicken porridge without celery."
+ },
+ {
+  "id": "s060",
+  "text_alt": "Sari regularly does morning exercise at the complex park on Sundays."
+ },
+ {
+  "id": "s061",
+  "text_alt": "The power outlets in the home office have a UPS to avoid sudden shutdowns."
+ },
+ {
+  "id": "s062",
+  "text_alt": "The second monitor, 27 inches, is mounted vertically for reading code."
+ },
+ {
+  "id": "s063",
+  "text_alt": "The Toko Berkah staging server uses Ubuntu with Nginx and PHP-FPM."
+ },
+ {
+  "id": "s064",
+  "text_alt": "The Toko Berkah database backup is sent to Google Drive at 11 pm."
+ },
+ {
+  "id": "s065",
+  "text_alt": "Dimas uses Notion to manage tasks and the project kanban board."
+ },
+ {
+  "id": "s066",
+  "text_alt": "The weekly report to the client is sent on Friday before 5 pm."
+ },
+ {
+  "id": "s067",
+  "text_alt": "Dimas records new technical terms in a personal glossary."
+ },
+ {
+  "id": "s068",
+  "text_alt": "Dimas's favorite Python reference book is Fluent Python."
+ },
+ {
+  "id": "s069",
+  "text_alt": "The part-time helper comes every Monday and Thursday morning."
+ },
+ {
+  "id": "s070",
+  "text_alt": "Aira's school fee per semester is Rp3.5 million."
+ },
+ {
+  "id": "s071",
+  "text_alt": "Dimas prefers short meetings without slides."
+ },
+ {
+  "id": "s072",
+  "text_alt": "Sari likes shopping for fresh vegetables at the traditional market on Saturdays."
+ },
+ {
+  "id": "s073",
+  "text_alt": "Aira's favorite ice cream flavor is strawberry."
+ },
+ {
+  "id": "s074",
+  "text_alt": "The koi pond in the backyard is cleaned once a month."
+ },
+ {
+  "id": "s075",
+  "text_alt": "The house water pump is a Shimizu brand, last serviced in March."
+ },
+ {
+  "id": "s076",
+  "text_alt": "The water heater in the main bathroom often turns off by itself and needs a technician check."
+ },
+ {
+  "id": "s077",
+  "text_alt": "The regular AC technician is Pak Dedi, whose number is saved in contacts."
+ },
+ {
+  "id": "s078",
+  "text_alt": "The bedroom AC is cleaned every six months."
+ },
+ {
+  "id": "s079",
+  "text_alt": "Dimas turns down projects involving online gambling."
+ },
+ {
+  "id": "s080",
+  "text_alt": "Freelance work contracts are a minimum of three months to ensure stable income."
+ },
+ {
+  "id": "s081",
+  "text_alt": "The Toko Berkah staff attendance module uses a ZKTeco fingerprint scanner."
+ },
+ {
+  "id": "s082",
+  "text_alt": "The item return feature in the POS app requires a stated reason."
+ },
+ {
+  "id": "s083",
+  "text_alt": "Dimas graduated from Informatics Engineering at ITB, class of 2008."
+ },
+ {
+  "id": "s084",
+  "text_alt": "Sari graduated from English Education at UPI."
+ },
+ {
+  "id": "s085",
+  "text_alt": "Dimas wants to retire early at age 50."
+ },
+ {
+  "id": "s086",
+  "text_alt": "The private retirement fund is managed through stock and bond mutual funds."
+ },
+ {
+  "id": "s087",
+  "text_alt": "Dimas is afraid of heights, so he avoids roller coaster rides."
+ },
+ {
+  "id": "s088",
+  "text_alt": "Sari gets carsick easily on winding roads."
+ },
+ {
+  "id": "s089",
+  "text_alt": "Dimas prefers sleeping with a fan rather than AC."
+ },
+ {
+  "id": "s090",
+  "text_alt": "The bedroom AC is set to 25 degrees when turned on."
+ },
+ {
+  "id": "s091",
+  "text_alt": "Household trash is collected by complex staff every Tuesday and Saturday."
+ },
+ {
+  "id": "s092",
+  "text_alt": "The complex's security fee is Rp150,000 per month."
+ },
+ {
+  "id": "s093",
+  "text_alt": "At the start of every month, Dimas reviews all active SaaS subscriptions."
+ },
+ {
+  "id": "s094",
+  "text_alt": "Subscriptions unused for three months will be cancelled."
+ },
+ {
+  "id": "s095",
+  "text_alt": "Dimas is writing a blog post about PostgreSQL query optimization."
+ },
+ {
+  "id": "s096",
+  "text_alt": "Dimas's personal blog is built with Astro and hosted on Cloudflare Pages."
+ },
+ {
+  "id": "s097",
+  "text_alt": "Dimas's mother enjoys gardening and grows jasmine flowers."
+ },
+ {
+  "id": "s098",
+  "text_alt": "Dimas's parents' wedding anniversary falls in April."
+ },
+ {
+  "id": "s099",
+  "text_alt": "Sari wants to open an English tutoring class for kids at home."
+ },
+ {
+  "id": "s100",
+  "text_alt": "The funding plan for Sari's tutoring class comes from personal savings, not a loan."
+ },
+ {
+  "id": "s101",
+  "text_alt": "Dimas's home office must not be entered when the door is closed."
+ },
+ {
+  "id": "s102",
+  "text_alt": "Dimas usually has dinner with the family at seven."
+ },
+ {
+  "id": "s103",
+  "text_alt": "Sunday afternoon is dedicated family time without gadgets."
+ },
+ {
+  "id": "s104",
+  "text_alt": "Aira is limited to a maximum of one hour of gadget use per day."
+ },
+ {
+  "id": "s105",
+  "text_alt": "The porch light turns on automatically at six in the evening."
+ },
+ {
+  "id": "s106",
+  "text_alt": "The technical contact at PT Maju Logistik is Mbak Dewi from IT."
+ },
+ {
+  "id": "s107",
+  "text_alt": "Pak Hendra prefers to be contacted by phone call, not chat."
+ },
+ {
+  "id": "s108",
+  "text_alt": "The logistics dashboard must support both Indonesian and English."
+ },
+ {
+  "id": "s109",
+  "text_alt": "The truck route map keeps trip history for 90 days."
+ },
+ {
+  "id": "s110",
+  "text_alt": "The logistics dashboard's report export feature supports CSV and PDF formats."
+ },
+ {
+  "id": "s111",
+  "text_alt": "A 65-watt fast charger is carried everywhere in the laptop bag."
+ },
+ {
+  "id": "s112",
+  "text_alt": "The laptop bag is a black Eiger brand, used for two years now."
+ },
+ {
+  "id": "s113",
+  "text_alt": "A Logitech MX Master 3 mouse is used for daily work."
+ },
+ {
+  "id": "s114",
+  "text_alt": "The mechanical keyboard is a Keychron K2 with brown switches."
+ },
+ {
+  "id": "s115",
+  "text_alt": "Dimas can't swim far; he can only do breaststroke briefly."
+ },
+ {
+  "id": "s116",
+  "text_alt": "Aira has been able to swim freestyle since she was six."
+ },
+ {
+  "id": "s117",
+  "text_alt": "Dimas prefers science fiction and thriller movies."
+ },
+ {
+  "id": "s118",
+  "text_alt": "Dimas's all-time favorite movie is Interstellar."
+ },
+ {
+  "id": "s119",
+  "text_alt": "Sari likes Korean dramas and watches them on weekends."
+ },
+ {
+  "id": "s120",
+  "text_alt": "Dimas reads tech news through the Hacker News aggregator every morning."
+ },
+ {
+  "id": "s121",
+  "text_alt": "Dimas tracks work hours per project using the Toggl app."
+ },
+ {
+  "id": "s122",
+  "text_alt": "The monthly work-hours report is sent together with the invoice."
+ },
+ {
+  "id": "s123",
+  "text_alt": "Dimas was hospitalized for dengue fever in 2019."
+ },
+ {
+  "id": "s124",
+  "text_alt": "Dimas's blood type is O positive."
+ },
+ {
+  "id": "s125",
+  "text_alt": "Sari's blood type is A positive."
+ },
+ {
+  "id": "s126",
+  "text_alt": "Aira's blood type is B positive."
+ },
+ {
+  "id": "s127",
+  "text_alt": "The planned release of the first version of the Toko Berkah POS app is early in the third quarter."
+ },
+ {
+  "id": "s128",
+  "text_alt": "User testing of the POS app is done with two of the store's cashiers."
+ },
+ {
+  "id": "s129",
+  "text_alt": "Cashier feedback noted that the delete button is too close to the pay button."
+ },
+ {
+  "id": "s130",
+  "text_alt": "Dimas rents a place in Jakarta for workdays at Rp1.8 million per month."
+ },
+ {
+  "id": "s131",
+  "text_alt": "Dimas learns the basics of stock investing through a free course from OJK."
+ },
+ {
+  "id": "s132",
+  "text_alt": "The family's BPJS Kesehatan card is paid via auto-debit."
+ },
+ {
+  "id": "s133",
+  "text_alt": "Aira's study companion is Dimas on Mondays and Sari on Tuesdays."
+ },
+ {
+  "id": "s134",
+  "text_alt": "Dimas likes the rain and its patter while he works."
+ },
+ {
+  "id": "s135",
+  "text_alt": "Dimas's favorite coffee is Gayo beans, medium roast."
+ },
+ {
+  "id": "s136",
+  "text_alt": "The home brewing setup is a V60 and a manual grinder."
+ },
+ {
+  "id": "s137",
+  "text_alt": "Dimas buys coffee beans from a local roastery in Cihapit."
+ },
+ {
+  "id": "s138",
+  "text_alt": "Dimas's resolution this year is to work overtime no more than twice a month."
+ },
+ {
+  "id": "s139",
+  "text_alt": "Sari's resolution this year is to write an English-learning guidebook."
+ },
+ {
+  "id": "s140",
+  "text_alt": "The family's annual vacation budget is around Rp25 million."
+ },
+ {
+  "id": "s141",
+  "text_alt": "Dimas's acid reflux flares up if he drinks too much coffee."
+ },
+ {
+  "id": "s142",
+  "text_alt": "Dimas caps every online meeting at a maximum of 45 minutes."
+ },
+ {
+  "id": "s143",
+  "text_alt": "Meeting minutes are sent to participants no later than a day after the meeting."
+ },
+ {
+  "id": "s144",
+  "text_alt": "Dimas subscribes to the Kompas digital newspaper to read economic news."
+ },
+ {
+  "id": "s145",
+  "text_alt": "Dimas explains the SOLID principles to his junior using real-world examples."
+ },
+ {
+  "id": "s146",
+  "text_alt": "Dimas mentors two junior developers from the Bandung community."
+ },
+ {
+  "id": "s147",
+  "text_alt": "Mentoring sessions happen every two weeks over video call."
+ },
+ {
+  "id": "s148",
+  "text_alt": "Dimas wants to build a second house in Lembang once the kids are older."
+ },
+ {
+  "id": "s149",
+  "text_alt": "A 200-square-meter plot in Lembang has already been bought under Sari's name."
+ },
+ {
+  "id": "s150",
+  "text_alt": "The land deed and house certificate are kept in a bank safe."
+ },
+ {
+  "id": "s151",
+  "text_alt": "The family card number is stored in an encrypted folder and must never be written in chat."
+ },
+ {
+  "id": "s152",
+  "text_alt": "Family passport and ID card photos are stored in the Bitwarden vault."
+ },
+ {
+  "id": "s153",
+  "text_alt": "Pengguna tidak suka meeting yang sebenarnya bisa diganti email."
+ },
+ {
+  "id": "s154",
+  "text_alt": "Dimas minum sekitar tiga gelas air sebelum tengah hari."
+ },
+ {
+  "id": "s155",
+  "text_alt": "Keluarga mengadopsi anjing hasil penyelamatan bernama Bruno musim dingin lalu."
+ },
+ {
+  "id": "s156",
+  "text_alt": "Bruno perlu diajak jalan dua kali sehari, pagi dan sore."
+ },
+ {
+  "id": "s157",
+  "text_alt": "Vaksinasi tahunan untuk hewan peliharaan jatuh setiap bulan Maret."
+ },
+ {
+  "id": "s158",
+  "text_alt": "Pengguna membuat invoice ke klien dalam IDR tapi menerima USD lewat Wise untuk klien luar negeri."
+ },
+ {
+  "id": "s159",
+  "text_alt": "Invoice yang terlambat dibayar diingatkan setelah tujuh hari dan ditelepon setelah empat belas hari."
+ },
+ {
+  "id": "s160",
+  "text_alt": "Dashboard armada memakai WebSocket untuk posisi truk secara real-time."
+ },
+ {
+  "id": "s161",
+  "text_alt": "Frontend dashboard armada dibangun dengan Svelte dan Tailwind."
+ },
+ {
+  "id": "s162",
+  "text_alt": "Tile peta diambil dari tile server self-hosted supaya tidak kena biaya API."
+ },
+ {
+  "id": "s163",
+  "text_alt": "Alert truk ngebut muncul kalau kecepatan melebihi 90 km/jam."
+ },
+ {
+  "id": "s164",
+  "text_alt": "Aplikasi kasir Toko Berkah menyimpan harga dalam rupiah bulat, tidak pernah pecahan."
+ },
+ {
+  "id": "s165",
+  "text_alt": "Struk Toko Berkah dicetak di kertas thermal 58 mm."
+ },
+ {
+  "id": "s166",
+  "text_alt": "Pemindaian barcode di kasir memakai scanner USB HID yang berfungsi seperti keyboard."
+ },
+ {
+  "id": "s167",
+  "text_alt": "Pengguna lebih suka dark mode di semua aplikasi."
+ },
+ {
+  "id": "s168",
+  "text_alt": "Font favorit adalah JetBrains Mono ukuran 13."
+ },
+ {
+  "id": "s169",
+  "text_alt": "Lebih suka tab daripada spasi hanya di kode Go; selain itu pakai spasi."
+ },
+ {
+  "id": "s170",
+  "text_alt": "Komentar code review harus spesifik dan menyertakan saran perubahan."
+ },
+ {
+  "id": "s171",
+  "text_alt": "Pengguna menulis design doc sebelum fitur apa pun yang butuh waktu lebih dari tiga hari."
+ },
+ {
+  "id": "s172",
+  "text_alt": "Design doc disimpan di Notion dan ditautkan dari issue tracker."
+ },
+ {
+  "id": "s173",
+  "text_alt": "Sprint berlangsung satu minggu dan dimulai hari Senin."
+ },
+ {
+  "id": "s174",
+  "text_alt": "Retrospective diadakan setiap dua minggu sekali pada Jumat pagi."
+ },
+ {
+  "id": "s175",
+  "text_alt": "Baru-baru ini mempelajari algoritma konsensus Raft dan membuat versi sederhananya."
+ },
+ {
+  "id": "s176",
+  "text_alt": "Membaca satu paper riset dari ACM digital library setiap dua minggu."
+ },
+ {
+  "id": "s177",
+  "text_alt": "Bahasa pemrograman favorit untuk dipelajari adalah Elixir."
+ },
+ {
+  "id": "s178",
+  "text_alt": "Dimas tumbuh besar di Garut sebelum pindah ke Bandung untuk kuliah."
+ },
+ {
+  "id": "s179",
+  "text_alt": "Sari lahir di Surabaya dan pindah ke Bandung setelah menikah."
+ },
+ {
+  "id": "s180",
+  "text_alt": "Pasangan ini bertemu di acara reuni alumni kampus tahun 2013."
+ },
+ {
+  "id": "s181",
+  "text_alt": "Mereka menikah tahun 2015 di Surabaya."
+ },
+ {
+  "id": "s182",
+  "text_alt": "Aira lahir di Rumah Sakit Santosa, Bandung."
+ },
+ {
+  "id": "s183",
+  "text_alt": "Pengguna suka teh hitam kental di sore hari."
+ },
+ {
+  "id": "s184",
+  "text_alt": "Lebih suka mandi air dingin di pagi hari."
+ },
+ {
+  "id": "s185",
+  "text_alt": "Server rumah adalah Raspberry Pi 5 yang menjalankan Pi-hole dan Home Assistant."
+ },
+ {
+  "id": "s186",
+  "text_alt": "Raspberry Pi mendapat daya dari UPS kecil agar tetap jalan saat listrik mati."
+ },
+ {
+  "id": "s187",
+  "text_alt": "Internet rumah adalah paket Indihome 100 Mbps dengan IP statis."
+ },
+ {
+  "id": "s188",
+  "text_alt": "Jalur internet cadangan adalah hotspot dari kartu Telkomsel."
+ },
+ {
+  "id": "s189",
+  "text_alt": "Meja kerja adalah standing desk yang diatur setinggi 110 cm."
+ },
+ {
+  "id": "s190",
+  "text_alt": "Monitor kedua, Dell U2723QE, terhubung lewat USB-C."
+ },
+ {
+  "id": "s191",
+  "text_alt": "Pengguna punya budget waktu mingguan: 30 jam billable, 10 jam admin dan belajar."
+ },
+ {
+  "id": "s192",
+  "text_alt": "Jumat pagi disisihkan untuk invoicing dan tugas admin."
+ },
+ {
+  "id": "s193",
+  "text_alt": "Webhook dari payment gateway diverifikasi dengan tanda tangan HMAC."
+ },
+ {
+  "id": "s194",
+  "text_alt": "Payment gateway untuk pesanan online Toko Berkah adalah Midtrans."
+ },
+ {
+  "id": "s195",
+  "text_alt": "Refund diproses manual dan butuh persetujuan owner."
+ },
+ {
+  "id": "s196",
+  "text_alt": "Job malam hari mencocokkan total penjualan dengan settlement bank."
+ },
+ {
+  "id": "s197",
+  "text_alt": "Pengguna punya wiki pribadi berisi langkah troubleshooting untuk masalah server yang berulang."
+ },
+ {
+  "id": "s198",
+  "text_alt": "Belajar bahwa VACUUM FULL di PostgreSQL mengunci tabel, jadi dihindari di produksi."
+ },
+ {
+  "id": "s199",
+  "text_alt": "Lebih suka keyset pagination daripada OFFSET untuk tabel besar."
+ },
+ {
+  "id": "s200",
+  "text_alt": "Memakai EXPLAIN ANALYZE sebelum menambah index baru."
+ },
+ {
+  "id": "s201",
+  "text_alt": "Bus sekolah Aira menjemputnya jam 6.45 pagi."
+ },
+ {
+  "id": "s202",
+  "text_alt": "Aira punya kartu perpustakaan di perpustakaan kota Bandung."
+ },
+ {
+  "id": "s203",
+  "text_alt": "Dokter keluarga menyarankan vaksin flu setiap bulan Oktober."
+ },
+ {
+  "id": "s204",
+  "text_alt": "Sari lebih suka naik gunung daripada ke pantai saat liburan."
+ },
+ {
+  "id": "s205",
+  "text_alt": "Dimas lebih suka pantai dan jarang naik gunung."
+ },
+ {
+  "id": "s206",
+  "text_alt": "Keluarga mengunjungi Bali untuk bulan madu di tahun 2015."
+ },
+ {
+  "id": "s207",
+  "text_alt": "Mereka berencana suatu hari mengunjungi Belanda untuk melihat ladang tulip."
+ },
+ {
+  "id": "s208",
+  "text_alt": "Panggilan dengan klien PT Maju Logistik direkam dengan izin."
+ },
+ {
+  "id": "s209",
+  "text_alt": "Rekaman meeting disimpan selama 30 hari lalu dihapus."
+ },
+ {
+  "id": "s210",
+  "text_alt": "Pengguna lebih suka menerima dokumen dalam PDF, bukan file Word."
+ },
+ {
+  "id": "s211",
+  "text_alt": "Undangan kalender sebaiknya menyertakan link video dan agenda."
+ },
+ {
+  "id": "s212",
+  "text_alt": "Dimas lebih suka bayar dengan QRIS di toko-toko kecil."
+ },
+ {
+  "id": "s213",
+  "text_alt": "Parkir di coworking space biayanya Rp3.000 per jam."
+ },
+ {
+  "id": "s214",
+  "text_alt": "Membership coworking termasuk sepuluh jam pemakaian ruang meeting per bulan."
+ },
+ {
+  "id": "s215",
+  "text_alt": "Membaca buku Clean Architecture dua tahun lalu dan sekarang membaca ulang beberapa bab pilihan."
+ },
+ {
+  "id": "s216",
+  "text_alt": "Menyimpan flashcard di Anki untuk kanji Jepang."
+ },
+ {
+  "id": "s217",
+  "text_alt": "Dimas berhenti main game mobile untuk menghemat waktu."
+ },
+ {
+  "id": "s218",
+  "text_alt": "Malam main game akhir pekan adalah Settlers of Catan bareng tetangga."
+ },
+ {
+  "id": "s219",
+  "text_alt": "Board game disimpan di lemari bawah TV."
+ },
+ {
+  "id": "s220",
+  "text_alt": "Pengguna suka makanan pedas tapi menghindarinya kalau kerja sampai malam."
+ },
+ {
+  "id": "s221",
+  "text_alt": "Dimas lebih suka sambal terasi daripada sambal bawang."
+ },
+ {
+  "id": "s222",
+  "text_alt": "Kontrak dengan klien Indonesia ditulis dalam Bahasa Indonesia dan ditandatangani dengan e-signature."
+ },
+ {
+  "id": "s223",
+  "text_alt": "Kontrak dengan klien asing ditulis dalam Bahasa Inggris berdasarkan hukum Singapura."
+ },
+ {
+  "id": "s224",
+  "text_alt": "Keluarga menyimpan tas darurat berisi dokumen, uang tunai, dan senter di dekat pintu depan."
+ },
+ {
+  "id": "s225",
+  "text_alt": "Dana darurat mencukupi pengeluaran selama enam bulan."
+ },
+ {
+  "id": "s226",
+  "text_alt": "Pengguna membisukan ponsel saat makan malam keluarga."
+ },
+ {
+  "id": "s227",
+  "text_alt": "Sari lebih suka catatan tulis tangan daripada mengetik."
+ },
+ {
+  "id": "s228",
+  "text_alt": "Dimas memakai spaced repetition untuk menghafal shortcut command-line."
+ },
+ {
+  "id": "s229",
+  "text_alt": "Kalender keluarga bersama ada di Google Calendar dengan kode warna per anggota."
+ },
+ {
+  "id": "s230",
+  "text_alt": "Foto dari acara sekolah Aira dibagikan di album keluarga."
+ },
+ {
+  "id": "s231",
+  "text_alt": "Proyek sampingan adalah aplikasi pelacak kebiasaan kecil yang ditulis dengan Flutter."
+ },
+ {
+  "id": "s232",
+  "text_alt": "Aplikasi pelacak kebiasaan menyimpan data secara lokal dan sinkron lewat server self-hosted."
+ },
+ {
+  "id": "s233",
+  "text_alt": "Aplikasi pelacak kebiasaan tidak ada iklan dan gratis dipakai."
+ },
+ {
+  "id": "s234",
+  "text_alt": "Memakai Linear untuk pelacakan issue di proyek pribadi."
+ },
+ {
+  "id": "s235",
+  "text_alt": "Memakai Jira untuk pelacakan tugas di PT Maju Logistik karena klien mewajibkannya."
+ },
+ {
+  "id": "s236",
+  "text_alt": "Meetings with PT Maju Logistik always use Google Meet, not Zoom."
+ },
+ {
+  "id": "s237",
+  "text_alt": "Deploys to production must go through the CI pipeline, never a direct SSH."
+ },
+ {
+  "id": "s238",
+  "text_alt": "If there's a bug in staging, file an issue first, then fix it on a hotfix branch."
+ },
+ {
+  "id": "s239",
+  "text_alt": "Code review needs at least one approval before merging to main."
+ },
+ {
+  "id": "s240",
+  "text_alt": "The database backup runs automatically at 2 am via cron."
+ },
+ {
+  "id": "s241",
+  "text_alt": "The charting library for the logistics dashboard is Apache ECharts."
+ },
+ {
+  "id": "s242",
+  "text_alt": "The /api/trucks endpoint must support pagination and filtering by status."
+ },
+ {
+  "id": "s243",
+  "text_alt": "The dashboard API is rate-limited to 60 requests per minute per user."
+ },
+ {
+  "id": "s244",
+  "text_alt": "Auth tokens use JWT with a 15-minute expiry and a 7-day refresh token."
+ },
+ {
+  "id": "s245",
+  "text_alt": "The notification feature in the Toko Berkah app uses Firebase Cloud Messaging."
+ },
+ {
+  "id": "s246",
+  "text_alt": "The Toko Berkah dev environment is set up with Docker Compose."
+ },
+ {
+  "id": "s247",
+  "text_alt": "Dimas prefers dark mode in every app, including the terminal."
+ },
+ {
+  "id": "s248",
+  "text_alt": "The terminal font is Fira Code with ligatures enabled."
+ },
+ {
+  "id": "s249",
+  "text_alt": "He prefers answers that are to the point, without small talk."
+ },
+ {
+  "id": "s250",
+  "text_alt": "When coding, Dimas likes listening to a synthwave playlist."
+ },
+ {
+  "id": "s251",
+  "text_alt": "Dimas brews his coffee with a V60, not an espresso machine."
+ },
+ {
+  "id": "s252",
+  "text_alt": "Aira is really into dinosaurs right now and collects T-Rex action figures."
+ },
+ {
+  "id": "s253",
+  "text_alt": "This weekend's family trip to Lembang is by car at 8 am."
+ },
+ {
+  "id": "s254",
+  "text_alt": "The hotel reservation in Labuan Bajo has already been booked through Agoda."
+ },
+ {
+  "id": "s255",
+  "text_alt": "The flight tickets to Labuan Bajo are with Citilink, departing from Husein Airport."
+ },
+ {
+  "id": "s256",
+  "text_alt": "Hotel check-in is at 2 pm, check-out at 12 noon."
+ },
+ {
+  "id": "s257",
+  "text_alt": "The anniversary dinner is booked at Sky Dining restaurant in Bandung."
+ },
+ {
+  "id": "s258",
+  "text_alt": "Sari's birthday gift this year is a spa voucher in Dago."
+ },
+ {
+  "id": "s259",
+  "text_alt": "Sari asked for a small navy-colored bag as a birthday gift."
+ },
+ {
+  "id": "s260",
+  "text_alt": "The monthly grocery budget is around Rp3 million for 3 people."
+ },
+ {
+  "id": "s261",
+  "text_alt": "The mortgage installment is auto-debited on the 5th from the BCA account."
+ },
+ {
+  "id": "s262",
+  "text_alt": "A reminder to pay the motorbike tax is set in the Signal app for September."
+ },
+ {
+  "id": "s263",
+  "text_alt": "The Samsung smart TV in the family room supports Netflix and YouTube."
+ },
+ {
+  "id": "s264",
+  "text_alt": "The WiFi guest password is changed every 3 months."
+ },
+ {
+  "id": "s265",
+  "text_alt": "The home Pi-hole already blocks ads on every device."
+ },
+ {
+  "id": "s266",
+  "text_alt": "Home Assistant has an automation that turns the lights on at 6 pm."
+ },
+ {
+  "id": "s267",
+  "text_alt": "The Imou CCTV can be accessed from the phone app through the cloud."
+ },
+ {
+  "id": "s268",
+  "text_alt": "Dimas is learning Rust for a small CLI project."
+ },
+ {
+  "id": "s269",
+  "text_alt": "The Kubernetes course on Udemy is already 40 percent complete."
+ },
+ {
+  "id": "s270",
+  "text_alt": "Docker study notes are kept in the Knowledge folder in Obsidian."
+ },
+ {
+  "id": "s271",
+  "text_alt": "Dimas explains the concept of eventual consistency using a food-stall cashier analogy."
+ },
+ {
+  "id": "s272",
+  "text_alt": "A Git cheat sheet is printed and stuck on the home office wall."
+ },
+ {
+  "id": "s273",
+  "text_alt": "The standup update is sent via Slack if Dimas can't join."
+ },
+ {
+  "id": "s274",
+  "text_alt": "Invoices are made using a Google Docs template, then exported as PDF."
+ },
+ {
+  "id": "s275",
+  "text_alt": "An invoice follow-up reminder is set in Google Calendar every Monday."
+ },
+ {
+  "id": "s276",
+  "text_alt": "New client contracts must be reviewed by the regular lawyer, Pak Fajar."
+ },
+ {
+  "id": "s277",
+  "text_alt": "Project handover requires README documentation and an architecture diagram."
+ },
+ {
+  "id": "s278",
+  "text_alt": "Dimas doesn't like push notifications from online shopping apps."
+ },
+ {
+  "id": "s279",
+  "text_alt": "Sari prefers getting voice notes over long text messages."
+ },
+ {
+  "id": "s280",
+  "text_alt": "Aira's piano lesson switches to online if it's raining heavily."
+ },
+ {
+  "id": "s281",
+  "text_alt": "Aira's piano teacher is Kak Sinta, charging Rp600,000 per month."
+ },
+ {
+  "id": "s282",
+  "text_alt": "Aira is joining a city-level drawing competition next month."
+ },
+ {
+  "id": "s283",
+  "text_alt": "Dimas picks Aira up from school when Sari has a teacher meeting."
+ },
+ {
+  "id": "s284",
+  "text_alt": "The emergency daycare, when both are busy, is Penitipan Ceria."
+ },
+ {
+  "id": "s285",
+  "text_alt": "Aira's birthday celebration is planned at home with a dinosaur theme."
+ },
+ {
+  "id": "s286",
+  "text_alt": "Dimas only checks business email at 9 am and 4 pm."
+ },
+ {
+  "id": "s287",
+  "text_alt": "The weekly report to Pak Hendra is sent via email, not WhatsApp."
+ },
+ {
+  "id": "s288",
+  "text_alt": "The logistics dashboard's staging server is on a Hetzner VPS in Singapore."
+ },
+ {
+  "id": "s289",
+  "text_alt": "Monitoring uses Uptime Kuma, with alerts going to Telegram."
+ },
+ {
+  "id": "s290",
+  "text_alt": "Application logs are sent to Loki and viewed through Grafana."
+ },
+ {
+  "id": "s291",
+  "text_alt": "The logistics dashboard database uses PostgreSQL with the PostGIS extension."
+ },
+ {
+  "id": "s292",
+  "text_alt": "Geospatial queries are optimized with a GiST index."
+ },
+ {
+  "id": "s293",
+  "text_alt": "The reason for using PostGIS: fast radius and polygon queries are needed."
+ },
+ {
+  "id": "s294",
+  "text_alt": "Prefers Linux for dev work, but Windows for gaming on the home desktop."
+ },
+ {
+  "id": "s295",
+  "text_alt": "The home desktop dual-boots Windows 11 and Ubuntu."
+ },
+ {
+  "id": "s296",
+  "text_alt": "The home desktop has a 1 TB NVMe SSD, already 70 percent full."
+ },
+ {
+  "id": "s297",
+  "text_alt": "The work laptop is backed up with Restic to Backblaze B2."
+ },
+ {
+  "id": "s298",
+  "text_alt": "Restic runs automatically every night at 1 am via a systemd timer."
+ },
+ {
+  "id": "s299",
+  "text_alt": "The password manager is a self-hosted Bitwarden instance (Vaultwarden) on a Raspberry Pi."
+ },
+ {
+  "id": "s300",
+  "text_alt": "There are two YubiKey hardware keys, one carried around and one kept in the safe."
+ },
+ {
+  "id": "s301",
+  "text_alt": "Dimas just replaced his motorbike tires, still under a 6-month warranty."
+ },
+ {
+  "id": "s302",
+  "text_alt": "Routine motorbike service is every 3 months at Pak Joko's workshop."
+ },
+ {
+  "id": "s303",
+  "text_alt": "The motorbike uses Shell Advance oil, changed every 2,000 km."
+ },
+ {
+  "id": "s304",
+  "text_alt": "Dimas's annual health checkup is scheduled for May."
+ },
+ {
+  "id": "s305",
+  "text_alt": "Dimas is dieting, aiming to lose 5 kg before December."
+ },
+ {
+  "id": "s306",
+  "text_alt": "Sugar is limited; stevia is used in tea instead."
+ },
+ {
+  "id": "s307",
+  "text_alt": "Dimas is writing a thread about his experience migrating from MySQL to Postgres."
+ },
+ {
+  "id": "s308",
+  "text_alt": "Dimas's talk at the Bandung Python meetup covers FastAPI and async."
+ },
+ {
+  "id": "s309",
+  "text_alt": "The talk's slides are kept in Google Slides with a minimalist theme."
+ },
+ {
+  "id": "s310",
+  "text_alt": "Dimas doesn't want to be contacted by sales vendors over WhatsApp."
+ },
+ {
+  "id": "s311",
+  "text_alt": "All email notifications from LinkedIn are turned off."
+ },
+ {
+  "id": "s312",
+  "text_alt": "The family regularly visits Alun-Alun Bandung on the first Saturday night of the month."
+ },
+ {
+  "id": "s313",
+  "text_alt": "The birthday cake is usually ordered from the Brownies Amanda shop."
+ },
+ {
+  "id": "s314",
+  "text_alt": "Dimas's hobby is a 5 km morning run every Sunday at Gasibu."
+ },
+ {
+  "id": "s315",
+  "text_alt": "Dimas's running goal: join the Bandung half marathon in October."
+ },
+ {
+  "id": "s316",
+  "text_alt": "Dimas's running shoes are Nike Pegasus, size 42."
+ },
+ {
+  "id": "s317",
+  "text_alt": "The handover of the old project to Rudi is done, with documentation in Notion."
+ },
+ {
+  "id": "s318",
+  "text_alt": "Rudi will be the backup if Dimas takes long leave."
+ },
+ {
+  "id": "s319",
+  "text_alt": "Dimas's annual leave is taken at the end of December, together with school holidays."
+ },
+ {
+  "id": "s320",
+  "text_alt": "The deadline for the logistics dashboard reporting feature falls at the end of the quarter."
+ }
+]

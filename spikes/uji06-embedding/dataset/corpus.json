@@ -1,0 +1,3002 @@
+[
+ {
+  "id": "g01a",
+  "text": "Dimas suka kopi hitam tanpa gula.",
+  "lang": "id",
+  "category": "User Preferences"
+ },
+ {
+  "id": "g01b",
+  "text": "Istri Dimas, Sari, suka kopi susu dengan gula aren.",
+  "lang": "id",
+  "category": "User Preferences"
+ },
+ {
+  "id": "g01c",
+  "text": "Dimas berhenti minum kopi setelah jam 3 sore karena susah tidur.",
+  "lang": "id",
+  "category": "User Preferences"
+ },
+ {
+  "id": "g02a",
+  "text": "The user's cat Mochi is an orange tabby, 3 years old.",
+  "lang": "en",
+  "category": "Personal Context"
+ },
+ {
+  "id": "g02b",
+  "text": "The neighbor has a black cat named Luna who often visits the garden.",
+  "lang": "en",
+  "category": "Personal Context"
+ },
+ {
+  "id": "g02c",
+  "text": "Mochi harus minum obat cacing setiap tiga bulan.",
+  "lang": "id",
+  "category": "Personal Context"
+ },
+ {
+  "id": "g03a",
+  "text": "Anak Dimas, Aira, kelas 2 SD di SDN Cipaganti.",
+  "lang": "id",
+  "category": "Personal Context"
+ },
+ {
+  "id": "g03b",
+  "text": "Aira berangkat sekolah jam 6.30 diantar Sari.",
+  "lang": "id",
+  "category": "Personal Context"
+ },
+ {
+  "id": "g03c",
+  "text": "Les piano Aira setiap Rabu jam 4 sore.",
+  "lang": "id",
+  "category": "Personal Context"
+ },
+ {
+  "id": "g04a",
+  "text": "The user drives a silver 2019 Honda Brio.",
+  "lang": "en",
+  "category": "Personal Context"
+ },
+ {
+  "id": "g04b",
+  "text": "Sari drives a white Suzuki Ertiga for the school run.",
+  "lang": "en",
+  "category": "Personal Context"
+ },
+ {
+  "id": "g04c",
+  "text": "Mobil Brio diservis tiap 5.000 km di bengkel Honda Soekarno-Hatta.",
+  "lang": "id",
+  "category": "Personal Context"
+ },
+ {
+  "id": "g05a",
+  "text": "The user prefers VS Code with the Vim extension.",
+  "lang": "en",
+  "category": "User Preferences"
+ },
+ {
+  "id": "g05b",
+  "text": "For quick edits on servers, the user uses nano instead of vim.",
+  "lang": "en",
+  "category": "User Preferences"
+ },
+ {
+  "id": "g05c",
+  "text": "Dimas memakai tema Dracula di semua editor.",
+  "lang": "id",
+  "category": "User Preferences"
+ },
+ {
+  "id": "g06a",
+  "text": "Primary backend language is Python 3.12 with FastAPI.",
+  "lang": "en",
+  "category": "User Preferences"
+ },
+ {
+  "id": "g06b",
+  "text": "Untuk script cepat, Dimas pakai Go, bukan Python.",
+  "lang": "mix",
+  "category": "User Preferences"
+ },
+ {
+  "id": "g06c",
+  "text": "Tools internal di sisi frontend memakai Svelte, bukan React.",
+  "lang": "id",
+  "category": "User Preferences"
+ },
+ {
+  "id": "g07a",
+  "text": "Deploy project Nibras pakai branch fase0 dulu.",
+  "lang": "mix",
+  "category": "Workflows"
+ },
+ {
+  "id": "g07b",
+  "text": "Deploy aplikasi toko ke server produksi hanya pada Selasa malam.",
+  "lang": "id",
+  "category": "Workflows"
+ },
+ {
+  "id": "g07c",
+  "text": "Staging deploys of the billing service run automatically on every merge to develop.",
+  "lang": "en",
+  "category": "Workflows"
+ },
+ {
+  "id": "g08a",
+  "text": "Standup tim jam 9.30 setiap hari kerja lewat Google Meet.",
+  "lang": "id",
+  "category": "Workflows"
+ },
+ {
+  "id": "g08b",
+  "text": "Review mingguan dengan klien Pak Hendra setiap Kamis jam 2 siang.",
+  "lang": "id",
+  "category": "Workflows"
+ },
+ {
+  "id": "g08c",
+  "text": "No meetings on Friday afternoons; that time is reserved for deep work.",
+  "lang": "en",
+  "category": "Workflows"
+ },
+ {
+  "id": "g09a",
+  "text": "Dimas alergi udang, jangan sarankan restoran seafood.",
+  "lang": "id",
+  "category": "Personal Context"
+ },
+ {
+  "id": "g09b",
+  "text": "Sari alergi kacang tanah.",
+  "lang": "id",
+  "category": "Personal Context"
+ },
+ {
+  "id": "g09c",
+  "text": "Aira is lactose intolerant and drinks oat milk.",
+  "lang": "en",
+  "category": "Personal Context"
+ },
+ {
+  "id": "g10a",
+  "text": "The user sleeps around 11 pm and wakes up at 5:30 am.",
+  "lang": "en",
+  "category": "User Preferences"
+ },
+ {
+  "id": "g10b",
+  "text": "Sari biasanya tidur lebih awal, jam 9 malam.",
+  "lang": "id",
+  "category": "User Preferences"
+ },
+ {
+  "id": "g10c",
+  "text": "Weekend Dimas bangun jam 7, boleh telat sedikit.",
+  "lang": "mix",
+  "category": "User Preferences"
+ },
+ {
+  "id": "g11a",
+  "text": "The user's phone is a Pixel 8 running Android 15.",
+  "lang": "en",
+  "category": "PC Information"
+ },
+ {
+  "id": "g11b",
+  "text": "HP lama Dimas, Samsung A52, sekarang dipakai Aira untuk belajar.",
+  "lang": "id",
+  "category": "PC Information"
+ },
+ {
+  "id": "g11c",
+  "text": "Sari memakai iPhone 13.",
+  "lang": "id",
+  "category": "PC Information"
+ },
+ {
+  "id": "g12a",
+  "text": "Work laptop is a ThinkPad T14 with 32 GB RAM running Ubuntu 24.04.",
+  "lang": "en",
+  "category": "PC Information"
+ },
+ {
+  "id": "g12b",
+  "text": "Laptop Aira adalah Chromebook murah dari sekolah.",
+  "lang": "id",
+  "category": "PC Information"
+ },
+ {
+  "id": "g12c",
+  "text": "The home desktop runs Windows 11 with a Ryzen 5 and an RTX 3060.",
+  "lang": "en",
+  "category": "PC Information"
+ },
+ {
+  "id": "g13a",
+  "text": "Foto keluarga di-backup ke Google Photos dan hard disk eksternal 2TB setiap akhir bulan.",
+  "lang": "id",
+  "category": "Workflows"
+ },
+ {
+  "id": "g13b",
+  "text": "Project code is mirrored on GitHub and a self-hosted Gitea instance.",
+  "lang": "en",
+  "category": "Workflows"
+ },
+ {
+  "id": "g13c",
+  "text": "Database produksi di-backup otomatis jam 2 pagi ke S3 dan disimpan 30 hari.",
+  "lang": "id",
+  "category": "Workflows"
+ },
+ {
+  "id": "g14a",
+  "text": "Dimas mendengarkan lo-fi saat coding.",
+  "lang": "id",
+  "category": "User Preferences"
+ },
+ {
+  "id": "g14b",
+  "text": "Sari likes Indonesian pop, especially Tulus and Raisa.",
+  "lang": "en",
+  "category": "User Preferences"
+ },
+ {
+  "id": "g14c",
+  "text": "Aira suka lagu anak-anak dan soundtrack film Disney.",
+  "lang": "id",
+  "category": "User Preferences"
+ },
+ {
+  "id": "g15a",
+  "text": "Liburan keluarga tahun lalu ke Yogyakarta selama 4 hari.",
+  "lang": "id",
+  "category": "Personal Context"
+ },
+ {
+  "id": "g15b",
+  "text": "Planned family trip next July: Labuan Bajo for 5 days.",
+  "lang": "en",
+  "category": "Personal Context"
+ },
+ {
+  "id": "g15c",
+  "text": "Dimas ingin sekali ke Jepang saat musim sakura, belum ada rencana pasti.",
+  "lang": "id",
+  "category": "Personal Context"
+ },
+ {
+  "id": "g16a",
+  "text": "The user plays badminton every Saturday morning at GOR Pajajaran.",
+  "lang": "en",
+  "category": "Personal Context"
+ },
+ {
+  "id": "g16b",
+  "text": "Dimas memancing sebulan sekali di Situ Patenggang.",
+  "lang": "id",
+  "category": "Personal Context"
+ },
+ {
+  "id": "g16c",
+  "text": "Sari ikut yoga class tiap Selasa dan Jumat pagi.",
+  "lang": "mix",
+  "category": "Personal Context"
+ },
+ {
+  "id": "g17a",
+  "text": "Gaji bulanan masuk tanggal 25; tagihan listrik dibayar tanggal 10.",
+  "lang": "id",
+  "category": "Personal Context"
+ },
+ {
+  "id": "g17b",
+  "text": "Monthly savings target is 20 percent of income into an index fund.",
+  "lang": "en",
+  "category": "Personal Context"
+ },
+ {
+  "id": "g17c",
+  "text": "Cicilan KPR rumah Rp4,2 juta per bulan, lunas tahun 2038.",
+  "lang": "id",
+  "category": "Personal Context"
+ },
+ {
+  "id": "g18a",
+  "text": "Main client is PT Maju Logistik, building their fleet tracking dashboard.",
+  "lang": "en",
+  "category": "Projects"
+ },
+ {
+  "id": "g18b",
+  "text": "Klien kedua adalah Toko Berkah, mengerjakan sistem kasir dan stok.",
+  "lang": "id",
+  "category": "Projects"
+ },
+ {
+  "id": "g18c",
+  "text": "Pak Hendra dari PT Maju minta invoice dikirim tiap tanggal 1.",
+  "lang": "mix",
+  "category": "Projects"
+ },
+ {
+  "id": "g19a",
+  "text": "Lapor SPT tahunan paling lambat 31 Maret.",
+  "lang": "id",
+  "category": "Knowledge"
+ },
+ {
+  "id": "g19b",
+  "text": "The user is a registered freelancer and pays final income tax of 0.5 percent on revenue.",
+  "lang": "en",
+  "category": "Knowledge"
+ },
+ {
+  "id": "g19c",
+  "text": "Bukti potong dari klien disimpan di folder Pajak di Google Drive.",
+  "lang": "id",
+  "category": "Knowledge"
+ },
+ {
+  "id": "g20a",
+  "text": "Prefers answers in short bullet points instead of long paragraphs.",
+  "lang": "en",
+  "category": "User Preferences"
+ },
+ {
+  "id": "g20b",
+  "text": "Dokumentasi proyek ditulis dalam bahasa Indonesia, sedangkan kode dan komentar dalam bahasa Inggris.",
+  "lang": "id",
+  "category": "User Preferences"
+ },
+ {
+  "id": "g20c",
+  "text": "Commit messages follow the Conventional Commits format.",
+  "lang": "en",
+  "category": "User Preferences"
+ },
+ {
+  "id": "g21a",
+  "text": "Branch utama proyek namanya main, bukan master.",
+  "lang": "mix",
+  "category": "Workflows"
+ },
+ {
+  "id": "g21b",
+  "text": "Pull requests need at least one approval before merging.",
+  "lang": "en",
+  "category": "Workflows"
+ },
+ {
+  "id": "g21c",
+  "text": "Rebase dilarang pada branch yang sudah di-push dan dipakai bersama.",
+  "lang": "id",
+  "category": "Workflows"
+ },
+ {
+  "id": "g22a",
+  "text": "Production database is PostgreSQL 16 hosted on Supabase.",
+  "lang": "en",
+  "category": "Projects"
+ },
+ {
+  "id": "g22b",
+  "text": "Database lokal untuk development memakai SQLite agar ringan.",
+  "lang": "id",
+  "category": "Projects"
+ },
+ {
+  "id": "g22c",
+  "text": "Cache layer pakai Redis dengan TTL default 10 menit.",
+  "lang": "mix",
+  "category": "Projects"
+ },
+ {
+  "id": "g23a",
+  "text": "VPS provider is Hetzner, a CX22 instance in Singapore.",
+  "lang": "en",
+  "category": "Projects"
+ },
+ {
+  "id": "g23b",
+  "text": "Domain dibeli di Niagahoster dan DNS dikelola lewat Cloudflare.",
+  "lang": "id",
+  "category": "Projects"
+ },
+ {
+  "id": "g23c",
+  "text": "SSL certificates renew automatically through Let's Encrypt.",
+  "lang": "en",
+  "category": "Projects"
+ },
+ {
+  "id": "g24a",
+  "text": "Makanan favorit Dimas adalah nasi timbel dengan ikan asin.",
+  "lang": "id",
+  "category": "User Preferences"
+ },
+ {
+  "id": "g24b",
+  "text": "Sari paling suka bakso dan mie ayam.",
+  "lang": "id",
+  "category": "User Preferences"
+ },
+ {
+  "id": "g24c",
+  "text": "Aira's favorite snack is banana fritters (pisang goreng).",
+  "lang": "en",
+  "category": "User Preferences"
+ },
+ {
+  "id": "g25a",
+  "text": "Langganan makan siang Dimas di warung Bu Eha dekat coworking.",
+  "lang": "id",
+  "category": "User Preferences"
+ },
+ {
+  "id": "g25b",
+  "text": "Family dinner spot is Sate Hadori, every first Sunday of the month.",
+  "lang": "en",
+  "category": "User Preferences"
+ },
+ {
+  "id": "g25c",
+  "text": "Hindari restoran Padang kalau sedang menjaga kolesterol.",
+  "lang": "id",
+  "category": "User Preferences"
+ },
+ {
+  "id": "g26a",
+  "text": "Dimas punya kolesterol tinggi, dokter menyarankan olahraga rutin.",
+  "lang": "id",
+  "category": "Personal Context"
+ },
+ {
+  "id": "g26b",
+  "text": "Sari takes vitamin D supplements every morning.",
+  "lang": "en",
+  "category": "Personal Context"
+ },
+ {
+  "id": "g26c",
+  "text": "Aira dijadwalkan imunisasi booster berikutnya bulan Maret.",
+  "lang": "id",
+  "category": "Personal Context"
+ },
+ {
+  "id": "g27a",
+  "text": "Dokter keluarga adalah dr. Amanda di Klinik Sehat Sentosa.",
+  "lang": "id",
+  "category": "Personal Context"
+ },
+ {
+  "id": "g27b",
+  "text": "Dentist checkups every six months with Dr. Budi in Dago.",
+  "lang": "en",
+  "category": "Personal Context"
+ },
+ {
+  "id": "g27c",
+  "text": "Mata Dimas minus 2,5 dan ganti kacamata tiap dua tahun.",
+  "lang": "id",
+  "category": "Personal Context"
+ },
+ {
+  "id": "g28a",
+  "text": "Rumah berada di Perumahan Griya Asri, Bandung Timur, blok C nomor 12.",
+  "lang": "id",
+  "category": "Personal Context"
+ },
+ {
+  "id": "g28b",
+  "text": "The WiFi router is a TP-Link Archer and its admin panel is at 192.168.0.1.",
+  "lang": "en",
+  "category": "PC Information"
+ },
+ {
+  "id": "g28c",
+  "text": "Listrik rumah memakai PLN pascabayar, meteran ada di samping pagar.",
+  "lang": "id",
+  "category": "Personal Context"
+ },
+ {
+  "id": "g29a",
+  "text": "Smart lights are Philips Hue, installed in the living room only.",
+  "lang": "en",
+  "category": "PC Information"
+ },
+ {
+  "id": "g29b",
+  "text": "CCTV rumah merek Imou, 3 kamera, rekaman disimpan 7 hari.",
+  "lang": "id",
+  "category": "PC Information"
+ },
+ {
+  "id": "g29c",
+  "text": "Robot vacuum Roborock jalan otomatis jam 10 pagi setiap hari.",
+  "lang": "mix",
+  "category": "PC Information"
+ },
+ {
+  "id": "g30a",
+  "text": "Currently reading Designing Data-Intensive Applications.",
+  "lang": "en",
+  "category": "User Preferences"
+ },
+ {
+  "id": "g30b",
+  "text": "Sari sedang membaca novel Laut Bercerita karya Leila S. Chudori.",
+  "lang": "id",
+  "category": "User Preferences"
+ },
+ {
+  "id": "g30c",
+  "text": "Dimas lebih suka buku fisik daripada e-book.",
+  "lang": "id",
+  "category": "User Preferences"
+ },
+ {
+  "id": "g31a",
+  "text": "Belanja bulanan di Superindo setiap akhir pekan pertama.",
+  "lang": "id",
+  "category": "Workflows"
+ },
+ {
+  "id": "g31b",
+  "text": "Online shopping is mostly on Tokopedia; avoids Shopee after a bad refund experience.",
+  "lang": "en",
+  "category": "Workflows"
+ },
+ {
+  "id": "g31c",
+  "text": "Perlengkapan sekolah Aira dibeli di toko Gramedia Merdeka.",
+  "lang": "id",
+  "category": "Workflows"
+ },
+ {
+  "id": "g32a",
+  "text": "The user is learning Japanese with Duolingo, 15 minutes daily.",
+  "lang": "en",
+  "category": "Knowledge"
+ },
+ {
+  "id": "g32b",
+  "text": "Sari kursus bahasa Inggris online tiap Senin malam.",
+  "lang": "id",
+  "category": "Knowledge"
+ },
+ {
+  "id": "g32c",
+  "text": "Aira belajar bahasa Sunda di sekolah sebagai muatan lokal.",
+  "lang": "mix",
+  "category": "Knowledge"
+ },
+ {
+  "id": "g33a",
+  "text": "Timezone is WIB (UTC+7).",
+  "lang": "en",
+  "category": "Personal Context"
+ },
+ {
+  "id": "g33b",
+  "text": "Dimas kadang kerja dari Jakarta di kantor klien, biasanya hari Selasa.",
+  "lang": "id",
+  "category": "Personal Context"
+ },
+ {
+  "id": "g33c",
+  "text": "Coworking space is Kolega on Jalan Riau, paid as a monthly membership.",
+  "lang": "en",
+  "category": "Personal Context"
+ },
+ {
+  "id": "g34a",
+  "text": "Notifikasi WhatsApp kerja dibisukan setelah jam 8 malam.",
+  "lang": "id",
+  "category": "User Preferences"
+ },
+ {
+  "id": "g34b",
+  "text": "Urgent messages from clients should come by phone call only.",
+  "lang": "en",
+  "category": "User Preferences"
+ },
+ {
+  "id": "g34c",
+  "text": "Email dicek dua kali sehari: jam 9 pagi dan jam 4 sore.",
+  "lang": "id",
+  "category": "User Preferences"
+ },
+ {
+  "id": "g35a",
+  "text": "Uses Bitwarden as password manager with a hardware key for 2FA.",
+  "lang": "en",
+  "category": "Workflows"
+ },
+ {
+  "id": "g35b",
+  "text": "Jangan pernah menyimpan kata sandi di catatan teks biasa.",
+  "lang": "id",
+  "category": "Workflows"
+ },
+ {
+  "id": "g35c",
+  "text": "Akun bank memakai token fisik KeyBCA.",
+  "lang": "id",
+  "category": "Workflows"
+ },
+ {
+  "id": "g36a",
+  "text": "Rekening utama di BCA, rekening tabungan sekolah Aira di Bank Mandiri.",
+  "lang": "id",
+  "category": "Personal Context"
+ },
+ {
+  "id": "g36b",
+  "text": "The credit card is a Jenius Visa, used only for online subscriptions.",
+  "lang": "en",
+  "category": "Personal Context"
+ },
+ {
+  "id": "g36c",
+  "text": "Dana darurat disimpan di reksa dana pasar uang Bibit.",
+  "lang": "id",
+  "category": "Personal Context"
+ },
+ {
+  "id": "g37a",
+  "text": "Netflix standard plan is shared with the family and renews on the 5th.",
+  "lang": "en",
+  "category": "Personal Context"
+ },
+ {
+  "id": "g37b",
+  "text": "Langganan Spotify Family dibayar oleh Sari.",
+  "lang": "id",
+  "category": "Personal Context"
+ },
+ {
+  "id": "g37c",
+  "text": "The ChatGPT Plus subscription is billed monthly to the company card.",
+  "lang": "en",
+  "category": "Personal Context"
+ },
+ {
+  "id": "g38a",
+  "text": "Ukuran sepatu Dimas 42.",
+  "lang": "id",
+  "category": "Personal Context"
+ },
+ {
+  "id": "g38b",
+  "text": "Sari memakai ukuran baju M dan sepatu 38.",
+  "lang": "id",
+  "category": "Personal Context"
+ },
+ {
+  "id": "g38c",
+  "text": "Aira's school uniform size is 8.",
+  "lang": "en",
+  "category": "Personal Context"
+ },
+ {
+  "id": "g39a",
+  "text": "Ulang tahun Dimas jatuh pada 14 Agustus.",
+  "lang": "id",
+  "category": "Personal Context"
+ },
+ {
+  "id": "g39b",
+  "text": "Sari lahir pada 3 Februari.",
+  "lang": "id",
+  "category": "Personal Context"
+ },
+ {
+  "id": "g39c",
+  "text": "Aira's birthday is on 21 November; she will turn 8.",
+  "lang": "en",
+  "category": "Personal Context"
+ },
+ {
+  "id": "g40a",
+  "text": "The wedding anniversary is on 12 June.",
+  "lang": "en",
+  "category": "Personal Context"
+ },
+ {
+  "id": "g40b",
+  "text": "Hari jadi usaha freelance Dimas adalah 1 Maret.",
+  "lang": "id",
+  "category": "Personal Context"
+ },
+ {
+  "id": "g40c",
+  "text": "Peringatan wafat ayah Dimas setiap 9 Oktober.",
+  "lang": "id",
+  "category": "Personal Context"
+ },
+ {
+  "id": "g41a",
+  "text": "Orang tua Dimas tinggal di Garut.",
+  "lang": "id",
+  "category": "Personal Context"
+ },
+ {
+  "id": "g41b",
+  "text": "Sari's parents live in Surabaya and visit during Lebaran.",
+  "lang": "en",
+  "category": "Personal Context"
+ },
+ {
+  "id": "g41c",
+  "text": "Mama Dimas rutin kontrol tekanan darah tiap bulan.",
+  "lang": "id",
+  "category": "Personal Context"
+ },
+ {
+  "id": "g42a",
+  "text": "Adik Dimas bernama Rizal, bekerja sebagai dokter di Makassar.",
+  "lang": "id",
+  "category": "Personal Context"
+ },
+ {
+  "id": "g42b",
+  "text": "Sari's older brother Andi runs a coffee shop in Malang.",
+  "lang": "en",
+  "category": "Personal Context"
+ },
+ {
+  "id": "g42c",
+  "text": "Kakak Dimas, Mbak Ratna, tinggal di Singapore dan kerja di bank.",
+  "lang": "mix",
+  "category": "Personal Context"
+ },
+ {
+  "id": "g43a",
+  "text": "Dimas salat Jumat di Masjid Al-Ikhlas dekat rumah.",
+  "lang": "id",
+  "category": "Personal Context"
+ },
+ {
+  "id": "g43b",
+  "text": "Pengajian ibu-ibu yang diikuti Sari berlangsung seminggu sekali, Sabtu sore.",
+  "lang": "id",
+  "category": "Personal Context"
+ },
+ {
+  "id": "g43c",
+  "text": "Aira attends a Quran recitation class at the local mosque on Sunday mornings.",
+  "lang": "en",
+  "category": "Personal Context"
+ },
+ {
+  "id": "g44a",
+  "text": "Commutes to the coworking space by motorbike, about 25 minutes.",
+  "lang": "en",
+  "category": "Workflows"
+ },
+ {
+  "id": "g44b",
+  "text": "Kalau hujan deras, Dimas kerja dari rumah.",
+  "lang": "id",
+  "category": "Workflows"
+ },
+ {
+  "id": "g44c",
+  "text": "Jalan Pasteur macet parah pada jam 7 pagi.",
+  "lang": "id",
+  "category": "Workflows"
+ },
+ {
+  "id": "g45a",
+  "text": "Prefers responses that briefly explain the reasoning before the final answer.",
+  "lang": "en",
+  "category": "User Preferences"
+ },
+ {
+  "id": "g45b",
+  "text": "Jangan tampilkan emoji di jawaban.",
+  "lang": "id",
+  "category": "User Preferences"
+ },
+ {
+  "id": "g45c",
+  "text": "Kalau ada ambiguitas, tanya balik dulu, jangan nebak.",
+  "lang": "mix",
+  "category": "User Preferences"
+ },
+ {
+  "id": "g46a",
+  "text": "Nibras is a portable AI assistant that runs from a USB drive on Windows.",
+  "lang": "en",
+  "category": "Projects"
+ },
+ {
+  "id": "g46b",
+  "text": "Stack Nibras: Python, PySide6, dan SQLite tanpa WAL.",
+  "lang": "mix",
+  "category": "Projects"
+ },
+ {
+  "id": "g46c",
+  "text": "Nibras memakai model embedding multilingual-e5-small untuk memori.",
+  "lang": "id",
+  "category": "Projects"
+ },
+ {
+  "id": "g47a",
+  "text": "The billing service is written in Go and deployed on Fly.io.",
+  "lang": "en",
+  "category": "Projects"
+ },
+ {
+  "id": "g47b",
+  "text": "Layanan notifikasi memakai RabbitMQ dan worker Celery.",
+  "lang": "id",
+  "category": "Projects"
+ },
+ {
+  "id": "g47c",
+  "text": "API gateway pakai Kong, rate limit 100 request per menit.",
+  "lang": "mix",
+  "category": "Projects"
+ },
+ {
+  "id": "g48a",
+  "text": "Error tracking uses Sentry, and alerts go to a Telegram channel.",
+  "lang": "en",
+  "category": "Workflows"
+ },
+ {
+  "id": "g48b",
+  "text": "Dashboard metrik di Grafana, server dipantau dengan Prometheus.",
+  "lang": "id",
+  "category": "Workflows"
+ },
+ {
+  "id": "g48c",
+  "text": "On-call: kalau uptime turun di bawah 99 persen, Dimas ditelepon otomatis.",
+  "lang": "mix",
+  "category": "Workflows"
+ },
+ {
+  "id": "g49a",
+  "text": "Unit tests use pytest with a minimum coverage of 80 percent.",
+  "lang": "en",
+  "category": "Workflows"
+ },
+ {
+  "id": "g49b",
+  "text": "Tes end-to-end memakai Playwright dan dijalankan sebelum rilis.",
+  "lang": "id",
+  "category": "Workflows"
+ },
+ {
+  "id": "g49c",
+  "text": "Load testing dengan k6 hanya dilakukan di staging.",
+  "lang": "id",
+  "category": "Workflows"
+ },
+ {
+  "id": "g50a",
+  "text": "CI runs on GitHub Actions and the pipeline takes about 6 minutes.",
+  "lang": "en",
+  "category": "Workflows"
+ },
+ {
+  "id": "g50b",
+  "text": "Docker image di-build dengan cache layer agar lebih cepat.",
+  "lang": "id",
+  "category": "Workflows"
+ },
+ {
+  "id": "g50c",
+  "text": "Format tag rilis itu v1.2.3, bukan 1.2.3 polos.",
+  "lang": "mix",
+  "category": "Workflows"
+ },
+ {
+  "id": "g51a",
+  "text": "Target belajar tahun ini: dasar-dasar Rust dan Kubernetes.",
+  "lang": "id",
+  "category": "Knowledge"
+ },
+ {
+  "id": "g51b",
+  "text": "Wants to earn the AWS Solutions Architect Associate certification.",
+  "lang": "en",
+  "category": "Knowledge"
+ },
+ {
+  "id": "g51c",
+  "text": "Dimas ikut kelas online machine learning tiap Sabtu malam.",
+  "lang": "id",
+  "category": "Knowledge"
+ },
+ {
+  "id": "g52a",
+  "text": "Aira ikut ekskul renang tiap Jumat sore.",
+  "lang": "id",
+  "category": "Personal Context"
+ },
+ {
+  "id": "g52b",
+  "text": "Aira's teacher is Bu Rina, with parent-teacher meetings every semester.",
+  "lang": "en",
+  "category": "Personal Context"
+ },
+ {
+  "id": "g52c",
+  "text": "Aira takut gelap, jadi tidur dengan lampu kecil.",
+  "lang": "id",
+  "category": "Personal Context"
+ },
+ {
+  "id": "g53a",
+  "text": "Tanaman monstera di ruang tamu disiram dua kali seminggu.",
+  "lang": "id",
+  "category": "Personal Context"
+ },
+ {
+  "id": "g53b",
+  "text": "The user grows chili peppers and basil on the balcony.",
+  "lang": "en",
+  "category": "Personal Context"
+ },
+ {
+  "id": "g53c",
+  "text": "Pupuk tanaman hias diganti sebulan sekali.",
+  "lang": "id",
+  "category": "Personal Context"
+ },
+ {
+  "id": "g54a",
+  "text": "Sari's signature dish is rendang, cooked on Sundays.",
+  "lang": "en",
+  "category": "Knowledge"
+ },
+ {
+  "id": "g54b",
+  "text": "Dimas jago membuat nasi goreng kampung.",
+  "lang": "id",
+  "category": "Knowledge"
+ },
+ {
+  "id": "g54c",
+  "text": "Resep sambal matah dari ibu mertua disimpan di catatan.",
+  "lang": "id",
+  "category": "Knowledge"
+ },
+ {
+  "id": "g55a",
+  "text": "Pernikahan teman Dimas, Bayu, tanggal 18 Desember di Lembang.",
+  "lang": "id",
+  "category": "Personal Context"
+ },
+ {
+  "id": "g55b",
+  "text": "The Bandung Python meetup happens on the last Thursday of each month.",
+  "lang": "en",
+  "category": "Personal Context"
+ },
+ {
+  "id": "g55c",
+  "text": "Reuni SMA angkatan 2008 direncanakan bulan Januari.",
+  "lang": "id",
+  "category": "Personal Context"
+ },
+ {
+  "id": "g56a",
+  "text": "Obat maag Dimas adalah antasida, diminum bila perih.",
+  "lang": "id",
+  "category": "Personal Context"
+ },
+ {
+  "id": "g56b",
+  "text": "Aira has a mild dust allergy, so her room is vacuumed regularly.",
+  "lang": "en",
+  "category": "Personal Context"
+ },
+ {
+  "id": "g56c",
+  "text": "Stok paracetamol di kotak P3K diperiksa setiap 6 bulan.",
+  "lang": "id",
+  "category": "Personal Context"
+ },
+ {
+  "id": "g57a",
+  "text": "Headphones are Sony WH-1000XM5.",
+  "lang": "en",
+  "category": "PC Information"
+ },
+ {
+  "id": "g57b",
+  "text": "Smartwatch Dimas merek Amazfit, dipakai untuk melacak lari.",
+  "lang": "id",
+  "category": "PC Information"
+ },
+ {
+  "id": "g57c",
+  "text": "The family tablet is an iPad 9th generation, mostly used by Aira.",
+  "lang": "en",
+  "category": "PC Information"
+ },
+ {
+  "id": "g58a",
+  "text": "Printer di rumah adalah Epson L3210.",
+  "lang": "id",
+  "category": "PC Information"
+ },
+ {
+  "id": "g58b",
+  "text": "Dokumen dipindai memakai aplikasi Adobe Scan di HP.",
+  "lang": "id",
+  "category": "PC Information"
+ },
+ {
+  "id": "g58c",
+  "text": "NAS Synology DS220 menyimpan backup, akses lewat VPN.",
+  "lang": "mix",
+  "category": "PC Information"
+ },
+ {
+  "id": "g59a",
+  "text": "Prefers the train over a plane for trips to Jakarta (Whoosh high-speed rail).",
+  "lang": "en",
+  "category": "User Preferences"
+ },
+ {
+  "id": "g59b",
+  "text": "Untuk perjalanan ke Garut, naik mobil lewat Nagreg.",
+  "lang": "id",
+  "category": "User Preferences"
+ },
+ {
+  "id": "g59c",
+  "text": "Tiket pesawat selalu dipesan lewat Traveloka.",
+  "lang": "id",
+  "category": "User Preferences"
+ },
+ {
+  "id": "g60a",
+  "text": "Zakat dibayar setiap Ramadan lewat Baznas.",
+  "lang": "id",
+  "category": "Personal Context"
+ },
+ {
+  "id": "g60b",
+  "text": "Monthly donation to a local orphanage is Rp500,000.",
+  "lang": "en",
+  "category": "Personal Context"
+ },
+ {
+  "id": "g60c",
+  "text": "Dimas jadi relawan literasi anak setiap bulan pertama.",
+  "lang": "id",
+  "category": "Personal Context"
+ },
+ {
+  "id": "s001",
+  "text": "Dimas lebih suka teh tawar hangat di pagi hari sebelum sarapan.",
+  "lang": "id",
+  "category": "User Preferences"
+ },
+ {
+  "id": "s002",
+  "text": "Nomor plat motor Dimas D 4521 XYZ, pajak jatuh tempo bulan September.",
+  "lang": "id",
+  "category": "Personal Context"
+ },
+ {
+  "id": "s003",
+  "text": "Tetangga sebelah rumah bernama Pak Wahyu, ketua RT di blok C.",
+  "lang": "id",
+  "category": "Personal Context"
+ },
+ {
+  "id": "s004",
+  "text": "Laporan keuangan klien dibuat dalam format Excel setiap tanggal 28.",
+  "lang": "id",
+  "category": "Workflows"
+ },
+ {
+  "id": "s005",
+  "text": "Dimas tidak suka pedas berlebihan, cukup level sedang.",
+  "lang": "id",
+  "category": "User Preferences"
+ },
+ {
+  "id": "s006",
+  "text": "Sekolah Aira mengadakan rapat orang tua setiap awal semester pada hari Sabtu.",
+  "lang": "id",
+  "category": "Personal Context"
+ },
+ {
+  "id": "s007",
+  "text": "Kabel LAN di ruang kerja rumah terhubung langsung ke switch di lemari.",
+  "lang": "id",
+  "category": "PC Information"
+ },
+ {
+  "id": "s008",
+  "text": "Proyek dashboard logistik memakai peta dari OpenStreetMap, bukan Google Maps.",
+  "lang": "id",
+  "category": "Projects"
+ },
+ {
+  "id": "s009",
+  "text": "Estimasi pekerjaan selalu ditambah buffer 20 persen untuk revisi klien.",
+  "lang": "id",
+  "category": "Workflows"
+ },
+ {
+  "id": "s010",
+  "text": "Kunci cadangan rumah dititipkan ke Bu Tini di sebelah kiri.",
+  "lang": "id",
+  "category": "Personal Context"
+ },
+ {
+  "id": "s011",
+  "text": "Dimas lebih suka mengerjakan tugas sulit di pagi hari sebelum jam 10.",
+  "lang": "id",
+  "category": "User Preferences"
+ },
+ {
+  "id": "s012",
+  "text": "Dimas sedang mempelajari pola desain CQRS untuk proyek berikutnya.",
+  "lang": "id",
+  "category": "Knowledge"
+ },
+ {
+  "id": "s013",
+  "text": "Ayah Sari bernama Pak Teguh, pensiunan guru matematika.",
+  "lang": "id",
+  "category": "Personal Context"
+ },
+ {
+  "id": "s014",
+  "text": "Anjing peliharaan tetangga sering menggonggong tengah malam, sudah dilaporkan ke RT.",
+  "lang": "id",
+  "category": "Personal Context"
+ },
+ {
+  "id": "s015",
+  "text": "Tagihan klien PT Maju Logistik jatuh tempo 14 hari setelah invoice dikirim.",
+  "lang": "id",
+  "category": "Workflows"
+ },
+ {
+  "id": "s016",
+  "text": "Baterai laptop kerja mulai menggembung, perlu diganti bulan depan.",
+  "lang": "id",
+  "category": "PC Information"
+ },
+ {
+  "id": "s017",
+  "text": "Fitur laporan PDF di aplikasi Toko Berkah memakai library dompdf.",
+  "lang": "id",
+  "category": "Projects"
+ },
+ {
+  "id": "s018",
+  "text": "Dimas tidak mau menerima telepon dari nomor tak dikenal saat jam kerja.",
+  "lang": "id",
+  "category": "User Preferences"
+ },
+ {
+  "id": "s019",
+  "text": "Cicilan motor lunas bulan Mei tahun lalu.",
+  "lang": "id",
+  "category": "Personal Context"
+ },
+ {
+  "id": "s020",
+  "text": "Aira bercita-cita menjadi dokter hewan.",
+  "lang": "id",
+  "category": "Personal Context"
+ },
+ {
+  "id": "s021",
+  "text": "Rapat dengan klien baru wajib didahului dokumen brief tertulis.",
+  "lang": "id",
+  "category": "Workflows"
+ },
+ {
+  "id": "s022",
+  "text": "Tabungan haji atas nama Dimas dan Sari ada di Bank Syariah Indonesia.",
+  "lang": "id",
+  "category": "Personal Context"
+ },
+ {
+  "id": "s023",
+  "text": "Sari tidak suka film horor, lebih suka drama keluarga.",
+  "lang": "id",
+  "category": "User Preferences"
+ },
+ {
+  "id": "s024",
+  "text": "Dimas menonton kanal YouTube Fireship untuk mengikuti kabar teknologi.",
+  "lang": "id",
+  "category": "Knowledge"
+ },
+ {
+  "id": "s025",
+  "text": "Router cadangan disimpan di laci meja kerja bila internet utama mati.",
+  "lang": "id",
+  "category": "PC Information"
+ },
+ {
+  "id": "s026",
+  "text": "Banjir kecil biasa terjadi di jalan depan perumahan saat hujan lebat.",
+  "lang": "id",
+  "category": "Personal Context"
+ },
+ {
+  "id": "s027",
+  "text": "Folder arsip proyek lama dikompres tiap akhir tahun lalu disimpan di NAS.",
+  "lang": "id",
+  "category": "Workflows"
+ },
+ {
+  "id": "s028",
+  "text": "Aplikasi stok Toko Berkah menyimpan data barang di MySQL versi 8.",
+  "lang": "id",
+  "category": "Projects"
+ },
+ {
+  "id": "s029",
+  "text": "Asuransi kesehatan keluarga dari Allianz, premi dibayar tahunan bulan Januari.",
+  "lang": "id",
+  "category": "Personal Context"
+ },
+ {
+  "id": "s030",
+  "text": "Dimas tidak minum minuman bersoda sejak dua tahun lalu.",
+  "lang": "id",
+  "category": "User Preferences"
+ },
+ {
+  "id": "s031",
+  "text": "Sari bekerja sebagai guru Bahasa Inggris di SMP Negeri 5 Bandung.",
+  "lang": "id",
+  "category": "Personal Context"
+ },
+ {
+  "id": "s032",
+  "text": "Jam pulang Sari dari sekolah biasanya pukul tiga sore.",
+  "lang": "id",
+  "category": "Personal Context"
+ },
+ {
+  "id": "s033",
+  "text": "Dimas suka berjalan kaki sore di sekitar kompleks sambil mendengarkan podcast.",
+  "lang": "id",
+  "category": "User Preferences"
+ },
+ {
+  "id": "s034",
+  "text": "Podcast favorit Dimas tentang teknologi berbahasa Indonesia adalah Podkesmas.",
+  "lang": "id",
+  "category": "Knowledge"
+ },
+ {
+  "id": "s035",
+  "text": "Sebelum rilis fitur besar, Dimas selalu membuat catatan rollback.",
+  "lang": "id",
+  "category": "Workflows"
+ },
+ {
+  "id": "s036",
+  "text": "Tema aplikasi Toko Berkah dibuat gelap karena kasir bekerja malam hari.",
+  "lang": "id",
+  "category": "Projects"
+ },
+ {
+  "id": "s037",
+  "text": "Warung langganan galon air isi ulang ada di depan gang, antar gratis.",
+  "lang": "id",
+  "category": "Personal Context"
+ },
+ {
+  "id": "s038",
+  "text": "Gas elpiji 3 kg dibeli di agen Pak Asep setiap dua minggu.",
+  "lang": "id",
+  "category": "Personal Context"
+ },
+ {
+  "id": "s039",
+  "text": "Printer thermal di toko Berkah terhubung lewat USB dan Bluetooth.",
+  "lang": "id",
+  "category": "PC Information"
+ },
+ {
+  "id": "s040",
+  "text": "Pajak PBB rumah dibayar bulan Juli lewat aplikasi bank.",
+  "lang": "id",
+  "category": "Personal Context"
+ },
+ {
+  "id": "s041",
+  "text": "Dokumen kontrak klien ditandatangani secara digital lewat PrivyID.",
+  "lang": "id",
+  "category": "Workflows"
+ },
+ {
+  "id": "s042",
+  "text": "Dimas menyimpan catatan harian di aplikasi Obsidian.",
+  "lang": "id",
+  "category": "User Preferences"
+ },
+ {
+  "id": "s043",
+  "text": "Dimas membaca ulang catatan mingguan setiap Minggu malam.",
+  "lang": "id",
+  "category": "Knowledge"
+ },
+ {
+  "id": "s044",
+  "text": "Mertua Dimas biasa datang membawa oleh-oleh bolu kukus dari Surabaya.",
+  "lang": "id",
+  "category": "Personal Context"
+ },
+ {
+  "id": "s045",
+  "text": "Aira punya sepeda lipat merah yang dipakai tiap Minggu pagi.",
+  "lang": "id",
+  "category": "Personal Context"
+ },
+ {
+  "id": "s046",
+  "text": "Pembayaran freelance dari klien luar negeri diterima lewat Wise.",
+  "lang": "id",
+  "category": "Workflows"
+ },
+ {
+  "id": "s047",
+  "text": "Dashboard logistik menampilkan posisi truk setiap 30 detik.",
+  "lang": "id",
+  "category": "Projects"
+ },
+ {
+  "id": "s048",
+  "text": "Notifikasi keterlambatan truk dikirim lewat email dan WhatsApp ke dispatcher.",
+  "lang": "id",
+  "category": "Projects"
+ },
+ {
+  "id": "s049",
+  "text": "Kontak darurat keluarga adalah Mbak Ratna dan dr. Rizal.",
+  "lang": "id",
+  "category": "Personal Context"
+ },
+ {
+  "id": "s050",
+  "text": "Nomor rekening listrik rumah terdaftar atas nama almarhum ayah Dimas.",
+  "lang": "id",
+  "category": "Personal Context"
+ },
+ {
+  "id": "s051",
+  "text": "Sari menyukai bunga tulip, tapi di Bandung susah ditemukan.",
+  "lang": "id",
+  "category": "User Preferences"
+ },
+ {
+  "id": "s052",
+  "text": "Hadiah ulang tahun Aira tahun lalu adalah set alat lukis.",
+  "lang": "id",
+  "category": "Personal Context"
+ },
+ {
+  "id": "s053",
+  "text": "Dimas tertarik pada fotografi analog dan punya kamera Canon AE-1.",
+  "lang": "id",
+  "category": "Knowledge"
+ },
+ {
+  "id": "s054",
+  "text": "Rol film dikembangkan di studio kecil dekat Braga.",
+  "lang": "id",
+  "category": "PC Information"
+ },
+ {
+  "id": "s055",
+  "text": "Dimas tidak menerima proyek dengan tenggat kurang dari dua minggu.",
+  "lang": "id",
+  "category": "Workflows"
+ },
+ {
+  "id": "s056",
+  "text": "Revisi di luar kesepakatan awal dikenakan biaya tambahan per jam.",
+  "lang": "id",
+  "category": "Workflows"
+ },
+ {
+  "id": "s057",
+  "text": "Anak tetangga, Kenzo, adalah teman bermain Aira.",
+  "lang": "id",
+  "category": "Personal Context"
+ },
+ {
+  "id": "s058",
+  "text": "Arisan keluarga besar Dimas diadakan setiap bulan ketiga di Garut.",
+  "lang": "id",
+  "category": "Personal Context"
+ },
+ {
+  "id": "s059",
+  "text": "Dimas suka bubur ayam tanpa seledri.",
+  "lang": "id",
+  "category": "User Preferences"
+ },
+ {
+  "id": "s060",
+  "text": "Sari rutin senam pagi di taman kompleks hari Minggu.",
+  "lang": "id",
+  "category": "Personal Context"
+ },
+ {
+  "id": "s061",
+  "text": "Colokan listrik ruang kerja dilengkapi UPS untuk menghindari mati mendadak.",
+  "lang": "id",
+  "category": "PC Information"
+ },
+ {
+  "id": "s062",
+  "text": "Monitor kedua berukuran 27 inci dipasang vertikal untuk membaca kode.",
+  "lang": "id",
+  "category": "PC Information"
+ },
+ {
+  "id": "s063",
+  "text": "Server staging Toko Berkah memakai Ubuntu dengan Nginx dan PHP-FPM.",
+  "lang": "id",
+  "category": "Projects"
+ },
+ {
+  "id": "s064",
+  "text": "Backup database Toko Berkah dikirim ke Google Drive pukul 23.00.",
+  "lang": "id",
+  "category": "Projects"
+ },
+ {
+  "id": "s065",
+  "text": "Dimas memakai Notion untuk mengelola tugas dan papan kanban proyek.",
+  "lang": "id",
+  "category": "Workflows"
+ },
+ {
+  "id": "s066",
+  "text": "Laporan mingguan ke klien dikirim hari Jumat sebelum jam 5 sore.",
+  "lang": "id",
+  "category": "Workflows"
+ },
+ {
+  "id": "s067",
+  "text": "Dimas mencatat istilah teknis baru dalam glosarium pribadi.",
+  "lang": "id",
+  "category": "Knowledge"
+ },
+ {
+  "id": "s068",
+  "text": "Buku referensi Python favorit Dimas adalah Fluent Python.",
+  "lang": "id",
+  "category": "Knowledge"
+ },
+ {
+  "id": "s069",
+  "text": "Pembantu paruh waktu datang setiap Senin dan Kamis pagi.",
+  "lang": "id",
+  "category": "Personal Context"
+ },
+ {
+  "id": "s070",
+  "text": "Biaya sekolah Aira per semester sebesar Rp3,5 juta.",
+  "lang": "id",
+  "category": "Personal Context"
+ },
+ {
+  "id": "s071",
+  "text": "Dimas lebih suka rapat singkat tanpa slide.",
+  "lang": "id",
+  "category": "User Preferences"
+ },
+ {
+  "id": "s072",
+  "text": "Sari suka berbelanja sayur segar di pasar tradisional hari Sabtu.",
+  "lang": "id",
+  "category": "User Preferences"
+ },
+ {
+  "id": "s073",
+  "text": "Es krim favorit Aira rasa stroberi.",
+  "lang": "id",
+  "category": "Personal Context"
+ },
+ {
+  "id": "s074",
+  "text": "Kolam ikan koi di halaman belakang dibersihkan sebulan sekali.",
+  "lang": "id",
+  "category": "Personal Context"
+ },
+ {
+  "id": "s075",
+  "text": "Pompa air rumah merek Shimizu, pernah diservis bulan Maret.",
+  "lang": "id",
+  "category": "PC Information"
+ },
+ {
+  "id": "s076",
+  "text": "Water heater di kamar mandi utama sering mati sendiri, perlu dicek teknisi.",
+  "lang": "id",
+  "category": "PC Information"
+ },
+ {
+  "id": "s077",
+  "text": "Teknisi AC langganan bernama Pak Dedi, nomor tersimpan di kontak.",
+  "lang": "id",
+  "category": "Personal Context"
+ },
+ {
+  "id": "s078",
+  "text": "AC kamar tidur dibersihkan setiap enam bulan.",
+  "lang": "id",
+  "category": "Personal Context"
+ },
+ {
+  "id": "s079",
+  "text": "Dimas menolak proyek yang melibatkan judi daring.",
+  "lang": "id",
+  "category": "Workflows"
+ },
+ {
+  "id": "s080",
+  "text": "Kontrak kerja freelance minimal tiga bulan agar ada kepastian pendapatan.",
+  "lang": "id",
+  "category": "Workflows"
+ },
+ {
+  "id": "s081",
+  "text": "Modul absensi karyawan Toko Berkah memakai sidik jari ZKTeco.",
+  "lang": "id",
+  "category": "Projects"
+ },
+ {
+  "id": "s082",
+  "text": "Fitur retur barang di aplikasi kasir wajib menyertakan alasan.",
+  "lang": "id",
+  "category": "Projects"
+ },
+ {
+  "id": "s083",
+  "text": "Dimas lulusan Teknik Informatika ITB angkatan 2008.",
+  "lang": "id",
+  "category": "Personal Context"
+ },
+ {
+  "id": "s084",
+  "text": "Sari lulusan Pendidikan Bahasa Inggris UPI.",
+  "lang": "id",
+  "category": "Personal Context"
+ },
+ {
+  "id": "s085",
+  "text": "Dimas ingin pensiun dini di usia 50 tahun.",
+  "lang": "id",
+  "category": "User Preferences"
+ },
+ {
+  "id": "s086",
+  "text": "Dana pensiun mandiri dikelola lewat reksa dana saham dan obligasi.",
+  "lang": "id",
+  "category": "Knowledge"
+ },
+ {
+  "id": "s087",
+  "text": "Dimas takut ketinggian, jadi menghindari wahana roller coaster.",
+  "lang": "id",
+  "category": "Personal Context"
+ },
+ {
+  "id": "s088",
+  "text": "Sari mudah mabuk perjalanan di jalan berkelok.",
+  "lang": "id",
+  "category": "Personal Context"
+ },
+ {
+  "id": "s089",
+  "text": "Dimas lebih suka tidur dengan kipas angin daripada AC.",
+  "lang": "id",
+  "category": "User Preferences"
+ },
+ {
+  "id": "s090",
+  "text": "Suhu AC kamar diatur 25 derajat bila dinyalakan.",
+  "lang": "id",
+  "category": "User Preferences"
+ },
+ {
+  "id": "s091",
+  "text": "Sampah rumah tangga diambil petugas kompleks setiap Selasa dan Sabtu.",
+  "lang": "id",
+  "category": "Personal Context"
+ },
+ {
+  "id": "s092",
+  "text": "Iuran keamanan kompleks Rp150 ribu per bulan.",
+  "lang": "id",
+  "category": "Personal Context"
+ },
+ {
+  "id": "s093",
+  "text": "Setiap awal bulan Dimas memeriksa semua langganan SaaS yang masih aktif.",
+  "lang": "id",
+  "category": "Workflows"
+ },
+ {
+  "id": "s094",
+  "text": "Langganan yang tidak dipakai selama tiga bulan akan dibatalkan.",
+  "lang": "id",
+  "category": "Workflows"
+ },
+ {
+  "id": "s095",
+  "text": "Dimas sedang menulis artikel blog tentang optimasi query PostgreSQL.",
+  "lang": "id",
+  "category": "Knowledge"
+ },
+ {
+  "id": "s096",
+  "text": "Blog pribadi Dimas dibuat dengan Astro dan di-hosting di Cloudflare Pages.",
+  "lang": "id",
+  "category": "Knowledge"
+ },
+ {
+  "id": "s097",
+  "text": "Ibu Dimas gemar berkebun dan menanam bunga melati.",
+  "lang": "id",
+  "category": "Personal Context"
+ },
+ {
+  "id": "s098",
+  "text": "Ulang tahun pernikahan orang tua Dimas jatuh pada bulan April.",
+  "lang": "id",
+  "category": "Personal Context"
+ },
+ {
+  "id": "s099",
+  "text": "Sari ingin membuka kelas les Bahasa Inggris untuk anak-anak di rumah.",
+  "lang": "id",
+  "category": "User Preferences"
+ },
+ {
+  "id": "s100",
+  "text": "Rencana pendanaan kelas les Sari berasal dari tabungan pribadi, bukan pinjaman.",
+  "lang": "id",
+  "category": "Projects"
+ },
+ {
+  "id": "s101",
+  "text": "Ruang kerja Dimas di rumah tidak boleh dimasuki saat pintunya tertutup.",
+  "lang": "id",
+  "category": "Workflows"
+ },
+ {
+  "id": "s102",
+  "text": "Dimas biasanya makan malam bersama keluarga pukul tujuh.",
+  "lang": "id",
+  "category": "User Preferences"
+ },
+ {
+  "id": "s103",
+  "text": "Hari Minggu sore adalah waktu khusus keluarga tanpa gawai.",
+  "lang": "id",
+  "category": "Personal Context"
+ },
+ {
+  "id": "s104",
+  "text": "Aira dibatasi bermain gawai maksimal satu jam per hari.",
+  "lang": "id",
+  "category": "Personal Context"
+ },
+ {
+  "id": "s105",
+  "text": "Lampu teras dinyalakan otomatis pukul enam sore.",
+  "lang": "id",
+  "category": "Personal Context"
+ },
+ {
+  "id": "s106",
+  "text": "Kontak teknis di PT Maju Logistik adalah Mbak Dewi, bagian IT.",
+  "lang": "id",
+  "category": "Workflows"
+ },
+ {
+  "id": "s107",
+  "text": "Pak Hendra lebih suka dihubungi lewat telepon, bukan chat.",
+  "lang": "id",
+  "category": "Workflows"
+ },
+ {
+  "id": "s108",
+  "text": "Dashboard logistik harus mendukung bahasa Indonesia dan Inggris.",
+  "lang": "id",
+  "category": "Projects"
+ },
+ {
+  "id": "s109",
+  "text": "Peta rute truk menyimpan riwayat perjalanan selama 90 hari.",
+  "lang": "id",
+  "category": "Projects"
+ },
+ {
+  "id": "s110",
+  "text": "Fitur ekspor laporan dashboard logistik dalam format CSV dan PDF.",
+  "lang": "id",
+  "category": "Projects"
+ },
+ {
+  "id": "s111",
+  "text": "Pengisi daya cepat 65 watt dibawa ke mana-mana dalam tas laptop.",
+  "lang": "id",
+  "category": "PC Information"
+ },
+ {
+  "id": "s112",
+  "text": "Tas laptop merek Eiger berwarna hitam, sudah dua tahun dipakai.",
+  "lang": "id",
+  "category": "PC Information"
+ },
+ {
+  "id": "s113",
+  "text": "Mouse Logitech MX Master 3 dipakai untuk kerja sehari-hari.",
+  "lang": "id",
+  "category": "PC Information"
+ },
+ {
+  "id": "s114",
+  "text": "Keyboard mekanik Keychron K2 dengan switch cokelat.",
+  "lang": "id",
+  "category": "PC Information"
+ },
+ {
+  "id": "s115",
+  "text": "Dimas tidak bisa berenang jauh, hanya bisa gaya katak sebentar.",
+  "lang": "id",
+  "category": "Personal Context"
+ },
+ {
+  "id": "s116",
+  "text": "Aira sudah bisa berenang gaya bebas sejak usia enam tahun.",
+  "lang": "id",
+  "category": "Personal Context"
+ },
+ {
+  "id": "s117",
+  "text": "Dimas lebih suka film fiksi ilmiah dan thriller.",
+  "lang": "id",
+  "category": "User Preferences"
+ },
+ {
+  "id": "s118",
+  "text": "Film favorit Dimas sepanjang masa adalah Interstellar.",
+  "lang": "id",
+  "category": "User Preferences"
+ },
+ {
+  "id": "s119",
+  "text": "Sari menyukai serial Korea dan menonton akhir pekan.",
+  "lang": "id",
+  "category": "User Preferences"
+ },
+ {
+  "id": "s120",
+  "text": "Dimas membaca berita teknologi lewat agregator Hacker News tiap pagi.",
+  "lang": "id",
+  "category": "Knowledge"
+ },
+ {
+  "id": "s121",
+  "text": "Dimas mencatat jam kerja per proyek memakai aplikasi Toggl.",
+  "lang": "id",
+  "category": "Workflows"
+ },
+ {
+  "id": "s122",
+  "text": "Laporan jam kerja bulanan dikirim bersamaan dengan invoice.",
+  "lang": "id",
+  "category": "Workflows"
+ },
+ {
+  "id": "s123",
+  "text": "Dimas pernah dirawat karena demam berdarah pada tahun 2019.",
+  "lang": "id",
+  "category": "Personal Context"
+ },
+ {
+  "id": "s124",
+  "text": "Golongan darah Dimas O positif.",
+  "lang": "id",
+  "category": "Personal Context"
+ },
+ {
+  "id": "s125",
+  "text": "Golongan darah Sari A positif.",
+  "lang": "id",
+  "category": "Personal Context"
+ },
+ {
+  "id": "s126",
+  "text": "Golongan darah Aira B positif.",
+  "lang": "id",
+  "category": "Personal Context"
+ },
+ {
+  "id": "s127",
+  "text": "Rencana rilis versi pertama aplikasi kasir Toko Berkah adalah awal kuartal ketiga.",
+  "lang": "id",
+  "category": "Projects"
+ },
+ {
+  "id": "s128",
+  "text": "Pengujian pengguna aplikasi kasir dilakukan bersama dua kasir toko.",
+  "lang": "id",
+  "category": "Projects"
+ },
+ {
+  "id": "s129",
+  "text": "Masukan kasir menyebut tombol hapus terlalu dekat dengan tombol bayar.",
+  "lang": "id",
+  "category": "Projects"
+ },
+ {
+  "id": "s130",
+  "text": "Kontrakan di Jakarta untuk hari kerja disewa Dimas dengan harga Rp1,8 juta per bulan.",
+  "lang": "id",
+  "category": "Personal Context"
+ },
+ {
+  "id": "s131",
+  "text": "Dimas belajar dasar investasi saham lewat kursus gratis dari OJK.",
+  "lang": "id",
+  "category": "Knowledge"
+ },
+ {
+  "id": "s132",
+  "text": "Kartu BPJS Kesehatan keluarga dibayar lewat autodebet.",
+  "lang": "id",
+  "category": "Personal Context"
+ },
+ {
+  "id": "s133",
+  "text": "Pendamping belajar Aira di hari Senin adalah Dimas, hari Selasa adalah Sari.",
+  "lang": "id",
+  "category": "Personal Context"
+ },
+ {
+  "id": "s134",
+  "text": "Dimas menyukai hujan dan suara gemericiknya saat bekerja.",
+  "lang": "id",
+  "category": "User Preferences"
+ },
+ {
+  "id": "s135",
+  "text": "Kopi favorit Dimas berasal dari biji Gayo, disangrai medium.",
+  "lang": "id",
+  "category": "User Preferences"
+ },
+ {
+  "id": "s136",
+  "text": "Alat seduh kopi di rumah adalah V60 dan grinder manual.",
+  "lang": "id",
+  "category": "PC Information"
+ },
+ {
+  "id": "s137",
+  "text": "Dimas membeli biji kopi dari roastery lokal di Cihapit.",
+  "lang": "id",
+  "category": "Personal Context"
+ },
+ {
+  "id": "s138",
+  "text": "Resolusi Dimas tahun ini adalah tidak lembur lebih dari dua kali sebulan.",
+  "lang": "id",
+  "category": "Personal Context"
+ },
+ {
+  "id": "s139",
+  "text": "Resolusi Sari tahun ini adalah menulis buku panduan belajar Bahasa Inggris.",
+  "lang": "id",
+  "category": "Personal Context"
+ },
+ {
+  "id": "s140",
+  "text": "Anggaran liburan keluarga per tahun sekitar Rp25 juta.",
+  "lang": "id",
+  "category": "Personal Context"
+ },
+ {
+  "id": "s141",
+  "text": "Penyakit asam lambung Dimas kambuh jika terlalu banyak minum kopi.",
+  "lang": "id",
+  "category": "Personal Context"
+ },
+ {
+  "id": "s142",
+  "text": "Dimas menetapkan batas satu pertemuan online maksimal 45 menit.",
+  "lang": "id",
+  "category": "Workflows"
+ },
+ {
+  "id": "s143",
+  "text": "Notulen rapat dikirim ke peserta paling lambat sehari setelah rapat.",
+  "lang": "id",
+  "category": "Workflows"
+ },
+ {
+  "id": "s144",
+  "text": "Dimas berlangganan koran digital Kompas untuk membaca berita ekonomi.",
+  "lang": "id",
+  "category": "Personal Context"
+ },
+ {
+  "id": "s145",
+  "text": "Istilah SOLID dijelaskan Dimas kepada juniornya lewat contoh nyata.",
+  "lang": "id",
+  "category": "Knowledge"
+ },
+ {
+  "id": "s146",
+  "text": "Dimas adalah mentor untuk dua pengembang junior dari komunitas Bandung.",
+  "lang": "id",
+  "category": "Workflows"
+ },
+ {
+  "id": "s147",
+  "text": "Sesi mentoring dilakukan dua minggu sekali lewat video call.",
+  "lang": "id",
+  "category": "Workflows"
+ },
+ {
+  "id": "s148",
+  "text": "Dimas ingin membangun rumah kedua di Lembang saat anak sudah besar.",
+  "lang": "id",
+  "category": "Personal Context"
+ },
+ {
+  "id": "s149",
+  "text": "Tanah di Lembang seluas 200 meter persegi sudah dibeli atas nama Sari.",
+  "lang": "id",
+  "category": "Personal Context"
+ },
+ {
+  "id": "s150",
+  "text": "Surat tanah dan sertifikat rumah disimpan di brankas bank.",
+  "lang": "id",
+  "category": "Personal Context"
+ },
+ {
+  "id": "s151",
+  "text": "Nomor kartu keluarga disimpan di folder terenkripsi, tidak boleh dicatat di chat.",
+  "lang": "id",
+  "category": "Personal Context"
+ },
+ {
+  "id": "s152",
+  "text": "Foto paspor dan KTP keluarga disimpan di brankas Bitwarden.",
+  "lang": "id",
+  "category": "Personal Context"
+ },
+ {
+  "id": "s153",
+  "text": "The user dislikes meetings that could have been an email.",
+  "lang": "en",
+  "category": "User Preferences"
+ },
+ {
+  "id": "s154",
+  "text": "Dimas drinks about three glasses of water before noon.",
+  "lang": "en",
+  "category": "User Preferences"
+ },
+ {
+  "id": "s155",
+  "text": "The family adopted a rescue dog named Bruno last winter.",
+  "lang": "en",
+  "category": "Personal Context"
+ },
+ {
+  "id": "s156",
+  "text": "Bruno needs a walk twice a day, morning and evening.",
+  "lang": "en",
+  "category": "Personal Context"
+ },
+ {
+  "id": "s157",
+  "text": "Annual vaccination for the pets is due every March.",
+  "lang": "en",
+  "category": "Personal Context"
+ },
+ {
+  "id": "s158",
+  "text": "The user invoices clients in IDR but accepts USD through Wise for overseas clients.",
+  "lang": "en",
+  "category": "Workflows"
+ },
+ {
+  "id": "s159",
+  "text": "Overdue invoices get a reminder after seven days and a phone call after fourteen.",
+  "lang": "en",
+  "category": "Workflows"
+ },
+ {
+  "id": "s160",
+  "text": "The fleet dashboard uses WebSockets for live truck positions.",
+  "lang": "en",
+  "category": "Projects"
+ },
+ {
+  "id": "s161",
+  "text": "The frontend of the fleet dashboard is built with Svelte and Tailwind.",
+  "lang": "en",
+  "category": "Projects"
+ },
+ {
+  "id": "s162",
+  "text": "Map tiles come from a self-hosted tile server to avoid API costs.",
+  "lang": "en",
+  "category": "Projects"
+ },
+ {
+  "id": "s163",
+  "text": "Alerts for speeding trucks trigger when speed exceeds 90 km/h.",
+  "lang": "en",
+  "category": "Projects"
+ },
+ {
+  "id": "s164",
+  "text": "The point-of-sale app for Toko Berkah stores prices in integer rupiah, never floats.",
+  "lang": "en",
+  "category": "Projects"
+ },
+ {
+  "id": "s165",
+  "text": "Receipts for Toko Berkah are printed on 58 mm thermal paper.",
+  "lang": "en",
+  "category": "Projects"
+ },
+ {
+  "id": "s166",
+  "text": "Barcode scanning in the POS uses a USB HID scanner acting as a keyboard.",
+  "lang": "en",
+  "category": "Projects"
+ },
+ {
+  "id": "s167",
+  "text": "The user prefers dark mode in every application.",
+  "lang": "en",
+  "category": "User Preferences"
+ },
+ {
+  "id": "s168",
+  "text": "Font preference is JetBrains Mono at size 13.",
+  "lang": "en",
+  "category": "User Preferences"
+ },
+ {
+  "id": "s169",
+  "text": "Prefers tabs over spaces only in Go code; spaces everywhere else.",
+  "lang": "en",
+  "category": "User Preferences"
+ },
+ {
+  "id": "s170",
+  "text": "Code review comments should be specific and include a suggested change.",
+  "lang": "en",
+  "category": "User Preferences"
+ },
+ {
+  "id": "s171",
+  "text": "The user writes design docs before any feature that takes more than three days.",
+  "lang": "en",
+  "category": "Workflows"
+ },
+ {
+  "id": "s172",
+  "text": "Design docs live in Notion and are linked from the issue tracker.",
+  "lang": "en",
+  "category": "Workflows"
+ },
+ {
+  "id": "s173",
+  "text": "Sprints are one week long and start on Monday.",
+  "lang": "en",
+  "category": "Workflows"
+ },
+ {
+  "id": "s174",
+  "text": "Retrospectives happen every other Friday morning.",
+  "lang": "en",
+  "category": "Workflows"
+ },
+ {
+  "id": "s175",
+  "text": "Recently studied the Raft consensus algorithm and implemented a toy version.",
+  "lang": "en",
+  "category": "Knowledge"
+ },
+ {
+  "id": "s176",
+  "text": "Reads one research paper from the ACM digital library every two weeks.",
+  "lang": "en",
+  "category": "Knowledge"
+ },
+ {
+  "id": "s177",
+  "text": "Favorite programming language to learn from is Elixir.",
+  "lang": "en",
+  "category": "Knowledge"
+ },
+ {
+  "id": "s178",
+  "text": "Dimas grew up in Garut before moving to Bandung for university.",
+  "lang": "en",
+  "category": "Personal Context"
+ },
+ {
+  "id": "s179",
+  "text": "Sari was born in Surabaya and moved to Bandung after marriage.",
+  "lang": "en",
+  "category": "Personal Context"
+ },
+ {
+  "id": "s180",
+  "text": "The couple met at a university alumni gathering in 2013.",
+  "lang": "en",
+  "category": "Personal Context"
+ },
+ {
+  "id": "s181",
+  "text": "They got married in 2015 in Surabaya.",
+  "lang": "en",
+  "category": "Personal Context"
+ },
+ {
+  "id": "s182",
+  "text": "Aira was born at Santosa Hospital in Bandung.",
+  "lang": "en",
+  "category": "Personal Context"
+ },
+ {
+  "id": "s183",
+  "text": "The user enjoys strong black tea in the afternoon.",
+  "lang": "en",
+  "category": "User Preferences"
+ },
+ {
+  "id": "s184",
+  "text": "Prefers cold showers in the morning.",
+  "lang": "en",
+  "category": "User Preferences"
+ },
+ {
+  "id": "s185",
+  "text": "The home server is a Raspberry Pi 5 running Pi-hole and Home Assistant.",
+  "lang": "en",
+  "category": "PC Information"
+ },
+ {
+  "id": "s186",
+  "text": "The Raspberry Pi is powered through a small UPS to survive blackouts.",
+  "lang": "en",
+  "category": "PC Information"
+ },
+ {
+  "id": "s187",
+  "text": "Home internet is a 100 Mbps Indihome plan with a static IP.",
+  "lang": "en",
+  "category": "PC Information"
+ },
+ {
+  "id": "s188",
+  "text": "The backup internet line is a mobile hotspot from a Telkomsel SIM.",
+  "lang": "en",
+  "category": "PC Information"
+ },
+ {
+  "id": "s189",
+  "text": "The office desk is a standing desk raised to 110 cm.",
+  "lang": "en",
+  "category": "PC Information"
+ },
+ {
+  "id": "s190",
+  "text": "A second monitor, a Dell U2723QE, is connected via USB-C.",
+  "lang": "en",
+  "category": "PC Information"
+ },
+ {
+  "id": "s191",
+  "text": "The user keeps a weekly time budget: 30 hours billable, 10 hours admin and learning.",
+  "lang": "en",
+  "category": "Workflows"
+ },
+ {
+  "id": "s192",
+  "text": "Friday morning is reserved for invoicing and admin tasks.",
+  "lang": "en",
+  "category": "Workflows"
+ },
+ {
+  "id": "s193",
+  "text": "Webhooks from the payment gateway are verified with an HMAC signature.",
+  "lang": "en",
+  "category": "Projects"
+ },
+ {
+  "id": "s194",
+  "text": "Payment gateway for Toko Berkah online orders is Midtrans.",
+  "lang": "en",
+  "category": "Projects"
+ },
+ {
+  "id": "s195",
+  "text": "Refunds are processed manually and require owner approval.",
+  "lang": "en",
+  "category": "Projects"
+ },
+ {
+  "id": "s196",
+  "text": "A nightly job reconciles sales totals against bank settlements.",
+  "lang": "en",
+  "category": "Projects"
+ },
+ {
+  "id": "s197",
+  "text": "The user keeps a personal wiki of troubleshooting steps for recurring server issues.",
+  "lang": "en",
+  "category": "Knowledge"
+ },
+ {
+  "id": "s198",
+  "text": "Learned that PostgreSQL VACUUM FULL locks the table and avoids it in production.",
+  "lang": "en",
+  "category": "Knowledge"
+ },
+ {
+  "id": "s199",
+  "text": "Prefers keyset pagination over OFFSET for large tables.",
+  "lang": "en",
+  "category": "Knowledge"
+ },
+ {
+  "id": "s200",
+  "text": "Uses EXPLAIN ANALYZE before adding any new index.",
+  "lang": "en",
+  "category": "Knowledge"
+ },
+ {
+  "id": "s201",
+  "text": "Aira's school bus picks her up at 6:45 am.",
+  "lang": "en",
+  "category": "Personal Context"
+ },
+ {
+  "id": "s202",
+  "text": "Aira has a library card at the Bandung city library.",
+  "lang": "en",
+  "category": "Personal Context"
+ },
+ {
+  "id": "s203",
+  "text": "The family doctor recommends a flu shot every October.",
+  "lang": "en",
+  "category": "Personal Context"
+ },
+ {
+  "id": "s204",
+  "text": "Sari prefers hiking over the beach on holidays.",
+  "lang": "en",
+  "category": "User Preferences"
+ },
+ {
+  "id": "s205",
+  "text": "Dimas prefers the beach and rarely goes to mountains.",
+  "lang": "en",
+  "category": "User Preferences"
+ },
+ {
+  "id": "s206",
+  "text": "The family visited Bali for their honeymoon in 2015.",
+  "lang": "en",
+  "category": "Personal Context"
+ },
+ {
+  "id": "s207",
+  "text": "They plan to visit the Netherlands one day to see the tulip fields.",
+  "lang": "en",
+  "category": "Personal Context"
+ },
+ {
+  "id": "s208",
+  "text": "Client calls with PT Maju Logistik are recorded with permission.",
+  "lang": "en",
+  "category": "Workflows"
+ },
+ {
+  "id": "s209",
+  "text": "Meeting recordings are stored for 30 days and then deleted.",
+  "lang": "en",
+  "category": "Workflows"
+ },
+ {
+  "id": "s210",
+  "text": "The user prefers receiving documents as PDF, not Word files.",
+  "lang": "en",
+  "category": "User Preferences"
+ },
+ {
+  "id": "s211",
+  "text": "Calendar invites should include a video link and an agenda.",
+  "lang": "en",
+  "category": "User Preferences"
+ },
+ {
+  "id": "s212",
+  "text": "Dimas prefers paying with QRIS at small shops.",
+  "lang": "en",
+  "category": "Personal Context"
+ },
+ {
+  "id": "s213",
+  "text": "Parking at the coworking space costs Rp3,000 per hour.",
+  "lang": "en",
+  "category": "Personal Context"
+ },
+ {
+  "id": "s214",
+  "text": "The coworking membership includes ten hours of meeting room use per month.",
+  "lang": "en",
+  "category": "Personal Context"
+ },
+ {
+  "id": "s215",
+  "text": "Studied the book Clean Architecture two years ago and now rereads selected chapters.",
+  "lang": "en",
+  "category": "Knowledge"
+ },
+ {
+  "id": "s216",
+  "text": "Keeps flashcards in Anki for Japanese kanji.",
+  "lang": "en",
+  "category": "Knowledge"
+ },
+ {
+  "id": "s217",
+  "text": "Dimas stopped playing mobile games to save time.",
+  "lang": "en",
+  "category": "Personal Context"
+ },
+ {
+  "id": "s218",
+  "text": "Weekend game night is Settlers of Catan with neighbors.",
+  "lang": "en",
+  "category": "Personal Context"
+ },
+ {
+  "id": "s219",
+  "text": "Board games are stored in the cabinet under the TV.",
+  "lang": "en",
+  "category": "Personal Context"
+ },
+ {
+  "id": "s220",
+  "text": "The user likes spicy food but avoids it when working late.",
+  "lang": "en",
+  "category": "User Preferences"
+ },
+ {
+  "id": "s221",
+  "text": "Dimas prefers sambal terasi over sambal bawang.",
+  "lang": "en",
+  "category": "User Preferences"
+ },
+ {
+  "id": "s222",
+  "text": "Contracts with Indonesian clients are written in Indonesian and signed with e-signature.",
+  "lang": "en",
+  "category": "Workflows"
+ },
+ {
+  "id": "s223",
+  "text": "Contracts with foreign clients are written in English under Singapore law.",
+  "lang": "en",
+  "category": "Workflows"
+ },
+ {
+  "id": "s224",
+  "text": "The family keeps an emergency bag with documents, cash, and a flashlight near the front door.",
+  "lang": "en",
+  "category": "Personal Context"
+ },
+ {
+  "id": "s225",
+  "text": "The emergency fund covers six months of expenses.",
+  "lang": "en",
+  "category": "Personal Context"
+ },
+ {
+  "id": "s226",
+  "text": "The user mutes the phone during family dinner.",
+  "lang": "en",
+  "category": "User Preferences"
+ },
+ {
+  "id": "s227",
+  "text": "Sari prefers handwritten notes over typing.",
+  "lang": "en",
+  "category": "User Preferences"
+ },
+ {
+  "id": "s228",
+  "text": "Dimas uses spaced repetition to memorize command-line shortcuts.",
+  "lang": "en",
+  "category": "Knowledge"
+ },
+ {
+  "id": "s229",
+  "text": "The shared family calendar is on Google Calendar with color-coded members.",
+  "lang": "en",
+  "category": "PC Information"
+ },
+ {
+  "id": "s230",
+  "text": "Photos from Aira's school events are shared in a family album.",
+  "lang": "en",
+  "category": "PC Information"
+ },
+ {
+  "id": "s231",
+  "text": "A side project is a small habit tracker app written in Flutter.",
+  "lang": "en",
+  "category": "Projects"
+ },
+ {
+  "id": "s232",
+  "text": "The habit tracker stores data locally and syncs through a self-hosted server.",
+  "lang": "en",
+  "category": "Projects"
+ },
+ {
+  "id": "s233",
+  "text": "The habit tracker has no ads and is free to use.",
+  "lang": "en",
+  "category": "Projects"
+ },
+ {
+  "id": "s234",
+  "text": "Uses Linear for issue tracking on personal projects.",
+  "lang": "en",
+  "category": "Workflows"
+ },
+ {
+  "id": "s235",
+  "text": "Uses Jira for tracking tasks in PT Maju Logistik because the client requires it.",
+  "lang": "en",
+  "category": "Workflows"
+ },
+ {
+  "id": "s236",
+  "text": "Meeting dengan PT Maju Logistik selalu pakai Google Meet, bukan Zoom.",
+  "lang": "mix",
+  "category": "Workflows"
+ },
+ {
+  "id": "s237",
+  "text": "Deploy ke production wajib lewat pipeline CI, jangan langsung SSH.",
+  "lang": "mix",
+  "category": "Workflows"
+ },
+ {
+  "id": "s238",
+  "text": "Kalau ada bug di staging, buat issue dulu baru fix di branch hotfix.",
+  "lang": "mix",
+  "category": "Workflows"
+ },
+ {
+  "id": "s239",
+  "text": "Code review minimal satu approval sebelum merge ke main.",
+  "lang": "mix",
+  "category": "Workflows"
+ },
+ {
+  "id": "s240",
+  "text": "Backup database di-run otomatis jam 2 pagi via cron.",
+  "lang": "mix",
+  "category": "Workflows"
+ },
+ {
+  "id": "s241",
+  "text": "Library untuk chart di dashboard logistik pakai Apache ECharts.",
+  "lang": "mix",
+  "category": "Projects"
+ },
+ {
+  "id": "s242",
+  "text": "Endpoint /api/trucks harus support pagination dan filter by status.",
+  "lang": "mix",
+  "category": "Projects"
+ },
+ {
+  "id": "s243",
+  "text": "Rate limit API dashboard 60 request per menit per user.",
+  "lang": "mix",
+  "category": "Projects"
+ },
+ {
+  "id": "s244",
+  "text": "Token auth pakai JWT dengan expiry 15 menit dan refresh token 7 hari.",
+  "lang": "mix",
+  "category": "Projects"
+ },
+ {
+  "id": "s245",
+  "text": "Fitur notifikasi di app Toko Berkah pakai Firebase Cloud Messaging.",
+  "lang": "mix",
+  "category": "Projects"
+ },
+ {
+  "id": "s246",
+  "text": "Setup environment dev Toko Berkah pakai Docker Compose.",
+  "lang": "mix",
+  "category": "Projects"
+ },
+ {
+  "id": "s247",
+  "text": "Dimas lebih suka pakai dark mode di semua app, termasuk terminal.",
+  "lang": "mix",
+  "category": "User Preferences"
+ },
+ {
+  "id": "s248",
+  "text": "Font di terminal pakai Fira Code dengan ligature aktif.",
+  "lang": "mix",
+  "category": "User Preferences"
+ },
+ {
+  "id": "s249",
+  "text": "Gw prefer jawaban yang to the point, tanpa basa-basi.",
+  "lang": "mix",
+  "category": "User Preferences"
+ },
+ {
+  "id": "s250",
+  "text": "Kalau ngoding, Dimas suka dengerin playlist synthwave.",
+  "lang": "mix",
+  "category": "User Preferences"
+ },
+ {
+  "id": "s251",
+  "text": "Dimas ngopi-nya pakai V60, bukan mesin espresso.",
+  "lang": "mix",
+  "category": "User Preferences"
+ },
+ {
+  "id": "s252",
+  "text": "Aira lagi suka banget sama dinosaurus dan koleksi action figure T-Rex.",
+  "lang": "mix",
+  "category": "Personal Context"
+ },
+ {
+  "id": "s253",
+  "text": "Weekend ini family trip ke Lembang naik mobil jam 8 pagi.",
+  "lang": "mix",
+  "category": "Personal Context"
+ },
+ {
+  "id": "s254",
+  "text": "Reservasi hotel di Labuan Bajo sudah di-book lewat Agoda.",
+  "lang": "mix",
+  "category": "Personal Context"
+ },
+ {
+  "id": "s255",
+  "text": "Tiket pesawat Labuan Bajo pakai maskapai Citilink, berangkat dari Bandara Husein.",
+  "lang": "mix",
+  "category": "Personal Context"
+ },
+ {
+  "id": "s256",
+  "text": "Check-in hotel jam 2 siang, check-out jam 12 siang.",
+  "lang": "mix",
+  "category": "Personal Context"
+ },
+ {
+  "id": "s257",
+  "text": "Anniversary dinner dibooking di restoran Sky Dining Bandung.",
+  "lang": "mix",
+  "category": "Personal Context"
+ },
+ {
+  "id": "s258",
+  "text": "Hadiah ulang tahun Sari tahun ini voucher spa di Dago.",
+  "lang": "mix",
+  "category": "Personal Context"
+ },
+ {
+  "id": "s259",
+  "text": "Sari request dibeliin tas kecil warna navy untuk ulang tahun.",
+  "lang": "mix",
+  "category": "Personal Context"
+ },
+ {
+  "id": "s260",
+  "text": "Budget bulanan groceries sekitar Rp3 juta untuk 3 orang.",
+  "lang": "mix",
+  "category": "Personal Context"
+ },
+ {
+  "id": "s261",
+  "text": "Cicilan KPR auto-debit tiap tanggal 5 dari rekening BCA.",
+  "lang": "mix",
+  "category": "Personal Context"
+ },
+ {
+  "id": "s262",
+  "text": "Reminder bayar pajak motor di aplikasi Signal bulan September.",
+  "lang": "mix",
+  "category": "Personal Context"
+ },
+ {
+  "id": "s263",
+  "text": "Smart TV Samsung di ruang keluarga support Netflix dan YouTube.",
+  "lang": "mix",
+  "category": "PC Information"
+ },
+ {
+  "id": "s264",
+  "text": "WiFi guest password diganti tiap 3 bulan.",
+  "lang": "mix",
+  "category": "PC Information"
+ },
+ {
+  "id": "s265",
+  "text": "Pi-hole di rumah udah block iklan di semua device.",
+  "lang": "mix",
+  "category": "PC Information"
+ },
+ {
+  "id": "s266",
+  "text": "Home Assistant punya automation lampu nyala jam 6 sore.",
+  "lang": "mix",
+  "category": "PC Information"
+ },
+ {
+  "id": "s267",
+  "text": "CCTV Imou bisa diakses dari app di HP lewat cloud.",
+  "lang": "mix",
+  "category": "PC Information"
+ },
+ {
+  "id": "s268",
+  "text": "Dimas lagi belajar Rust buat project CLI kecil.",
+  "lang": "mix",
+  "category": "Knowledge"
+ },
+ {
+  "id": "s269",
+  "text": "Course Kubernetes di Udemy sudah selesai 40 persen.",
+  "lang": "mix",
+  "category": "Knowledge"
+ },
+ {
+  "id": "s270",
+  "text": "Catatan belajar Docker disimpan di folder Knowledge di Obsidian.",
+  "lang": "mix",
+  "category": "Knowledge"
+ },
+ {
+  "id": "s271",
+  "text": "Konsep eventual consistency dijelaskan Dimas pakai analogi kasir warung.",
+  "lang": "mix",
+  "category": "Knowledge"
+ },
+ {
+  "id": "s272",
+  "text": "Cheat sheet Git di-print dan ditempel di dinding ruang kerja.",
+  "lang": "mix",
+  "category": "Knowledge"
+ },
+ {
+  "id": "s273",
+  "text": "Standup update dikirim via Slack kalau Dimas tidak bisa join.",
+  "lang": "mix",
+  "category": "Workflows"
+ },
+ {
+  "id": "s274",
+  "text": "Invoice dibuat pakai template Google Docs lalu export jadi PDF.",
+  "lang": "mix",
+  "category": "Workflows"
+ },
+ {
+  "id": "s275",
+  "text": "Reminder invoice follow-up di-set di Google Calendar tiap Senin.",
+  "lang": "mix",
+  "category": "Workflows"
+ },
+ {
+  "id": "s276",
+  "text": "Kontrak klien baru wajib di-review lawyer langganan, Pak Fajar.",
+  "lang": "mix",
+  "category": "Workflows"
+ },
+ {
+  "id": "s277",
+  "text": "Project handover butuh dokumentasi README dan diagram arsitektur.",
+  "lang": "mix",
+  "category": "Workflows"
+ },
+ {
+  "id": "s278",
+  "text": "Dimas ga suka notifikasi push dari app belanja online.",
+  "lang": "mix",
+  "category": "User Preferences"
+ },
+ {
+  "id": "s279",
+  "text": "Sari lebih suka dikirimin voice note daripada pesan panjang.",
+  "lang": "mix",
+  "category": "User Preferences"
+ },
+ {
+  "id": "s280",
+  "text": "Les piano Aira diganti jadi online kalau hujan deras.",
+  "lang": "mix",
+  "category": "Personal Context"
+ },
+ {
+  "id": "s281",
+  "text": "Guru piano Aira namanya Kak Sinta, tarif per bulan Rp600 ribu.",
+  "lang": "mix",
+  "category": "Personal Context"
+ },
+ {
+  "id": "s282",
+  "text": "Aira ikut lomba menggambar tingkat kota bulan depan.",
+  "lang": "mix",
+  "category": "Personal Context"
+ },
+ {
+  "id": "s283",
+  "text": "Jemput sekolah Aira kalau Sari ada rapat guru dilakukan Dimas.",
+  "lang": "mix",
+  "category": "Personal Context"
+ },
+ {
+  "id": "s284",
+  "text": "Daycare darurat kalau keduanya sibuk ada di penitipan Ceria.",
+  "lang": "mix",
+  "category": "Personal Context"
+ },
+ {
+  "id": "s285",
+  "text": "Perayaan ulang tahun Aira rencananya di rumah dengan tema dino.",
+  "lang": "mix",
+  "category": "Personal Context"
+ },
+ {
+  "id": "s286",
+  "text": "Dimas ngecek email bisnis jam 9 pagi dan 4 sore saja.",
+  "lang": "mix",
+  "category": "Workflows"
+ },
+ {
+  "id": "s287",
+  "text": "Weekly report ke Pak Hendra dikirim via email bukan WA.",
+  "lang": "mix",
+  "category": "Workflows"
+ },
+ {
+  "id": "s288",
+  "text": "Server staging dashboard logistik di VPS Hetzner Singapore.",
+  "lang": "mix",
+  "category": "Projects"
+ },
+ {
+  "id": "s289",
+  "text": "Monitoring pakai Uptime Kuma, alert masuk ke Telegram.",
+  "lang": "mix",
+  "category": "Projects"
+ },
+ {
+  "id": "s290",
+  "text": "Log aplikasi dikirim ke Loki dan dilihat lewat Grafana.",
+  "lang": "mix",
+  "category": "Projects"
+ },
+ {
+  "id": "s291",
+  "text": "Database dashboard logistik pakai PostgreSQL dengan ekstensi PostGIS.",
+  "lang": "mix",
+  "category": "Projects"
+ },
+ {
+  "id": "s292",
+  "text": "Query geospasial dioptimasi dengan GiST index.",
+  "lang": "mix",
+  "category": "Projects"
+ },
+ {
+  "id": "s293",
+  "text": "Alasan pakai PostGIS: butuh query radius dan polygon yang cepat.",
+  "lang": "mix",
+  "category": "Knowledge"
+ },
+ {
+  "id": "s294",
+  "text": "Prefer Linux untuk dev, tapi Windows untuk gaming di desktop rumah.",
+  "lang": "mix",
+  "category": "User Preferences"
+ },
+ {
+  "id": "s295",
+  "text": "Desktop rumah dual boot Windows 11 dan Ubuntu.",
+  "lang": "mix",
+  "category": "PC Information"
+ },
+ {
+  "id": "s296",
+  "text": "Storage SSD NVMe 1 TB di desktop rumah, sudah terisi 70 persen.",
+  "lang": "mix",
+  "category": "PC Information"
+ },
+ {
+  "id": "s297",
+  "text": "Backup laptop kerja pakai Restic ke Backblaze B2.",
+  "lang": "mix",
+  "category": "PC Information"
+ },
+ {
+  "id": "s298",
+  "text": "Restic jalan otomatis tiap malam jam 1 lewat systemd timer.",
+  "lang": "mix",
+  "category": "PC Information"
+ },
+ {
+  "id": "s299",
+  "text": "Password manager Bitwarden self-hosted pakai Vaultwarden di Raspberry Pi.",
+  "lang": "mix",
+  "category": "Workflows"
+ },
+ {
+  "id": "s300",
+  "text": "Hardware key YubiKey ada dua, satu dibawa satu disimpan di brankas.",
+  "lang": "mix",
+  "category": "Workflows"
+ },
+ {
+  "id": "s301",
+  "text": "Dimas baru ganti ban motor, masih garansi 6 bulan.",
+  "lang": "mix",
+  "category": "Personal Context"
+ },
+ {
+  "id": "s302",
+  "text": "Servis motor rutin tiap 3 bulan di bengkel Pak Joko.",
+  "lang": "mix",
+  "category": "Personal Context"
+ },
+ {
+  "id": "s303",
+  "text": "Oli motor pakai Shell Advance, ganti tiap 2.000 km.",
+  "lang": "mix",
+  "category": "Personal Context"
+ },
+ {
+  "id": "s304",
+  "text": "Jadwal cek kesehatan tahunan Dimas di bulan Mei.",
+  "lang": "mix",
+  "category": "Personal Context"
+ },
+ {
+  "id": "s305",
+  "text": "Dimas lagi diet, target turun 5 kg sebelum Desember.",
+  "lang": "mix",
+  "category": "Personal Context"
+ },
+ {
+  "id": "s306",
+  "text": "Gula dibatasi, ganti pakai stevia di teh.",
+  "lang": "mix",
+  "category": "Personal Context"
+ },
+ {
+  "id": "s307",
+  "text": "Dimas lagi nulis thread soal pengalaman migrasi dari MySQL ke Postgres.",
+  "lang": "mix",
+  "category": "Knowledge"
+ },
+ {
+  "id": "s308",
+  "text": "Talk Dimas di meetup Python Bandung bahas FastAPI dan async.",
+  "lang": "mix",
+  "category": "Knowledge"
+ },
+ {
+  "id": "s309",
+  "text": "Slide talk disimpan di Google Slides dengan tema minimalis.",
+  "lang": "mix",
+  "category": "Knowledge"
+ },
+ {
+  "id": "s310",
+  "text": "Dimas ga mau dikontak vendor sales lewat WA.",
+  "lang": "mix",
+  "category": "User Preferences"
+ },
+ {
+  "id": "s311",
+  "text": "Notifikasi email dari LinkedIn dimatikan semua.",
+  "lang": "mix",
+  "category": "User Preferences"
+ },
+ {
+  "id": "s312",
+  "text": "Keluarga rutin ke Alun-Alun Bandung tiap malam Minggu pertama.",
+  "lang": "mix",
+  "category": "Personal Context"
+ },
+ {
+  "id": "s313",
+  "text": "Kue ulang tahun biasanya pesan di toko Brownies Amanda.",
+  "lang": "mix",
+  "category": "Personal Context"
+ },
+ {
+  "id": "s314",
+  "text": "Dimas hobi lari pagi 5 km tiap Minggu di Gasibu.",
+  "lang": "mix",
+  "category": "Personal Context"
+ },
+ {
+  "id": "s315",
+  "text": "Target lari Dimas: ikut half marathon Bandung bulan Oktober.",
+  "lang": "mix",
+  "category": "Personal Context"
+ },
+ {
+  "id": "s316",
+  "text": "Sepatu lari Dimas Nike Pegasus, ukuran 42.",
+  "lang": "mix",
+  "category": "Personal Context"
+ },
+ {
+  "id": "s317",
+  "text": "Handover project lama ke Rudi sudah beres, dokumentasi di Notion.",
+  "lang": "mix",
+  "category": "Workflows"
+ },
+ {
+  "id": "s318",
+  "text": "Rudi bakal jadi backup kalau Dimas cuti lama.",
+  "lang": "mix",
+  "category": "Workflows"
+ },
+ {
+  "id": "s319",
+  "text": "Cuti tahunan Dimas diambil akhir Desember bareng liburan sekolah.",
+  "lang": "mix",
+  "category": "Workflows"
+ },
+ {
+  "id": "s320",
+  "text": "Deadline fitur laporan dashboard logistik jatuh di akhir kuartal.",
+  "lang": "mix",
+  "category": "Workflows"
+ }
+]
