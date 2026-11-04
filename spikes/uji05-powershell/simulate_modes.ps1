@@ -31,5 +31,5 @@ if ($Mode -in 'execpolicy','all') {
 }
 if ($Mode -in 'clm','all') {
   Write-Output '== constrained language (in-session only; no system policy change)'
-  & $py -I "$here\ps_wrapper.py" '$ExecutionContext.SessionState.LanguageMode = "ConstrainedLanguage"; [System.Math]::Sqrt(4)'
+  & $py -I "$here\_clm_probe.py"
 }
