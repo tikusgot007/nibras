@@ -4,7 +4,7 @@
 
 Dokumen ini adalah **sumber kebenaran desain** proyek Nibras. Setiap implementasi wajib mengikuti keputusan di sini. Jika implementasi perlu menyimpang, hentikan pekerjaan dan ajukan revisi keputusan. Jangan menyimpang diam-diam.
 
-**Status:** Desain MVP selesai. Fase 0 sedang berjalan (Uji #1 lulus).
+**Status:** Desain MVP selesai. Fase 0 sedang berjalan (Uji #1 lulus, Uji #6 belum lulus dan dilanjutkan dengan Uji #6b).
 
 **Arti status:**
 - **Disetujui:** keputusan final.
@@ -180,10 +180,10 @@ Policy Engine, Plan Executor (mencocokkan setiap tindakan dengan rencana yang di
 |---|---|---|
 | D-24 | Vektor disimpan sebagai BLOB di `index.db` dan dicari secara brute-force dengan `numpy`, di balik antarmuka `VectorIndex` | Perlu validasi |
 | D-25 | Entri memori berupa pernyataan atomik dalam bahasa alami ditambah metadata terstruktur | Disetujui |
-| D-26 | Model embedding lokal: `multilingual-e5-small` dalam format ONNX terkuantisasi int8, dengan dimensi 384 | Perlu validasi (Uji #6) |
+| D-26 | Model embedding lokal: `multilingual-e5-small` dalam format ONNX terkuantisasi int8, dengan dimensi 384 | **Belum lulus** (Uji #6: Recall@5 60,5%). Dievaluasi ulang di Uji #6b |
 | D-27 | Alur usulan memori melalui chip di akhir respons dan Memory Inbox | Disetujui |
 | D-28 | Consolidation dan archiving berbasis usulan yang memerlukan persetujuan | Disetujui |
-| D-29 | Ranking Hybrid Search: Reciprocal Rank Fusion, lalu penyesuaian berdasarkan prioritas | Disetujui |
+| D-29 | Ranking Hybrid Search: Reciprocal Rank Fusion, lalu penyesuaian berdasarkan prioritas | Perlu validasi (Uji #6b) |
 | D-30 | Backup dan restore atomik dengan verifikasi | Disetujui |
 | D-31 | Identifikasi PC dengan fingerprint gabungan berbobot | Perlu validasi (Uji #9) |
 
@@ -356,7 +356,7 @@ Aturan ini hanya boleh **menaikkan** risk level, tidak pernah menurunkan.
 | 3 | Antivirus dan SmartScreen terhadap launcher | Tercatat, dan ada solusi untuk setiap blokir | D-12 |
 | 4 | Streaming respons sekitar 5.000 token di UI | UI tidak macet | D-11, D-16, D-50 |
 | 5 | PowerShell di akun non-admin dan PC kantor | Gagal dengan aman dan menampilkan pesan yang jelas | D-17 |
-| 6 | Embedding pada 200 query campuran Indonesia–Inggris | Jawaban benar muncul di top-5 untuk minimal 80% query | D-14, D-26 |
+| 6 | Embedding pada 200 query campuran Indonesia–Inggris | Jawaban benar muncul di top-5 untuk minimal 80% query | D-14, D-26 — **Belum lulus**, dilanjutkan Uji #6b (lihat bagian 12) |
 | 7 | Chromium dijalankan dari USB | Waktu start dan volume tulis tercatat | D-13 |
 | 8 | Izin NTFS lintas 2–3 PC dan akun | Tidak ada error permission | D-04 |
 | 9 | Identifikasi PC, termasuk skenario ganti komponen | PC dikenali dengan benar | D-31 |
@@ -391,6 +391,13 @@ Sebelum dipublikasikan luas, cek merek "Nibras" di PDKI untuk kelas 9 dan 42.
 | ID | Keputusan | Status |
 |---|---|---|
 | D-54 | **Intent log untuk tindakan non-idempotent.** (1) Sebelum eksekusi, catat status `pending` lalu commit. (2) Jalankan tindakan. (3) Catat status `done`. (4) Saat recovery, tindakan yang masih berstatus `pending` **tidak pernah diulang otomatis**. Tindakan tersebut ditampilkan sebagai tugas *interrupted*, dan pengguna diminta memverifikasi. Memperkuat D-08 dan D-21 | Disetujui |
+
+### Uji #6: Kualitas embedding lokal (BELUM LULUS)
+- **Hasil:** Recall@5 vektor int8 **60,5%** (target 80%). fp32 62,5%, FTS5 29,0%, Hybrid RRF 46,0%. Lisensi model (MIT) terverifikasi. Performa baik: indexing 10.000 entri sintetis (untuk uji performa) 4,3 menit, dan median query 26 ms di Intel i5-4460.
+- **Kelemahan model yang nyata:** bias bahasa ketika query Indonesia mencari entri berbahasa Inggris (Recall@5 hanya 33,3%). Model cenderung memilih entri yang bahasanya sama dengan query.
+- **Kelemahan dataset:** query dibuat terlalu adversarial. Sebanyak 92,5% query `id-id` sama sekali tidak berbagi kata dengan jawabannya, dan sebagian memakai parafrase yang tidak natural. Persona juga ambigu, karena ada entri tentang "Dimas" dan ada entri tentang "the user". Hybrid dirugikan oleh FTS5 tanpa penghapusan stopword. Karena itu hasilnya kemungkinan **di bawah** performa nyata, tetapi belum cukup untuk memutuskan.
+- **Tindak lanjut:** Uji #6b dengan query natural, perbandingan `e5-small` dan `e5-base`, mitigasi entri dwibahasa, dan Hybrid yang adil. Kriteria keputusan ditetapkan di brief sebelum uji dijalankan.
+- Laporan lengkap: `results/uji06-embedding.md`.
 
 ---
 
