@@ -1,0 +1,2609 @@
+[
+  {
+    "query_id": "q003",
+    "type": "id-id",
+    "query": "Bagaimana Dimas biasanya meminum kopinya?",
+    "relevant": [
+      {
+        "id": "g01a",
+        "text": "Dimas suka kopi hitam tanpa gula."
+      }
+    ],
+    "top5": [
+      {
+        "id": "s135",
+        "text": "Kopi favorit Dimas berasal dari biji Gayo, disangrai medium."
+      },
+      {
+        "id": "g01c",
+        "text": "Dimas berhenti minum kopi setelah jam 3 sore karena susah tidur."
+      },
+      {
+        "id": "g01b",
+        "text": "Istri Dimas, Sari, suka kopi susu dengan gula aren."
+      },
+      {
+        "id": "s141",
+        "text": "Penyakit asam lambung Dimas kambuh jika terlalu banyak minum kopi."
+      },
+      {
+        "id": "g24a",
+        "text": "Makanan favorit Dimas adalah nasi timbel dengan ikan asin."
+      }
+    ]
+  },
+  {
+    "query_id": "q005",
+    "type": "id-id",
+    "query": "Di sekolah mana Aira belajar?",
+    "relevant": [
+      {
+        "id": "g03a",
+        "text": "Anak Dimas, Aira, kelas 2 SD di SDN Cipaganti."
+      }
+    ],
+    "top5": [
+      {
+        "id": "s006",
+        "text": "Sekolah Aira mengadakan rapat orang tua setiap awal semester pada hari Sabtu."
+      },
+      {
+        "id": "g31c",
+        "text": "Perlengkapan sekolah Aira dibeli di toko Gramedia Merdeka."
+      },
+      {
+        "id": "s133",
+        "text": "Pendamping belajar Aira di hari Senin adalah Dimas, hari Selasa adalah Sari."
+      },
+      {
+        "id": "s070",
+        "text": "Biaya sekolah Aira per semester sebesar Rp3,5 juta."
+      },
+      {
+        "id": "g12b",
+        "text": "Laptop Aira adalah Chromebook murah dari sekolah."
+      }
+    ]
+  },
+  {
+    "query_id": "q006",
+    "type": "id-id",
+    "query": "Siapa yang membawa Aira menuju kelas saat pagi?",
+    "relevant": [
+      {
+        "id": "g03b",
+        "text": "Aira berangkat sekolah jam 6.30 diantar Sari."
+      }
+    ],
+    "top5": [
+      {
+        "id": "s045",
+        "text": "Aira punya sepeda lipat merah yang dipakai tiap Minggu pagi."
+      },
+      {
+        "id": "s006",
+        "text": "Sekolah Aira mengadakan rapat orang tua setiap awal semester pada hari Sabtu."
+      },
+      {
+        "id": "s133",
+        "text": "Pendamping belajar Aira di hari Senin adalah Dimas, hari Selasa adalah Sari."
+      },
+      {
+        "id": "s057",
+        "text": "Anak tetangga, Kenzo, adalah teman bermain Aira."
+      },
+      {
+        "id": "g31c",
+        "text": "Perlengkapan sekolah Aira dibeli di toko Gramedia Merdeka."
+      }
+    ]
+  },
+  {
+    "query_id": "q008",
+    "type": "id-id",
+    "query": "Di mana kendaraan roda empat itu dirawat berkala?",
+    "relevant": [
+      {
+        "id": "g04c",
+        "text": "Mobil Brio diservis tiap 5.000 km di bengkel Honda Soekarno-Hatta."
+      }
+    ],
+    "top5": [
+      {
+        "id": "s123",
+        "text": "Dimas pernah dirawat karena demam berdarah pada tahun 2019."
+      },
+      {
+        "id": "s019",
+        "text": "Cicilan motor lunas bulan Mei tahun lalu."
+      },
+      {
+        "id": "g15a",
+        "text": "Liburan keluarga tahun lalu ke Yogyakarta selama 4 hari."
+      },
+      {
+        "id": "s302",
+        "text": "Servis motor rutin tiap 3 bulan di bengkel Pak Joko."
+      },
+      {
+        "id": "g03c",
+        "text": "Les piano Aira setiap Rabu jam 4 sore."
+      }
+    ]
+  },
+  {
+    "query_id": "q009",
+    "type": "id-id",
+    "query": "Skema warna apa yang dipilih Dimas untuk lingkungan pengembangannya?",
+    "relevant": [
+      {
+        "id": "g05c",
+        "text": "Dimas memakai tema Dracula di semua editor."
+      }
+    ],
+    "top5": [
+      {
+        "id": "s123",
+        "text": "Dimas pernah dirawat karena demam berdarah pada tahun 2019."
+      },
+      {
+        "id": "s146",
+        "text": "Dimas adalah mentor untuk dua pengembang junior dari komunitas Bandung."
+      },
+      {
+        "id": "s035",
+        "text": "Sebelum rilis fitur besar, Dimas selalu membuat catatan rollback."
+      },
+      {
+        "id": "s068",
+        "text": "Buku referensi Python favorit Dimas adalah Fluent Python."
+      },
+      {
+        "id": "s135",
+        "text": "Kopi favorit Dimas berasal dari biji Gayo, disangrai medium."
+      }
+    ]
+  },
+  {
+    "query_id": "q010",
+    "type": "id-id",
+    "query": "Pantangan makanan apa yang dimiliki Dimas?",
+    "relevant": [
+      {
+        "id": "g09a",
+        "text": "Dimas alergi udang, jangan sarankan restoran seafood."
+      }
+    ],
+    "top5": [
+      {
+        "id": "g24a",
+        "text": "Makanan favorit Dimas adalah nasi timbel dengan ikan asin."
+      },
+      {
+        "id": "s123",
+        "text": "Dimas pernah dirawat karena demam berdarah pada tahun 2019."
+      },
+      {
+        "id": "g56a",
+        "text": "Obat maag Dimas adalah antasida, diminum bila perih."
+      },
+      {
+        "id": "s135",
+        "text": "Kopi favorit Dimas berasal dari biji Gayo, disangrai medium."
+      },
+      {
+        "id": "g25a",
+        "text": "Langganan makan siang Dimas di warung Bu Eha dekat coworking."
+      }
+    ]
+  },
+  {
+    "query_id": "q012",
+    "type": "id-id",
+    "query": "Pukul berapa Sari beranjak ke peraduan?",
+    "relevant": [
+      {
+        "id": "g10b",
+        "text": "Sari biasanya tidur lebih awal, jam 9 malam."
+      }
+    ],
+    "top5": [
+      {
+        "id": "g39b",
+        "text": "Sari lahir pada 3 Februari."
+      },
+      {
+        "id": "s032",
+        "text": "Jam pulang Sari dari sekolah biasanya pukul tiga sore."
+      },
+      {
+        "id": "s084",
+        "text": "Sari lulusan Pendidikan Bahasa Inggris UPI."
+      },
+      {
+        "id": "g38b",
+        "text": "Sari memakai ukuran baju M dan sepatu 38."
+      },
+      {
+        "id": "s031",
+        "text": "Sari bekerja sebagai guru Bahasa Inggris di SMP Negeri 5 Bandung."
+      }
+    ]
+  },
+  {
+    "query_id": "q015",
+    "type": "id-id",
+    "query": "Kapan salinan gambar kenangan di rumah diamankan?",
+    "relevant": [
+      {
+        "id": "g13a",
+        "text": "Foto keluarga di-backup ke Google Photos dan hard disk eksternal 2TB setiap akhir bulan."
+      }
+    ],
+    "top5": [
+      {
+        "id": "s058",
+        "text": "Arisan keluarga besar Dimas diadakan setiap bulan ketiga di Garut."
+      },
+      {
+        "id": "s285",
+        "text": "Perayaan ulang tahun Aira rencananya di rumah dengan tema dino."
+      },
+      {
+        "id": "s050",
+        "text": "Nomor rekening listrik rumah terdaftar atas nama almarhum ayah Dimas."
+      },
+      {
+        "id": "s035",
+        "text": "Sebelum rilis fitur besar, Dimas selalu membuat catatan rollback."
+      },
+      {
+        "id": "s101",
+        "text": "Ruang kerja Dimas di rumah tidak boleh dimasuki saat pintunya tertutup."
+      }
+    ]
+  },
+  {
+    "query_id": "q017",
+    "type": "id-id",
+    "query": "Musik apa yang menemani Dimas ketika menulis program?",
+    "relevant": [
+      {
+        "id": "g14a",
+        "text": "Dimas mendengarkan lo-fi saat coding."
+      }
+    ],
+    "top5": [
+      {
+        "id": "s035",
+        "text": "Sebelum rilis fitur besar, Dimas selalu membuat catatan rollback."
+      },
+      {
+        "id": "s068",
+        "text": "Buku referensi Python favorit Dimas adalah Fluent Python."
+      },
+      {
+        "id": "s250",
+        "text": "Kalau ngoding, Dimas suka dengerin playlist synthwave."
+      },
+      {
+        "id": "s146",
+        "text": "Dimas adalah mentor untuk dua pengembang junior dari komunitas Bandung."
+      },
+      {
+        "id": "s123",
+        "text": "Dimas pernah dirawat karena demam berdarah pada tahun 2019."
+      }
+    ]
+  },
+  {
+    "query_id": "q018",
+    "type": "id-id",
+    "query": "Ke mana rombongan Dimas pelesir setahun silam?",
+    "relevant": [
+      {
+        "id": "g15a",
+        "text": "Liburan keluarga tahun lalu ke Yogyakarta selama 4 hari."
+      }
+    ],
+    "top5": [
+      {
+        "id": "g41a",
+        "text": "Orang tua Dimas tinggal di Garut."
+      },
+      {
+        "id": "s098",
+        "text": "Ulang tahun pernikahan orang tua Dimas jatuh pada bulan April."
+      },
+      {
+        "id": "s123",
+        "text": "Dimas pernah dirawat karena demam berdarah pada tahun 2019."
+      },
+      {
+        "id": "s304",
+        "text": "Jadwal cek kesehatan tahunan Dimas di bulan Mei."
+      },
+      {
+        "id": "s058",
+        "text": "Arisan keluarga besar Dimas diadakan setiap bulan ketiga di Garut."
+      }
+    ]
+  },
+  {
+    "query_id": "q020",
+    "type": "id-id",
+    "query": "Aktivitas apa yang Dimas lakukan di danau tiap empat minggu?",
+    "relevant": [
+      {
+        "id": "g16b",
+        "text": "Dimas memancing sebulan sekali di Situ Patenggang."
+      }
+    ],
+    "top5": [
+      {
+        "id": "s058",
+        "text": "Arisan keluarga besar Dimas diadakan setiap bulan ketiga di Garut."
+      },
+      {
+        "id": "s123",
+        "text": "Dimas pernah dirawat karena demam berdarah pada tahun 2019."
+      },
+      {
+        "id": "s115",
+        "text": "Dimas tidak bisa berenang jauh, hanya bisa gaya katak sebentar."
+      },
+      {
+        "id": "s035",
+        "text": "Sebelum rilis fitur besar, Dimas selalu membuat catatan rollback."
+      },
+      {
+        "id": "s304",
+        "text": "Jadwal cek kesehatan tahunan Dimas di bulan Mei."
+      }
+    ]
+  },
+  {
+    "query_id": "q022",
+    "type": "id-id",
+    "query": "Berapa besar angsuran hunian setiap 30 hari?",
+    "relevant": [
+      {
+        "id": "g17c",
+        "text": "Cicilan KPR rumah Rp4,2 juta per bulan, lunas tahun 2038."
+      }
+    ],
+    "top5": [
+      {
+        "id": "s140",
+        "text": "Anggaran liburan keluarga per tahun sekitar Rp25 juta."
+      },
+      {
+        "id": "g13c",
+        "text": "Database produksi di-backup otomatis jam 2 pagi ke S3 dan disimpan 30 hari."
+      },
+      {
+        "id": "g02c",
+        "text": "Mochi harus minum obat cacing setiap tiga bulan."
+      },
+      {
+        "id": "s094",
+        "text": "Langganan yang tidak dipakai selama tiga bulan akan dibatalkan."
+      },
+      {
+        "id": "s104",
+        "text": "Aira dibatasi bermain gawai maksimal satu jam per hari."
+      }
+    ]
+  },
+  {
+    "query_id": "q023",
+    "type": "id-id",
+    "query": "Usaha apa yang menjadi pelanggan nomor dua Dimas?",
+    "relevant": [
+      {
+        "id": "g18b",
+        "text": "Klien kedua adalah Toko Berkah, mengerjakan sistem kasir dan stok."
+      }
+    ],
+    "top5": [
+      {
+        "id": "s146",
+        "text": "Dimas adalah mentor untuk dua pengembang junior dari komunitas Bandung."
+      },
+      {
+        "id": "s050",
+        "text": "Nomor rekening listrik rumah terdaftar atas nama almarhum ayah Dimas."
+      },
+      {
+        "id": "s128",
+        "text": "Pengujian pengguna aplikasi kasir dilakukan bersama dua kasir toko."
+      },
+      {
+        "id": "s068",
+        "text": "Buku referensi Python favorit Dimas adalah Fluent Python."
+      },
+      {
+        "id": "s123",
+        "text": "Dimas pernah dirawat karena demam berdarah pada tahun 2019."
+      }
+    ]
+  },
+  {
+    "query_id": "q027",
+    "type": "id-id",
+    "query": "Bolehkah menulis ulang riwayat commit di cabang yang digunakan tim?",
+    "relevant": [
+      {
+        "id": "g21c",
+        "text": "Rebase dilarang pada branch yang sudah di-push dan dipakai bersama."
+      }
+    ],
+    "top5": [
+      {
+        "id": "s082",
+        "text": "Fitur retur barang di aplikasi kasir wajib menyertakan alasan."
+      },
+      {
+        "id": "g54c",
+        "text": "Resep sambal matah dari ibu mertua disimpan di catatan."
+      },
+      {
+        "id": "s025",
+        "text": "Router cadangan disimpan di laci meja kerja bila internet utama mati."
+      },
+      {
+        "id": "s151",
+        "text": "Nomor kartu keluarga disimpan di folder terenkripsi, tidak boleh dicatat di chat."
+      },
+      {
+        "id": "s035",
+        "text": "Sebelum rilis fitur besar, Dimas selalu membuat catatan rollback."
+      }
+    ]
+  },
+  {
+    "query_id": "q032",
+    "type": "id-id",
+    "query": "Seberapa sering Dimas memperbarui alat bantu penglihatannya?",
+    "relevant": [
+      {
+        "id": "g27c",
+        "text": "Mata Dimas minus 2,5 dan ganti kacamata tiap dua tahun."
+      }
+    ],
+    "top5": [
+      {
+        "id": "s035",
+        "text": "Sebelum rilis fitur besar, Dimas selalu membuat catatan rollback."
+      },
+      {
+        "id": "g57b",
+        "text": "Smartwatch Dimas merek Amazfit, dipakai untuk melacak lari."
+      },
+      {
+        "id": "s123",
+        "text": "Dimas pernah dirawat karena demam berdarah pada tahun 2019."
+      },
+      {
+        "id": "s067",
+        "text": "Dimas mencatat istilah teknis baru dalam glosarium pribadi."
+      },
+      {
+        "id": "s146",
+        "text": "Dimas adalah mentor untuk dua pengembang junior dari komunitas Bandung."
+      }
+    ]
+  },
+  {
+    "query_id": "q034",
+    "type": "id-id",
+    "query": "Berapa lama tayangan alat pengawas keamanan tersimpan?",
+    "relevant": [
+      {
+        "id": "g29b",
+        "text": "CCTV rumah merek Imou, 3 kamera, rekaman disimpan 7 hari."
+      }
+    ],
+    "top5": [
+      {
+        "id": "s301",
+        "text": "Dimas baru ganti ban motor, masih garansi 6 bulan."
+      },
+      {
+        "id": "s081",
+        "text": "Modul absensi karyawan Toko Berkah memakai sidik jari ZKTeco."
+      },
+      {
+        "id": "s078",
+        "text": "AC kamar tidur dibersihkan setiap enam bulan."
+      },
+      {
+        "id": "g57b",
+        "text": "Smartwatch Dimas merek Amazfit, dipakai untuk melacak lari."
+      },
+      {
+        "id": "s094",
+        "text": "Langganan yang tidak dipakai selama tiga bulan akan dibatalkan."
+      }
+    ]
+  },
+  {
+    "query_id": "q036",
+    "type": "id-id",
+    "query": "Mulai pukul berapa dering pesan urusan profesional dimatikan?",
+    "relevant": [
+      {
+        "id": "g34a",
+        "text": "Notifikasi WhatsApp kerja dibisukan setelah jam 8 malam."
+      }
+    ],
+    "top5": [
+      {
+        "id": "s142",
+        "text": "Dimas menetapkan batas satu pertemuan online maksimal 45 menit."
+      },
+      {
+        "id": "g40b",
+        "text": "Hari jadi usaha freelance Dimas adalah 1 Maret."
+      },
+      {
+        "id": "s143",
+        "text": "Notulen rapat dikirim ke peserta paling lambat sehari setelah rapat."
+      },
+      {
+        "id": "g08a",
+        "text": "Standup tim jam 9.30 setiap hari kerja lewat Google Meet."
+      },
+      {
+        "id": "s018",
+        "text": "Dimas tidak mau menerima telepon dari nomor tak dikenal saat jam kerja."
+      }
+    ]
+  },
+  {
+    "query_id": "q042",
+    "type": "en-en",
+    "query": "Whose animal drops by the backyard?",
+    "relevant": [
+      {
+        "id": "g02b",
+        "text": "The neighbor has a black cat named Luna who often visits the garden."
+      }
+    ],
+    "top5": [
+      {
+        "id": "s074",
+        "text": "Kolam ikan koi di halaman belakang dibersihkan sebulan sekali."
+      },
+      {
+        "id": "s014",
+        "text": "Anjing peliharaan tetangga sering menggonggong tengah malam, sudah dilaporkan ke RT."
+      },
+      {
+        "id": "s155",
+        "text": "The family adopted a rescue dog named Bruno last winter."
+      },
+      {
+        "id": "g16b",
+        "text": "Dimas memancing sebulan sekali di Situ Patenggang."
+      },
+      {
+        "id": "g54b",
+        "text": "Dimas jago membuat nasi goreng kampung."
+      }
+    ]
+  },
+  {
+    "query_id": "q047",
+    "type": "en-en",
+    "query": "Which web framework runs server-side logic?",
+    "relevant": [
+      {
+        "id": "g06a",
+        "text": "Primary backend language is Python 3.12 with FastAPI."
+      }
+    ],
+    "top5": [
+      {
+        "id": "s197",
+        "text": "The user keeps a personal wiki of troubleshooting steps for recurring server issues."
+      },
+      {
+        "id": "s232",
+        "text": "The habit tracker stores data locally and syncs through a self-hosted server."
+      },
+      {
+        "id": "s288",
+        "text": "Server staging dashboard logistik di VPS Hetzner Singapore."
+      },
+      {
+        "id": "s063",
+        "text": "Server staging Toko Berkah memakai Ubuntu dengan Nginx dan PHP-FPM."
+      },
+      {
+        "id": "s185",
+        "text": "The home server is a Raspberry Pi 5 running Pi-hole and Home Assistant."
+      }
+    ]
+  },
+  {
+    "query_id": "q048",
+    "type": "en-en",
+    "query": "What pushes the invoicing component to the pre-production environment without manual action?",
+    "relevant": [
+      {
+        "id": "g07c",
+        "text": "Staging deploys of the billing service run automatically on every merge to develop."
+      }
+    ],
+    "top5": [
+      {
+        "id": "s122",
+        "text": "Laporan jam kerja bulanan dikirim bersamaan dengan invoice."
+      },
+      {
+        "id": "s274",
+        "text": "Invoice dibuat pakai template Google Docs lalu export jadi PDF."
+      },
+      {
+        "id": "g49b",
+        "text": "Tes end-to-end memakai Playwright dan dijalankan sebelum rilis."
+      },
+      {
+        "id": "s021",
+        "text": "Rapat dengan klien baru wajib didahului dokumen brief tertulis."
+      },
+      {
+        "id": "s237",
+        "text": "Deploy ke production wajib lewat pipeline CI, jangan langsung SSH."
+      }
+    ]
+  },
+  {
+    "query_id": "q055",
+    "type": "en-en",
+    "query": "Where are repositories replicated?",
+    "relevant": [
+      {
+        "id": "g13b",
+        "text": "Project code is mirrored on GitHub and a self-hosted Gitea instance."
+      }
+    ],
+    "top5": [
+      {
+        "id": "s297",
+        "text": "Backup laptop kerja pakai Restic ke Backblaze B2."
+      },
+      {
+        "id": "s270",
+        "text": "Catatan belajar Docker disimpan di folder Knowledge di Obsidian."
+      },
+      {
+        "id": "g06c",
+        "text": "Tools internal di sisi frontend memakai Svelte, bukan React."
+      },
+      {
+        "id": "g21c",
+        "text": "Rebase dilarang pada branch yang sudah di-push dan dipakai bersama."
+      },
+      {
+        "id": "s246",
+        "text": "Setup environment dev Toko Berkah pakai Docker Compose."
+      }
+    ]
+  },
+  {
+    "query_id": "q065",
+    "type": "en-en",
+    "query": "Which cloud service runs the live data store?",
+    "relevant": [
+      {
+        "id": "g22a",
+        "text": "Production database is PostgreSQL 16 hosted on Supabase."
+      }
+    ],
+    "top5": [
+      {
+        "id": "s288",
+        "text": "Server staging dashboard logistik di VPS Hetzner Singapore."
+      },
+      {
+        "id": "s232",
+        "text": "The habit tracker stores data locally and syncs through a self-hosted server."
+      },
+      {
+        "id": "s160",
+        "text": "The fleet dashboard uses WebSockets for live truck positions."
+      },
+      {
+        "id": "s025",
+        "text": "Router cadangan disimpan di laci meja kerja bila internet utama mati."
+      },
+      {
+        "id": "g23b",
+        "text": "Domain dibeli di Niagahoster dan DNS dikelola lewat Cloudflare."
+      }
+    ]
+  },
+  {
+    "query_id": "q071",
+    "type": "id-en",
+    "query": "Warna kucing Dimas apa?",
+    "relevant": [
+      {
+        "id": "g02a",
+        "text": "The user's cat Mochi is an orange tabby, 3 years old."
+      }
+    ],
+    "top5": [
+      {
+        "id": "s115",
+        "text": "Dimas tidak bisa berenang jauh, hanya bisa gaya katak sebentar."
+      },
+      {
+        "id": "s123",
+        "text": "Dimas pernah dirawat karena demam berdarah pada tahun 2019."
+      },
+      {
+        "id": "g24a",
+        "text": "Makanan favorit Dimas adalah nasi timbel dengan ikan asin."
+      },
+      {
+        "id": "s068",
+        "text": "Buku referensi Python favorit Dimas adalah Fluent Python."
+      },
+      {
+        "id": "s118",
+        "text": "Film favorit Dimas sepanjang masa adalah Interstellar."
+      }
+    ]
+  },
+  {
+    "query_id": "q073",
+    "type": "id-en",
+    "query": "Mobil Sari merek apa?",
+    "relevant": [
+      {
+        "id": "g04b",
+        "text": "Sari drives a white Suzuki Ertiga for the school run."
+      }
+    ],
+    "top5": [
+      {
+        "id": "g38b",
+        "text": "Sari memakai ukuran baju M dan sepatu 38."
+      },
+      {
+        "id": "s031",
+        "text": "Sari bekerja sebagai guru Bahasa Inggris di SMP Negeri 5 Bandung."
+      },
+      {
+        "id": "s084",
+        "text": "Sari lulusan Pendidikan Bahasa Inggris UPI."
+      },
+      {
+        "id": "s139",
+        "text": "Resolusi Sari tahun ini adalah menulis buku panduan belajar Bahasa Inggris."
+      },
+      {
+        "id": "g30b",
+        "text": "Sari sedang membaca novel Laut Bercerita karya Leila S. Chudori."
+      }
+    ]
+  },
+  {
+    "query_id": "q074",
+    "type": "id-en",
+    "query": "Aplikasi apa untuk menyunting berkas cepat di server?",
+    "relevant": [
+      {
+        "id": "g05b",
+        "text": "For quick edits on servers, the user uses nano instead of vim."
+      }
+    ],
+    "top5": [
+      {
+        "id": "s245",
+        "text": "Fitur notifikasi di app Toko Berkah pakai Firebase Cloud Messaging."
+      },
+      {
+        "id": "s063",
+        "text": "Server staging Toko Berkah memakai Ubuntu dengan Nginx dan PHP-FPM."
+      },
+      {
+        "id": "g50b",
+        "text": "Docker image di-build dengan cache layer agar lebih cepat."
+      },
+      {
+        "id": "g58b",
+        "text": "Dokumen dipindai memakai aplikasi Adobe Scan di HP."
+      },
+      {
+        "id": "g07b",
+        "text": "Deploy aplikasi toko ke server produksi hanya pada Selasa malam."
+      }
+    ]
+  },
+  {
+    "query_id": "q075",
+    "type": "id-en",
+    "query": "Kerangka kerja utama untuk sisi server?",
+    "relevant": [
+      {
+        "id": "g06a",
+        "text": "Primary backend language is Python 3.12 with FastAPI."
+      }
+    ],
+    "top5": [
+      {
+        "id": "s025",
+        "text": "Router cadangan disimpan di laci meja kerja bila internet utama mati."
+      },
+      {
+        "id": "g07b",
+        "text": "Deploy aplikasi toko ke server produksi hanya pada Selasa malam."
+      },
+      {
+        "id": "s288",
+        "text": "Server staging dashboard logistik di VPS Hetzner Singapore."
+      },
+      {
+        "id": "s063",
+        "text": "Server staging Toko Berkah memakai Ubuntu dengan Nginx dan PHP-FPM."
+      },
+      {
+        "id": "g21a",
+        "text": "Branch utama proyek namanya main, bukan master."
+      }
+    ]
+  },
+  {
+    "query_id": "q076",
+    "type": "id-en",
+    "query": "Kapan rilis otomatis layanan tagihan ke staging?",
+    "relevant": [
+      {
+        "id": "g07c",
+        "text": "Staging deploys of the billing service run automatically on every merge to develop."
+      }
+    ],
+    "top5": [
+      {
+        "id": "g17a",
+        "text": "Gaji bulanan masuk tanggal 25; tagihan listrik dibayar tanggal 10."
+      },
+      {
+        "id": "s262",
+        "text": "Reminder bayar pajak motor di aplikasi Signal bulan September."
+      },
+      {
+        "id": "s132",
+        "text": "Kartu BPJS Kesehatan keluarga dibayar lewat autodebet."
+      },
+      {
+        "id": "s238",
+        "text": "Kalau ada bug di staging, buat issue dulu baru fix di branch hotfix."
+      },
+      {
+        "id": "s261",
+        "text": "Cicilan KPR auto-debit tiap tanggal 5 dari rekening BCA."
+      }
+    ]
+  },
+  {
+    "query_id": "q077",
+    "type": "id-en",
+    "query": "Kapan waktu bebas dari rapat?",
+    "relevant": [
+      {
+        "id": "g08c",
+        "text": "No meetings on Friday afternoons; that time is reserved for deep work."
+      }
+    ],
+    "top5": [
+      {
+        "id": "s143",
+        "text": "Notulen rapat dikirim ke peserta paling lambat sehari setelah rapat."
+      },
+      {
+        "id": "s056",
+        "text": "Revisi di luar kesepakatan awal dikenakan biaya tambahan per jam."
+      },
+      {
+        "id": "g19a",
+        "text": "Lapor SPT tahunan paling lambat 31 Maret."
+      },
+      {
+        "id": "s006",
+        "text": "Sekolah Aira mengadakan rapat orang tua setiap awal semester pada hari Sabtu."
+      },
+      {
+        "id": "s032",
+        "text": "Jam pulang Sari dari sekolah biasanya pukul tiga sore."
+      }
+    ]
+  },
+  {
+    "query_id": "q078",
+    "type": "id-en",
+    "query": "Susu pengganti untuk Aira apa?",
+    "relevant": [
+      {
+        "id": "g09c",
+        "text": "Aira is lactose intolerant and drinks oat milk."
+      }
+    ],
+    "top5": [
+      {
+        "id": "s020",
+        "text": "Aira bercita-cita menjadi dokter hewan."
+      },
+      {
+        "id": "g31c",
+        "text": "Perlengkapan sekolah Aira dibeli di toko Gramedia Merdeka."
+      },
+      {
+        "id": "s070",
+        "text": "Biaya sekolah Aira per semester sebesar Rp3,5 juta."
+      },
+      {
+        "id": "s045",
+        "text": "Aira punya sepeda lipat merah yang dipakai tiap Minggu pagi."
+      },
+      {
+        "id": "g12b",
+        "text": "Laptop Aira adalah Chromebook murah dari sekolah."
+      }
+    ]
+  },
+  {
+    "query_id": "q079",
+    "type": "id-en",
+    "query": "Jam berapa Dimas tidur dan bangun?",
+    "relevant": [
+      {
+        "id": "g10a",
+        "text": "The user sleeps around 11 pm and wakes up at 5:30 am."
+      }
+    ],
+    "top5": [
+      {
+        "id": "g01c",
+        "text": "Dimas berhenti minum kopi setelah jam 3 sore karena susah tidur."
+      },
+      {
+        "id": "s011",
+        "text": "Dimas lebih suka mengerjakan tugas sulit di pagi hari sebelum jam 10."
+      },
+      {
+        "id": "s102",
+        "text": "Dimas biasanya makan malam bersama keluarga pukul tujuh."
+      },
+      {
+        "id": "g39a",
+        "text": "Ulang tahun Dimas jatuh pada 14 Agustus."
+      },
+      {
+        "id": "s123",
+        "text": "Dimas pernah dirawat karena demam berdarah pada tahun 2019."
+      }
+    ]
+  },
+  {
+    "query_id": "q081",
+    "type": "id-en",
+    "query": "Di mana kode proyek disalin sebagai cadangan?",
+    "relevant": [
+      {
+        "id": "g13b",
+        "text": "Project code is mirrored on GitHub and a self-hosted Gitea instance."
+      }
+    ],
+    "top5": [
+      {
+        "id": "g20b",
+        "text": "Dokumentasi proyek ditulis dalam bahasa Indonesia, sedangkan kode dan komentar dalam bahasa Inggris."
+      },
+      {
+        "id": "s025",
+        "text": "Router cadangan disimpan di laci meja kerja bila internet utama mati."
+      },
+      {
+        "id": "g14a",
+        "text": "Dimas mendengarkan lo-fi saat coding."
+      },
+      {
+        "id": "s248",
+        "text": "Font di terminal pakai Fira Code dengan ligature aktif."
+      },
+      {
+        "id": "s081",
+        "text": "Modul absensi karyawan Toko Berkah memakai sidik jari ZKTeco."
+      }
+    ]
+  },
+  {
+    "query_id": "q082",
+    "type": "id-en",
+    "query": "Penyanyi favorit Sari siapa?",
+    "relevant": [
+      {
+        "id": "g14b",
+        "text": "Sari likes Indonesian pop, especially Tulus and Raisa."
+      }
+    ],
+    "top5": [
+      {
+        "id": "g39b",
+        "text": "Sari lahir pada 3 Februari."
+      },
+      {
+        "id": "g01b",
+        "text": "Istri Dimas, Sari, suka kopi susu dengan gula aren."
+      },
+      {
+        "id": "s031",
+        "text": "Sari bekerja sebagai guru Bahasa Inggris di SMP Negeri 5 Bandung."
+      },
+      {
+        "id": "g16c",
+        "text": "Sari ikut yoga class tiap Selasa dan Jumat pagi."
+      },
+      {
+        "id": "s084",
+        "text": "Sari lulusan Pendidikan Bahasa Inggris UPI."
+      }
+    ]
+  },
+  {
+    "query_id": "q083",
+    "type": "id-en",
+    "query": "Liburan keluarga bulan Juli ke mana?",
+    "relevant": [
+      {
+        "id": "g15b",
+        "text": "Planned family trip next July: Labuan Bajo for 5 days."
+      }
+    ],
+    "top5": [
+      {
+        "id": "g15a",
+        "text": "Liburan keluarga tahun lalu ke Yogyakarta selama 4 hari."
+      },
+      {
+        "id": "s140",
+        "text": "Anggaran liburan keluarga per tahun sekitar Rp25 juta."
+      },
+      {
+        "id": "s040",
+        "text": "Pajak PBB rumah dibayar bulan Juli lewat aplikasi bank."
+      },
+      {
+        "id": "s103",
+        "text": "Hari Minggu sore adalah waktu khusus keluarga tanpa gawai."
+      },
+      {
+        "id": "s319",
+        "text": "Cuti tahunan Dimas diambil akhir Desember bareng liburan sekolah."
+      }
+    ]
+  },
+  {
+    "query_id": "q084",
+    "type": "id-en",
+    "query": "Dimas main bulu tangkis di mana?",
+    "relevant": [
+      {
+        "id": "g16a",
+        "text": "The user plays badminton every Saturday morning at GOR Pajajaran."
+      }
+    ],
+    "top5": [
+      {
+        "id": "s115",
+        "text": "Dimas tidak bisa berenang jauh, hanya bisa gaya katak sebentar."
+      },
+      {
+        "id": "s055",
+        "text": "Dimas tidak menerima proyek dengan tenggat kurang dari dua minggu."
+      },
+      {
+        "id": "g33b",
+        "text": "Dimas kadang kerja dari Jakarta di kantor klien, biasanya hari Selasa."
+      },
+      {
+        "id": "g24a",
+        "text": "Makanan favorit Dimas adalah nasi timbel dengan ikan asin."
+      },
+      {
+        "id": "s133",
+        "text": "Pendamping belajar Aira di hari Senin adalah Dimas, hari Selasa adalah Sari."
+      }
+    ]
+  },
+  {
+    "query_id": "q085",
+    "type": "id-en",
+    "query": "Berapa persen penghasilan ditabung?",
+    "relevant": [
+      {
+        "id": "g17b",
+        "text": "Monthly savings target is 20 percent of income into an index fund."
+      }
+    ],
+    "top5": [
+      {
+        "id": "s130",
+        "text": "Kontrakan di Jakarta untuk hari kerja disewa Dimas dengan harga Rp1,8 juta per bulan."
+      },
+      {
+        "id": "s009",
+        "text": "Estimasi pekerjaan selalu ditambah buffer 20 persen untuk revisi klien."
+      },
+      {
+        "id": "s140",
+        "text": "Anggaran liburan keluarga per tahun sekitar Rp25 juta."
+      },
+      {
+        "id": "s086",
+        "text": "Dana pensiun mandiri dikelola lewat reksa dana saham dan obligasi."
+      },
+      {
+        "id": "g37b",
+        "text": "Langganan Spotify Family dibayar oleh Sari."
+      }
+    ]
+  },
+  {
+    "query_id": "q086",
+    "type": "id-en",
+    "query": "Klien utama sedang membangun apa?",
+    "relevant": [
+      {
+        "id": "g18a",
+        "text": "Main client is PT Maju Logistik, building their fleet tracking dashboard."
+      }
+    ],
+    "top5": [
+      {
+        "id": "g21a",
+        "text": "Branch utama proyek namanya main, bukan master."
+      },
+      {
+        "id": "s004",
+        "text": "Laporan keuangan klien dibuat dalam format Excel setiap tanggal 28."
+      },
+      {
+        "id": "g18b",
+        "text": "Klien kedua adalah Toko Berkah, mengerjakan sistem kasir dan stok."
+      },
+      {
+        "id": "g33b",
+        "text": "Dimas kadang kerja dari Jakarta di kantor klien, biasanya hari Selasa."
+      },
+      {
+        "id": "s148",
+        "text": "Dimas ingin membangun rumah kedua di Lembang saat anak sudah besar."
+      }
+    ]
+  },
+  {
+    "query_id": "q088",
+    "type": "id-en",
+    "query": "Format jawaban apa yang disukai?",
+    "relevant": [
+      {
+        "id": "g20a",
+        "text": "Prefers answers in short bullet points instead of long paragraphs."
+      }
+    ],
+    "top5": [
+      {
+        "id": "s034",
+        "text": "Podcast favorit Dimas tentang teknologi berbahasa Indonesia adalah Podkesmas."
+      },
+      {
+        "id": "s068",
+        "text": "Buku referensi Python favorit Dimas adalah Fluent Python."
+      },
+      {
+        "id": "s249",
+        "text": "Gw prefer jawaban yang to the point, tanpa basa-basi."
+      },
+      {
+        "id": "s095",
+        "text": "Dimas sedang menulis artikel blog tentang optimasi query PostgreSQL."
+      },
+      {
+        "id": "s004",
+        "text": "Laporan keuangan klien dibuat dalam format Excel setiap tanggal 28."
+      }
+    ]
+  },
+  {
+    "query_id": "q090",
+    "type": "id-en",
+    "query": "Postgres di-host di mana?",
+    "relevant": [
+      {
+        "id": "g22a",
+        "text": "Production database is PostgreSQL 16 hosted on Supabase."
+      }
+    ],
+    "top5": [
+      {
+        "id": "s291",
+        "text": "Database dashboard logistik pakai PostgreSQL dengan ekstensi PostGIS."
+      },
+      {
+        "id": "s095",
+        "text": "Dimas sedang menulis artikel blog tentang optimasi query PostgreSQL."
+      },
+      {
+        "id": "g23b",
+        "text": "Domain dibeli di Niagahoster dan DNS dikelola lewat Cloudflare."
+      },
+      {
+        "id": "s307",
+        "text": "Dimas lagi nulis thread soal pengalaman migrasi dari MySQL ke Postgres."
+      },
+      {
+        "id": "s288",
+        "text": "Server staging dashboard logistik di VPS Hetzner Singapore."
+      }
+    ]
+  },
+  {
+    "query_id": "q091",
+    "type": "id-en",
+    "query": "Penyedia server virtual siapa?",
+    "relevant": [
+      {
+        "id": "g23a",
+        "text": "VPS provider is Hetzner, a CX22 instance in Singapore."
+      }
+    ],
+    "top5": [
+      {
+        "id": "g48b",
+        "text": "Dashboard metrik di Grafana, server dipantau dengan Prometheus."
+      },
+      {
+        "id": "s288",
+        "text": "Server staging dashboard logistik di VPS Hetzner Singapore."
+      },
+      {
+        "id": "g07b",
+        "text": "Deploy aplikasi toko ke server produksi hanya pada Selasa malam."
+      },
+      {
+        "id": "s063",
+        "text": "Server staging Toko Berkah memakai Ubuntu dengan Nginx dan PHP-FPM."
+      },
+      {
+        "id": "s294",
+        "text": "Prefer Linux untuk dev, tapi Windows untuk gaming di desktop rumah."
+      }
+    ]
+  },
+  {
+    "query_id": "q093",
+    "type": "id-en",
+    "query": "Camilan favorit Aira apa?",
+    "relevant": [
+      {
+        "id": "g24c",
+        "text": "Aira's favorite snack is banana fritters (pisang goreng)."
+      }
+    ],
+    "top5": [
+      {
+        "id": "s073",
+        "text": "Es krim favorit Aira rasa stroberi."
+      },
+      {
+        "id": "s070",
+        "text": "Biaya sekolah Aira per semester sebesar Rp3,5 juta."
+      },
+      {
+        "id": "g12b",
+        "text": "Laptop Aira adalah Chromebook murah dari sekolah."
+      },
+      {
+        "id": "s057",
+        "text": "Anak tetangga, Kenzo, adalah teman bermain Aira."
+      },
+      {
+        "id": "g14c",
+        "text": "Aira suka lagu anak-anak dan soundtrack film Disney."
+      }
+    ]
+  },
+  {
+    "query_id": "q096",
+    "type": "id-en",
+    "query": "Lampu pintar merek apa dan di ruangan mana?",
+    "relevant": [
+      {
+        "id": "g29a",
+        "text": "Smart lights are Philips Hue, installed in the living room only."
+      }
+    ],
+    "top5": [
+      {
+        "id": "s007",
+        "text": "Kabel LAN di ruang kerja rumah terhubung langsung ke switch di lemari."
+      },
+      {
+        "id": "g58a",
+        "text": "Printer di rumah adalah Epson L3210."
+      },
+      {
+        "id": "s039",
+        "text": "Printer thermal di toko Berkah terhubung lewat USB dan Bluetooth."
+      },
+      {
+        "id": "g52c",
+        "text": "Aira takut gelap, jadi tidur dengan lampu kecil."
+      },
+      {
+        "id": "g28c",
+        "text": "Listrik rumah memakai PLN pascabayar, meteran ada di samping pagar."
+      }
+    ]
+  },
+  {
+    "query_id": "q100",
+    "type": "id-en",
+    "query": "Donasi bulanan untuk panti asuhan berapa?",
+    "relevant": [
+      {
+        "id": "g60b",
+        "text": "Monthly donation to a local orphanage is Rp500,000."
+      }
+    ],
+    "top5": [
+      {
+        "id": "s029",
+        "text": "Asuransi kesehatan keluarga dari Allianz, premi dibayar tahunan bulan Januari."
+      },
+      {
+        "id": "s260",
+        "text": "Budget bulanan groceries sekitar Rp3 juta untuk 3 orang."
+      },
+      {
+        "id": "g17c",
+        "text": "Cicilan KPR rumah Rp4,2 juta per bulan, lunas tahun 2038."
+      },
+      {
+        "id": "s092",
+        "text": "Iuran keamanan kompleks Rp150 ribu per bulan."
+      },
+      {
+        "id": "g16b",
+        "text": "Dimas memancing sebulan sekali di Situ Patenggang."
+      }
+    ]
+  },
+  {
+    "query_id": "q101",
+    "type": "en-id",
+    "query": "What time does Aira's mother take her to school?",
+    "relevant": [
+      {
+        "id": "g03b",
+        "text": "Aira berangkat sekolah jam 6.30 diantar Sari."
+      }
+    ],
+    "top5": [
+      {
+        "id": "s006",
+        "text": "Sekolah Aira mengadakan rapat orang tua setiap awal semester pada hari Sabtu."
+      },
+      {
+        "id": "g52b",
+        "text": "Aira's teacher is Bu Rina, with parent-teacher meetings every semester."
+      },
+      {
+        "id": "s201",
+        "text": "Aira's school bus picks her up at 6:45 am."
+      },
+      {
+        "id": "g39c",
+        "text": "Aira's birthday is on 21 November; she will turn 8."
+      },
+      {
+        "id": "s230",
+        "text": "Photos from Aira's school events are shared in a family album."
+      }
+    ]
+  },
+  {
+    "query_id": "q105",
+    "type": "en-id",
+    "query": "What food must Dimas avoid?",
+    "relevant": [
+      {
+        "id": "g09a",
+        "text": "Dimas alergi udang, jangan sarankan restoran seafood."
+      }
+    ],
+    "top5": [
+      {
+        "id": "g24a",
+        "text": "Makanan favorit Dimas adalah nasi timbel dengan ikan asin."
+      },
+      {
+        "id": "s123",
+        "text": "Dimas pernah dirawat karena demam berdarah pada tahun 2019."
+      },
+      {
+        "id": "g56a",
+        "text": "Obat maag Dimas adalah antasida, diminum bila perih."
+      },
+      {
+        "id": "s221",
+        "text": "Dimas prefers sambal terasi over sambal bawang."
+      },
+      {
+        "id": "s102",
+        "text": "Dimas biasanya makan malam bersama keluarga pukul tujuh."
+      }
+    ]
+  },
+  {
+    "query_id": "q108",
+    "type": "en-id",
+    "query": "What happened to Dimas's old phone?",
+    "relevant": [
+      {
+        "id": "g11b",
+        "text": "HP lama Dimas, Samsung A52, sekarang dipakai Aira untuk belajar."
+      }
+    ],
+    "top5": [
+      {
+        "id": "g48c",
+        "text": "On-call: kalau uptime turun di bawah 99 persen, Dimas ditelepon otomatis."
+      },
+      {
+        "id": "s018",
+        "text": "Dimas tidak mau menerima telepon dari nomor tak dikenal saat jam kerja."
+      },
+      {
+        "id": "s123",
+        "text": "Dimas pernah dirawat karena demam berdarah pada tahun 2019."
+      },
+      {
+        "id": "s217",
+        "text": "Dimas stopped playing mobile games to save time."
+      },
+      {
+        "id": "s035",
+        "text": "Sebelum rilis fitur besar, Dimas selalu membuat catatan rollback."
+      }
+    ]
+  },
+  {
+    "query_id": "q111",
+    "type": "en-id",
+    "query": "What music does Dimas listen to when coding?",
+    "relevant": [
+      {
+        "id": "g14a",
+        "text": "Dimas mendengarkan lo-fi saat coding."
+      }
+    ],
+    "top5": [
+      {
+        "id": "s250",
+        "text": "Kalau ngoding, Dimas suka dengerin playlist synthwave."
+      },
+      {
+        "id": "s228",
+        "text": "Dimas uses spaced repetition to memorize command-line shortcuts."
+      },
+      {
+        "id": "s035",
+        "text": "Sebelum rilis fitur besar, Dimas selalu membuat catatan rollback."
+      },
+      {
+        "id": "s118",
+        "text": "Film favorit Dimas sepanjang masa adalah Interstellar."
+      },
+      {
+        "id": "s068",
+        "text": "Buku referensi Python favorit Dimas adalah Fluent Python."
+      }
+    ]
+  },
+  {
+    "query_id": "q129",
+    "type": "en-id",
+    "query": "What is Dimas's brother's job?",
+    "relevant": [
+      {
+        "id": "g42a",
+        "text": "Adik Dimas bernama Rizal, bekerja sebagai dokter di Makassar."
+      }
+    ],
+    "top5": [
+      {
+        "id": "g42c",
+        "text": "Kakak Dimas, Mbak Ratna, tinggal di Singapore dan kerja di bank."
+      },
+      {
+        "id": "g41a",
+        "text": "Orang tua Dimas tinggal di Garut."
+      },
+      {
+        "id": "s050",
+        "text": "Nomor rekening listrik rumah terdaftar atas nama almarhum ayah Dimas."
+      },
+      {
+        "id": "s146",
+        "text": "Dimas adalah mentor untuk dua pengembang junior dari komunitas Bandung."
+      },
+      {
+        "id": "s118",
+        "text": "Film favorit Dimas sepanjang masa adalah Interstellar."
+      }
+    ]
+  },
+  {
+    "query_id": "q130",
+    "type": "en-id",
+    "query": "Where does Dimas pray on Fridays?",
+    "relevant": [
+      {
+        "id": "g43a",
+        "text": "Dimas salat Jumat di Masjid Al-Ikhlas dekat rumah."
+      }
+    ],
+    "top5": [
+      {
+        "id": "g40c",
+        "text": "Peringatan wafat ayah Dimas setiap 9 Oktober."
+      },
+      {
+        "id": "s123",
+        "text": "Dimas pernah dirawat karena demam berdarah pada tahun 2019."
+      },
+      {
+        "id": "g39a",
+        "text": "Ulang tahun Dimas jatuh pada 14 Agustus."
+      },
+      {
+        "id": "s118",
+        "text": "Film favorit Dimas sepanjang masa adalah Interstellar."
+      },
+      {
+        "id": "s319",
+        "text": "Cuti tahunan Dimas diambil akhir Desember bareng liburan sekolah."
+      }
+    ]
+  },
+  {
+    "query_id": "q131",
+    "type": "informal",
+    "query": "gw biasanya ngopi gimana ya?",
+    "relevant": [
+      {
+        "id": "g01a",
+        "text": "Dimas suka kopi hitam tanpa gula."
+      }
+    ],
+    "top5": [
+      {
+        "id": "s249",
+        "text": "Gw prefer jawaban yang to the point, tanpa basa-basi."
+      },
+      {
+        "id": "s134",
+        "text": "Dimas menyukai hujan dan suara gemericiknya saat bekerja."
+      },
+      {
+        "id": "g14a",
+        "text": "Dimas mendengarkan lo-fi saat coding."
+      },
+      {
+        "id": "s236",
+        "text": "Meeting dengan PT Maju Logistik selalu pakai Google Meet, bukan Zoom."
+      },
+      {
+        "id": "g26a",
+        "text": "Dimas punya kolesterol tinggi, dokter menyarankan olahraga rutin."
+      }
+    ]
+  },
+  {
+    "query_id": "q134",
+    "type": "informal",
+    "query": "kucing gw umur brp?",
+    "relevant": [
+      {
+        "id": "g02a",
+        "text": "The user's cat Mochi is an orange tabby, 3 years old."
+      }
+    ],
+    "top5": [
+      {
+        "id": "s313",
+        "text": "Kue ulang tahun biasanya pesan di toko Brownies Amanda."
+      },
+      {
+        "id": "s020",
+        "text": "Aira bercita-cita menjadi dokter hewan."
+      },
+      {
+        "id": "s244",
+        "text": "Token auth pakai JWT dengan expiry 15 menit dan refresh token 7 hari."
+      },
+      {
+        "id": "s085",
+        "text": "Dimas ingin pensiun dini di usia 50 tahun."
+      },
+      {
+        "id": "s115",
+        "text": "Dimas tidak bisa berenang jauh, hanya bisa gaya katak sebentar."
+      }
+    ]
+  },
+  {
+    "query_id": "q138",
+    "type": "informal",
+    "query": "mobil gw merk apa",
+    "relevant": [
+      {
+        "id": "g04a",
+        "text": "The user drives a silver 2019 Honda Brio."
+      }
+    ],
+    "top5": [
+      {
+        "id": "g04c",
+        "text": "Mobil Brio diservis tiap 5.000 km di bengkel Honda Soekarno-Hatta."
+      },
+      {
+        "id": "s253",
+        "text": "Weekend ini family trip ke Lembang naik mobil jam 8 pagi."
+      },
+      {
+        "id": "s106",
+        "text": "Kontak teknis di PT Maju Logistik adalah Mbak Dewi, bagian IT."
+      },
+      {
+        "id": "g31c",
+        "text": "Perlengkapan sekolah Aira dibeli di toko Gramedia Merdeka."
+      },
+      {
+        "id": "g59b",
+        "text": "Untuk perjalanan ke Garut, naik mobil lewat Nagreg."
+      }
+    ]
+  },
+  {
+    "query_id": "q139",
+    "type": "informal",
+    "query": "editor yg gw pake apa",
+    "relevant": [
+      {
+        "id": "g05a",
+        "text": "The user prefers VS Code with the Vim extension."
+      }
+    ],
+    "top5": [
+      {
+        "id": "g05b",
+        "text": "For quick edits on servers, the user uses nano instead of vim."
+      },
+      {
+        "id": "g11b",
+        "text": "HP lama Dimas, Samsung A52, sekarang dipakai Aira untuk belajar."
+      },
+      {
+        "id": "g05c",
+        "text": "Dimas memakai tema Dracula di semua editor."
+      },
+      {
+        "id": "s234",
+        "text": "Uses Linear for issue tracking on personal projects."
+      },
+      {
+        "id": "s113",
+        "text": "Mouse Logitech MX Master 3 dipakai untuk kerja sehari-hari."
+      }
+    ]
+  },
+  {
+    "query_id": "q140",
+    "type": "informal",
+    "query": "kalo bikin script cepet gw pake bahasa apa",
+    "relevant": [
+      {
+        "id": "g06b",
+        "text": "Untuk script cepat, Dimas pakai Go, bukan Python."
+      }
+    ],
+    "top5": [
+      {
+        "id": "g50b",
+        "text": "Docker image di-build dengan cache layer agar lebih cepat."
+      },
+      {
+        "id": "s238",
+        "text": "Kalau ada bug di staging, buat issue dulu baru fix di branch hotfix."
+      },
+      {
+        "id": "g14a",
+        "text": "Dimas mendengarkan lo-fi saat coding."
+      },
+      {
+        "id": "g20c",
+        "text": "Commit messages follow the Conventional Commits format."
+      },
+      {
+        "id": "s308",
+        "text": "Talk Dimas di meetup Python Bandung bahas FastAPI dan async."
+      }
+    ]
+  },
+  {
+    "query_id": "q145",
+    "type": "informal",
+    "query": "jam brp gw biasanya bangun?",
+    "relevant": [
+      {
+        "id": "g10a",
+        "text": "The user sleeps around 11 pm and wakes up at 5:30 am."
+      }
+    ],
+    "top5": [
+      {
+        "id": "s240",
+        "text": "Backup database di-run otomatis jam 2 pagi via cron."
+      },
+      {
+        "id": "g10b",
+        "text": "Sari biasanya tidur lebih awal, jam 9 malam."
+      },
+      {
+        "id": "g29c",
+        "text": "Robot vacuum Roborock jalan otomatis jam 10 pagi setiap hari."
+      },
+      {
+        "id": "s014",
+        "text": "Anjing peliharaan tetangga sering menggonggong tengah malam, sudah dilaporkan ke RT."
+      },
+      {
+        "id": "s253",
+        "text": "Weekend ini family trip ke Lembang naik mobil jam 8 pagi."
+      }
+    ]
+  },
+  {
+    "query_id": "q146",
+    "type": "informal",
+    "query": "hp gw apaan",
+    "relevant": [
+      {
+        "id": "g11a",
+        "text": "The user's phone is a Pixel 8 running Android 15."
+      }
+    ],
+    "top5": [
+      {
+        "id": "g11b",
+        "text": "HP lama Dimas, Samsung A52, sekarang dipakai Aira untuk belajar."
+      },
+      {
+        "id": "s267",
+        "text": "CCTV Imou bisa diakses dari app di HP lewat cloud."
+      },
+      {
+        "id": "g58b",
+        "text": "Dokumen dipindai memakai aplikasi Adobe Scan di HP."
+      },
+      {
+        "id": "s077",
+        "text": "Teknisi AC langganan bernama Pak Dedi, nomor tersimpan di kontak."
+      },
+      {
+        "id": "s106",
+        "text": "Kontak teknis di PT Maju Logistik adalah Mbak Dewi, bagian IT."
+      }
+    ]
+  },
+  {
+    "query_id": "q147",
+    "type": "informal",
+    "query": "spek pc rumah gw gmn",
+    "relevant": [
+      {
+        "id": "g12c",
+        "text": "The home desktop runs Windows 11 with a Ryzen 5 and an RTX 3060."
+      }
+    ],
+    "top5": [
+      {
+        "id": "s296",
+        "text": "Storage SSD NVMe 1 TB di desktop rumah, sudah terisi 70 persen."
+      },
+      {
+        "id": "s050",
+        "text": "Nomor rekening listrik rumah terdaftar atas nama almarhum ayah Dimas."
+      },
+      {
+        "id": "s136",
+        "text": "Alat seduh kopi di rumah adalah V60 dan grinder manual."
+      },
+      {
+        "id": "g58a",
+        "text": "Printer di rumah adalah Epson L3210."
+      },
+      {
+        "id": "s106",
+        "text": "Kontak teknis di PT Maju Logistik adalah Mbak Dewi, bagian IT."
+      }
+    ]
+  },
+  {
+    "query_id": "q151",
+    "type": "informal",
+    "query": "gw main bulutangkis di mana",
+    "relevant": [
+      {
+        "id": "g16a",
+        "text": "The user plays badminton every Saturday morning at GOR Pajajaran."
+      }
+    ],
+    "top5": [
+      {
+        "id": "g48b",
+        "text": "Dashboard metrik di Grafana, server dipantau dengan Prometheus."
+      },
+      {
+        "id": "s039",
+        "text": "Printer thermal di toko Berkah terhubung lewat USB dan Bluetooth."
+      },
+      {
+        "id": "s294",
+        "text": "Prefer Linux untuk dev, tapi Windows untuk gaming di desktop rumah."
+      },
+      {
+        "id": "g19c",
+        "text": "Bukti potong dari klien disimpan di folder Pajak di Google Drive."
+      },
+      {
+        "id": "g16b",
+        "text": "Dimas memancing sebulan sekali di Situ Patenggang."
+      }
+    ]
+  },
+  {
+    "query_id": "q152",
+    "type": "informal",
+    "query": "tgl brp gajian",
+    "relevant": [
+      {
+        "id": "g17a",
+        "text": "Gaji bulanan masuk tanggal 25; tagihan listrik dibayar tanggal 10."
+      }
+    ],
+    "top5": [
+      {
+        "id": "s015",
+        "text": "Tagihan klien PT Maju Logistik jatuh tempo 14 hari setelah invoice dikirim."
+      },
+      {
+        "id": "s140",
+        "text": "Anggaran liburan keluarga per tahun sekitar Rp25 juta."
+      },
+      {
+        "id": "s260",
+        "text": "Budget bulanan groceries sekitar Rp3 juta untuk 3 orang."
+      },
+      {
+        "id": "s126",
+        "text": "Golongan darah Aira B positif."
+      },
+      {
+        "id": "s040",
+        "text": "Pajak PBB rumah dibayar bulan Juli lewat aplikasi bank."
+      }
+    ]
+  },
+  {
+    "query_id": "q154",
+    "type": "informal",
+    "query": "klien utama gw lg bikin apa",
+    "relevant": [
+      {
+        "id": "g18a",
+        "text": "Main client is PT Maju Logistik, building their fleet tracking dashboard."
+      }
+    ],
+    "top5": [
+      {
+        "id": "s106",
+        "text": "Kontak teknis di PT Maju Logistik adalah Mbak Dewi, bagian IT."
+      },
+      {
+        "id": "s015",
+        "text": "Tagihan klien PT Maju Logistik jatuh tempo 14 hari setelah invoice dikirim."
+      },
+      {
+        "id": "g18c",
+        "text": "Pak Hendra dari PT Maju minta invoice dikirim tiap tanggal 1."
+      },
+      {
+        "id": "g47b",
+        "text": "Layanan notifikasi memakai RabbitMQ dan worker Celery."
+      },
+      {
+        "id": "g33b",
+        "text": "Dimas kadang kerja dari Jakarta di kantor klien, biasanya hari Selasa."
+      }
+    ]
+  },
+  {
+    "query_id": "q158",
+    "type": "informal",
+    "query": "db prod gw di mana",
+    "relevant": [
+      {
+        "id": "g22a",
+        "text": "Production database is PostgreSQL 16 hosted on Supabase."
+      }
+    ],
+    "top5": [
+      {
+        "id": "g19c",
+        "text": "Bukti potong dari klien disimpan di folder Pajak di Google Drive."
+      },
+      {
+        "id": "s064",
+        "text": "Backup database Toko Berkah dikirim ke Google Drive pukul 23.00."
+      },
+      {
+        "id": "g48b",
+        "text": "Dashboard metrik di Grafana, server dipantau dengan Prometheus."
+      },
+      {
+        "id": "s270",
+        "text": "Catatan belajar Docker disimpan di folder Knowledge di Obsidian."
+      },
+      {
+        "id": "g07b",
+        "text": "Deploy aplikasi toko ke server produksi hanya pada Selasa malam."
+      }
+    ]
+  },
+  {
+    "query_id": "q161",
+    "type": "informal",
+    "query": "istri gw demen makan apa",
+    "relevant": [
+      {
+        "id": "g24b",
+        "text": "Sari paling suka bakso dan mie ayam."
+      }
+    ],
+    "top5": [
+      {
+        "id": "g01b",
+        "text": "Istri Dimas, Sari, suka kopi susu dengan gula aren."
+      },
+      {
+        "id": "g24a",
+        "text": "Makanan favorit Dimas adalah nasi timbel dengan ikan asin."
+      },
+      {
+        "id": "s102",
+        "text": "Dimas biasanya makan malam bersama keluarga pukul tujuh."
+      },
+      {
+        "id": "g25a",
+        "text": "Langganan makan siang Dimas di warung Bu Eha dekat coworking."
+      },
+      {
+        "id": "s257",
+        "text": "Anniversary dinner dibooking di restoran Sky Dining Bandung."
+      }
+    ]
+  },
+  {
+    "query_id": "q164",
+    "type": "informal",
+    "query": "gw lg baca buku apa",
+    "relevant": [
+      {
+        "id": "g30a",
+        "text": "Currently reading Designing Data-Intensive Applications."
+      }
+    ],
+    "top5": [
+      {
+        "id": "g30b",
+        "text": "Sari sedang membaca novel Laut Bercerita karya Leila S. Chudori."
+      },
+      {
+        "id": "s139",
+        "text": "Resolusi Sari tahun ini adalah menulis buku panduan belajar Bahasa Inggris."
+      },
+      {
+        "id": "s043",
+        "text": "Dimas membaca ulang catatan mingguan setiap Minggu malam."
+      },
+      {
+        "id": "s095",
+        "text": "Dimas sedang menulis artikel blog tentang optimasi query PostgreSQL."
+      },
+      {
+        "id": "g14a",
+        "text": "Dimas mendengarkan lo-fi saat coding."
+      }
+    ]
+  },
+  {
+    "query_id": "q168",
+    "type": "informal",
+    "query": "ultah aira kapan",
+    "relevant": [
+      {
+        "id": "g39c",
+        "text": "Aira's birthday is on 21 November; she will turn 8."
+      }
+    ],
+    "top5": [
+      {
+        "id": "s006",
+        "text": "Sekolah Aira mengadakan rapat orang tua setiap awal semester pada hari Sabtu."
+      },
+      {
+        "id": "s133",
+        "text": "Pendamping belajar Aira di hari Senin adalah Dimas, hari Selasa adalah Sari."
+      },
+      {
+        "id": "g26c",
+        "text": "Aira dijadwalkan imunisasi booster berikutnya bulan Maret."
+      },
+      {
+        "id": "s020",
+        "text": "Aira bercita-cita menjadi dokter hewan."
+      },
+      {
+        "id": "s070",
+        "text": "Biaya sekolah Aira per semester sebesar Rp3,5 juta."
+      }
+    ]
+  },
+  {
+    "query_id": "q169",
+    "type": "informal",
+    "query": "gw naik apa ke kantor",
+    "relevant": [
+      {
+        "id": "g44a",
+        "text": "Commutes to the coworking space by motorbike, about 25 minutes."
+      }
+    ],
+    "top5": [
+      {
+        "id": "g33b",
+        "text": "Dimas kadang kerja dari Jakarta di kantor klien, biasanya hari Selasa."
+      },
+      {
+        "id": "s007",
+        "text": "Kabel LAN di ruang kerja rumah terhubung langsung ke switch di lemari."
+      },
+      {
+        "id": "g25a",
+        "text": "Langganan makan siang Dimas di warung Bu Eha dekat coworking."
+      },
+      {
+        "id": "s004",
+        "text": "Laporan keuangan klien dibuat dalam format Excel setiap tanggal 28."
+      },
+      {
+        "id": "s275",
+        "text": "Reminder invoice follow-up di-set di Google Calendar tiap Senin."
+      }
+    ]
+  },
+  {
+    "query_id": "q171",
+    "type": "typo",
+    "query": "Bagimana dimas minum kopinya?",
+    "relevant": [
+      {
+        "id": "g01a",
+        "text": "Dimas suka kopi hitam tanpa gula."
+      }
+    ],
+    "top5": [
+      {
+        "id": "g01b",
+        "text": "Istri Dimas, Sari, suka kopi susu dengan gula aren."
+      },
+      {
+        "id": "s135",
+        "text": "Kopi favorit Dimas berasal dari biji Gayo, disangrai medium."
+      },
+      {
+        "id": "g01c",
+        "text": "Dimas berhenti minum kopi setelah jam 3 sore karena susah tidur."
+      },
+      {
+        "id": "s141",
+        "text": "Penyakit asam lambung Dimas kambuh jika terlalu banyak minum kopi."
+      },
+      {
+        "id": "g24a",
+        "text": "Makanan favorit Dimas adalah nasi timbel dengan ikan asin."
+      }
+    ]
+  },
+  {
+    "query_id": "q172",
+    "type": "typo",
+    "query": "Kpan aira les pinao?",
+    "relevant": [
+      {
+        "id": "g03c",
+        "text": "Les piano Aira setiap Rabu jam 4 sore."
+      }
+    ],
+    "top5": [
+      {
+        "id": "s070",
+        "text": "Biaya sekolah Aira per semester sebesar Rp3,5 juta."
+      },
+      {
+        "id": "s020",
+        "text": "Aira bercita-cita menjadi dokter hewan."
+      },
+      {
+        "id": "s134",
+        "text": "Dimas menyukai hujan dan suara gemericiknya saat bekerja."
+      },
+      {
+        "id": "s148",
+        "text": "Dimas ingin membangun rumah kedua di Lembang saat anak sudah besar."
+      },
+      {
+        "id": "s012",
+        "text": "Dimas sedang mempelajari pola desain CQRS untuk proyek berikutnya."
+      }
+    ]
+  },
+  {
+    "query_id": "q173",
+    "type": "typo",
+    "query": "Dimas nyetir mbil apa?",
+    "relevant": [
+      {
+        "id": "g04a",
+        "text": "The user drives a silver 2019 Honda Brio."
+      }
+    ],
+    "top5": [
+      {
+        "id": "s050",
+        "text": "Nomor rekening listrik rumah terdaftar atas nama almarhum ayah Dimas."
+      },
+      {
+        "id": "s035",
+        "text": "Sebelum rilis fitur besar, Dimas selalu membuat catatan rollback."
+      },
+      {
+        "id": "s123",
+        "text": "Dimas pernah dirawat karena demam berdarah pada tahun 2019."
+      },
+      {
+        "id": "g26a",
+        "text": "Dimas punya kolesterol tinggi, dokter menyarankan olahraga rutin."
+      },
+      {
+        "id": "s018",
+        "text": "Dimas tidak mau menerima telepon dari nomor tak dikenal saat jam kerja."
+      }
+    ]
+  },
+  {
+    "query_id": "q174",
+    "type": "typo",
+    "query": "What editr does the user prefr?",
+    "relevant": [
+      {
+        "id": "g05a",
+        "text": "The user prefers VS Code with the Vim extension."
+      }
+    ],
+    "top5": [
+      {
+        "id": "g05b",
+        "text": "For quick edits on servers, the user uses nano instead of vim."
+      },
+      {
+        "id": "g49b",
+        "text": "Tes end-to-end memakai Playwright dan dijalankan sebelum rilis."
+      },
+      {
+        "id": "s171",
+        "text": "The user writes design docs before any feature that takes more than three days."
+      },
+      {
+        "id": "s197",
+        "text": "The user keeps a personal wiki of troubleshooting steps for recurring server issues."
+      },
+      {
+        "id": "s210",
+        "text": "The user prefers receiving documents as PDF, not Word files."
+      }
+    ]
+  },
+  {
+    "query_id": "q175",
+    "type": "typo",
+    "query": "Dimas alrgi apa?",
+    "relevant": [
+      {
+        "id": "g09a",
+        "text": "Dimas alergi udang, jangan sarankan restoran seafood."
+      }
+    ],
+    "top5": [
+      {
+        "id": "s050",
+        "text": "Nomor rekening listrik rumah terdaftar atas nama almarhum ayah Dimas."
+      },
+      {
+        "id": "s123",
+        "text": "Dimas pernah dirawat karena demam berdarah pada tahun 2019."
+      },
+      {
+        "id": "g39a",
+        "text": "Ulang tahun Dimas jatuh pada 14 Agustus."
+      },
+      {
+        "id": "s035",
+        "text": "Sebelum rilis fitur besar, Dimas selalu membuat catatan rollback."
+      },
+      {
+        "id": "g24a",
+        "text": "Makanan favorit Dimas adalah nasi timbel dengan ikan asin."
+      }
+    ]
+  },
+  {
+    "query_id": "q176",
+    "type": "typo",
+    "query": "Jam bperapa dimas bangun?",
+    "relevant": [
+      {
+        "id": "g10a",
+        "text": "The user sleeps around 11 pm and wakes up at 5:30 am."
+      }
+    ],
+    "top5": [
+      {
+        "id": "g01c",
+        "text": "Dimas berhenti minum kopi setelah jam 3 sore karena susah tidur."
+      },
+      {
+        "id": "s011",
+        "text": "Dimas lebih suka mengerjakan tugas sulit di pagi hari sebelum jam 10."
+      },
+      {
+        "id": "s148",
+        "text": "Dimas ingin membangun rumah kedua di Lembang saat anak sudah besar."
+      },
+      {
+        "id": "s050",
+        "text": "Nomor rekening listrik rumah terdaftar atas nama almarhum ayah Dimas."
+      },
+      {
+        "id": "g34c",
+        "text": "Email dicek dua kali sehari: jam 9 pagi dan jam 4 sore."
+      }
+    ]
+  },
+  {
+    "query_id": "q177",
+    "type": "typo",
+    "query": "What phoen does the user have?",
+    "relevant": [
+      {
+        "id": "g11a",
+        "text": "The user's phone is a Pixel 8 running Android 15."
+      }
+    ],
+    "top5": [
+      {
+        "id": "s197",
+        "text": "The user keeps a personal wiki of troubleshooting steps for recurring server issues."
+      },
+      {
+        "id": "g05b",
+        "text": "For quick edits on servers, the user uses nano instead of vim."
+      },
+      {
+        "id": "g35a",
+        "text": "Uses Bitwarden as password manager with a hardware key for 2FA."
+      },
+      {
+        "id": "s293",
+        "text": "Alasan pakai PostGIS: butuh query radius dan polygon yang cepat."
+      },
+      {
+        "id": "s191",
+        "text": "The user keeps a weekly time budget: 30 hours billable, 10 hours admin and learning."
+      }
+    ]
+  },
+  {
+    "query_id": "q178",
+    "type": "typo",
+    "query": "Spesifikasi komputr dekstop rumah?",
+    "relevant": [
+      {
+        "id": "g12c",
+        "text": "The home desktop runs Windows 11 with a Ryzen 5 and an RTX 3060."
+      }
+    ],
+    "top5": [
+      {
+        "id": "s246",
+        "text": "Setup environment dev Toko Berkah pakai Docker Compose."
+      },
+      {
+        "id": "s075",
+        "text": "Pompa air rumah merek Shimizu, pernah diservis bulan Maret."
+      },
+      {
+        "id": "g58a",
+        "text": "Printer di rumah adalah Epson L3210."
+      },
+      {
+        "id": "g28c",
+        "text": "Listrik rumah memakai PLN pascabayar, meteran ada di samping pagar."
+      },
+      {
+        "id": "s050",
+        "text": "Nomor rekening listrik rumah terdaftar atas nama almarhum ayah Dimas."
+      }
+    ]
+  },
+  {
+    "query_id": "q180",
+    "type": "typo",
+    "query": "Muisk apa yg dimas dengrkan saat ngoding?",
+    "relevant": [
+      {
+        "id": "g14a",
+        "text": "Dimas mendengarkan lo-fi saat coding."
+      }
+    ],
+    "top5": [
+      {
+        "id": "g56a",
+        "text": "Obat maag Dimas adalah antasida, diminum bila perih."
+      },
+      {
+        "id": "s134",
+        "text": "Dimas menyukai hujan dan suara gemericiknya saat bekerja."
+      },
+      {
+        "id": "s035",
+        "text": "Sebelum rilis fitur besar, Dimas selalu membuat catatan rollback."
+      },
+      {
+        "id": "s011",
+        "text": "Dimas lebih suka mengerjakan tugas sulit di pagi hari sebelum jam 10."
+      },
+      {
+        "id": "s085",
+        "text": "Dimas ingin pensiun dini di usia 50 tahun."
+      }
+    ]
+  },
+  {
+    "query_id": "q181",
+    "type": "typo",
+    "query": "Kemana libuaran keluarga tahun depan?",
+    "relevant": [
+      {
+        "id": "g15b",
+        "text": "Planned family trip next July: Labuan Bajo for 5 days."
+      }
+    ],
+    "top5": [
+      {
+        "id": "g15a",
+        "text": "Liburan keluarga tahun lalu ke Yogyakarta selama 4 hari."
+      },
+      {
+        "id": "s140",
+        "text": "Anggaran liburan keluarga per tahun sekitar Rp25 juta."
+      },
+      {
+        "id": "s263",
+        "text": "Smart TV Samsung di ruang keluarga support Netflix dan YouTube."
+      },
+      {
+        "id": "s029",
+        "text": "Asuransi kesehatan keluarga dari Allianz, premi dibayar tahunan bulan Januari."
+      },
+      {
+        "id": "g13a",
+        "text": "Foto keluarga di-backup ke Google Photos dan hard disk eksternal 2TB setiap akhir bulan."
+      }
+    ]
+  },
+  {
+    "query_id": "q182",
+    "type": "typo",
+    "query": "Dimas main bdminton dmn?",
+    "relevant": [
+      {
+        "id": "g16a",
+        "text": "The user plays badminton every Saturday morning at GOR Pajajaran."
+      }
+    ],
+    "top5": [
+      {
+        "id": "s146",
+        "text": "Dimas adalah mentor untuk dua pengembang junior dari komunitas Bandung."
+      },
+      {
+        "id": "s035",
+        "text": "Sebelum rilis fitur besar, Dimas selalu membuat catatan rollback."
+      },
+      {
+        "id": "s308",
+        "text": "Talk Dimas di meetup Python Bandung bahas FastAPI dan async."
+      },
+      {
+        "id": "g41c",
+        "text": "Mama Dimas rutin kontrol tekanan darah tiap bulan."
+      },
+      {
+        "id": "s304",
+        "text": "Jadwal cek kesehatan tahunan Dimas di bulan Mei."
+      }
+    ]
+  },
+  {
+    "query_id": "q183",
+    "type": "typo",
+    "query": "Gaji masuk tgl berpa?",
+    "relevant": [
+      {
+        "id": "g17a",
+        "text": "Gaji bulanan masuk tanggal 25; tagihan listrik dibayar tanggal 10."
+      }
+    ],
+    "top5": [
+      {
+        "id": "s106",
+        "text": "Kontak teknis di PT Maju Logistik adalah Mbak Dewi, bagian IT."
+      },
+      {
+        "id": "s015",
+        "text": "Tagihan klien PT Maju Logistik jatuh tempo 14 hari setelah invoice dikirim."
+      },
+      {
+        "id": "s236",
+        "text": "Meeting dengan PT Maju Logistik selalu pakai Google Meet, bukan Zoom."
+      },
+      {
+        "id": "s289",
+        "text": "Monitoring pakai Uptime Kuma, alert masuk ke Telegram."
+      },
+      {
+        "id": "s003",
+        "text": "Tetangga sebelah rumah bernama Pak Wahyu, ketua RT di blok C."
+      }
+    ]
+  },
+  {
+    "query_id": "q187",
+    "type": "typo",
+    "query": "Hosting databse produksi dimana?",
+    "relevant": [
+      {
+        "id": "g22a",
+        "text": "Production database is PostgreSQL 16 hosted on Supabase."
+      }
+    ],
+    "top5": [
+      {
+        "id": "s288",
+        "text": "Server staging dashboard logistik di VPS Hetzner Singapore."
+      },
+      {
+        "id": "g07b",
+        "text": "Deploy aplikasi toko ke server produksi hanya pada Selasa malam."
+      },
+      {
+        "id": "s096",
+        "text": "Blog pribadi Dimas dibuat dengan Astro dan di-hosting di Cloudflare Pages."
+      },
+      {
+        "id": "g48b",
+        "text": "Dashboard metrik di Grafana, server dipantau dengan Prometheus."
+      },
+      {
+        "id": "g23b",
+        "text": "Domain dibeli di Niagahoster dan DNS dikelola lewat Cloudflare."
+      }
+    ]
+  },
+  {
+    "query_id": "q197",
+    "type": "typo",
+    "query": "Dimas kerjanya nagkot apa?",
+    "relevant": [
+      {
+        "id": "g44a",
+        "text": "Commutes to the coworking space by motorbike, about 25 minutes."
+      }
+    ],
+    "top5": [
+      {
+        "id": "g33b",
+        "text": "Dimas kadang kerja dari Jakarta di kantor klien, biasanya hari Selasa."
+      },
+      {
+        "id": "s130",
+        "text": "Kontrakan di Jakarta untuk hari kerja disewa Dimas dengan harga Rp1,8 juta per bulan."
+      },
+      {
+        "id": "g42a",
+        "text": "Adik Dimas bernama Rizal, bekerja sebagai dokter di Makassar."
+      },
+      {
+        "id": "g44b",
+        "text": "Kalau hujan deras, Dimas kerja dari rumah."
+      },
+      {
+        "id": "s011",
+        "text": "Dimas lebih suka mengerjakan tugas sulit di pagi hari sebelum jam 10."
+      }
+    ]
+  },
+  {
+    "query_id": "q199",
+    "type": "typo",
+    "query": "Lanugage for project docs?",
+    "relevant": [
+      {
+        "id": "g20b",
+        "text": "Dokumentasi proyek ditulis dalam bahasa Indonesia, sedangkan kode dan komentar dalam bahasa Inggris."
+      }
+    ],
+    "top5": [
+      {
+        "id": "s121",
+        "text": "Dimas mencatat jam kerja per proyek memakai aplikasi Toggl."
+      },
+      {
+        "id": "s234",
+        "text": "Uses Linear for issue tracking on personal projects."
+      },
+      {
+        "id": "s065",
+        "text": "Dimas memakai Notion untuk mengelola tugas dan papan kanban proyek."
+      },
+      {
+        "id": "g22b",
+        "text": "Database lokal untuk development memakai SQLite agar ringan."
+      },
+      {
+        "id": "s291",
+        "text": "Database dashboard logistik pakai PostgreSQL dengan ekstensi PostGIS."
+      }
+    ]
+  }
+]
