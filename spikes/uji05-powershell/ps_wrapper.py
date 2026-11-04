@@ -60,7 +60,7 @@ def classify(returncode, stderr, exc) -> str:
         return "BLOCKED_BY_POLICY"
     if "pssecurityexception" in low or "running scripts is disabled" in low or "about_execution_policies" in low:
         return "EXEC_POLICY"
-    if "fullylqualifiederrorid" in low and "constrained" in low or "constrainedlanguage" in low or "language mode" in low:
+    if "constrainedlanguage" in low or "language mode" in low:
         return "CONSTRAINED_LANGUAGE"
     return "ERROR"
 
