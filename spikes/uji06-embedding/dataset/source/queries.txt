@@ -1,0 +1,200 @@
+id-id|Minuman apa yang Dimas hindari setelah sore hari?|g01c
+id-id|Kopi seperti apa yang disukai istri Dimas?|g01b
+id-id|Bagaimana Dimas biasanya meminum kopinya?|g01a
+id-id|Seberapa sering kucing peliharaan perlu dikasih obat cacing?|g02c
+id-id|Di sekolah mana Aira belajar?|g03a
+id-id|Siapa yang mengantar Aira ke sekolah pagi hari?|g03b
+id-id|Kegiatan musik apa yang diikuti Aira dan kapan jadwalnya?|g03c
+id-id|Di mana mobil Brio dirawat secara berkala?|g04c
+id-id|Tema warna apa yang dipakai Dimas pada editor kodenya?|g05c
+id-id|Pantangan makanan apa yang dimiliki Dimas?|g09a
+id-id|Siapa di keluarga yang tidak boleh makan kacang?|g09b
+id-id|Jam berapa Sari biasanya terlelap?|g10b
+id-id|Ponsel lama Dimas sekarang dipegang siapa?|g11b
+id-id|Perangkat belajar Aira berasal dari mana?|g12b
+id-id|Kapan cadangan foto keluarga dilakukan?|g13a
+id-id|Seberapa sering pencadangan data produksi berjalan?|g13c
+id-id|Musik apa yang menemani Dimas saat menulis program?|g14a
+id-id|Ke mana keluarga berlibur setahun silam?|g15a
+id-id|Destinasi impian Dimas di Asia Timur?|g15c
+id-id|Hobi apa yang Dimas lakukan sebulan sekali di danau?|g16b
+id-id|Tanggal berapa penghasilan bulanan diterima?|g17a
+id-id|Berapa angsuran rumah tiap bulan?|g17c
+id-id|Pelanggan kedua Dimas bergerak di bidang apa?|g18b
+id-id|Batas akhir pelaporan pajak penghasilan tahunan?|g19a
+id-id|Di mana kuitansi potongan pajak disimpan?|g19c
+id-id|Bahasa apa yang dipakai untuk menulis dokumentasi proyek?|g20b
+id-id|Bagaimana aturan mengenai rebase pada cabang bersama?|g21c
+id-id|Basis data apa yang dipakai untuk pengembangan lokal?|g22b
+id-id|Di mana nama situs dibeli?|g23b
+id-id|Hidangan Sunda kesukaan Dimas apa?|g24a
+id-id|Siapa dokter yang menangani keluarga ini?|g27a
+id-id|Seberapa sering lensa kacamata Dimas diganti?|g27c
+id-id|Di mana letak tempat tinggal keluarga ini?|g28a
+id-id|Berapa lama rekaman kamera pengawas tersimpan?|g29b
+id-id|Buku apa yang sedang dibaca Sari?|g30b
+id-id|Pada jam berapa pesan kerja dibisukan?|g34a
+id-id|Bank mana yang dipakai untuk tabungan pendidikan Aira?|g36a
+id-id|Nomor alas kaki Dimas berapa?|g38a
+id-id|Kapan Dimas merayakan hari lahirnya?|g39a
+id-id|Di kota mana kedua orang tua Dimas bermukim?|g41a
+en-en|What color is the user's cat?|g02a
+en-en|Whose pet visits the garden?|g02b
+en-en|What car does the user drive?|g04a
+en-en|Which vehicle does Sari use for school drop-off?|g04b
+en-en|Which code editor does the user prefer?|g05a
+en-en|What does the user use to modify files on remote machines?|g05b
+en-en|Which web framework powers the backend?|g06a
+en-en|How are staging releases of the billing service triggered?|g07c
+en-en|When is no one scheduled for calls?|g08c
+en-en|What does Aira drink instead of cow's milk?|g09c
+en-en|What time does the user wake up?|g10a
+en-en|What phone model does the user own?|g11a
+en-en|Which operating system runs on the work laptop?|g12a
+en-en|What graphics card is in the home computer?|g12c
+en-en|Where is project source code mirrored?|g13b
+en-en|Which singers does Sari enjoy?|g14b
+en-en|Where is the next family vacation?|g15b
+en-en|Where does the user play badminton?|g16a
+en-en|How much of income goes to the index fund?|g17b
+en-en|What is the main client building?|g18a
+en-en|What tax rate applies to freelance revenue?|g19b
+en-en|What answer format does the user prefer?|g20a
+en-en|What convention do commit messages follow?|g20c
+en-en|What is required before merging a PR?|g21b
+en-en|Where is the production database hosted?|g22a
+en-en|Who provides the VPS?|g23a
+en-en|How are SSL certificates renewed?|g23c
+en-en|What is Aira's favorite snack?|g24c
+en-en|What supplement does Sari take?|g26b
+en-en|How often does the user visit the dentist?|g27b
+id-en|Warna kucing Dimas apa?|g02a
+id-en|Siapa nama kucing tetangga yang sering datang?|g02b
+id-en|Mobil Sari merek apa?|g04b
+id-en|Aplikasi apa untuk menyunting berkas cepat di server?|g05b
+id-en|Kerangka kerja utama untuk sisi server?|g06a
+id-en|Kapan rilis otomatis layanan tagihan ke staging?|g07c
+id-en|Kapan waktu bebas dari rapat?|g08c
+id-en|Susu pengganti untuk Aira apa?|g09c
+id-en|Jam berapa Dimas tidur dan bangun?|g10a
+id-en|Sistem operasi di laptop kerja apa?|g12a
+id-en|Di mana kode proyek disalin sebagai cadangan?|g13b
+id-en|Penyanyi favorit Sari siapa?|g14b
+id-en|Liburan keluarga bulan Juli ke mana?|g15b
+id-en|Dimas main bulu tangkis di mana?|g16a
+id-en|Berapa persen penghasilan ditabung?|g17b
+id-en|Klien utama sedang membangun apa?|g18a
+id-en|Pajak final freelance berapa persen?|g19b
+id-en|Format jawaban apa yang disukai?|g20a
+id-en|Syarat sebelum menggabungkan pull request?|g21b
+id-en|Postgres di-host di mana?|g22a
+id-en|Penyedia server virtual siapa?|g23a
+id-en|Sertifikat SSL diperbarui bagaimana?|g23c
+id-en|Camilan favorit Aira apa?|g24c
+id-en|Suplemen apa yang diminum Sari tiap pagi?|g26b
+id-en|Seberapa sering periksa gigi?|g27b
+id-en|Lampu pintar merek apa dan di ruangan mana?|g29a
+id-en|Headphone yang dipakai apa?|g57a
+id-en|Tablet keluarga dipakai oleh siapa?|g57c
+id-en|Ke Jakarta lebih suka naik kereta atau pesawat?|g59a
+id-en|Donasi bulanan untuk panti asuhan berapa?|g60b
+en-id|What time does Aira's mother take her to school?|g03b
+en-id|Which day is Aira's piano class?|g03c
+en-id|Where does the family take the Brio for maintenance?|g04c
+en-id|What editor theme does Dimas use?|g05c
+en-id|What food must Dimas avoid?|g09a
+en-id|What is Sari allergic to?|g09b
+en-id|When does Sari go to bed?|g10b
+en-id|What happened to Dimas's old phone?|g11b
+en-id|How often is the family photo backup done?|g13a
+en-id|When is the production database backed up and for how long?|g13c
+en-id|What music does Dimas listen to when coding?|g14a
+en-id|Where did the family holiday last year?|g15a
+en-id|How much is the monthly mortgage payment?|g17c
+en-id|What day of the month is salary received?|g17a
+en-id|Who is the second client?|g18b
+en-id|What is the deadline for the annual tax return?|g19a
+en-id|What language is project documentation written in?|g20b
+en-id|Is rebasing allowed on shared branches?|g21c
+en-id|Where was the domain purchased?|g23b
+en-id|What dish does Dimas love with salted fish?|g24a
+en-id|Who is the family physician?|g27a
+en-id|How often does Dimas change his glasses?|g27c
+en-id|How long are CCTV recordings kept?|g29b
+en-id|Which novel is Sari reading?|g30b
+en-id|When are work chat notifications muted?|g34a
+en-id|What is Dimas's shoe size?|g38a
+en-id|When is Dimas's birthday?|g39a
+en-id|Where do Dimas's parents live?|g41a
+en-id|What is Dimas's brother's job?|g42a
+en-id|Where does Dimas pray on Fridays?|g43a
+informal|gw biasanya ngopi gimana ya?|g01a
+informal|istri gw suka kopi apa sih|g01b
+informal|kenapa gw stop ngopi sore?|g01c
+informal|kucing gw umur brp?|g02a
+informal|mochi kudu dikasih obat kpn?|g02c
+informal|aira sklh di mana sih|g03a
+informal|les piano aira hari apa?|g03c
+informal|mobil gw merk apa|g04a
+informal|editor yg gw pake apa|g05a
+informal|kalo bikin script cepet gw pake bahasa apa|g06b
+informal|frontend internal pake framework apa gmn|g06c
+informal|gmn aturan deploy ke prod?|g07b
+informal|standup jam brp yak|g08a
+informal|gw alergi apa sih|g09a
+informal|jam brp gw biasanya bangun?|g10a
+informal|hp gw apaan|g11a
+informal|spek pc rumah gw gmn|g12c
+informal|backup db jam brp|g13c
+informal|lagu yg gw dgr kalo ngoding apa|g14a
+informal|kapan jadwal trip ke labuan bajo|g15b
+informal|gw main bulutangkis di mana|g16a
+informal|tgl brp gajian|g17a
+informal|kpr lunas taun brp|g17c
+informal|klien utama gw lg bikin apa|g18a
+informal|kapan deadline lapor spt|g19a
+informal|format commit gw gmn|g20c
+informal|approve brp biar bisa merge|g21b
+informal|db prod gw di mana|g22a
+informal|gw beli domain dimana|g23b
+informal|makanan fav gw yg pake ikan asin apa|g24a
+informal|istri gw demen makan apa|g24b
+informal|dokter gigi gw siapa|g27b
+informal|wifi router ip nya brp|g28b
+informal|gw lg baca buku apa|g30a
+informal|notif wa kerja off jam brp|g34a
+informal|gw nyeduh kopi pake alat apa|s136
+informal|yubikey gw ada brp|s300
+informal|ultah aira kapan|g39c
+informal|gw naik apa ke kantor|g44a
+informal|gw prefer jawaban kyk gimana|g20a,g45a
+typo|Bagimana dimas minum kopinya?|g01a
+typo|Kpan aira les pinao?|g03c
+typo|Dimas nyetir mbil apa?|g04a
+typo|What editr does the user prefr?|g05a
+typo|Dimas alrgi apa?|g09a
+typo|Jam bperapa dimas bangun?|g10a
+typo|What phoen does the user have?|g11a
+typo|Spesifikasi komputr dekstop rumah?|g12c
+typo|Dimana bakcup foto keluarga disimpn?|g13a
+typo|Muisk apa yg dimas dengrkan saat ngoding?|g14a
+typo|Kemana libuaran keluarga tahun depan?|g15b
+typo|Dimas main bdminton dmn?|g16a
+typo|Gaji masuk tgl berpa?|g17a
+typo|Who is the main cleint?|g18a
+typo|Kpan batas lapor pjak tahunan?|g19a
+typo|What formta do commit mesages follow?|g20c
+typo|Hosting databse produksi dimana?|g22a
+typo|Where is the VPS hostd?|g23a
+typo|Dimas suka makan nsi timbel?|g24a
+typo|Aira snack favroit apa?|g24c
+typo|Siapa dokter keluraga?|g27a
+typo|Berpaa lama rekaman cctv disimpan?|g29b
+typo|Sari sedang membca novel apa?|g30b
+typo|Pasword manager yang dipakai?|g35a
+typo|Rekning utama di bank apa?|g36a
+typo|Whats the anniversery date?|g40a
+typo|Dimas kerjanya nagkot apa?|g44a
+typo|Tulisan emoji boleh ga di jawban?|g45b
+typo|Lanugage for project docs?|g20b
+typo|Kapna ulang tahn Sari?|g39b

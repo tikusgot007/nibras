@@ -1,0 +1,180 @@
+g01a|I|P|Dimas suka kopi hitam tanpa gula.
+g01b|I|P|Istri Dimas, Sari, suka kopi susu dengan gula aren.
+g01c|I|P|Dimas berhenti minum kopi setelah jam 3 sore karena susah tidur.
+g02a|E|C|The user's cat Mochi is an orange tabby, 3 years old.
+g02b|E|C|The neighbor has a black cat named Luna who often visits the garden.
+g02c|I|C|Mochi harus minum obat cacing setiap tiga bulan.
+g03a|I|C|Anak Dimas, Aira, kelas 2 SD di SDN Cipaganti.
+g03b|I|C|Aira berangkat sekolah jam 6.30 diantar Sari.
+g03c|I|C|Les piano Aira setiap Rabu jam 4 sore.
+g04a|E|C|The user drives a silver 2019 Honda Brio.
+g04b|E|C|Sari drives a white Suzuki Ertiga for the school run.
+g04c|I|C|Mobil Brio diservis tiap 5.000 km di bengkel Honda Soekarno-Hatta.
+g05a|E|P|The user prefers VS Code with the Vim extension.
+g05b|E|P|For quick edits on servers, the user uses nano instead of vim.
+g05c|I|P|Dimas memakai tema Dracula di semua editor.
+g06a|E|P|Primary backend language is Python 3.12 with FastAPI.
+g06b|M|P|Untuk script cepat, Dimas pakai Go, bukan Python.
+g06c|I|P|Tools internal di sisi frontend memakai Svelte, bukan React.
+g07a|M|W|Deploy project Nibras pakai branch fase0 dulu.
+g07b|I|W|Deploy aplikasi toko ke server produksi hanya pada Selasa malam.
+g07c|E|W|Staging deploys of the billing service run automatically on every merge to develop.
+g08a|I|W|Standup tim jam 9.30 setiap hari kerja lewat Google Meet.
+g08b|I|W|Review mingguan dengan klien Pak Hendra setiap Kamis jam 2 siang.
+g08c|E|W|No meetings on Friday afternoons; that time is reserved for deep work.
+g09a|I|C|Dimas alergi udang, jangan sarankan restoran seafood.
+g09b|I|C|Sari alergi kacang tanah.
+g09c|E|C|Aira is lactose intolerant and drinks oat milk.
+g10a|E|P|The user sleeps around 11 pm and wakes up at 5:30 am.
+g10b|I|P|Sari biasanya tidur lebih awal, jam 9 malam.
+g10c|M|P|Weekend Dimas bangun jam 7, boleh telat sedikit.
+g11a|E|S|The user's phone is a Pixel 8 running Android 15.
+g11b|I|S|HP lama Dimas, Samsung A52, sekarang dipakai Aira untuk belajar.
+g11c|I|S|Sari memakai iPhone 13.
+g12a|E|S|Work laptop is a ThinkPad T14 with 32 GB RAM running Ubuntu 24.04.
+g12b|I|S|Laptop Aira adalah Chromebook murah dari sekolah.
+g12c|E|S|The home desktop runs Windows 11 with a Ryzen 5 and an RTX 3060.
+g13a|I|W|Foto keluarga di-backup ke Google Photos dan hard disk eksternal 2TB setiap akhir bulan.
+g13b|E|W|Project code is mirrored on GitHub and a self-hosted Gitea instance.
+g13c|I|W|Database produksi di-backup otomatis jam 2 pagi ke S3 dan disimpan 30 hari.
+g14a|I|P|Dimas mendengarkan lo-fi saat coding.
+g14b|E|P|Sari likes Indonesian pop, especially Tulus and Raisa.
+g14c|I|P|Aira suka lagu anak-anak dan soundtrack film Disney.
+g15a|I|C|Liburan keluarga tahun lalu ke Yogyakarta selama 4 hari.
+g15b|E|C|Planned family trip next July: Labuan Bajo for 5 days.
+g15c|I|C|Dimas ingin sekali ke Jepang saat musim sakura, belum ada rencana pasti.
+g16a|E|C|The user plays badminton every Saturday morning at GOR Pajajaran.
+g16b|I|C|Dimas memancing sebulan sekali di Situ Patenggang.
+g16c|M|C|Sari ikut yoga class tiap Selasa dan Jumat pagi.
+g17a|I|C|Gaji bulanan masuk tanggal 25; tagihan listrik dibayar tanggal 10.
+g17b|E|C|Monthly savings target is 20 percent of income into an index fund.
+g17c|I|C|Cicilan KPR rumah Rp4,2 juta per bulan, lunas tahun 2038.
+g18a|E|J|Main client is PT Maju Logistik, building their fleet tracking dashboard.
+g18b|I|J|Klien kedua adalah Toko Berkah, mengerjakan sistem kasir dan stok.
+g18c|M|J|Pak Hendra dari PT Maju minta invoice dikirim tiap tanggal 1.
+g19a|I|K|Lapor SPT tahunan paling lambat 31 Maret.
+g19b|E|K|The user is a registered freelancer and pays final income tax of 0.5 percent on revenue.
+g19c|I|K|Bukti potong dari klien disimpan di folder Pajak di Google Drive.
+g20a|E|P|Prefers answers in short bullet points instead of long paragraphs.
+g20b|I|P|Dokumentasi proyek ditulis dalam bahasa Indonesia, sedangkan kode dan komentar dalam bahasa Inggris.
+g20c|E|P|Commit messages follow the Conventional Commits format.
+g21a|M|W|Branch utama proyek namanya main, bukan master.
+g21b|E|W|Pull requests need at least one approval before merging.
+g21c|I|W|Rebase dilarang pada branch yang sudah di-push dan dipakai bersama.
+g22a|E|J|Production database is PostgreSQL 16 hosted on Supabase.
+g22b|I|J|Database lokal untuk development memakai SQLite agar ringan.
+g22c|M|J|Cache layer pakai Redis dengan TTL default 10 menit.
+g23a|E|J|VPS provider is Hetzner, a CX22 instance in Singapore.
+g23b|I|J|Domain dibeli di Niagahoster dan DNS dikelola lewat Cloudflare.
+g23c|E|J|SSL certificates renew automatically through Let's Encrypt.
+g24a|I|P|Makanan favorit Dimas adalah nasi timbel dengan ikan asin.
+g24b|I|P|Sari paling suka bakso dan mie ayam.
+g24c|E|P|Aira's favorite snack is banana fritters (pisang goreng).
+g25a|I|P|Langganan makan siang Dimas di warung Bu Eha dekat coworking.
+g25b|E|P|Family dinner spot is Sate Hadori, every first Sunday of the month.
+g25c|I|P|Hindari restoran Padang kalau sedang menjaga kolesterol.
+g26a|I|C|Dimas punya kolesterol tinggi, dokter menyarankan olahraga rutin.
+g26b|E|C|Sari takes vitamin D supplements every morning.
+g26c|I|C|Aira dijadwalkan imunisasi booster berikutnya bulan Maret.
+g27a|I|C|Dokter keluarga adalah dr. Amanda di Klinik Sehat Sentosa.
+g27b|E|C|Dentist checkups every six months with Dr. Budi in Dago.
+g27c|I|C|Mata Dimas minus 2,5 dan ganti kacamata tiap dua tahun.
+g28a|I|C|Rumah berada di Perumahan Griya Asri, Bandung Timur, blok C nomor 12.
+g28b|E|S|The WiFi router is a TP-Link Archer and its admin panel is at 192.168.0.1.
+g28c|I|C|Listrik rumah memakai PLN pascabayar, meteran ada di samping pagar.
+g29a|E|S|Smart lights are Philips Hue, installed in the living room only.
+g29b|I|S|CCTV rumah merek Imou, 3 kamera, rekaman disimpan 7 hari.
+g29c|M|S|Robot vacuum Roborock jalan otomatis jam 10 pagi setiap hari.
+g30a|E|P|Currently reading Designing Data-Intensive Applications.
+g30b|I|P|Sari sedang membaca novel Laut Bercerita karya Leila S. Chudori.
+g30c|I|P|Dimas lebih suka buku fisik daripada e-book.
+g31a|I|W|Belanja bulanan di Superindo setiap akhir pekan pertama.
+g31b|E|W|Online shopping is mostly on Tokopedia; avoids Shopee after a bad refund experience.
+g31c|I|W|Perlengkapan sekolah Aira dibeli di toko Gramedia Merdeka.
+g32a|E|K|The user is learning Japanese with Duolingo, 15 minutes daily.
+g32b|I|K|Sari kursus bahasa Inggris online tiap Senin malam.
+g32c|M|K|Aira belajar bahasa Sunda di sekolah sebagai muatan lokal.
+g33a|E|C|Timezone is WIB (UTC+7).
+g33b|I|C|Dimas kadang kerja dari Jakarta di kantor klien, biasanya hari Selasa.
+g33c|E|C|Coworking space is Kolega on Jalan Riau, paid as a monthly membership.
+g34a|I|P|Notifikasi WhatsApp kerja dibisukan setelah jam 8 malam.
+g34b|E|P|Urgent messages from clients should come by phone call only.
+g34c|I|P|Email dicek dua kali sehari: jam 9 pagi dan jam 4 sore.
+g35a|E|W|Uses Bitwarden as password manager with a hardware key for 2FA.
+g35b|I|W|Jangan pernah menyimpan kata sandi di catatan teks biasa.
+g35c|I|W|Akun bank memakai token fisik KeyBCA.
+g36a|I|C|Rekening utama di BCA, rekening tabungan sekolah Aira di Bank Mandiri.
+g36b|E|C|The credit card is a Jenius Visa, used only for online subscriptions.
+g36c|I|C|Dana darurat disimpan di reksa dana pasar uang Bibit.
+g37a|E|C|Netflix standard plan is shared with the family and renews on the 5th.
+g37b|I|C|Langganan Spotify Family dibayar oleh Sari.
+g37c|E|C|The ChatGPT Plus subscription is billed monthly to the company card.
+g38a|I|C|Ukuran sepatu Dimas 42.
+g38b|I|C|Sari memakai ukuran baju M dan sepatu 38.
+g38c|E|C|Aira's school uniform size is 8.
+g39a|I|C|Ulang tahun Dimas jatuh pada 14 Agustus.
+g39b|I|C|Sari lahir pada 3 Februari.
+g39c|E|C|Aira's birthday is on 21 November; she will turn 8.
+g40a|E|C|The wedding anniversary is on 12 June.
+g40b|I|C|Hari jadi usaha freelance Dimas adalah 1 Maret.
+g40c|I|C|Peringatan wafat ayah Dimas setiap 9 Oktober.
+g41a|I|C|Orang tua Dimas tinggal di Garut.
+g41b|E|C|Sari's parents live in Surabaya and visit during Lebaran.
+g41c|I|C|Mama Dimas rutin kontrol tekanan darah tiap bulan.
+g42a|I|C|Adik Dimas bernama Rizal, bekerja sebagai dokter di Makassar.
+g42b|E|C|Sari's older brother Andi runs a coffee shop in Malang.
+g42c|M|C|Kakak Dimas, Mbak Ratna, tinggal di Singapore dan kerja di bank.
+g43a|I|C|Dimas salat Jumat di Masjid Al-Ikhlas dekat rumah.
+g43b|I|C|Pengajian ibu-ibu yang diikuti Sari berlangsung seminggu sekali, Sabtu sore.
+g43c|E|C|Aira attends a Quran recitation class at the local mosque on Sunday mornings.
+g44a|E|W|Commutes to the coworking space by motorbike, about 25 minutes.
+g44b|I|W|Kalau hujan deras, Dimas kerja dari rumah.
+g44c|I|W|Jalan Pasteur macet parah pada jam 7 pagi.
+g45a|E|P|Prefers responses that briefly explain the reasoning before the final answer.
+g45b|I|P|Jangan tampilkan emoji di jawaban.
+g45c|M|P|Kalau ada ambiguitas, tanya balik dulu, jangan nebak.
+g46a|E|J|Nibras is a portable AI assistant that runs from a USB drive on Windows.
+g46b|M|J|Stack Nibras: Python, PySide6, dan SQLite tanpa WAL.
+g46c|I|J|Nibras memakai model embedding multilingual-e5-small untuk memori.
+g47a|E|J|The billing service is written in Go and deployed on Fly.io.
+g47b|I|J|Layanan notifikasi memakai RabbitMQ dan worker Celery.
+g47c|M|J|API gateway pakai Kong, rate limit 100 request per menit.
+g48a|E|W|Error tracking uses Sentry, and alerts go to a Telegram channel.
+g48b|I|W|Dashboard metrik di Grafana, server dipantau dengan Prometheus.
+g48c|M|W|On-call: kalau uptime turun di bawah 99 persen, Dimas ditelepon otomatis.
+g49a|E|W|Unit tests use pytest with a minimum coverage of 80 percent.
+g49b|I|W|Tes end-to-end memakai Playwright dan dijalankan sebelum rilis.
+g49c|I|W|Load testing dengan k6 hanya dilakukan di staging.
+g50a|E|W|CI runs on GitHub Actions and the pipeline takes about 6 minutes.
+g50b|I|W|Docker image di-build dengan cache layer agar lebih cepat.
+g50c|M|W|Format tag rilis itu v1.2.3, bukan 1.2.3 polos.
+g51a|I|K|Target belajar tahun ini: dasar-dasar Rust dan Kubernetes.
+g51b|E|K|Wants to earn the AWS Solutions Architect Associate certification.
+g51c|I|K|Dimas ikut kelas online machine learning tiap Sabtu malam.
+g52a|I|C|Aira ikut ekskul renang tiap Jumat sore.
+g52b|E|C|Aira's teacher is Bu Rina, with parent-teacher meetings every semester.
+g52c|I|C|Aira takut gelap, jadi tidur dengan lampu kecil.
+g53a|I|C|Tanaman monstera di ruang tamu disiram dua kali seminggu.
+g53b|E|C|The user grows chili peppers and basil on the balcony.
+g53c|I|C|Pupuk tanaman hias diganti sebulan sekali.
+g54a|E|K|Sari's signature dish is rendang, cooked on Sundays.
+g54b|I|K|Dimas jago membuat nasi goreng kampung.
+g54c|I|K|Resep sambal matah dari ibu mertua disimpan di catatan.
+g55a|I|C|Pernikahan teman Dimas, Bayu, tanggal 18 Desember di Lembang.
+g55b|E|C|The Bandung Python meetup happens on the last Thursday of each month.
+g55c|I|C|Reuni SMA angkatan 2008 direncanakan bulan Januari.
+g56a|I|C|Obat maag Dimas adalah antasida, diminum bila perih.
+g56b|E|C|Aira has a mild dust allergy, so her room is vacuumed regularly.
+g56c|I|C|Stok paracetamol di kotak P3K diperiksa setiap 6 bulan.
+g57a|E|S|Headphones are Sony WH-1000XM5.
+g57b|I|S|Smartwatch Dimas merek Amazfit, dipakai untuk melacak lari.
+g57c|E|S|The family tablet is an iPad 9th generation, mostly used by Aira.
+g58a|I|S|Printer di rumah adalah Epson L3210.
+g58b|I|S|Dokumen dipindai memakai aplikasi Adobe Scan di HP.
+g58c|M|S|NAS Synology DS220 menyimpan backup, akses lewat VPN.
+g59a|E|P|Prefers the train over a plane for trips to Jakarta (Whoosh high-speed rail).
+g59b|I|P|Untuk perjalanan ke Garut, naik mobil lewat Nagreg.
+g59c|I|P|Tiket pesawat selalu dipesan lewat Traveloka.
+g60a|I|C|Zakat dibayar setiap Ramadan lewat Baznas.
+g60b|E|C|Monthly donation to a local orphanage is Rp500,000.
+g60c|I|C|Dimas jadi relawan literasi anak setiap bulan pertama.

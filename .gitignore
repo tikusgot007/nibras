@@ -40,3 +40,10 @@ desktop.ini
 .DS_Store
 .vscode/
 .idea/
+
+# Uji #6: model embedding (jangan di-commit) dan pengecualian JSON metrik mentah
+*.onnx
+*.safetensors
+*.bin
+!results/uji06-raw/
+!results/uji06-raw/*.json

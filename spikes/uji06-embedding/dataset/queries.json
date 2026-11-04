@@ -1,0 +1,1603 @@
+[
+ {
+  "id": "q001",
+  "query": "Apa yang Dimas stop konsumsi menjelang petang karena insomnia?",
+  "type": "id-id",
+  "relevant_ids": [
+   "g01c"
+  ]
+ },
+ {
+  "id": "q002",
+  "query": "Racikan minuman apa yang digemari pasangan Dimas?",
+  "type": "id-id",
+  "relevant_ids": [
+   "g01b"
+  ]
+ },
+ {
+  "id": "q003",
+  "query": "Bagaimana Dimas biasanya meminum kopinya?",
+  "type": "id-id",
+  "relevant_ids": [
+   "g01a"
+  ]
+ },
+ {
+  "id": "q004",
+  "query": "Seberapa rutin si kucing diberi antiparasit usus?",
+  "type": "id-id",
+  "relevant_ids": [
+   "g02c"
+  ]
+ },
+ {
+  "id": "q005",
+  "query": "Di sekolah mana Aira belajar?",
+  "type": "id-id",
+  "relevant_ids": [
+   "g03a"
+  ]
+ },
+ {
+  "id": "q006",
+  "query": "Siapa yang membawa Aira menuju kelas saat pagi?",
+  "type": "id-id",
+  "relevant_ids": [
+   "g03b"
+  ]
+ },
+ {
+  "id": "q007",
+  "query": "Kegiatan musik apa yang diikuti Aira dan kapan jadwalnya?",
+  "type": "id-id",
+  "relevant_ids": [
+   "g03c"
+  ]
+ },
+ {
+  "id": "q008",
+  "query": "Di mana kendaraan roda empat itu dirawat berkala?",
+  "type": "id-id",
+  "relevant_ids": [
+   "g04c"
+  ]
+ },
+ {
+  "id": "q009",
+  "query": "Skema warna apa yang dipilih Dimas untuk lingkungan pengembangannya?",
+  "type": "id-id",
+  "relevant_ids": [
+   "g05c"
+  ]
+ },
+ {
+  "id": "q010",
+  "query": "Pantangan makanan apa yang dimiliki Dimas?",
+  "type": "id-id",
+  "relevant_ids": [
+   "g09a"
+  ]
+ },
+ {
+  "id": "q011",
+  "query": "Siapa yang tubuhnya bereaksi buruk terhadap panganan sejenis polong-polongan?",
+  "type": "id-id",
+  "relevant_ids": [
+   "g09b"
+  ]
+ },
+ {
+  "id": "q012",
+  "query": "Pukul berapa Sari beranjak ke peraduan?",
+  "type": "id-id",
+  "relevant_ids": [
+   "g10b"
+  ]
+ },
+ {
+  "id": "q013",
+  "query": "Gawai yang dulu dimiliki Dimas kini digunakan siapa?",
+  "type": "id-id",
+  "relevant_ids": [
+   "g11b"
+  ]
+ },
+ {
+  "id": "q014",
+  "query": "Perangkat belajar Aira berasal dari mana?",
+  "type": "id-id",
+  "relevant_ids": [
+   "g12b"
+  ]
+ },
+ {
+  "id": "q015",
+  "query": "Kapan salinan gambar kenangan di rumah diamankan?",
+  "type": "id-id",
+  "relevant_ids": [
+   "g13a"
+  ]
+ },
+ {
+  "id": "q016",
+  "query": "Pukul berapa salinan data inti layanan dibuat dan berapa lama dipertahankan?",
+  "type": "id-id",
+  "relevant_ids": [
+   "g13c"
+  ]
+ },
+ {
+  "id": "q017",
+  "query": "Musik apa yang menemani Dimas ketika menulis program?",
+  "type": "id-id",
+  "relevant_ids": [
+   "g14a"
+  ]
+ },
+ {
+  "id": "q018",
+  "query": "Ke mana rombongan Dimas pelesir setahun silam?",
+  "type": "id-id",
+  "relevant_ids": [
+   "g15a"
+  ]
+ },
+ {
+  "id": "q019",
+  "query": "Destinasi impian Dimas di Asia Timur?",
+  "type": "id-id",
+  "relevant_ids": [
+   "g15c"
+  ]
+ },
+ {
+  "id": "q020",
+  "query": "Aktivitas apa yang Dimas lakukan di danau tiap empat minggu?",
+  "type": "id-id",
+  "relevant_ids": [
+   "g16b"
+  ]
+ },
+ {
+  "id": "q021",
+  "query": "Kapan pendapatan rutin dari pekerjaan cair?",
+  "type": "id-id",
+  "relevant_ids": [
+   "g17a"
+  ]
+ },
+ {
+  "id": "q022",
+  "query": "Berapa besar angsuran hunian setiap 30 hari?",
+  "type": "id-id",
+  "relevant_ids": [
+   "g17c"
+  ]
+ },
+ {
+  "id": "q023",
+  "query": "Usaha apa yang menjadi pelanggan nomor dua Dimas?",
+  "type": "id-id",
+  "relevant_ids": [
+   "g18b"
+  ]
+ },
+ {
+  "id": "q024",
+  "query": "Kapan tenggat penyampaian surat pemberitahuan pajak setiap tahun?",
+  "type": "id-id",
+  "relevant_ids": [
+   "g19a"
+  ]
+ },
+ {
+  "id": "q025",
+  "query": "Di mana dokumen pemotongan penghasilan dari pelanggan diarsipkan?",
+  "type": "id-id",
+  "relevant_ids": [
+   "g19c"
+  ]
+ },
+ {
+  "id": "q026",
+  "query": "Dalam tutur apa catatan teknis untuk pekerjaan ini dituliskan?",
+  "type": "id-id",
+  "relevant_ids": [
+   "g20b"
+  ]
+ },
+ {
+  "id": "q027",
+  "query": "Bolehkah menulis ulang riwayat commit di cabang yang digunakan tim?",
+  "type": "id-id",
+  "relevant_ids": [
+   "g21c"
+  ]
+ },
+ {
+  "id": "q028",
+  "query": "Basis data apa untuk lingkungan kerja di laptop?",
+  "type": "id-id",
+  "relevant_ids": [
+   "g22b"
+  ]
+ },
+ {
+  "id": "q029",
+  "query": "Dari penyedia mana alamat situs web didapat?",
+  "type": "id-id",
+  "relevant_ids": [
+   "g23b"
+  ]
+ },
+ {
+  "id": "q030",
+  "query": "Hidangan Sunda kesukaan Dimas apa?",
+  "type": "id-id",
+  "relevant_ids": [
+   "g24a"
+  ]
+ },
+ {
+  "id": "q031",
+  "query": "Siapa tenaga medis langganan untuk seisi rumah?",
+  "type": "id-id",
+  "relevant_ids": [
+   "g27a"
+  ]
+ },
+ {
+  "id": "q032",
+  "query": "Seberapa sering Dimas memperbarui alat bantu penglihatannya?",
+  "type": "id-id",
+  "relevant_ids": [
+   "g27c"
+  ]
+ },
+ {
+  "id": "q033",
+  "query": "Di mana letak tempat tinggal keluarga ini?",
+  "type": "id-id",
+  "relevant_ids": [
+   "g28a"
+  ]
+ },
+ {
+  "id": "q034",
+  "query": "Berapa lama tayangan alat pengawas keamanan tersimpan?",
+  "type": "id-id",
+  "relevant_ids": [
+   "g29b"
+  ]
+ },
+ {
+  "id": "q035",
+  "query": "Karya sastra apa yang kini ditekuni Sari?",
+  "type": "id-id",
+  "relevant_ids": [
+   "g30b"
+  ]
+ },
+ {
+  "id": "q036",
+  "query": "Mulai pukul berapa dering pesan urusan profesional dimatikan?",
+  "type": "id-id",
+  "relevant_ids": [
+   "g34a"
+  ]
+ },
+ {
+  "id": "q037",
+  "query": "Lembaga keuangan mana yang menampung dana pendidikan Aira?",
+  "type": "id-id",
+  "relevant_ids": [
+   "g36a"
+  ]
+ },
+ {
+  "id": "q038",
+  "query": "Nomor alas kaki Dimas berapa?",
+  "type": "id-id",
+  "relevant_ids": [
+   "g38a"
+  ]
+ },
+ {
+  "id": "q039",
+  "query": "Kapan Dimas merayakan hari lahirnya?",
+  "type": "id-id",
+  "relevant_ids": [
+   "g39a"
+  ]
+ },
+ {
+  "id": "q040",
+  "query": "Di kota mana ayah dan ibu Dimas menetap?",
+  "type": "id-id",
+  "relevant_ids": [
+   "g41a"
+  ]
+ },
+ {
+  "id": "q041",
+  "query": "What shade is the user's feline?",
+  "type": "en-en",
+  "relevant_ids": [
+   "g02a"
+  ]
+ },
+ {
+  "id": "q042",
+  "query": "Whose animal drops by the backyard?",
+  "type": "en-en",
+  "relevant_ids": [
+   "g02b"
+  ]
+ },
+ {
+  "id": "q043",
+  "query": "What car does the user drive?",
+  "type": "en-en",
+  "relevant_ids": [
+   "g04a"
+  ]
+ },
+ {
+  "id": "q044",
+  "query": "Which vehicle does Sari use for taking the kid to class?",
+  "type": "en-en",
+  "relevant_ids": [
+   "g04b"
+  ]
+ },
+ {
+  "id": "q045",
+  "query": "Which text-editing software does the user favor?",
+  "type": "en-en",
+  "relevant_ids": [
+   "g05a"
+  ]
+ },
+ {
+  "id": "q046",
+  "query": "What does the user use to modify files on remote machines?",
+  "type": "en-en",
+  "relevant_ids": [
+   "g05b"
+  ]
+ },
+ {
+  "id": "q047",
+  "query": "Which web framework runs server-side logic?",
+  "type": "en-en",
+  "relevant_ids": [
+   "g06a"
+  ]
+ },
+ {
+  "id": "q048",
+  "query": "What pushes the invoicing component to the pre-production environment without manual action?",
+  "type": "en-en",
+  "relevant_ids": [
+   "g07c"
+  ]
+ },
+ {
+  "id": "q049",
+  "query": "When is no one scheduled for calls?",
+  "type": "en-en",
+  "relevant_ids": [
+   "g08c"
+  ]
+ },
+ {
+  "id": "q050",
+  "query": "What beverage replaces dairy for Aira?",
+  "type": "en-en",
+  "relevant_ids": [
+   "g09c"
+  ]
+ },
+ {
+  "id": "q051",
+  "query": "What time does the user wake up?",
+  "type": "en-en",
+  "relevant_ids": [
+   "g10a"
+  ]
+ },
+ {
+  "id": "q052",
+  "query": "Which handset does the user carry?",
+  "type": "en-en",
+  "relevant_ids": [
+   "g11a"
+  ]
+ },
+ {
+  "id": "q053",
+  "query": "Which OS does the office notebook run?",
+  "type": "en-en",
+  "relevant_ids": [
+   "g12a"
+  ]
+ },
+ {
+  "id": "q054",
+  "query": "Which GPU does the gaming rig at the house have?",
+  "type": "en-en",
+  "relevant_ids": [
+   "g12c"
+  ]
+ },
+ {
+  "id": "q055",
+  "query": "Where are repositories replicated?",
+  "type": "en-en",
+  "relevant_ids": [
+   "g13b"
+  ]
+ },
+ {
+  "id": "q056",
+  "query": "Which singers does Sari enjoy?",
+  "type": "en-en",
+  "relevant_ids": [
+   "g14b"
+  ]
+ },
+ {
+  "id": "q057",
+  "query": "Where are the relatives heading for their upcoming getaway?",
+  "type": "en-en",
+  "relevant_ids": [
+   "g15b"
+  ]
+ },
+ {
+  "id": "q058",
+  "query": "Where does the user play shuttlecock sports?",
+  "type": "en-en",
+  "relevant_ids": [
+   "g16a"
+  ]
+ },
+ {
+  "id": "q059",
+  "query": "What share of earnings is put into the investment vehicle?",
+  "type": "en-en",
+  "relevant_ids": [
+   "g17b"
+  ]
+ },
+ {
+  "id": "q060",
+  "query": "What is the principal customer creating?",
+  "type": "en-en",
+  "relevant_ids": [
+   "g18a"
+  ]
+ },
+ {
+  "id": "q061",
+  "query": "What percentage does the user owe the government on self-employed turnover?",
+  "type": "en-en",
+  "relevant_ids": [
+   "g19b"
+  ]
+ },
+ {
+  "id": "q062",
+  "query": "What answer format does the user prefer?",
+  "type": "en-en",
+  "relevant_ids": [
+   "g20a"
+  ]
+ },
+ {
+  "id": "q063",
+  "query": "What style guide governs git log entries?",
+  "type": "en-en",
+  "relevant_ids": [
+   "g20c"
+  ]
+ },
+ {
+  "id": "q064",
+  "query": "How many sign-offs are needed prior to integrating a PR?",
+  "type": "en-en",
+  "relevant_ids": [
+   "g21b"
+  ]
+ },
+ {
+  "id": "q065",
+  "query": "Which cloud service runs the live data store?",
+  "type": "en-en",
+  "relevant_ids": [
+   "g22a"
+  ]
+ },
+ {
+  "id": "q066",
+  "query": "Which company supplies the virtual server?",
+  "type": "en-en",
+  "relevant_ids": [
+   "g23a"
+  ]
+ },
+ {
+  "id": "q067",
+  "query": "How is HTTPS encryption kept valid?",
+  "type": "en-en",
+  "relevant_ids": [
+   "g23c"
+  ]
+ },
+ {
+  "id": "q068",
+  "query": "What treat does Aira like best?",
+  "type": "en-en",
+  "relevant_ids": [
+   "g24c"
+  ]
+ },
+ {
+  "id": "q069",
+  "query": "What supplement does Sari take?",
+  "type": "en-en",
+  "relevant_ids": [
+   "g26b"
+  ]
+ },
+ {
+  "id": "q070",
+  "query": "How frequently are tooth checks done?",
+  "type": "en-en",
+  "relevant_ids": [
+   "g27b"
+  ]
+ },
+ {
+  "id": "q071",
+  "query": "Warna kucing Dimas apa?",
+  "type": "id-en",
+  "relevant_ids": [
+   "g02a"
+  ]
+ },
+ {
+  "id": "q072",
+  "query": "Siapa nama kucing tetangga yang sering datang?",
+  "type": "id-en",
+  "relevant_ids": [
+   "g02b"
+  ]
+ },
+ {
+  "id": "q073",
+  "query": "Mobil Sari merek apa?",
+  "type": "id-en",
+  "relevant_ids": [
+   "g04b"
+  ]
+ },
+ {
+  "id": "q074",
+  "query": "Aplikasi apa untuk menyunting berkas cepat di server?",
+  "type": "id-en",
+  "relevant_ids": [
+   "g05b"
+  ]
+ },
+ {
+  "id": "q075",
+  "query": "Kerangka kerja utama untuk sisi server?",
+  "type": "id-en",
+  "relevant_ids": [
+   "g06a"
+  ]
+ },
+ {
+  "id": "q076",
+  "query": "Kapan rilis otomatis layanan tagihan ke staging?",
+  "type": "id-en",
+  "relevant_ids": [
+   "g07c"
+  ]
+ },
+ {
+  "id": "q077",
+  "query": "Kapan waktu bebas dari rapat?",
+  "type": "id-en",
+  "relevant_ids": [
+   "g08c"
+  ]
+ },
+ {
+  "id": "q078",
+  "query": "Susu pengganti untuk Aira apa?",
+  "type": "id-en",
+  "relevant_ids": [
+   "g09c"
+  ]
+ },
+ {
+  "id": "q079",
+  "query": "Jam berapa Dimas tidur dan bangun?",
+  "type": "id-en",
+  "relevant_ids": [
+   "g10a"
+  ]
+ },
+ {
+  "id": "q080",
+  "query": "Sistem operasi di laptop kerja apa?",
+  "type": "id-en",
+  "relevant_ids": [
+   "g12a"
+  ]
+ },
+ {
+  "id": "q081",
+  "query": "Di mana kode proyek disalin sebagai cadangan?",
+  "type": "id-en",
+  "relevant_ids": [
+   "g13b"
+  ]
+ },
+ {
+  "id": "q082",
+  "query": "Penyanyi favorit Sari siapa?",
+  "type": "id-en",
+  "relevant_ids": [
+   "g14b"
+  ]
+ },
+ {
+  "id": "q083",
+  "query": "Liburan keluarga bulan Juli ke mana?",
+  "type": "id-en",
+  "relevant_ids": [
+   "g15b"
+  ]
+ },
+ {
+  "id": "q084",
+  "query": "Dimas main bulu tangkis di mana?",
+  "type": "id-en",
+  "relevant_ids": [
+   "g16a"
+  ]
+ },
+ {
+  "id": "q085",
+  "query": "Berapa persen penghasilan ditabung?",
+  "type": "id-en",
+  "relevant_ids": [
+   "g17b"
+  ]
+ },
+ {
+  "id": "q086",
+  "query": "Klien utama sedang membangun apa?",
+  "type": "id-en",
+  "relevant_ids": [
+   "g18a"
+  ]
+ },
+ {
+  "id": "q087",
+  "query": "Pajak final freelance berapa persen?",
+  "type": "id-en",
+  "relevant_ids": [
+   "g19b"
+  ]
+ },
+ {
+  "id": "q088",
+  "query": "Format jawaban apa yang disukai?",
+  "type": "id-en",
+  "relevant_ids": [
+   "g20a"
+  ]
+ },
+ {
+  "id": "q089",
+  "query": "Syarat sebelum menggabungkan pull request?",
+  "type": "id-en",
+  "relevant_ids": [
+   "g21b"
+  ]
+ },
+ {
+  "id": "q090",
+  "query": "Postgres di-host di mana?",
+  "type": "id-en",
+  "relevant_ids": [
+   "g22a"
+  ]
+ },
+ {
+  "id": "q091",
+  "query": "Penyedia server virtual siapa?",
+  "type": "id-en",
+  "relevant_ids": [
+   "g23a"
+  ]
+ },
+ {
+  "id": "q092",
+  "query": "Sertifikat SSL diperbarui bagaimana?",
+  "type": "id-en",
+  "relevant_ids": [
+   "g23c"
+  ]
+ },
+ {
+  "id": "q093",
+  "query": "Camilan favorit Aira apa?",
+  "type": "id-en",
+  "relevant_ids": [
+   "g24c"
+  ]
+ },
+ {
+  "id": "q094",
+  "query": "Suplemen apa yang diminum Sari tiap pagi?",
+  "type": "id-en",
+  "relevant_ids": [
+   "g26b"
+  ]
+ },
+ {
+  "id": "q095",
+  "query": "Seberapa sering periksa gigi?",
+  "type": "id-en",
+  "relevant_ids": [
+   "g27b"
+  ]
+ },
+ {
+  "id": "q096",
+  "query": "Lampu pintar merek apa dan di ruangan mana?",
+  "type": "id-en",
+  "relevant_ids": [
+   "g29a"
+  ]
+ },
+ {
+  "id": "q097",
+  "query": "Headphone yang dipakai apa?",
+  "type": "id-en",
+  "relevant_ids": [
+   "g57a"
+  ]
+ },
+ {
+  "id": "q098",
+  "query": "Tablet keluarga dipakai oleh siapa?",
+  "type": "id-en",
+  "relevant_ids": [
+   "g57c"
+  ]
+ },
+ {
+  "id": "q099",
+  "query": "Ke Jakarta lebih suka naik kereta atau pesawat?",
+  "type": "id-en",
+  "relevant_ids": [
+   "g59a"
+  ]
+ },
+ {
+  "id": "q100",
+  "query": "Donasi bulanan untuk panti asuhan berapa?",
+  "type": "id-en",
+  "relevant_ids": [
+   "g60b"
+  ]
+ },
+ {
+  "id": "q101",
+  "query": "What time does Aira's mother take her to school?",
+  "type": "en-id",
+  "relevant_ids": [
+   "g03b"
+  ]
+ },
+ {
+  "id": "q102",
+  "query": "Which day is Aira's piano class?",
+  "type": "en-id",
+  "relevant_ids": [
+   "g03c"
+  ]
+ },
+ {
+  "id": "q103",
+  "query": "Where does the family take the Brio for maintenance?",
+  "type": "en-id",
+  "relevant_ids": [
+   "g04c"
+  ]
+ },
+ {
+  "id": "q104",
+  "query": "What editor theme does Dimas use?",
+  "type": "en-id",
+  "relevant_ids": [
+   "g05c"
+  ]
+ },
+ {
+  "id": "q105",
+  "query": "What food must Dimas avoid?",
+  "type": "en-id",
+  "relevant_ids": [
+   "g09a"
+  ]
+ },
+ {
+  "id": "q106",
+  "query": "What is Sari allergic to?",
+  "type": "en-id",
+  "relevant_ids": [
+   "g09b"
+  ]
+ },
+ {
+  "id": "q107",
+  "query": "When does Sari go to bed?",
+  "type": "en-id",
+  "relevant_ids": [
+   "g10b"
+  ]
+ },
+ {
+  "id": "q108",
+  "query": "What happened to Dimas's old phone?",
+  "type": "en-id",
+  "relevant_ids": [
+   "g11b"
+  ]
+ },
+ {
+  "id": "q109",
+  "query": "How often is the family photo backup done?",
+  "type": "en-id",
+  "relevant_ids": [
+   "g13a"
+  ]
+ },
+ {
+  "id": "q110",
+  "query": "When is the production database backed up and for how long?",
+  "type": "en-id",
+  "relevant_ids": [
+   "g13c"
+  ]
+ },
+ {
+  "id": "q111",
+  "query": "What music does Dimas listen to when coding?",
+  "type": "en-id",
+  "relevant_ids": [
+   "g14a"
+  ]
+ },
+ {
+  "id": "q112",
+  "query": "Where did the family holiday last year?",
+  "type": "en-id",
+  "relevant_ids": [
+   "g15a"
+  ]
+ },
+ {
+  "id": "q113",
+  "query": "How much is the monthly mortgage payment?",
+  "type": "en-id",
+  "relevant_ids": [
+   "g17c"
+  ]
+ },
+ {
+  "id": "q114",
+  "query": "What day of the month is salary received?",
+  "type": "en-id",
+  "relevant_ids": [
+   "g17a"
+  ]
+ },
+ {
+  "id": "q115",
+  "query": "Who is the second client?",
+  "type": "en-id",
+  "relevant_ids": [
+   "g18b"
+  ]
+ },
+ {
+  "id": "q116",
+  "query": "What is the deadline for the annual tax return?",
+  "type": "en-id",
+  "relevant_ids": [
+   "g19a"
+  ]
+ },
+ {
+  "id": "q117",
+  "query": "What language is project documentation written in?",
+  "type": "en-id",
+  "relevant_ids": [
+   "g20b"
+  ]
+ },
+ {
+  "id": "q118",
+  "query": "Is rebasing allowed on shared branches?",
+  "type": "en-id",
+  "relevant_ids": [
+   "g21c"
+  ]
+ },
+ {
+  "id": "q119",
+  "query": "Where was the domain purchased?",
+  "type": "en-id",
+  "relevant_ids": [
+   "g23b"
+  ]
+ },
+ {
+  "id": "q120",
+  "query": "What dish does Dimas love with salted fish?",
+  "type": "en-id",
+  "relevant_ids": [
+   "g24a"
+  ]
+ },
+ {
+  "id": "q121",
+  "query": "Who is the family physician?",
+  "type": "en-id",
+  "relevant_ids": [
+   "g27a"
+  ]
+ },
+ {
+  "id": "q122",
+  "query": "How often does Dimas change his glasses?",
+  "type": "en-id",
+  "relevant_ids": [
+   "g27c"
+  ]
+ },
+ {
+  "id": "q123",
+  "query": "How long are CCTV recordings kept?",
+  "type": "en-id",
+  "relevant_ids": [
+   "g29b"
+  ]
+ },
+ {
+  "id": "q124",
+  "query": "Which novel is Sari reading?",
+  "type": "en-id",
+  "relevant_ids": [
+   "g30b"
+  ]
+ },
+ {
+  "id": "q125",
+  "query": "When are work chat notifications muted?",
+  "type": "en-id",
+  "relevant_ids": [
+   "g34a"
+  ]
+ },
+ {
+  "id": "q126",
+  "query": "What is Dimas's shoe size?",
+  "type": "en-id",
+  "relevant_ids": [
+   "g38a"
+  ]
+ },
+ {
+  "id": "q127",
+  "query": "When is Dimas's birthday?",
+  "type": "en-id",
+  "relevant_ids": [
+   "g39a"
+  ]
+ },
+ {
+  "id": "q128",
+  "query": "Where do Dimas's parents live?",
+  "type": "en-id",
+  "relevant_ids": [
+   "g41a"
+  ]
+ },
+ {
+  "id": "q129",
+  "query": "What is Dimas's brother's job?",
+  "type": "en-id",
+  "relevant_ids": [
+   "g42a"
+  ]
+ },
+ {
+  "id": "q130",
+  "query": "Where does Dimas pray on Fridays?",
+  "type": "en-id",
+  "relevant_ids": [
+   "g43a"
+  ]
+ },
+ {
+  "id": "q131",
+  "query": "gw biasanya ngopi gimana ya?",
+  "type": "informal",
+  "relevant_ids": [
+   "g01a"
+  ]
+ },
+ {
+  "id": "q132",
+  "query": "istri gw suka kopi apa sih",
+  "type": "informal",
+  "relevant_ids": [
+   "g01b"
+  ]
+ },
+ {
+  "id": "q133",
+  "query": "kenapa gw stop ngopi sore?",
+  "type": "informal",
+  "relevant_ids": [
+   "g01c"
+  ]
+ },
+ {
+  "id": "q134",
+  "query": "kucing gw umur brp?",
+  "type": "informal",
+  "relevant_ids": [
+   "g02a"
+  ]
+ },
+ {
+  "id": "q135",
+  "query": "mochi kudu dikasih obat kpn?",
+  "type": "informal",
+  "relevant_ids": [
+   "g02c"
+  ]
+ },
+ {
+  "id": "q136",
+  "query": "aira sklh di mana sih",
+  "type": "informal",
+  "relevant_ids": [
+   "g03a"
+  ]
+ },
+ {
+  "id": "q137",
+  "query": "les piano aira hari apa?",
+  "type": "informal",
+  "relevant_ids": [
+   "g03c"
+  ]
+ },
+ {
+  "id": "q138",
+  "query": "mobil gw merk apa",
+  "type": "informal",
+  "relevant_ids": [
+   "g04a"
+  ]
+ },
+ {
+  "id": "q139",
+  "query": "editor yg gw pake apa",
+  "type": "informal",
+  "relevant_ids": [
+   "g05a"
+  ]
+ },
+ {
+  "id": "q140",
+  "query": "kalo bikin script cepet gw pake bahasa apa",
+  "type": "informal",
+  "relevant_ids": [
+   "g06b"
+  ]
+ },
+ {
+  "id": "q141",
+  "query": "frontend internal pake framework apa gmn",
+  "type": "informal",
+  "relevant_ids": [
+   "g06c"
+  ]
+ },
+ {
+  "id": "q142",
+  "query": "gmn aturan deploy ke prod?",
+  "type": "informal",
+  "relevant_ids": [
+   "g07b"
+  ]
+ },
+ {
+  "id": "q143",
+  "query": "standup jam brp yak",
+  "type": "informal",
+  "relevant_ids": [
+   "g08a"
+  ]
+ },
+ {
+  "id": "q144",
+  "query": "gw alergi apa sih",
+  "type": "informal",
+  "relevant_ids": [
+   "g09a"
+  ]
+ },
+ {
+  "id": "q145",
+  "query": "jam brp gw biasanya bangun?",
+  "type": "informal",
+  "relevant_ids": [
+   "g10a"
+  ]
+ },
+ {
+  "id": "q146",
+  "query": "hp gw apaan",
+  "type": "informal",
+  "relevant_ids": [
+   "g11a"
+  ]
+ },
+ {
+  "id": "q147",
+  "query": "spek pc rumah gw gmn",
+  "type": "informal",
+  "relevant_ids": [
+   "g12c"
+  ]
+ },
+ {
+  "id": "q148",
+  "query": "backup db jam brp",
+  "type": "informal",
+  "relevant_ids": [
+   "g13c"
+  ]
+ },
+ {
+  "id": "q149",
+  "query": "lagu yg gw dgr kalo ngoding apa",
+  "type": "informal",
+  "relevant_ids": [
+   "g14a"
+  ]
+ },
+ {
+  "id": "q150",
+  "query": "kapan jadwal trip ke labuan bajo",
+  "type": "informal",
+  "relevant_ids": [
+   "g15b"
+  ]
+ },
+ {
+  "id": "q151",
+  "query": "gw main bulutangkis di mana",
+  "type": "informal",
+  "relevant_ids": [
+   "g16a"
+  ]
+ },
+ {
+  "id": "q152",
+  "query": "tgl brp gajian",
+  "type": "informal",
+  "relevant_ids": [
+   "g17a"
+  ]
+ },
+ {
+  "id": "q153",
+  "query": "kpr lunas taun brp",
+  "type": "informal",
+  "relevant_ids": [
+   "g17c"
+  ]
+ },
+ {
+  "id": "q154",
+  "query": "klien utama gw lg bikin apa",
+  "type": "informal",
+  "relevant_ids": [
+   "g18a"
+  ]
+ },
+ {
+  "id": "q155",
+  "query": "kapan deadline lapor spt",
+  "type": "informal",
+  "relevant_ids": [
+   "g19a"
+  ]
+ },
+ {
+  "id": "q156",
+  "query": "format commit gw gmn",
+  "type": "informal",
+  "relevant_ids": [
+   "g20c"
+  ]
+ },
+ {
+  "id": "q157",
+  "query": "approve brp biar bisa merge",
+  "type": "informal",
+  "relevant_ids": [
+   "g21b"
+  ]
+ },
+ {
+  "id": "q158",
+  "query": "db prod gw di mana",
+  "type": "informal",
+  "relevant_ids": [
+   "g22a"
+  ]
+ },
+ {
+  "id": "q159",
+  "query": "gw beli domain dimana",
+  "type": "informal",
+  "relevant_ids": [
+   "g23b"
+  ]
+ },
+ {
+  "id": "q160",
+  "query": "makanan fav gw yg pake ikan asin apa",
+  "type": "informal",
+  "relevant_ids": [
+   "g24a"
+  ]
+ },
+ {
+  "id": "q161",
+  "query": "istri gw demen makan apa",
+  "type": "informal",
+  "relevant_ids": [
+   "g24b"
+  ]
+ },
+ {
+  "id": "q162",
+  "query": "dokter gigi gw siapa",
+  "type": "informal",
+  "relevant_ids": [
+   "g27b"
+  ]
+ },
+ {
+  "id": "q163",
+  "query": "wifi router ip nya brp",
+  "type": "informal",
+  "relevant_ids": [
+   "g28b"
+  ]
+ },
+ {
+  "id": "q164",
+  "query": "gw lg baca buku apa",
+  "type": "informal",
+  "relevant_ids": [
+   "g30a"
+  ]
+ },
+ {
+  "id": "q165",
+  "query": "notif wa kerja off jam brp",
+  "type": "informal",
+  "relevant_ids": [
+   "g34a"
+  ]
+ },
+ {
+  "id": "q166",
+  "query": "gw nyeduh kopi pake alat apa",
+  "type": "informal",
+  "relevant_ids": [
+   "s136"
+  ]
+ },
+ {
+  "id": "q167",
+  "query": "yubikey gw ada brp",
+  "type": "informal",
+  "relevant_ids": [
+   "s300"
+  ]
+ },
+ {
+  "id": "q168",
+  "query": "ultah aira kapan",
+  "type": "informal",
+  "relevant_ids": [
+   "g39c"
+  ]
+ },
+ {
+  "id": "q169",
+  "query": "gw naik apa ke kantor",
+  "type": "informal",
+  "relevant_ids": [
+   "g44a"
+  ]
+ },
+ {
+  "id": "q170",
+  "query": "gw prefer jawaban kyk gimana",
+  "type": "informal",
+  "relevant_ids": [
+   "g20a",
+   "g45a"
+  ]
+ },
+ {
+  "id": "q171",
+  "query": "Bagimana dimas minum kopinya?",
+  "type": "typo",
+  "relevant_ids": [
+   "g01a"
+  ]
+ },
+ {
+  "id": "q172",
+  "query": "Kpan aira les pinao?",
+  "type": "typo",
+  "relevant_ids": [
+   "g03c"
+  ]
+ },
+ {
+  "id": "q173",
+  "query": "Dimas nyetir mbil apa?",
+  "type": "typo",
+  "relevant_ids": [
+   "g04a"
+  ]
+ },
+ {
+  "id": "q174",
+  "query": "What editr does the user prefr?",
+  "type": "typo",
+  "relevant_ids": [
+   "g05a"
+  ]
+ },
+ {
+  "id": "q175",
+  "query": "Dimas alrgi apa?",
+  "type": "typo",
+  "relevant_ids": [
+   "g09a"
+  ]
+ },
+ {
+  "id": "q176",
+  "query": "Jam bperapa dimas bangun?",
+  "type": "typo",
+  "relevant_ids": [
+   "g10a"
+  ]
+ },
+ {
+  "id": "q177",
+  "query": "What phoen does the user have?",
+  "type": "typo",
+  "relevant_ids": [
+   "g11a"
+  ]
+ },
+ {
+  "id": "q178",
+  "query": "Spesifikasi komputr dekstop rumah?",
+  "type": "typo",
+  "relevant_ids": [
+   "g12c"
+  ]
+ },
+ {
+  "id": "q179",
+  "query": "Dimana bakcup foto keluarga disimpn?",
+  "type": "typo",
+  "relevant_ids": [
+   "g13a"
+  ]
+ },
+ {
+  "id": "q180",
+  "query": "Muisk apa yg dimas dengrkan saat ngoding?",
+  "type": "typo",
+  "relevant_ids": [
+   "g14a"
+  ]
+ },
+ {
+  "id": "q181",
+  "query": "Kemana libuaran keluarga tahun depan?",
+  "type": "typo",
+  "relevant_ids": [
+   "g15b"
+  ]
+ },
+ {
+  "id": "q182",
+  "query": "Dimas main bdminton dmn?",
+  "type": "typo",
+  "relevant_ids": [
+   "g16a"
+  ]
+ },
+ {
+  "id": "q183",
+  "query": "Gaji masuk tgl berpa?",
+  "type": "typo",
+  "relevant_ids": [
+   "g17a"
+  ]
+ },
+ {
+  "id": "q184",
+  "query": "Who is the main cleint?",
+  "type": "typo",
+  "relevant_ids": [
+   "g18a"
+  ]
+ },
+ {
+  "id": "q185",
+  "query": "Kpan batas lapor pjak tahunan?",
+  "type": "typo",
+  "relevant_ids": [
+   "g19a"
+  ]
+ },
+ {
+  "id": "q186",
+  "query": "What formta do commit mesages follow?",
+  "type": "typo",
+  "relevant_ids": [
+   "g20c"
+  ]
+ },
+ {
+  "id": "q187",
+  "query": "Hosting databse produksi dimana?",
+  "type": "typo",
+  "relevant_ids": [
+   "g22a"
+  ]
+ },
+ {
+  "id": "q188",
+  "query": "Where is the VPS hostd?",
+  "type": "typo",
+  "relevant_ids": [
+   "g23a"
+  ]
+ },
+ {
+  "id": "q189",
+  "query": "Dimas suka makan nsi timbel?",
+  "type": "typo",
+  "relevant_ids": [
+   "g24a"
+  ]
+ },
+ {
+  "id": "q190",
+  "query": "Aira snack favroit apa?",
+  "type": "typo",
+  "relevant_ids": [
+   "g24c"
+  ]
+ },
+ {
+  "id": "q191",
+  "query": "Siapa dokter keluraga?",
+  "type": "typo",
+  "relevant_ids": [
+   "g27a"
+  ]
+ },
+ {
+  "id": "q192",
+  "query": "Berpaa lama rekaman cctv disimpan?",
+  "type": "typo",
+  "relevant_ids": [
+   "g29b"
+  ]
+ },
+ {
+  "id": "q193",
+  "query": "Sari sedang membca novel apa?",
+  "type": "typo",
+  "relevant_ids": [
+   "g30b"
+  ]
+ },
+ {
+  "id": "q194",
+  "query": "Pasword manager yang dipakai?",
+  "type": "typo",
+  "relevant_ids": [
+   "g35a"
+  ]
+ },
+ {
+  "id": "q195",
+  "query": "Rekning utama di bank apa?",
+  "type": "typo",
+  "relevant_ids": [
+   "g36a"
+  ]
+ },
+ {
+  "id": "q196",
+  "query": "Whats the anniversery date?",
+  "type": "typo",
+  "relevant_ids": [
+   "g40a"
+  ]
+ },
+ {
+  "id": "q197",
+  "query": "Dimas kerjanya nagkot apa?",
+  "type": "typo",
+  "relevant_ids": [
+   "g44a"
+  ]
+ },
+ {
+  "id": "q198",
+  "query": "Tulisan emoji boleh ga di jawban?",
+  "type": "typo",
+  "relevant_ids": [
+   "g45b"
+  ]
+ },
+ {
+  "id": "q199",
+  "query": "Lanugage for project docs?",
+  "type": "typo",
+  "relevant_ids": [
+   "g20b"
+  ]
+ },
+ {
+  "id": "q200",
+  "query": "Kapna ulang tahn Sari?",
+  "type": "typo",
+  "relevant_ids": [
+   "g39b"
+  ]
+ }
+]
