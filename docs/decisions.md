@@ -4,7 +4,7 @@
 
 Dokumen ini adalah **sumber kebenaran desain** proyek Nibras. Setiap implementasi wajib mengikuti keputusan di sini. Jika implementasi perlu menyimpang, hentikan pekerjaan dan ajukan revisi keputusan. Jangan menyimpang diam-diam.
 
-**Status:** Desain MVP selesai. Fase 0 sedang berjalan (Uji #1 lulus, Uji #6 belum lulus dan dilanjutkan dengan Uji #6b).
+**Status:** Desain MVP selesai. Fase 0 sedang berjalan (Uji #1 dan Uji #6b lulus).
 
 **Arti status:**
 - **Disetujui:** keputusan final.
@@ -180,12 +180,13 @@ Policy Engine, Plan Executor (mencocokkan setiap tindakan dengan rencana yang di
 |---|---|---|
 | D-24 | Vektor disimpan sebagai BLOB di `index.db` dan dicari secara brute-force dengan `numpy`, di balik antarmuka `VectorIndex` | Perlu validasi |
 | D-25 | Entri memori berupa pernyataan atomik dalam bahasa alami ditambah metadata terstruktur | Disetujui |
-| D-26 | Model embedding lokal: `multilingual-e5-small` dalam format ONNX terkuantisasi int8, dengan dimensi 384 | **Belum lulus** (Uji #6: Recall@5 60,5%). Dievaluasi ulang di Uji #6b |
+| D-26 | Model embedding lokal: `multilingual-e5-small` dalam format ONNX terkuantisasi int8, dengan dimensi 384 | **Lulus** (Uji #6b: Recall@5 94,0% dengan entri dwibahasa + Hybrid, lihat D-55) |
 | D-27 | Alur usulan memori melalui chip di akhir respons dan Memory Inbox | Disetujui |
 | D-28 | Consolidation dan archiving berbasis usulan yang memerlukan persetujuan | Disetujui |
-| D-29 | Ranking Hybrid Search: Reciprocal Rank Fusion, lalu penyesuaian berdasarkan prioritas | Perlu validasi (Uji #6b) |
+| D-29 | Ranking Hybrid Search: Reciprocal Rank Fusion, lalu penyesuaian berdasarkan prioritas | **Lulus** (Uji #6b, bobot FTS5 tetap 0,5 — lihat D-55) |
 | D-30 | Backup dan restore atomik dengan verifikasi | Disetujui |
 | D-31 | Identifikasi PC dengan fingerprint gabungan berbobot | Perlu validasi (Uji #9) |
+| D-55 | **Entri memori disimpan dwibahasa untuk pencarian.** Setiap entri menyimpan `text` (bahasa asli) dan `text_alt` (terjemahan), ditulis AI sekaligus saat entri dibuat (tanpa panggilan API tambahan, memperkuat D-27). Kedua teks di-embed terpisah; skor entri diambil dari nilai **maksimum** kedua vektor. Hybrid Search (D-29) memakai bobot FTS5 **0,5** tetap, dengan stopword Indonesia dan Inggris dihapus dari sisi query. Mempertahankan `multilingual-e5-small` (D-26); `multilingual-e5-base` **tidak dipakai** karena ukuran/kecepatan/RAM lebih mahal tanpa kebutuhan nyata | Disetujui |
 
 ### Rincian D-25: entri memori
 - **Isi:** satu pernyataan atomik.
@@ -356,7 +357,7 @@ Aturan ini hanya boleh **menaikkan** risk level, tidak pernah menurunkan.
 | 3 | Antivirus dan SmartScreen terhadap launcher | Tercatat, dan ada solusi untuk setiap blokir | D-12 |
 | 4 | Streaming respons sekitar 5.000 token di UI | UI tidak macet | D-11, D-16, D-50 |
 | 5 | PowerShell di akun non-admin dan PC kantor | Gagal dengan aman dan menampilkan pesan yang jelas | D-17 |
-| 6 | Embedding pada 200 query campuran Indonesia–Inggris | Jawaban benar muncul di top-5 untuk minimal 80% query | D-14, D-26 — **Belum lulus**, dilanjutkan Uji #6b (lihat bagian 12) |
+| 6 | Embedding pada 200 query campuran Indonesia–Inggris | Jawaban benar muncul di top-5 untuk minimal 80% query | D-14, D-26 — **Lulus** di Uji #6b dengan entri dwibahasa + Hybrid (lihat D-55 dan bagian 12) |
 | 7 | Chromium dijalankan dari USB | Waktu start dan volume tulis tercatat | D-13 |
 | 8 | Izin NTFS lintas 2–3 PC dan akun | Tidak ada error permission | D-04 |
 | 9 | Identifikasi PC, termasuk skenario ganti komponen | PC dikenali dengan benar | D-31 |
@@ -398,6 +399,14 @@ Sebelum dipublikasikan luas, cek merek "Nibras" di PDKI untuk kelas 9 dan 42.
 - **Kelemahan dataset:** query dibuat terlalu adversarial. Sebanyak 92,5% query `id-id` sama sekali tidak berbagi kata dengan jawabannya, dan sebagian memakai parafrase yang tidak natural. Persona juga ambigu, karena ada entri tentang "Dimas" dan ada entri tentang "the user". Hybrid dirugikan oleh FTS5 tanpa penghapusan stopword. Karena itu hasilnya kemungkinan **di bawah** performa nyata, tetapi belum cukup untuk memutuskan.
 - **Tindak lanjut:** Uji #6b dengan query natural, perbandingan `e5-small` dan `e5-base`, mitigasi entri dwibahasa, dan Hybrid yang adil. Kriteria keputusan ditetapkan di brief sebelum uji dijalankan.
 - Laporan lengkap: `results/uji06-embedding.md`.
+
+### Uji #6b: Evaluasi lanjutan embedding dan mitigasi (LULUS)
+- **Hasil:** 24 run nyata (model `S`=e5-small / `B`=e5-base int8 × entri `mono`/`bi` × pencarian `vec`/`hyb1`/`hyb05`, pada query v1 adversarial dan v2 natural). Konfigurasi terbaik yang memakai `e5-small`: `S_bi_hyb05` Recall@5 **94,0%** pada v2 (`id-en` 96,7%) — memenuhi kriteria Prioritas 1 brief (≥80% total dan ≥70% `id-en`), ditetapkan sebelum uji dijalankan.
+- **Penyebab kegagalan Uji #6 terkonfirmasi tercampur:** menyimpan entri dalam dua bahasa (teks asli + terjemahan, skor = maksimum kedua vektor) menaikkan Recall@5 v2 sekitar 12–19 poin dibanding teks tunggal, terutama tipe `id-en` (36,7–66,7% → 93,3–100%). Jadi bias bahasa Uji #6 bisa dimitigasi tanpa mengganti model.
+- **`multilingual-e5-base` tidak diperlukan:** sedikit lebih akurat (95,5% vs 94,0%) tetapi ~2,4× lebih besar di disk, ~2× lebih lambat indexing/query, dan ~1,5× lebih banyak RAM. Karena `e5-small` sudah memenuhi kriteria Prioritas 1, upgrade ini menambah biaya tanpa kebutuhan nyata di USB non-admin.
+- **Kegagalan yang tersisa** (9/200 query pada konfigurasi terbaik) murni kelemahan model, bukan artefak dataset: query semantik murni tanpa kata bersama, atau kata isi umum yang menjadi distraktor leksikal antar-entri tentang entitas yang sama.
+- Menghasilkan D-55 (entri dwibahasa + Hybrid bobot FTS5 0,5 tetap).
+- Laporan lengkap: `results/uji06b-embedding.md`.
 
 ---
 
