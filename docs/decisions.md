@@ -4,7 +4,7 @@
 
 Dokumen ini adalah **sumber kebenaran desain** proyek Nibras. Setiap implementasi wajib mengikuti keputusan di sini. Jika implementasi perlu menyimpang, hentikan pekerjaan dan ajukan revisi keputusan. Jangan menyimpang diam-diam.
 
-**Status:** Desain MVP selesai. Fase 0 sedang berjalan (Uji #1 dan Uji #6b lulus).
+**Status:** Desain MVP selesai. Fase 0 sedang berjalan (Uji #1, #5, dan #6b lulus).
 
 **Arti status:**
 - **Disetujui:** keputusan final.
@@ -357,7 +357,7 @@ Aturan ini hanya boleh **menaikkan** risk level, tidak pernah menurunkan.
 | 2 | Waktu startup dari USB 3.x dan 2.0 | Di bawah 10 detik pada USB 3.x | D-02, D-12 |
 | 3 | Antivirus dan SmartScreen terhadap launcher | Tercatat, dan ada solusi untuk setiap blokir | D-12 |
 | 4 | Streaming respons sekitar 5.000 token di UI | UI tidak macet | D-11, D-16, D-50 |
-| 5 | PowerShell di akun non-admin dan PC kantor | Gagal dengan aman dan menampilkan pesan yang jelas | D-17 |
+| 5 | PowerShell di akun non-admin dan PC kantor | Gagal dengan aman dan menampilkan pesan yang jelas | D-17 — **Lulus untuk akun non-admin**. PC kantor dan AppLocker belum teruji (lihat bagian 12) |
 | 6 | Embedding pada 200 query campuran Indonesia–Inggris | Jawaban benar muncul di top-5 untuk minimal 80% query | D-14, D-26 — **Lulus** di Uji #6b dengan entri dwibahasa + Hybrid (lihat D-55 dan bagian 12) |
 | 7 | Chromium dijalankan dari USB | Waktu start dan volume tulis tercatat | D-13 |
 | 8 | Izin NTFS lintas 2–3 PC dan akun | Tidak ada error permission | D-04 |
@@ -408,6 +408,14 @@ Sebelum dipublikasikan luas, cek merek "Nibras" di PDKI untuk kelas 9 dan 42.
 - **Kegagalan yang tersisa** (9/200 query pada konfigurasi terbaik) murni kelemahan model, bukan artefak dataset: query semantik murni tanpa kata bersama, atau kata isi umum yang menjadi distraktor leksikal antar-entri tentang entitas yang sama.
 - Menghasilkan D-55 (entri dwibahasa + Hybrid bobot FTS5 0,5 tetap).
 - Laporan lengkap: `results/uji06b-embedding.md`.
+
+### Uji #5: PowerShell di akun non-admin (LULUS untuk non-admin)
+- **Hasil:** di Windows 11 Pro dengan PowerShell 5.1 dan akun non-admin, semua mode yang bisa disimulasikan gagal dengan aman dan menampilkan pesan yang jelas. Mode yang diuji: ExecutionPolicy `Restricted`, timeout, `powershell.exe` tidak ada di `PATH`, dan Constrained Language Mode di dalam sesi. Tidak ada crash tanpa pesan dan tidak ada data rusak. ExecutionPolicy dikembalikan ke semula, dan ini terverifikasi.
+- **Temuan penting:** `Restricted` hanya memblokir file `.ps1`, sedangkan `-Command` inline tetap berjalan. Temuan ini menjadi dasar D-56.
+- **Temuan teknis:** Windows mencari executable memakai `PATH` proses induk, bukan `PATH` yang diberikan ke proses anak. Karena itu, keberadaan `powershell.exe` harus dicek lebih dulu (preflight) supaya kondisi "tidak ditemukan" terdeteksi dengan benar.
+- **Rekomendasi implementasi:** timeout 15 detik. Startup normal hanya 0,23–0,38 detik, tetapi angka ini belum divalidasi di PC yang lambat.
+- **Belum teruji (risiko terbuka):** AppLocker/SRP yang memblokir `powershell.exe`, CLM tingkat sistem (WDAC/AppLocker), dan PC kantor/terkelola. Pemetaan error untuk AppLocker sudah ada di wrapper, tetapi belum pernah benar-benar terpicu.
+- Laporan lengkap: `results/uji05-powershell.md`.
 
 ---
 
