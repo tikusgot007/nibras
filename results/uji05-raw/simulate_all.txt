@@ -1,0 +1,22 @@
+== baseline
+{"kind": "OK", "returncode": 0, "stdout": "ok\n", "stderr": "", "duration_s": 0.384, "user_message": "", "exception": ""}
+== timeout
+{"kind": "TIMEOUT", "returncode": null, "stdout": "", "stderr": "", "duration_s": 3.026, "user_message": "PowerShell tidak merespons tepat waktu. Coba lagi nanti.", "exception": "TimeoutExpired(['C:\\\\WINDOWS\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe', '-NoProfile', '-NonInteractive', '-Command', 'Start-Sleep -Seconds 30'], 3)"}
+== notfound (PATH override in test process only)
+preflight: None
+{"kind": "NOT_FOUND", "returncode": null, "stdout": "", "stderr": "powershell.exe not found on PATH", "duration_s": 0.0, "user_message": "Windows PowerShell tidak ditemukan di PC ini. Fitur yang membutuhkannya dinonaktifkan.", "exception": "FileNotFoundError('powershell.exe not found on PATH')"}
+== execpolicy Restricted (CurrentUser)
+original CurrentUser = RemoteSigned
+inline: {"kind": "OK", "returncode": 0, "stdout": "ok\n", "stderr": "", "duration_s": 0.233, "user_message": "", "exception": ""}
+script: {"kind": "EXEC_POLICY", "returncode": 1, "stdout": "", "stderr": "& : File D:\\Nibras\\spikes\\uji05-powershell\\noop.ps1 cannot be loaded because running scripts is disabled on this \nsystem. For more information, see about_Execution_Policies at https:/go.microsoft.com/fwlink/?LinkID=135170.\nAt line:1 char:3\n+ & 'D:\\Nibras\\spikes\\uji05-powershell\\noop.ps1'\n+   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : SecurityError: (:) [], PSSecurityException\n    + FullyQualifiedErrorId : UnauthorizedAccess\n", "duration_s": 0.277, "user_message": "Kebijakan eksekusi skrip PowerShell di PC ini melarang skrip dijalankan. Fitur yang membutuhkannya dinonaktifkan.", "exception": ""}
+restored CurrentUser = RemoteSigned
+== constrained language (in-session only; no system policy change)
+{
+  "kind": "CONSTRAINED_LANGUAGE",
+  "returncode": 1,
+  "stdout": "",
+  "stderr": "Cannot invoke method. Method invocation is supported only on core types in this language mode.\nAt line:1 char:70\n+ ... ionState.LanguageMode = 'ConstrainedLanguage'; [System.Math]::Sqrt(4)\n+                                                    ~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException\n    + FullyQualifiedErrorId : MethodInvocationNotSupportedInConstrainedLanguage\n \n",
+  "duration_s": 0.253,
+  "user_message": "PowerShell di PC ini berjalan dalam mode terbatas (Constrained Language). Fitur yang membutuhkannya dinonaktifkan.",
+  "exception": ""
+}
