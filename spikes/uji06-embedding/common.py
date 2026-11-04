@@ -70,6 +70,39 @@ def fts_query(text: str) -> str:
     return " OR ".join('"' + t.replace('"', '""') + '"' for t in toks)
 
 
+# Stopword list for Uji #6b Hybrid FTS5 queries (brief section 4 "Aturan Hybrid
+# baru"): removed from the FTS5 query side only, never from the indexed text.
+# Fixed in code before any evaluation run; not tuned against results.
+STOPWORDS_ID_EN = set("""
+yang dan di ke dari untuk dengan pada ini itu atau juga akan sudah belum tidak
+bukan ada adalah apa siapa kapan mana berapa bagaimana kenapa mengapa saya aku
+dia kami kita mereka nya sih ya kah lah pun serta namun tetapi karena sebab
+jika kalau agar supaya hingga sampai saat ketika sebelum sesudah setelah antara
+sebagai oleh bagi tentang dalam luar atas bawah lebih kurang paling sangat
+banget begitu gitu gini begini demikian tersebut berikut yaitu yakni
+dgn utk yg gw gue lu lo ga gak ngga enggak tdk dmn brp kpn gmn knp napa
+the a an and or but for nor so yet is are was were be been being am
+to of in on at by with from into onto over under about above below
+this that these those it its they them their he she his her him we us our
+you your i my me do does did have has had not no can cannot could would
+should will shall may might must there here then than when where which who
+whom whose what why how all any both each few more most other some such
+only own same so than too very just
+""".split())
+
+
+def fts_query_stopwords(text: str, stopwords: set) -> str:
+    """Query-side builder for Uji #6b Hybrid: drop stopwords (ID+EN) before
+    building the FTS5 MATCH expression. The indexed text itself is untouched."""
+    toks = re.findall(r"\w+", text, flags=re.UNICODE)
+    kept = [t for t in toks if t.lower() not in stopwords]
+    if not kept:
+        kept = toks  # every token was a stopword; fall back to the raw query
+    if not kept:
+        return '""'
+    return " OR ".join('"' + t.replace('"', '""') + '"' for t in kept)
+
+
 class FtsIndex:
     def __init__(self, ids, texts):
         self.db = sqlite3.connect(":memory:")
@@ -82,17 +115,19 @@ class FtsIndex:
         self.db.commit()
         self.ids = ids
 
-    def topk(self, query, k):
+    def topk(self, query, k, query_builder=fts_query):
         rows = self.db.execute(
             "SELECT rowid FROM m WHERE m MATCH ? ORDER BY bm25(m) LIMIT ?",
-            (fts_query(query), k),
+            (query_builder(query), k),
         ).fetchall()
         return [r[0] for r in rows]
 
 
-def rrf(rank_lists, k=60, top=10):
+def rrf(rank_lists, k=60, top=10, weights=None):
+    if weights is None:
+        weights = [1.0] * len(rank_lists)
     scores = {}
-    for lst in rank_lists:
+    for lst, w in zip(rank_lists, weights):
         for rank, doc in enumerate(lst, 1):
-            scores[doc] = scores.get(doc, 0.0) + 1.0 / (k + rank)
+            scores[doc] = scores.get(doc, 0.0) + w / (k + rank)
     return [d for d, _ in sorted(scores.items(), key=lambda x: (-x[1], x[0]))[:top]]

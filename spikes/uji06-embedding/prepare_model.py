@@ -1,9 +1,12 @@
-"""Download multilingual-e5-small ONNX files (fp32 + official int8) and write MODEL_INFO.json.
+"""Download multilingual-e5-small/base ONNX files (fp32 + official int8) and write MODEL_INFO.json.
 
-Uses only the standard library. No torch / transformers needed because the
-official repo ships ONNX files (brief section 5, step 1-2).
+Uses only the standard library. No torch / transformers needed because both
+official repos ship ONNX files (brief section 4 "Model `e5-base`": use official
+int8 file if present; small and base both have one, so no export is needed).
 
-Usage: python prepare_model.py [--out C:/nibras-staging/models]
+Usage:
+  python prepare_model.py --model small --out /path/to/models_s
+  python prepare_model.py --model base  --out /path/to/models_b
 """
 import argparse
 import hashlib
@@ -11,8 +14,16 @@ import json
 import urllib.request
 from pathlib import Path
 
-REPO = "intfloat/multilingual-e5-small"
-REVISION = "614241f622f53c4eeff9890bdc4f31cfecc418b3"
+MODELS = {
+    "small": {
+        "repo": "intfloat/multilingual-e5-small",
+        "revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+    },
+    "base": {
+        "repo": "intfloat/multilingual-e5-base",
+        "revision": "d128750597153bb5987e10b1c3493a34e5a4502a",
+    },
+}
 FILES = {
     "model_fp32.onnx": "onnx/model.onnx",
     "model_int8.onnx": "onnx/model_qint8_avx512_vnni.onnx",
@@ -35,10 +46,13 @@ def sha256(path: Path) -> str:
 
 def main():
     ap = argparse.ArgumentParser()
+    ap.add_argument("--model", choices=sorted(MODELS), default="small")
     ap.add_argument("--out", default="C:/nibras-staging/models")
     args = ap.parse_args()
     out = Path(args.out)
     out.mkdir(parents=True, exist_ok=True)
+    REPO = MODELS[args.model]["repo"]
+    REVISION = MODELS[args.model]["revision"]
 
     info_files = {}
     for local, remote in FILES.items():
