@@ -6,17 +6,14 @@ param (
     [Parameter()]
     [int]$Runs = 1,
 
-    [Parameter()]
-    [string]$BundleDir = "App",
+    [Parameter(Mandatory = $true)]
+    [string]$BundleDir,
 
-    [Parameter()]
-    [string]$DataDir = "Data",
+    [Parameter(Mandatory = $true)]
+    [string]$DataDir,
 
     [Parameter()]
     [string]$OutDir = "results\startup",
-
-    [Parameter()]
-    [string]$ProbeScript = "spikes\uji02-startup\startup_probe.py",
 
     [Parameter()]
     [int]$TimeoutSeconds = 60,
@@ -30,7 +27,7 @@ $ErrorActionPreference = "Stop"
 $resolvedBundleDir = [System.IO.Path]::GetFullPath($BundleDir)
 $resolvedDataDir = [System.IO.Path]::GetFullPath($DataDir)
 $resolvedOutDir = [System.IO.Path]::GetFullPath($OutDir)
-$resolvedProbeScript = [System.IO.Path]::GetFullPath($ProbeScript)
+$resolvedProbeScript = Join-Path $resolvedBundleDir "probe\startup_probe.py"
 
 $pythonDir = Join-Path $resolvedBundleDir "python"
 $pythonwExe = Join-Path $pythonDir "pythonw.exe"
@@ -57,6 +54,7 @@ Write-Host "Scenario     : $Scenario"
 Write-Host "Runs count   : $Runs"
 Write-Host "Start Index  : $StartRunIndex"
 Write-Host "Executable   : $targetExe"
+Write-Host "Probe Script : $resolvedProbeScript"
 Write-Host "Bundle Dir   : $resolvedBundleDir"
 Write-Host "Data Dir     : $resolvedDataDir"
 Write-Host "Output Dir   : $resolvedOutDir"

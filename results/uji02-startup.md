@@ -17,8 +17,27 @@
 | Kapasitas USB | ... GB |
 | Antarmuka USB | USB 3.x / USB 2.0 |
 | Status Windows Defender / Antivirus | Aktif / Non-aktif |
-| Versi Python Runtime | Python 3.12.9 Embeddable (Windows x86-64) |
-| Alasan Pemilihan Versi Python | Versi stabil terbaru dengan ketersediaan wheel biner resmi Windows (`win_amd64`) untuk seluruh 13 paket dependency tanpa kompilasi C di PC host |
+| Versi Python Runtime | Python 3.14.10 Embeddable (Windows x86-64) |
+| Alasan Pemilihan Versi Python | Versi tertinggi yang berhasil pada pengecekan wheel 4 November 2026 (lihat bagian 1.1): wheel biner resmi Windows (`win_amd64`) tersedia untuk seluruh 13 paket dependency tanpa kompilasi C di PC host |
+
+### 1.1 Pengecekan ketersediaan wheel (4 November 2026)
+
+Pengecekan dilakukan dengan `pip download` (pip 26.3) untuk 13 paket dependency beserta dependensinya, tanpa kompilasi dari source:
+
+```text
+pip download --only-binary=:all: --platform win_amd64 \
+  --python-version 314 --implementation cp --abi cp314 \
+  --no-cache-dir -d <dir> <13 paket>
+```
+
+Perintah yang sama dijalankan untuk Python 3.13 (`--python-version 313 --abi cp313`).
+
+| Versi Python | Hasil | Wheel terunduh |
+|---|---|---|
+| 3.14 | BERHASIL | 54 wheel, termasuk `numpy` 2.5.4 (`cp314`), `onnxruntime` 1.31.1 (`cp314`), `pywin32` 312 (`cp314`), `PySide6` 6.12.0 (`abi3`), `cryptography` 50.0.2 (`abi3`) |
+| 3.13 | BERHASIL | 54 wheel, termasuk `numpy` 2.5.4 (`cp313`), `onnxruntime` 1.31.1 (`cp313`), `pywin32` 312 (`cp313`), `PySide6` 6.12.0 (`abi3`), `cryptography` 50.0.2 (`abi3`) |
+
+Dipilih **Python 3.14** karena merupakan versi tertinggi yang berhasil untuk semua paket. Patch default **3.14.10** adalah rilis 3.14 terbaru di python.org pada tanggal pengecekan, dan file `python-3.14.10-embed-amd64.zip` terverifikasi tersedia (HTTP 200, 12.619.664 byte). Pengecekan ini hanya membuktikan ketersediaan wheel biner Windows, bukan hasil uji startup di USB.
 
 ### Versi Paket Dependency (`App/BUILD_INFO.json`):
 - `PySide6`: ...

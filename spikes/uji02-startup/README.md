@@ -32,26 +32,45 @@ spikes/uji02-startup/
 
 ## 3. Langkah 1: Membangun Bundle (`build_bundle.ps1`)
 
-Bundle utama dibangun dengan Python 3.12.9 (versi Python Embeddable resmi yang memiliki wheel biner Windows resmi lengkap untuk semua dependency):
+Bundle utama dibangun dengan Python 3.14.10 (versi Python Embeddable resmi, dipilih berdasarkan pengecekan wheel pada bagian 3.1):
 
 ```powershell
 # Build bundle standar dengan precompile bytecode (.pyc) ke folder App/ di USB
-.\spikes\uji02-startup\build_bundle.ps1 -OutputDir "F:\App" -PythonVersion "3.12.9" -Clean
+.\spikes\uji02-startup\build_bundle.ps1 -OutputDir "F:\App" -PythonVersion "3.14.10" -Clean
 
 # (Untuk Skenario No-Pyc) Build varian tanpa precompile bytecode ke folder terpisah:
-.\spikes\uji02-startup\build_bundle.ps1 -OutputDir "F:\App_nopyc" -PythonVersion "3.12.9" -NoPrecompile -Clean
+.\spikes\uji02-startup\build_bundle.ps1 -OutputDir "F:\App_nopyc" -PythonVersion "3.14.10" -NoPrecompile -Clean
 ```
 
 Paket yang diinstal secara otomatis:
 `PySide6`, `numpy`, `onnxruntime`, `openai`, `anthropic`, `httpx`, `markdown-it-py`, `Pygments`, `cryptography`, `argon2-cffi`, `psutil`, `pywin32`, `mcp`.
 
-Hasil build menghasilkan file `App/BUILD_INFO.json` yang mencatat ukuran bundle, jumlah file, dan versi setiap paket.
+Hasil build menghasilkan file `App/BUILD_INFO.json` yang mencatat ukuran bundle, jumlah file, dan versi setiap paket. Build juga menyalin `startup_probe.py` ke `App\probe\startup_probe.py` di dalam bundle; `measure_startup.ps1` menjalankan probe dari lokasi tersebut.
+
+### 3.1 Pemilihan versi Python (pengecekan wheel, 4 November 2026)
+
+Pengecekan dilakukan dengan `pip download` (pip 26.3) untuk 13 paket di atas beserta dependensinya, tanpa kompilasi dari source:
+
+```text
+pip download --only-binary=:all: --platform win_amd64 \
+  --python-version 314 --implementation cp --abi cp314 \
+  --no-cache-dir -d <dir> <13 paket>
+```
+
+Perintah yang sama dijalankan untuk Python 3.13 (`--python-version 313 --abi cp313`).
+
+| Versi Python | Hasil | Wheel terunduh |
+|---|---|---|
+| 3.14 | BERHASIL | 54 wheel, termasuk `numpy` 2.5.4 (`cp314`), `onnxruntime` 1.31.1 (`cp314`), `pywin32` 312 (`cp314`), `PySide6` 6.12.0 (`abi3`), `cryptography` 50.0.2 (`abi3`) |
+| 3.13 | BERHASIL | 54 wheel, termasuk `numpy` 2.5.4 (`cp313`), `onnxruntime` 1.31.1 (`cp313`), `pywin32` 312 (`cp313`), `PySide6` 6.12.0 (`abi3`), `cryptography` 50.0.2 (`abi3`) |
+
+Dipilih **Python 3.14** karena merupakan versi tertinggi yang berhasil untuk semua paket. Patch default **3.14.10** adalah rilis 3.14 terbaru di python.org pada tanggal pengecekan, dan file `python-3.14.10-embed-amd64.zip` terverifikasi tersedia (HTTP 200, 12.619.664 byte). Versi paket di atas adalah versi yang terunduh saat pengecekan; `build_bundle.ps1` tidak mem-pin versi paket. Pengecekan ini hanya membuktikan ketersediaan wheel biner Windows, bukan hasil uji startup di USB.
 
 ---
 
 ## 4. Langkah 2: Mengukur Startup (`measure_startup.ps1`)
 
-Script pengukur menjalankan `pythonw.exe startup_probe.py` dengan isolasi penuh (`PYTHONDONTWRITEBYTECODE=1`, `PYTHONNOUSERSITE=1`, tanpa `PYTHONPATH`/`PYTHONHOME`).
+Script pengukur menjalankan probe dari dalam bundle (`<BundleDir>\probe\startup_probe.py`) dengan `pythonw.exe` dan isolasi penuh (`PYTHONDONTWRITEBYTECODE=1`, `PYTHONNOUSERSITE=1`, tanpa `PYTHONPATH`/`PYTHONHOME`). Parameter `-BundleDir` dan `-DataDir` wajib diisi dan tidak memiliki nilai default. Probe mencatat T3 saat paint event pertama jendela benar-benar terjadi (`paintEvent`), lalu menutup jendela.
 
 ### Sintaks Pengukuran:
 

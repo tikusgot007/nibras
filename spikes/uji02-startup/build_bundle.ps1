@@ -4,7 +4,7 @@ param (
     [string]$OutputDir = "App",
 
     [Parameter()]
-    [string]$PythonVersion = "3.12.9",
+    [string]$PythonVersion = "3.14.10",
 
     [Parameter()]
     [switch]$NoPrecompile,
@@ -54,7 +54,7 @@ Write-Host "Precompile     : $(!$NoPrecompile)"
 Write-Host "==========================================="
 
 if ($Clean -and (Test-Path -LiteralPath $resolvedOutputDir)) {
-    Write-Host "[1/6] Cleaning existing output directory..."
+    Write-Host "[1/7] Cleaning existing output directory..."
     Remove-Item -LiteralPath $resolvedOutputDir -Recurse -Force
 }
 
@@ -70,15 +70,15 @@ $embedZipPath = Join-Path $CacheDir $embedZipName
 $embedUrl = "https://www.python.org/ftp/python/$PythonVersion/$embedZipName"
 
 if (!(Test-Path -LiteralPath $embedZipPath)) {
-    Write-Host "[2/6] Downloading Python embeddable ($PythonVersion) from $embedUrl..."
+    Write-Host "[2/7] Downloading Python embeddable ($PythonVersion) from $embedUrl..."
     [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12 -bor [Net.SecurityProtocolType]::Tls13
     Invoke-WebRequest -Uri $embedUrl -OutFile $embedZipPath -UseBasicParsing
     Write-Host "Downloaded to: $embedZipPath"
 } else {
-    Write-Host "[2/6] Using cached Python embeddable archive: $embedZipPath"
+    Write-Host "[2/7] Using cached Python embeddable archive: $embedZipPath"
 }
 
-Write-Host "[3/6] Extracting Python embeddable archive into $pythonDir..."
+Write-Host "[3/7] Extracting Python embeddable archive into $pythonDir..."
 Expand-Archive -LiteralPath $embedZipPath -DestinationPath $pythonDir -Force
 
 $pthFiles = Get-ChildItem -LiteralPath $pythonDir -Filter "*._pth"
@@ -86,7 +86,7 @@ if ($pthFiles.Count -eq 0) {
     throw "ERROR: No ._pth file found in $pythonDir"
 }
 $pthFile = $pthFiles[0].FullName
-Write-Host "[4/6] Configuring ._pth file: $pthFile..."
+Write-Host "[4/7] Configuring ._pth file: $pthFile..."
 
 $pthContent = Get-Content -LiteralPath $pthFile -Raw
 $pthLines = $pthContent -split "`r?`n"
@@ -119,7 +119,7 @@ Write-Host "Updated ._pth content:"
 Get-Content -LiteralPath $pthFile | ForEach-Object { Write-Host "   $_" }
 
 $majorMinor = ($PythonVersion -split "\.")[0..1] -join "."
-Write-Host "[5/6] Installing dependencies via pip --target for Python $majorMinor..."
+Write-Host "[5/7] Installing dependencies via pip --target for Python $majorMinor..."
 $pipArgs = @(
     "install",
     "--target", $sitePackagesDir,
@@ -136,7 +136,7 @@ if ($LASTEXITCODE -ne 0) {
 }
 
 if (!$NoPrecompile) {
-    Write-Host "[6/6] Precompiling bytecode (.py -> .pyc) using bundled Python ($PythonVersion)..."
+    Write-Host "[6/7] Precompiling bytecode (.py -> .pyc) using bundled Python ($PythonVersion)..."
     $bundlePythonExe = Join-Path $pythonDir "python.exe"
     & "$bundlePythonExe" -m compileall -q "$pythonDir"
     if ($LASTEXITCODE -ne 0) {
@@ -145,8 +145,21 @@ if (!$NoPrecompile) {
         Write-Host "Bytecode precompilation completed."
     }
 } else {
-    Write-Host "[6/6] Precompilation skipped (-NoPrecompile requested)."
+    Write-Host "[6/7] Precompilation skipped (-NoPrecompile requested)."
 }
+
+Write-Host "[7/7] Copying startup probe into bundle..."
+$probeSource = Join-Path $PSScriptRoot "startup_probe.py"
+$probeDir = Join-Path $resolvedOutputDir "probe"
+$probeDest = Join-Path $probeDir "startup_probe.py"
+if (!(Test-Path -LiteralPath $probeSource)) {
+    throw "ERROR: Startup probe script not found at: $probeSource"
+}
+if (!(Test-Path -LiteralPath $probeDir)) {
+    New-Item -ItemType Directory -Path $probeDir -Force | Out-Null
+}
+Copy-Item -LiteralPath $probeSource -Destination $probeDest -Force
+Write-Host "Copied probe to: $probeDest"
 
 Write-Host "Gathering package versions from metadata..."
 $packageVersions = @{}

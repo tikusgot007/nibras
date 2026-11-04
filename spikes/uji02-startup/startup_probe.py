@@ -19,6 +19,17 @@ def parse_args() -> argparse.Namespace:
     return parser.parse_args()
 
 
+def _is_within(path: str, parent: str) -> bool:
+    if not parent:
+        return True
+    try:
+        normalized_path = os.path.normcase(os.path.realpath(path))
+        normalized_parent = os.path.normcase(os.path.realpath(parent))
+        return os.path.commonpath([normalized_path, normalized_parent]) == normalized_parent
+    except ValueError:
+        return False
+
+
 def verify_isolation(bundle_dir: str) -> dict:
     bundle_real = os.path.realpath(bundle_dir) if bundle_dir else ""
     py_exec_real = os.path.realpath(sys.executable)
@@ -33,15 +44,15 @@ def verify_isolation(bundle_dir: str) -> dict:
 
     user_site_ok = (enable_user_site is False or enable_user_site is None)
 
-    exec_in_bundle = (bundle_real == "" or py_exec_real.startswith(bundle_real))
-    prefix_in_bundle = (bundle_real == "" or py_prefix_real.startswith(bundle_real))
+    exec_in_bundle = _is_within(py_exec_real, bundle_real)
+    prefix_in_bundle = _is_within(py_prefix_real, bundle_real)
 
     external_paths = []
     for p in sys.path:
         if not p:
             continue
         p_real = os.path.realpath(p)
-        if bundle_real and not p_real.startswith(bundle_real):
+        if bundle_real and not _is_within(p_real, bundle_real):
             external_paths.append(p)
 
     sys_path_ok = (len(external_paths) == 0)
@@ -79,23 +90,36 @@ def main() -> None:
     t2_ms = time.time() * 1000.0
 
     t3_start = time.perf_counter()
-    window = QMainWindow()
+    first_paint = {"recorded": False, "t3_ms": None}
+
+    def on_first_paint():
+        if first_paint["recorded"]:
+            return
+        first_paint["recorded"] = True
+        first_paint["t3_ms"] = time.time() * 1000.0
+        QTimer.singleShot(0, close_window)
+
+    def close_window():
+        window.close()
+        app.quit()
+
+    class ProbeWindow(QMainWindow):
+        def paintEvent(self, event):
+            super().paintEvent(event)
+            on_first_paint()
+
+    window = ProbeWindow()
     window.setWindowTitle("Nibras Probe")
     window.setCentralWidget(QLabel("Nibras Portable Assistant Probe"))
     window.resize(320, 200)
     window.show()
 
-    painted = False
-
-    def on_painted():
-        nonlocal painted
-        painted = True
-        window.close()
-        app.quit()
-
-    QTimer.singleShot(0, on_painted)
     app.exec()
-    t3_ms = time.time() * 1000.0
+    t3_ms = first_paint["t3_ms"]
+    # Event loop only exits via close_window(), which runs after the first
+    # paint event, so this fallback only applies if it exits without paint.
+    if t3_ms is None:
+        t3_ms = time.time() * 1000.0
 
     packages_to_import = [
         ("numpy", "numpy"),
