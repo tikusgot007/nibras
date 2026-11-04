@@ -113,6 +113,7 @@ USB:\
 | D-15 | SDK resmi `openai` dan `anthropic` di balik Provider Adapter buatan sendiri. OpenAI-Compatible memakai SDK `openai` dengan `base_url`. Custom Adapter memakai `httpx` | Disetujui |
 | D-16 | Chat dirender dengan `QTextBrowser`. Markdown dikonversi ke HTML sederhana dengan `markdown-it-py`, dan syntax highlighting memakai `Pygments` | Disetujui |
 | D-17 | Library pendukung: `psutil`, `pywin32`, Windows PowerShell 5.1 bawaan OS (dipanggil dengan `-NoProfile`), `cryptography`, `argon2-cffi`, SDK `mcp`, `pywinauto` (bergantung scope), dan `logging` dengan rotasi | Disetujui |
+| D-56 | **PowerShell selalu dipanggil dengan `-Command`, tidak pernah menjalankan file `.ps1`.** Pemanggilan memakai `powershell.exe -NoProfile -NonInteractive -Command <script>`. Skill yang butuh skrip panjang mengirim isi skrip lewat `-Command`, bukan lewat path file. Alasan: Uji #5 menunjukkan ExecutionPolicy `Restricted` hanya memblokir file `.ps1`, tidak memblokir `-Command`. Memperkuat D-17 | Disetujui |
 
 ### Prinsip turunan
 - Semua dependency di-bundle saat build. **Tidak ada `pip install` di PC host.**
