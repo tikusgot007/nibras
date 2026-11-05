@@ -356,7 +356,7 @@ Aturan ini hanya boleh **menaikkan** risk level, tidak pernah menurunkan.
 | 1 | Cabut USB saat SQLite sedang menulis, 20 kali | Tidak ada database rusak. Paling banyak hanya transaksi terakhir yang hilang | D-01, D-04, D-05 — **LULUS** (lihat bagian 12) |
 | 2 | Waktu startup dari USB 3.x dan 2.0 | Di bawah 10 detik pada USB 3.x | D-02, D-12 |
 | 3 | Antivirus dan SmartScreen terhadap launcher | Tercatat, dan ada solusi untuk setiap blokir | D-12 |
-| 4 | Streaming respons sekitar 5.000 token di UI | UI tidak macet | D-11, D-16, D-50 |
+| 4 | Streaming respons sekitar 5.000 token di UI | UI tidak macet | D-11, D-16, D-50 — **Belum lulus**. Strategi render perlu mitigasi (lihat bagian 12) |
 | 5 | PowerShell di akun non-admin dan PC kantor | Gagal dengan aman dan menampilkan pesan yang jelas | D-17 — **Lulus untuk akun non-admin**. PC kantor dan AppLocker belum teruji (lihat bagian 12) |
 | 6 | Embedding pada 200 query campuran Indonesia–Inggris | Jawaban benar muncul di top-5 untuk minimal 80% query | D-14, D-26 — **Lulus** di Uji #6b dengan entri dwibahasa + Hybrid (lihat D-55 dan bagian 12) |
 | 7 | Chromium dijalankan dari USB | Waktu start dan volume tulis tercatat | D-13 |
@@ -416,6 +416,14 @@ Sebelum dipublikasikan luas, cek merek "Nibras" di PDKI untuk kelas 9 dan 42.
 - **Rekomendasi implementasi:** timeout 15 detik. Startup normal hanya 0,23–0,38 detik, tetapi angka ini belum divalidasi di PC yang lambat.
 - **Belum teruji (risiko terbuka):** AppLocker/SRP yang memblokir `powershell.exe`, CLM tingkat sistem (WDAC/AppLocker), dan PC kantor/terkelola. Pemetaan error untuk AppLocker sudah ada di wrapper, tetapi belum pernah benar-benar terpicu.
 - Laporan lengkap: `results/uji05-powershell.md`.
+
+### Uji #4: Streaming respons panjang di UI (BELUM LULUS)
+- **Hasil:** diuji di Windows 11 dengan Intel i7-1065G7 dan PySide6 6.12, pada laju 40 token/detik. Klik dan scroll diotomatisasi, bukan dilakukan manusia. Mode render ulang penuh per token gagal di ketiga fixture: klik tertahan sampai beberapa menit, dan 2 run kena timeout. Mode bertahap (N=10 token) lulus 8 dari 9 run. Run yang gagal adalah `wide_mixed` (tabel 14 kolom, CJK, Arab), dengan p95 jeda 153 ms.
+- **Penyebab:** strategi render, bukan pilihan `QTextBrowser`. Setiap update mengonversi seluruh Markdown dan melakukan highlighting ulang di main thread, sehingga biaya render naik seiring panjang pesan. Satu render `wide_mixed` makan waktu p50 87–138 ms dan maksimum 480 ms.
+- **Kelemahan metrik brief:** p95 jeda timer tidak peka terhadap freeze panjang, karena tick yang terlewat digabung menjadi satu sampel. Kriteria delta klik tetap menangkap masalah ini.
+- **Belum diperiksa:** kebenaran tampilan teks Arab (RTL) dan CJK di `QTextBrowser`. Ini masih menjadi risiko di bagian 11.
+- **Tindak lanjut:** Uji #4b untuk menguji mitigasi render.
+- Laporan lengkap: `results/uji04-streaming-ui.md`.
 
 ---
 
