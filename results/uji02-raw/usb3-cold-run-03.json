@@ -1,0 +1,70 @@
+{
+  "timestamp": "2026-11-05T05:43:19Z",
+  "timestamps": {
+    "t0_launch": 1793857377651.0,
+    "t1_script_start": 1793857377918.6685,
+    "t2_qt_ready": 1793857379893.1333,
+    "t3_first_paint": 1793857379996.712,
+    "t4_imports_done": 1793857399142.945,
+    "t5_dbs_ready": 1793857399147.0552,
+    "t6_ready": 1793857399151.0781
+  },
+  "elapsed_from_t0_ms": {
+    "T1": 267.67,
+    "T2": 2242.13,
+    "T3": 2345.71,
+    "T4": 21491.95,
+    "T5": 21496.06,
+    "T6": 21500.08
+  },
+  "intervals_ms": {
+    "interpreter_init": 267.67,
+    "qt_init": 1974.46,
+    "first_paint": 103.58,
+    "other_imports": 19146.23,
+    "db_init": 4.11,
+    "finish": 4.02
+  },
+  "import_timings_ms": {
+    "numpy": 1004.86,
+    "onnxruntime": 646.86,
+    "openai": 2270.04,
+    "anthropic": 11061.65,
+    "httpx": 331.53,
+    "markdown_it": 420.12,
+    "pygments": 0.01,
+    "cryptography": 8.44,
+    "argon2": 110.59,
+    "psutil": 56.96,
+    "pywin32": 102.52,
+    "mcp": 3129.97
+  },
+  "import_errors": {},
+  "db_results": {
+    "core.db": "ok",
+    "memory.db": "ok",
+    "conversations.db": "ok",
+    "index.db": "ok"
+  },
+  "isolation": {
+    "passed": true,
+    "sys_executable": "F:\\App\\python\\pythonw.exe",
+    "sys_prefix": "F:\\App\\python",
+    "bundle_dir": "F:\\App",
+    "enable_user_site": false,
+    "user_site_ok": true,
+    "exec_in_bundle": true,
+    "prefix_in_bundle": true,
+    "external_sys_paths": [],
+    "sys_path_count": 6,
+    "sys_path": [
+      "F:\\App\\python\\python314.zip",
+      "F:\\App\\python",
+      "F:\\App\\python\\Lib\\site-packages",
+      "F:\\App\\python\\Lib\\site-packages\\win32",
+      "F:\\App\\python\\Lib\\site-packages\\win32\\lib",
+      "F:\\App\\python\\Lib\\site-packages\\pythonwin"
+    ]
+  },
+  "passed": true
+}

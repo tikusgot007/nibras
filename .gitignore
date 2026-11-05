@@ -55,3 +55,7 @@ desktop.ini
 # Uji #4: pengecualian JSON data mentah
 !results/uji04-raw/
 !results/uji04-raw/*.json
+
+# Uji #2: pengecualian JSON data mentah startup
+!results/uji02-raw/
+!results/uji02-raw/*.json
