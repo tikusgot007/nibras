@@ -4,7 +4,7 @@
 
 Dokumen ini adalah **sumber kebenaran desain** proyek Nibras. Setiap implementasi wajib mengikuti keputusan di sini. Jika implementasi perlu menyimpang, hentikan pekerjaan dan ajukan revisi keputusan. Jangan menyimpang diam-diam.
 
-**Status:** Desain MVP selesai. Fase 0 sedang berjalan (Uji #1, #5, dan #6b lulus; Uji #4 cukup untuk pemakaian pribadi). Sisa: Uji #2 dan #8 (lihat D-57).
+**Status:** Desain MVP selesai. Fase 0 sedang berjalan (Uji #1, #5, dan #6b lulus; Uji #4 cukup untuk pemakaian pribadi). Sisa: Uji #2 (lihat D-57 dan D-58).
 
 **Arti status:**
 - **Disetujui:** keputusan final.
@@ -349,6 +349,7 @@ Aturan ini hanya boleh **menaikkan** risk level, tidak pernah menurunkan.
 | D-52 | Rencana Fase 0: 9 uji risiko dengan kriteria lulus | Disetujui, scope disesuaikan oleh D-57 |
 | D-53 | Nama aplikasi **Nibras** (bahasa Arab: cahaya, pelita). Repo `nibras`, launcher `Nibras.exe` | Disetujui |
 | D-57 | **Scope Fase 0 disesuaikan untuk pemakaian pribadi** (satu pengguna, di PC milik sendiri). (1) Uji #4 dianggap cukup. Chat di-render **bertahap, tidak per token**; dasar yang terbukti di Uji #4 adalah minimal tiap 10 token. Optimasi (konversi di thread lain, render inkremental) baru dikerjakan kalau terasa tersendat. Uji #4b dibatalkan. (2) Uji #3, #7, dan #9 tidak dijalankan sebagai uji terpisah. Pengecekannya **wajib** dimasukkan ke brief v0.1: #3 diuji dengan launcher asli, #7 diukur saat fitur browsing dibangun, #9 diuji lewat unit test logika skor. (3) Sisa Fase 0 adalah Uji #2 dan #8. (4) Jika Nibras akan dibagikan ke orang lain, semua uji yang dilewati atau dipersempit oleh keputusan ini **wajib** ditinjau ulang sebelum dibagikan | Disetujui |
+| D-58 | **Uji #8 dilewati.** Fase 0 hanya dijalankan di satu PC, sehingga uji perpindahan flashdisk antar-PC tidak bisa dilakukan. Pengecekannya dipindah ke v0.1. Saat startup, launcher wajib memeriksa bahwa drive berformat NTFS (D-04), lalu mencoba menulis, membaca, dan menghapus satu file uji di `Data/`. Kalau gagal, launcher menampilkan pesan yang jelas dan tidak melanjutkan. Risiko error permission saat flashdisk dipakai di PC lain tetap **terbuka** sampai ada pemakaian nyata di PC kedua. Sisa Fase 0: Uji #2. Melengkapi D-57 | Disetujui |
 
 ### D-52: uji Fase 0
 
@@ -361,7 +362,7 @@ Aturan ini hanya boleh **menaikkan** risk level, tidak pernah menurunkan.
 | 5 | PowerShell di akun non-admin dan PC kantor | Gagal dengan aman dan menampilkan pesan yang jelas | D-17 — **Lulus untuk akun non-admin**. PC kantor dan AppLocker belum teruji (lihat bagian 12) |
 | 6 | Embedding pada 200 query campuran Indonesia–Inggris | Jawaban benar muncul di top-5 untuk minimal 80% query | D-14, D-26 — **Lulus** di Uji #6b dengan entri dwibahasa + Hybrid (lihat D-55 dan bagian 12) |
 | 7 | Chromium dijalankan dari USB | Waktu start dan volume tulis tercatat | D-13 — **Dipindah ke v0.1** (D-57) |
-| 8 | Izin NTFS lintas 2–3 PC dan akun | Tidak ada error permission | D-04 |
+| 8 | Izin NTFS lintas 2–3 PC dan akun | Tidak ada error permission | D-04 — **Dilewati**, pengecekan dipindah ke launcher v0.1 (D-58) |
 | 9 | Identifikasi PC, termasuk skenario ganti komponen | PC dikenali dengan benar | D-31 — **Dipindah ke v0.1** sebagai unit test logika skor (D-57) |
 
 Jika ada uji yang gagal, keputusan terkait direvisi sebelum MVP dibangun.
