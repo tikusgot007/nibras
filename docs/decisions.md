@@ -4,7 +4,7 @@
 
 Dokumen ini adalah **sumber kebenaran desain** proyek Nibras. Setiap implementasi wajib mengikuti keputusan di sini. Jika implementasi perlu menyimpang, hentikan pekerjaan dan ajukan revisi keputusan. Jangan menyimpang diam-diam.
 
-**Status:** Desain MVP selesai. Fase 0 sedang berjalan (Uji #1, #5, dan #6b lulus).
+**Status:** Desain MVP selesai. Fase 0 sedang berjalan (Uji #1, #5, dan #6b lulus; Uji #4 cukup untuk pemakaian pribadi). Sisa: Uji #2 dan #8 (lihat D-57).
 
 **Arti status:**
 - **Disetujui:** keputusan final.
@@ -346,8 +346,9 @@ Aturan ini hanya boleh **menaikkan** risk level, tidak pernah menurunkan.
 
 | ID | Keputusan | Status |
 |---|---|---|
-| D-52 | Rencana Fase 0: 9 uji risiko dengan kriteria lulus | Disetujui |
+| D-52 | Rencana Fase 0: 9 uji risiko dengan kriteria lulus | Disetujui, scope disesuaikan oleh D-57 |
 | D-53 | Nama aplikasi **Nibras** (bahasa Arab: cahaya, pelita). Repo `nibras`, launcher `Nibras.exe` | Disetujui |
+| D-57 | **Scope Fase 0 disesuaikan untuk pemakaian pribadi** (satu pengguna, di PC milik sendiri). (1) Uji #4 dianggap cukup. Chat di-render **bertahap, tidak per token**; dasar yang terbukti di Uji #4 adalah minimal tiap 10 token. Optimasi (konversi di thread lain, render inkremental) baru dikerjakan kalau terasa tersendat. Uji #4b dibatalkan. (2) Uji #3, #7, dan #9 tidak dijalankan sebagai uji terpisah. Pengecekannya **wajib** dimasukkan ke brief v0.1: #3 diuji dengan launcher asli, #7 diukur saat fitur browsing dibangun, #9 diuji lewat unit test logika skor. (3) Sisa Fase 0 adalah Uji #2 dan #8. (4) Jika Nibras akan dibagikan ke orang lain, semua uji yang dilewati atau dipersempit oleh keputusan ini **wajib** ditinjau ulang sebelum dibagikan | Disetujui |
 
 ### D-52: uji Fase 0
 
@@ -355,13 +356,13 @@ Aturan ini hanya boleh **menaikkan** risk level, tidak pernah menurunkan.
 |---|---|---|---|
 | 1 | Cabut USB saat SQLite sedang menulis, 20 kali | Tidak ada database rusak. Paling banyak hanya transaksi terakhir yang hilang | D-01, D-04, D-05 — **LULUS** (lihat bagian 12) |
 | 2 | Waktu startup dari USB 3.x dan 2.0 | Di bawah 10 detik pada USB 3.x | D-02, D-12 |
-| 3 | Antivirus dan SmartScreen terhadap launcher | Tercatat, dan ada solusi untuk setiap blokir | D-12 |
-| 4 | Streaming respons sekitar 5.000 token di UI | UI tidak macet | D-11, D-16, D-50 — **Belum lulus**. Strategi render perlu mitigasi (lihat bagian 12) |
+| 3 | Antivirus dan SmartScreen terhadap launcher | Tercatat, dan ada solusi untuk setiap blokir | D-12 — **Dipindah ke v0.1** (D-57) |
+| 4 | Streaming respons sekitar 5.000 token di UI | UI tidak macet | D-11, D-16, D-50 — **Cukup untuk pemakaian pribadi** dengan render bertahap (D-57). Fixture tabel lebar CJK/Arab belum lulus (lihat bagian 12) |
 | 5 | PowerShell di akun non-admin dan PC kantor | Gagal dengan aman dan menampilkan pesan yang jelas | D-17 — **Lulus untuk akun non-admin**. PC kantor dan AppLocker belum teruji (lihat bagian 12) |
 | 6 | Embedding pada 200 query campuran Indonesia–Inggris | Jawaban benar muncul di top-5 untuk minimal 80% query | D-14, D-26 — **Lulus** di Uji #6b dengan entri dwibahasa + Hybrid (lihat D-55 dan bagian 12) |
-| 7 | Chromium dijalankan dari USB | Waktu start dan volume tulis tercatat | D-13 |
+| 7 | Chromium dijalankan dari USB | Waktu start dan volume tulis tercatat | D-13 — **Dipindah ke v0.1** (D-57) |
 | 8 | Izin NTFS lintas 2–3 PC dan akun | Tidak ada error permission | D-04 |
-| 9 | Identifikasi PC, termasuk skenario ganti komponen | PC dikenali dengan benar | D-31 |
+| 9 | Identifikasi PC, termasuk skenario ganti komponen | PC dikenali dengan benar | D-31 — **Dipindah ke v0.1** sebagai unit test logika skor (D-57) |
 
 Jika ada uji yang gagal, keputusan terkait direvisi sebelum MVP dibangun.
 
@@ -422,7 +423,7 @@ Sebelum dipublikasikan luas, cek merek "Nibras" di PDKI untuk kelas 9 dan 42.
 - **Penyebab:** strategi render, bukan pilihan `QTextBrowser`. Setiap update mengonversi seluruh Markdown dan melakukan highlighting ulang di main thread, sehingga biaya render naik seiring panjang pesan. Satu render `wide_mixed` makan waktu p50 87–138 ms dan maksimum 480 ms.
 - **Kelemahan metrik brief:** p95 jeda timer tidak peka terhadap freeze panjang, karena tick yang terlewat digabung menjadi satu sampel. Kriteria delta klik tetap menangkap masalah ini.
 - **Belum diperiksa:** kebenaran tampilan teks Arab (RTL) dan CJK di `QTextBrowser`. Ini masih menjadi risiko di bagian 11.
-- **Tindak lanjut:** Uji #4b untuk menguji mitigasi render.
+- **Tindak lanjut:** Uji #4b sempat disiapkan untuk menguji mitigasi render, tetapi **dibatalkan** oleh D-57. Untuk pemakaian pribadi, teks biasa dan kode panjang sudah lulus dengan render bertahap. Kasus tabel lebar CJK/Arab hanya menyebabkan UI tersendat sesaat (sampai sekitar 0,5 detik), tanpa hang atau crash. Brief `fase0-uji04b-streaming-ui-mitigasi.md` disimpan sebagai rujukan kalau optimasi diperlukan.
 - Laporan lengkap: `results/uji04-streaming-ui.md`.
 
 ---
