@@ -23,6 +23,8 @@ Pertanyaan yang dijawab:
 
 **Wajib diterapkan di seluruh kode dan laporan uji ini:**
 - Setiap komponen fingerprint **disamarkan** sebelum disimpan ke file apa pun yang akan di-commit: hash satu arah dengan salt acak per sesi uji (`hashlib.sha256(salt + nilai_asli)`), lalu hanya **8 karakter pertama** hash yang dicatat. Ini cukup untuk membandingkan "apakah sama atau beda" antar-run tanpa membocorkan nilai asli.
+- **Satu salt untuk seluruh kampanye uji, dipakai di SEMUA PC.** Kalau tiap PC memakai salt sendiri, hash komponen yang sama akan terlihat berbeda antar-PC, dan uji "PC berbeda" lulus tanpa makna. Salt dibuat sekali (minimal 32 byte acak dari `secrets.token_hex`), lalu disimpan di file lokal `spikes/uji09-pc-id/.salt` yang masuk `.gitignore`. Salt dipindahkan ke PC lain secara manual oleh operator.
+- **Salt tidak boleh di-commit atau dicetak ke log.** Alamat MAC hanya punya sekitar 24 bit acak setelah prefiks vendor, jadi kalau salt-nya publik, hash MAC bisa ditebak dengan brute force. Laporan cukup mencatat 8 karakter pertama dari `sha256(salt)` sebagai bukti bahwa semua PC memakai salt yang sama.
 - Nama PC (hostname) juga disamarkan jika mengandung nama orang atau instansi — ganti dengan label generik (`PC-A`, `PC-B`, `PC-C`) di laporan, dan catat pemetaan label ini **hanya** di file lokal yang **tidak** di-commit (tambahkan ke `.gitignore`).
 - Review manual wajib dilakukan terhadap seluruh file di `results/uji09-raw/` sebelum commit, untuk memastikan tidak ada nilai mentah yang lolos.
 
