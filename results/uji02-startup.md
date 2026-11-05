@@ -2,7 +2,9 @@
 
 **Referensi Brief:** `docs/briefs/fase0-uji02-startup.md`  
 **Keputusan Desain Terkait:** D-01, D-02, D-07, D-12, D-14 sampai D-17 (`docs/decisions.md`)  
-**Status Uji:** Selesai (Eksekusi Nyata di Windows 11 — Seluruh Kriteria LULUS)
+**Status Uji:** Selesai (eksekusi nyata di Windows 11). **Kriteria wajib T6 `usb3-cold` < 10 detik GAGAL** (median 16,26 detik). Kriteria wajib isolasi lulus, dan target lunak T3 lulus.
+
+> **Koreksi reviewer:** di versi awal laporan ini, status di atas tertulis "Seluruh Kriteria LULUS". Itu bertentangan dengan bagian 7 laporan ini sendiri, yang menyatakan T6 cold start gagal. Reviewer juga menambahkan catatan validitas run di bagian 3 dan memperbaiki kesimpulan tentang `.pyc` di bagian 7. Data mentah di `results/uji02-raw/` tidak diubah.
 
 ---
 
@@ -38,14 +40,21 @@
 
 ## 3. Tabel Hasil Uji per Skenario
 
-| Skenario | Deskripsi | Run | Median T3 (ms) | Maks T3 (ms) | Median T6 (ms) | Maks T6 (ms) | Isolasi OK | Status |
-|---|---|---|---|---|---|---|---|---|
-| `first-run` | Run perdana pasca-salin ke USB | 1 | 2.579,2 | 2.579,2 | 17.242,2 | 17.242,2 | 100% | PASS |
-| `usb3-cold` | USB 3.x, cabut-colok tiap run | 5 | 2.537,6 | 2.665,7 | 16.261,4 | 21.500,1 | 100% | PASS |
-| `usb3-warm` | USB 3.x, run berulang tanpa cabut | 5 | 319,8 | 342,5 | 3.115,7 | 3.265,0 | 100% | PASS |
-| `usb2-cold` | USB 2.0 port | 0 | - | - | - | - | - | Tidak teruji: tidak ada port |
-| `ssd-cold` | Baseline disk lokal internal | 3 | 288,4 | 978,8 | 3.377,1 | 15.075,2 | 100% | PASS |
-| `usb3-cold-nopyc` | Varian tanpa precompile `.pyc` | 3 | 2.407,5 | 2.640,1 | 12.717,1 | 45.392,2 | 100% | PASS |
+| Skenario | Deskripsi | Run | Median T3 (ms) | Maks T3 (ms) | Median T6 (ms) | Maks T6 (ms) | Isolasi |
+|---|---|---|---|---|---|---|---|
+| `first-run` | Run perdana pasca-salin ke USB | 1 | 2.579,2 | 2.579,2 | 17.242,2 | 17.242,2 | Lulus |
+| `usb3-cold` | USB 3.x, cabut-colok tiap run | 5 | 2.537,6 | 2.665,7 | 16.261,4 | 21.500,1 | Lulus |
+| `usb3-warm` | USB 3.x, run berulang tanpa cabut | 5 | 319,8 | 342,5 | 3.115,7 | 3.265,0 | Lulus |
+| `usb2-cold` | USB 2.0 port | 0 | - | - | - | - | Tidak teruji: tidak ada port |
+| `ssd-cold` | Baseline disk lokal internal | 3 | 288,4 | 978,8 | 3.377,1 | 15.075,2 | Lulus |
+| `usb3-cold-nopyc` | Varian tanpa precompile `.pyc` | 3 | 2.407,5 | 2.640,1 | 12.717,1 | 45.392,2 | Lulus |
+
+Kolom "Isolasi" hanya menunjukkan hasil verifikasi isolasi per run. Kolom ini **bukan** status lulus kriteria waktu. Evaluasi kriteria ada di bagian 7.
+
+*Catatan validitas run (koreksi reviewer, berdasarkan timestamp dan T3 di data mentah):*
+- `usb3-cold`: kelima run valid sebagai cold start. Jarak antar-run 1–2 menit, dan T3 konsisten di 2,35–2,67 detik.
+- `ssd-cold`: hanya run 1 yang cold. Run 2 dan 3 dijalankan 4 detik setelah run sebelumnya, sehingga file sudah ada di cache Windows. Kedua run itu sebenarnya warm. Run 1 (15,1 detik) juga kemungkinan ikut dipengaruhi pemindaian Avast terhadap salinan bundle yang baru. Baseline SSD cold karena itu **tidak bisa disimpulkan** dari data ini.
+- `usb3-cold-nopyc`: run 2 punya T3 0,29 detik, setara warm (T3 cold selalu sekitar 2,4 detik). Kemungkinan flashdisk tidak dicabut sebelum run itu. Hanya run 1 dan 3 yang valid sebagai cold start.
 
 *Catatan Skenario:*
 - `usb2-cold` ditandai **"tidak teruji: tidak ada port"** karena perangkat host tidak memiliki port fisik USB 2.0.
@@ -103,7 +112,7 @@ Pada seluruh 17 run yang dieksekusi di seluruh skenario:
 |---|---|---|---|
 | **Isolasi `sys.path`** | 0 pelanggaran di semua run | 0 pelanggaran (17/17 run PASS) | **LULUS (Wajib)** |
 | **Median T3 pada `usb3-cold`** | < 4,0 detik | 2,54 detik (2.537,6 ms) | **LULUS (Target Lunak Tercapai)** |
-| **Median T6 pada `usb3-warm`** | Kondisi cached | 3,12 detik (3.115,7 ms) | **Sangat Cepat** |
+| Median T6 pada `usb3-warm` | Informasi, bukan kriteria brief | 3,12 detik (3.115,7 ms) | Informasi |
 | **Median T6 pada `usb3-cold`** | < 10,0 detik | 16,26 detik (16.261,4 ms) | **GAGAL (Kriteria Wajib)** |
 
 ### Analisis Kegagalan Target T6 Cold Start:
@@ -112,8 +121,8 @@ Pada seluruh 17 run yang dieksekusi di seluruh skenario:
    - `anthropic` (5,4 detik), `mcp` (2,7 detik), dan `openai` (2,4 detik) menyumbang total ~10,5 detik I/O read dari USB.
 3. **Warm Start membuktikan efisiensi kode:** Ketika filesystem cache Windows aktif (`usb3-warm`), T6 turun drastis menjadi **3,11 detik**.
 4. **Varian NoPrecompile (`usb3-cold-nopyc`):**
-   - Run 1 mencatat T6 hingga **45,39 detik** karena CPU/I/O harus mengompilasi AST Python saat runtime dari USB.
-   - Run 3 mencatat T6 12,71 detik. Hal ini membuktikan bahwa precompile `.pyc` sangat penting untuk stabilitas deterministik dan mencegah lag kompilasi runtime yang ekstrem.
+   - Run 1 mencatat T6 hingga **45,39 detik**. Run 3 mencatat T6 12,71 detik, lebih cepat daripada median `usb3-cold` dengan `.pyc` (16,26 detik). Run 2 tidak valid sebagai cold start (lihat bagian 3).
+   - *(Koreksi reviewer)* Dengan hanya 2 run cold yang valid dan hasil yang saling bertolak belakang, data ini **tidak cukup** untuk menyimpulkan apakah precompile `.pyc` mempercepat atau memperlambat cold start dari USB. Kesimpulan versi awal bahwa "`.pyc` sangat penting" dihapus karena tidak didukung data.
 5. **Rekomendasi Arsitektural untuk Fase 1:**
    - Pertahankan jendela utama muncul segera pada T3 (splash / skeleton UI).
    - Jalankan import modul LLM (`anthropic`, `openai`, `mcp`, `onnxruntime`) secara lazy atau background worker thread saat UI sudah menyapa pengguna.
