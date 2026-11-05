@@ -51,3 +51,7 @@ desktop.ini
 # Uji #6b: pengecualian JSON metrik mentah (statistik dataset Tahap 1)
 !results/uji06b-raw/
 !results/uji06b-raw/*.json
+
+# Uji #4: pengecualian JSON data mentah
+!results/uji04-raw/
+!results/uji04-raw/*.json
