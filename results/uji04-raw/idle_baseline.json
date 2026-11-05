@@ -1,0 +1,57 @@
+{
+ "fixture": "idle",
+ "mode": "idle",
+ "run": 0,
+ "rate_tok_per_s": 40.0,
+ "batch_n": null,
+ "tokens": 0,
+ "stream_seconds": null,
+ "automation": "automatic (QTimer scroll every 250ms; posted QMouseEvent clicks at random 0.7-2.2s); not manual",
+ "timer_samples": 624,
+ "timer_lag_ms": {
+  "p50": 0.007300000637769699,
+  "p95": 0.5665000677108765,
+  "p99": 1.0146999880671501,
+  "max": 1.6713999826461077
+ },
+ "timer_lag_histogram_ms": {
+  "<1": 617,
+  "1-2": 7,
+  "2-5": 0,
+  "5-10": 0,
+  "10-20": 0,
+  "20-50": 0,
+  "50-100": 0,
+  "100-200": 0,
+  "200-500": 0,
+  ">=500": 0
+ },
+ "click_count": 7,
+ "click_delta_ms": {
+  "p50": 1.1720999609678984,
+  "p95": 2.1786000579595566,
+  "max": 2.1786000579595566
+ },
+ "click_deltas_ms": [
+  1.66,
+  1.15,
+  1.1,
+  2.18,
+  1.08,
+  1.53,
+  1.17
+ ],
+ "render_count": 0,
+ "render_ms": {
+  "p50": null,
+  "p95": null,
+  "max": null,
+  "total": 0
+ },
+ "env": {
+  "python": "3.14.7",
+  "pyside6": "6.12.0",
+  "qt": "6.12.0",
+  "os": "Windows-11-10.0.26100-SP0"
+ }
+}
