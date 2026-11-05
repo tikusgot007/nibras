@@ -4,7 +4,7 @@
 
 Dokumen ini adalah **sumber kebenaran desain** proyek Nibras. Setiap implementasi wajib mengikuti keputusan di sini. Jika implementasi perlu menyimpang, hentikan pekerjaan dan ajukan revisi keputusan. Jangan menyimpang diam-diam.
 
-**Status:** Desain MVP selesai. **Fase 0 selesai** (lihat D-57 sampai D-59 dan bagian 12). Langkah berikutnya: brief v0.1.
+**Status:** Desain MVP selesai. **Fase 0 selesai** (lihat D-57 sampai D-59 dan bagian 12). v0.1 dibangun dalam 5 tahap. Tahap 1 (chat dasar) sedang dikerjakan: `docs/briefs/v01-tahap1-chat-dasar.md`.
 
 **Arti status:**
 - **Disetujui:** keputusan final.
@@ -114,6 +114,9 @@ USB:\
 | D-16 | Chat dirender dengan `QTextBrowser`. Markdown dikonversi ke HTML sederhana dengan `markdown-it-py`, dan syntax highlighting memakai `Pygments` | Disetujui |
 | D-17 | Library pendukung: `psutil`, `pywin32`, Windows PowerShell 5.1 bawaan OS (dipanggil dengan `-NoProfile`), `cryptography`, `argon2-cffi`, SDK `mcp`, `pywinauto` (bergantung scope), dan `logging` dengan rotasi | Disetujui |
 | D-56 | **PowerShell selalu dipanggil dengan `-Command`, tidak pernah menjalankan file `.ps1`.** Pemanggilan memakai `powershell.exe -NoProfile -NonInteractive -Command <script>`. Skill yang butuh skrip panjang mengirim isi skrip lewat `-Command`, bukan lewat path file. Alasan: Uji #5 menunjukkan ExecutionPolicy `Restricted` hanya memblokir file `.ps1`, tidak memblokir `-Command`. Memperkuat D-17 | Disetujui |
+| D-60 | **Launcher `Nibras.exe` ditulis dalam C dan dikompilasi dengan mingw-w64.** Tugasnya hanya: menentukan root flashdisk dari lokasi exe, menolak berjalan jika volume bukan NTFS (`MessageBox` berisi panduan), mengatur environment proses anak (`PYTHONHOME`, `PYTHONNOUSERSITE`, `PYTHONDONTWRITEBYTECODE`, `TEMP`/`TMP` dan cache Qt ke `Temp/`), lalu menjalankan `App\python\pythonw.exe -m nibras` tanpa console. Alasan: binary sekecil mungkin, tanpa runtime tambahan, dan pemeriksaan lain dilakukan di Python. Menyelesaikan "Ditunda: bahasa implementasi launcher" | Disetujui |
+| D-61 | **Dependency dikunci.** Daftar langsung di `packaging/requirements.in`. Versi lengkap beserta hash di `packaging/requirements.lock` (dibuat dengan `pip-compile --generate-hashes` untuk Windows amd64 dan versi Python bundle). Build memakai `pip install --require-hashes --target`. Versi Python Embeddable beserta SHA-256 file zip-nya juga dikunci di skrip build | Disetujui |
+| D-62 | **Struktur kode repo:** `src/nibras/` untuk aplikasi (subpaket `ui`, `core` untuk Agent Core, `storage`, `security` untuk vault dan audit log, `providers`), `launcher/` untuk source `Nibras.exe`, `packaging/` untuk skrip build dan lock file, `tests/` untuk unit test `pytest`. Hasil build ditulis ke folder yang di-ignore git, lalu disalin ke flashdisk dengan skrip | Disetujui |
 
 ### Prinsip turunan
 - Semua dependency di-bundle saat build. **Tidak ada `pip install` di PC host.**
@@ -129,7 +132,7 @@ USB:\
 Sekitar 0,5–0,9 GB. Rekomendasinya USB 3.x berkapasitas minimal 32 GB dengan performa random write yang baik.
 
 ### Ditunda
-- Bahasa implementasi launcher (ditentukan saat implementasi).
+- ~~Bahasa implementasi launcher (ditentukan saat implementasi).~~ Diputuskan di D-60.
 
 ---
 
@@ -234,6 +237,8 @@ Policy Engine, Plan Executor (mencocokkan setiap tindakan dengan rencana yang di
 Prototipe kecil yang terpisah dari aplikasi. Rincian ujinya ada di D-52.
 
 ### v0.1 (MVP): asisten inti yang andal
+Dibangun dalam 5 tahap. Di akhir setiap tahap, aplikasi bisa dicoba dari flashdisk: (1) chat dasar dengan satu provider OpenAI-compatible, (2) provider lengkap dan biaya, (3) memori, (4) tools dan Policy Engine, (5) project, persona, PC Profile, backup/restore, dan dashboard lengkap.
+
 - **Fondasi:** launcher, pemeriksaan NTFS, lock dan recovery, backup dan restore.
 - **Keamanan:** vault, passphrase, auto-lock, Policy Engine, audit log.
 - **Provider:** OpenAI, Anthropic, OpenAI-Compatible, beserta fallback dengan persetujuan.
