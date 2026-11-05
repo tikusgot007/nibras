@@ -4,7 +4,7 @@
 
 Dokumen ini adalah **sumber kebenaran desain** proyek Nibras. Setiap implementasi wajib mengikuti keputusan di sini. Jika implementasi perlu menyimpang, hentikan pekerjaan dan ajukan revisi keputusan. Jangan menyimpang diam-diam.
 
-**Status:** Desain MVP selesai. Fase 0 sedang berjalan (Uji #1, #5, dan #6b lulus; Uji #4 cukup untuk pemakaian pribadi). Sisa: Uji #2 (lihat D-57 dan D-58).
+**Status:** Desain MVP selesai. **Fase 0 selesai** (lihat D-57 sampai D-59 dan bagian 12). Langkah berikutnya: brief v0.1.
 
 **Arti status:**
 - **Disetujui:** keputusan final.
@@ -350,13 +350,14 @@ Aturan ini hanya boleh **menaikkan** risk level, tidak pernah menurunkan.
 | D-53 | Nama aplikasi **Nibras** (bahasa Arab: cahaya, pelita). Repo `nibras`, launcher `Nibras.exe` | Disetujui |
 | D-57 | **Scope Fase 0 disesuaikan untuk pemakaian pribadi** (satu pengguna, di PC milik sendiri). (1) Uji #4 dianggap cukup. Chat di-render **bertahap, tidak per token**; dasar yang terbukti di Uji #4 adalah minimal tiap 10 token. Optimasi (konversi di thread lain, render inkremental) baru dikerjakan kalau terasa tersendat. Uji #4b dibatalkan. (2) Uji #3, #7, dan #9 tidak dijalankan sebagai uji terpisah. Pengecekannya **wajib** dimasukkan ke brief v0.1: #3 diuji dengan launcher asli, #7 diukur saat fitur browsing dibangun, #9 diuji lewat unit test logika skor. (3) Sisa Fase 0 adalah Uji #2 dan #8. (4) Jika Nibras akan dibagikan ke orang lain, semua uji yang dilewati atau dipersempit oleh keputusan ini **wajib** ditinjau ulang sebelum dibagikan | Disetujui |
 | D-58 | **Uji #8 dilewati.** Fase 0 hanya dijalankan di satu PC, sehingga uji perpindahan flashdisk antar-PC tidak bisa dilakukan. Pengecekannya dipindah ke v0.1. Saat startup, launcher wajib memeriksa bahwa drive berformat NTFS (D-04), lalu mencoba menulis, membaca, dan menghapus satu file uji di `Data/`. Kalau gagal, launcher menampilkan pesan yang jelas dan tidak melanjutkan. Risiko error permission saat flashdisk dipakai di PC lain tetap **terbuka** sampai ada pemakaian nyata di PC kedua. Sisa Fase 0: Uji #2. Melengkapi D-57 | Disetujui |
+| D-59 | **Jendela tampil dulu, SDK AI dimuat di latar belakang.** Saat startup, aplikasi segera menampilkan jendela dan kotak ketik. Impor `anthropic`, `openai`, `mcp`, dan `onnxruntime` dijalankan di thread latar belakang setelah jendela tampil. Pengguna bisa langsung mengetik. Kalau pesan dikirim sebelum provider siap, pesan ditahan dan UI menampilkan status "menyiapkan AI…". Pesan tidak dibuang, dan pengguna tidak diminta mengulang. Dasar: Uji #2. Kriteria "siap pakai < 10 detik" dibaca ulang sebagai "jendela tampil dan bisa diketik", dengan T3 cold start 2,5 detik. Waktu sampai AI siap pada cold start (sekitar 16 detik) diterima untuk pemakaian pribadi (D-57). Melengkapi D-12 dan D-15 | Disetujui |
 
 ### D-52: uji Fase 0
 
 | # | Uji | Kriteria lulus | Keputusan terkait |
 |---|---|---|---|
 | 1 | Cabut USB saat SQLite sedang menulis, 20 kali | Tidak ada database rusak. Paling banyak hanya transaksi terakhir yang hilang | D-01, D-04, D-05 — **LULUS** (lihat bagian 12) |
-| 2 | Waktu startup dari USB 3.x dan 2.0 | Di bawah 10 detik pada USB 3.x | D-02, D-12 |
+| 2 | Waktu startup dari USB 3.x dan 2.0 | Di bawah 10 detik pada USB 3.x | D-02, D-12 — **Gagal** untuk siap penuh (16,3 detik). Diselesaikan dengan D-59: jendela tampil dalam 2,5 detik (lihat bagian 12) |
 | 3 | Antivirus dan SmartScreen terhadap launcher | Tercatat, dan ada solusi untuk setiap blokir | D-12 — **Dipindah ke v0.1** (D-57) |
 | 4 | Streaming respons sekitar 5.000 token di UI | UI tidak macet | D-11, D-16, D-50 — **Cukup untuk pemakaian pribadi** dengan render bertahap (D-57). Fixture tabel lebar CJK/Arab belum lulus (lihat bagian 12) |
 | 5 | PowerShell di akun non-admin dan PC kantor | Gagal dengan aman dan menampilkan pesan yang jelas | D-17 — **Lulus untuk akun non-admin**. PC kantor dan AppLocker belum teruji (lihat bagian 12) |
@@ -426,6 +427,13 @@ Sebelum dipublikasikan luas, cek merek "Nibras" di PDKI untuk kelas 9 dan 42.
 - **Belum diperiksa:** kebenaran tampilan teks Arab (RTL) dan CJK di `QTextBrowser`. Ini masih menjadi risiko di bagian 11.
 - **Tindak lanjut:** Uji #4b sempat disiapkan untuk menguji mitigasi render, tetapi **dibatalkan** oleh D-57. Untuk pemakaian pribadi, teks biasa dan kode panjang sudah lulus dengan render bertahap. Kasus tabel lebar CJK/Arab hanya menyebabkan UI tersendat sesaat (sampai sekitar 0,5 detik), tanpa hang atau crash. Brief `fase0-uji04b-streaming-ui-mitigasi.md` disimpan sebagai rujukan kalau optimasi diperlukan.
 - Laporan lengkap: `results/uji04-streaming-ui.md`.
+
+### Uji #2: Waktu startup dari USB (GAGAL untuk siap penuh, diselesaikan dengan D-59)
+- **Hasil:** diuji di Windows 11, Intel i7-13620H, flashdisk SanDisk USB 3.2 Gen1 berformat NTFS, dengan Avast aktif. Bundle Python 3.14.10 Embeddable berukuran 880 MB (19.892 file). Median startup sampai siap penuh pada cold start USB 3.x adalah **16,3 detik** (target < 10 detik, **gagal**). Warm start 3,1 detik. Jendela pertama muncul dalam **2,5 detik** pada cold start. Isolasi dari Python host lulus di 17/17 run.
+- **Penyebab:** impor SDK dari flashdisk saat cold start, yaitu `anthropic` sekitar 5,4 detik, `mcp` 2,7 detik, dan `openai` 2,4 detik.
+- **Keterbatasan data:** tidak ada port USB 2.0, sehingga skenario `usb2-cold` tidak teruji. Baseline SSD cold dan efek `.pyc` tidak bisa disimpulkan, karena beberapa run ternyata bukan cold start (dikoreksi reviewer di laporan).
+- **Tindak lanjut:** D-59. Kalau waktu sampai AI siap terasa mengganggu, opsi optimasi berikutnya adalah mengemas paket pure-Python ke dalam zip untuk mengurangi pembacaan ribuan file kecil, atau mengganti SDK dengan klien `httpx`. Keduanya **belum diuji**.
+- Laporan lengkap: `results/uji02-startup.md`.
 
 ---
 
