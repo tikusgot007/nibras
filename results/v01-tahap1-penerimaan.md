@@ -45,10 +45,10 @@ setelah aplikasi dibuka ulang (terlihat di tangkapan layar operator).
 Pengamatan bukan bug (tahap ini memang belum punya alat): Nibras tidak bisa
 melihat drive PC karena Tools/PowerShell baru ada di Tahap 4.
 
-Lulus (dilaporkan operator): butir 4 (passphrase salah), 5 (cabut saat streaming), dan 6 (dua instance di flashdisk).
+Lulus (dilaporkan operator): butir 2 (chat panjang, Batalkan, Esc), 4 (passphrase salah), 5 (cabut saat streaming), dan 6 (dua instance di flashdisk).
 
 Belum diuji atau belum dilaporkan: butir 8 (waktu cold-start), 3 (tutup lalu buka
-lagi, secara tidak langsung terlihat berjalan), 7 (jejak di PC host untuk F:), dan butir 2 untuk tombol `Esc`.
+lagi, secara tidak langsung terlihat berjalan), dan 7 (jejak di PC host untuk F:).
 
 ## Checklist operator
 
@@ -62,10 +62,10 @@ lagi, secara tidak langsung terlihat berjalan), 7 (jejak di PC host untuk F:), d
 - Hasil:
 
 ## 2. Chat panjang (kode + tabel)
-- [ ] Jawaban panjang tampil utuh (kode + tabel ter-render)
-- [ ] UI tetap responsif selama streaming
-- [ ] Tombol Batalkan menghentikan streaming; Esc juga menghentikan
-- Hasil:
+- [x] Jawaban panjang tampil utuh (kode + tabel ter-render)
+- [x] UI tetap responsif selama streaming
+- [x] Tombol Batalkan menghentikan streaming; Esc juga menghentikan
+- Hasil: **LULUS** (dilaporkan operator di flashdisk, tanpa angka responsivitas). Data flashdisk mencatat jawaban berstatus `cancelled`; data tidak membedakan Batalkan dari `Esc`. Tinggi kartu panjang sempat salah di versi awal (diperbaiki di `a600a20`).
 
 ## 3. Tutup & buka lagi
 - [ ] Ditutup via tombol "Tutup & Aman Dilepas"
