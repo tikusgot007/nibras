@@ -24,6 +24,45 @@ from .markdown import render_markdown
 RENDER_EVERY_TOKENS = 10
 
 
+class AutoHeightBrowser(QTextBrowser):
+    """QTextBrowser whose height always matches its laid-out document.
+
+    The height can only be known after the document is wrapped to the real
+    viewport width. Computing it right after ``setHtml`` (before the widget
+    has its final width) gave cards that were far too short, so only a line
+    or two of a long answer was visible. The height is therefore refitted
+    after every ``setHtml`` and on every width change.
+    """
+
+    MIN_HEIGHT = 40
+
+    def __init__(self, parent: QWidget | None = None):
+        super().__init__(parent)
+        self.setReadOnly(True)
+        self.setOpenExternalLinks(False)
+        self.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.setFixedHeight(self.MIN_HEIGHT)
+
+    def setHtml(self, html: str) -> None:  # noqa: N802 - Qt naming
+        super().setHtml(html)
+        self._fit_height()
+
+    def resizeEvent(self, event) -> None:  # noqa: N802 - Qt naming
+        super().resizeEvent(event)  # lets Qt wrap the document to the new width
+        self._fit_height()
+
+    def _fit_height(self) -> None:
+        doc = self.document()
+        if self.viewport().width() > 0:
+            doc.setTextWidth(self.viewport().width())
+        height = int(doc.size().height()) + 2 * self.frameWidth() + 8
+        height = max(height, self.MIN_HEIGHT)
+        if height != self.height():
+            self.setFixedHeight(height)
+            self.verticalScrollBar().setValue(0)
+
+
 class MessageCard(QFrame):
     def __init__(self, role: str, parent: QWidget | None = None):
         super().__init__(parent)
@@ -38,11 +77,7 @@ class MessageCard(QFrame):
         who = QLabel("Kamu" if role == "user" else "Nibras")
         who.setObjectName("muted")
         layout.addWidget(who)
-        self.browser = QTextBrowser()
-        self.browser.setReadOnly(True)
-        self.browser.setOpenExternalLinks(False)
-        self.browser.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
-        self.browser.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.browser = AutoHeightBrowser()
         layout.addWidget(self.browser)
         self._status = QLabel("")
         self._status.setObjectName("muted")
@@ -75,9 +110,7 @@ class MessageCard(QFrame):
         self._status.setText(status)
 
     def _render(self) -> None:
-        self.browser.setHtml(render_markdown(self._text))
-        height = int(self.browser.document().size().height()) + 12
-        self.browser.setFixedHeight(max(height, 40))
+        self.browser.setHtml(render_markdown(self._text))  # also refits the height
 
 
 class ChatView(QScrollArea):

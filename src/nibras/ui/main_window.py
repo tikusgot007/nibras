@@ -8,6 +8,7 @@ the Agent Core through signals.
 from __future__ import annotations
 
 import time
+import uuid
 
 from PySide6.QtCore import Qt, QTimer, Signal, Slot
 from PySide6.QtGui import QKeySequence, QShortcut
@@ -177,6 +178,11 @@ class MainWindow(QMainWindow):
         self._chat.clear()
         self._core.request_load_conversations.emit()
         self._input.setFocus()
+        # A first message typed before any conversation existed was held while
+        # the conversation was being created; send it now.
+        if self._pending_text and self._provider_ready and not self._vault_locked:
+            text, self._pending_text = self._pending_text, None
+            self._send_now(text)
 
     def _open_conversation(self, item: QListWidgetItem) -> None:
         conv_id = item.data(Qt.UserRole)
@@ -215,6 +221,9 @@ class MainWindow(QMainWindow):
             return
         self._input.clear()
         self._notice.setText("")
+        # Show the user's own message right away; it was never added to the
+        # chat view before, so only the replies were visible.
+        self._chat.add_message(f"local-{uuid.uuid4().hex}", "user", text)
         self._core.request_send.emit(self._current_conversation, text)
         self._streaming = True
         self._cancel_btn.setVisible(True)
