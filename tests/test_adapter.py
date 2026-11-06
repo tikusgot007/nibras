@@ -10,6 +10,7 @@ from __future__ import annotations
 import asyncio
 import json
 import threading
+import time
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 
 import pytest
@@ -24,6 +25,8 @@ class MockState:
         self.fail_mid_stream_after = -1  # -1 = never
         self.requests = 0
         self.last_body: dict | None = None
+        self.last_auth: str | None = None   # Authorization header of the last POST
+        self.chunk_delay = 0.0              # seconds between SSE chunks
 
 
 def _sse_chunk(content: str) -> bytes:
@@ -55,6 +58,7 @@ def make_handler(state: MockState):
         def do_POST(self):
             length = int(self.headers.get("Content-Length", 0))
             state.last_body = json.loads(self.rfile.read(length) or b"{}")
+            state.last_auth = self.headers.get("Authorization")
             state.requests += 1
             if self.path != "/v1/chat/completions":
                 self._send_json(404, {"error": "not found"})
@@ -78,6 +82,8 @@ def make_handler(state: MockState):
                     return
                 self.wfile.write(_sse_chunk(text))
                 self.wfile.flush()
+                if state.chunk_delay:
+                    time.sleep(state.chunk_delay)
             finish = {"choices": [{"delta": {}, "finish_reason": "stop"}]}
             self.wfile.write(f"data: {json.dumps(finish)}\n\n".encode())
             self.wfile.flush()
