@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import os
 import sys
 from pathlib import Path
 
@@ -24,3 +25,14 @@ def root_dir(tmp_path: Path) -> Path:
     (tmp_path / "Temp").mkdir()
     (tmp_path / "Backups").mkdir()
     return tmp_path
+
+
+@pytest.fixture(scope="session")
+def qapp():
+    """ONE QApplication for the whole test session. Qt allows a single
+    application object per process; mixing QCoreApplication and QApplication
+    across test modules crashes the interpreter."""
+    os.environ.setdefault("QT_QPA_PLATFORM", "offscreen")
+    from PySide6.QtWidgets import QApplication
+
+    return QApplication.instance() or QApplication([])

@@ -103,7 +103,9 @@ class Application:
         self.lock: SingleInstanceLock | None = None
         self.core: AgentCore | None = None
         self.window: MainWindow | None = None
-        self._passphrase: str | None = None
+        # While the vault is open the app holds only the DERIVED KEY (never
+        # the passphrase). The API key is handed to the Core and not kept here.
+        self._session: vault_mod.VaultSession | None = None
         self._api_key = ""
         self._settings: dict = dict(DEFAULT_SETTINGS)
         self._shutting_down = False
@@ -137,10 +139,12 @@ class Application:
             return 0
 
         self.core = AgentCore(self.data, self._api_key, self._settings)
+        api_key_set = bool(self._api_key)
+        self._api_key = ""  # the Core owns the key from here on
         self.core.start()
         load_fonts(app_dir(self.root) / "fonts")
         self.window = MainWindow(
-            self.core, self._settings, bool(self._api_key),
+            self.core, self._settings, api_key_set,
             on_settings_saved=self._on_settings_saved,
             on_safe_close=self.safe_close,
         )
@@ -183,53 +187,81 @@ class Application:
             dlg = PassphraseDialog(first_setup=True)
             if not dlg.exec():
                 return False
-            self._passphrase = dlg.passphrase()
-            vault_mod.create_vault(vault_path, self._passphrase, {"api_key": ""})
+            passphrase = dlg.passphrase()
+            dlg.pass1.clear()
+            dlg.pass2.clear()
+            vault_mod.create_vault(vault_path, passphrase, {"api_key": ""})
+            self._session, _payload = vault_mod.unlock_vault(vault_path, passphrase)
+            del passphrase
             self._api_key = ""
             return True
         while True:
             dlg = PassphraseDialog(first_setup=False)
             if not dlg.exec():
                 return False
+            passphrase = dlg.passphrase()
+            dlg.pass1.clear()
             try:
-                payload = vault_mod.open_vault(vault_path, dlg.passphrase())
+                self._session, payload = vault_mod.unlock_vault(vault_path, passphrase)
             except VaultError as exc:
                 QMessageBox.warning(None, "Nibras", str(exc))
                 continue
-            self._passphrase = dlg.passphrase()
+            finally:
+                del passphrase
             self._api_key = str(payload.get("api_key", ""))
             return True
 
-    # -- settings / unlock callbacks (from the UI) ---------------------------
+    # -- settings / lock / unlock callbacks (from the UI) --------------------
     def _on_settings_saved(self, kind: str, *args) -> None:
         if kind == "settings":
             _settings, api_key = args
-            if api_key and self._passphrase is not None:
-                vault_path = self.data / "vault.bin"
-                try:
-                    payload = vault_mod.open_vault(vault_path, self._passphrase)
-                except VaultError:
-                    payload = {}
-                payload["api_key"] = api_key
-                vault_mod.create_vault(vault_path, self._passphrase, payload)
-                self._api_key = api_key
-            if self.dbs is not None:
-                if self.core is not None:
-                    self.core.request_audit.emit("settings_saved", "")
+            if api_key:
+                self._save_api_key(api_key)
+            if self.core is not None:
+                self.core.request_audit.emit("settings_saved", "")
+        elif kind == "lock":
+            self._forget_secrets()
         elif kind == "unlock":
             passphrase = args[0]
-            vault_path = self.data / "vault.bin"
             try:
-                payload = vault_mod.open_vault(vault_path, passphrase)
+                session, payload = vault_mod.unlock_vault(
+                    self.data / "vault.bin", passphrase)
             except VaultError as exc:
                 QMessageBox.warning(None, "Nibras", str(exc))
                 return
-            self._passphrase = passphrase
-            self._api_key = str(payload.get("api_key", ""))
+            finally:
+                del passphrase
+            self._session = session
             if self.core is not None:
-                self.core.request_update_settings.emit(self._settings, self._api_key)
+                # The Core rebuilds its adapter with the reopened key.
+                self.core.request_unlock.emit(str(payload.get("api_key", "")))
+            del payload
             if self.window is not None:
                 self.window.unlock_vault()
+
+    def _save_api_key(self, api_key: str) -> None:
+        """Re-encrypt the vault with the held key: same salt and Argon2
+        parameters from the header, no new Argon2 run, no UI freeze."""
+        if self._session is None or not self._session.is_open:
+            QMessageBox.warning(
+                None, "Nibras",
+                "Vault terkunci, API key baru belum disimpan. Buka vault dulu, "
+                "lalu simpan ulang pengaturannya.")
+            return
+        vault_path = self.data / "vault.bin"
+        try:
+            payload = vault_mod.read_with_session(vault_path, self._session)
+            payload["api_key"] = api_key
+            vault_mod.save_with_session(vault_path, self._session, payload)
+        except VaultError as exc:
+            QMessageBox.warning(None, "Nibras", str(exc))
+
+    def _forget_secrets(self) -> None:
+        """Vault locked: wipe the derived key and drop any key copy held here."""
+        if self._session is not None:
+            self._session.wipe()
+            self._session = None
+        self._api_key = ""
 
     # -- shutdown --------------------------------------------------------------
     def safe_close(self) -> None:
@@ -242,6 +274,7 @@ class Application:
         QApplication.quit()
 
     def _shutdown(self) -> None:
+        self._forget_secrets()
         if self.core is not None:
             self.core.stop()
             self.core = None

@@ -200,11 +200,19 @@ class MainWindow(QMainWindow):
         self._cancel_btn.setVisible(True)
         self._send_btn.setEnabled(False)
 
-    def _ask_unlock_then_send(self, text: str) -> None:
+    def _prompt_unlock(self) -> bool:
+        """Ask for the passphrase and reopen the vault. True when unlocked."""
         dlg = PassphraseDialog(first_setup=False, parent=self)
-        if dlg.exec():
-            self._pending_text = text
-            self._on_settings_saved("unlock", dlg.passphrase())
+        if not dlg.exec():
+            return False
+        passphrase = dlg.passphrase()
+        dlg.pass1.clear()
+        self._on_settings_saved("unlock", passphrase)  # unlock_vault() runs on success
+        return not self._vault_locked
+
+    def _ask_unlock_then_send(self, text: str) -> None:
+        self._pending_text = text  # held, never dropped (D-10)
+        self._prompt_unlock()
 
     @Slot(str, str)
     def _on_token(self, message_id: str, delta: str) -> None:
@@ -256,6 +264,8 @@ class MainWindow(QMainWindow):
 
     # -- settings --------------------------------------------------------------
     def _open_settings(self) -> None:
+        if self._vault_locked and not self._prompt_unlock():
+            return  # a new API key can only be saved into an open vault
         dlg = SettingsDialog(self._settings, self._api_key_set, parent=self)
         if not dlg.exec():
             return
@@ -275,6 +285,9 @@ class MainWindow(QMainWindow):
     def _tick_idle(self) -> None:
         if self._vault_locked:
             return
+        if self._streaming:  # never lock in the middle of an answer
+            self._mark_activity()
+            return
         limit = int(self._settings.get(KEY_AUTO_LOCK_MINUTES, 30)) * 60
         idle = time.monotonic() - self._last_activity
         remaining = max(0, int(limit - idle))
@@ -286,6 +299,7 @@ class MainWindow(QMainWindow):
     def _lock_vault(self) -> None:
         self._vault_locked = True
         self._status_vault.setText("Vault: terkunci")
+        self._on_settings_saved("lock")  # Application wipes its derived key
         self._core.request_lock_vault.emit()
 
     @Slot()

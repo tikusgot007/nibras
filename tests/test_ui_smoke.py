@@ -19,12 +19,6 @@ from nibras.ui.markdown import render_markdown
 from nibras.ui.theme import QSS
 
 
-@pytest.fixture(scope="module")
-def qapp():
-    app = QApplication.instance() or QApplication([])
-    yield app
-
-
 def test_markdown_renders_code_with_highlight():
     html = render_markdown("# Judul\n\n```python\nprint('halo')\n```\n")
     assert "Judul" in html

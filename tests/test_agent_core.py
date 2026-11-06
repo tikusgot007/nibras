@@ -33,11 +33,6 @@ from tests.test_adapter import mock_server  # noqa: F401  (pytest fixture)
 API_KEY = "sk-test-tidak-asli-aaa"
 
 
-@pytest.fixture(scope="module")
-def qapp():
-    return QCoreApplication.instance() or QCoreApplication([])
-
-
 def wait_until(predicate, timeout=10.0, what="kondisi"):
     """Process Qt events (queued signals from the Core thread) until true."""
     end = time.monotonic() + timeout
