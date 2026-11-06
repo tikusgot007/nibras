@@ -14,10 +14,14 @@ Diverifikasi di PC pengembang Windows 11 (Python 3.14, dependency dari
 | `pytest`: 48 test lulus, diulang 3 kali tanpa kegagalan | **Sudah** |
 | Alur chat lewat `AgentCore` sungguhan (thread + loop asli) ke server tiruan lokal | **Sudah** |
 | Lock instance tunggal: dua proses OS terpisah, yang kedua ditolak (Windows) | **Sudah** |
-| Kompilasi `Nibras.exe` dengan mingw-w64 | **Belum** (mingw-w64 belum terpasang di PC ini) |
-| `build_bundle.ps1` dan pemasangan ke folder uji di drive internal NTFS | **Belum** |
-| Menjalankan `Nibras.exe` dari folder uji: jendela, setup pertama, log startup | **Belum** |
-| Jejak di `%TEMP%` dan `%LOCALAPPDATA%` saat aplikasi berjalan | **Belum** |
+| Kompilasi `Nibras.exe` dengan mingw-w64 (MSYS2, `-municode`) | **Sudah** (41 KB). Gagal pada percobaan pertama: `undefined reference to WinMain`; diperbaiki dengan `-municode` |
+| `build_bundle.ps1` (dependency dari lock, `--require-hashes`) dan pemasangan ke `D:
+ibras-test\` (NTFS internal) | **Sudah** (bundle 765 MB) |
+| `Nibras.exe` dijalankan dari folder uji: dialog setup pertama tampil, lalu jendela chat tema gelap | **Sudah** (dialog diisi oleh orang di PC, bukan agen) |
+| Instance kedua ditolak lock dan tidak membuka jendela baru | **Sudah**, setelah perbaikan: sebelumnya selalu muncul kotak pesan karena `import win32gui` gagal di bundle (`.pth` pywin32 tidak diproses). Diganti `ctypes` |
+| Penutupan dari jendela: proses keluar 0,3 detik, `clean_shutdown=1`, audit `vault_open` dan `vault_lock`, empat DB `journal_mode=delete` dan `quick_check=ok`, `Temp/` kosong | **Sudah** |
+| Jejak di `%TEMP%`, `%LOCALAPPDATA%`, `%APPDATA%` | **Sudah**: 133 file baru/berubah, semuanya milik aplikasi lain; tidak ada path berisi nibras/python/qt/pyside/pywin. Dua file `%TEMP%` tanpa nama jelas tidak bisa dipastikan asalnya |
+| Log startup | `Data/logs/nibras.log` **kosong** (0 byte) pada start normal. Tidak ada galat, tapi tidak ada baris startup |
 | Seluruh checklist 1–8 di bawah (butuh flashdisk dan operator) | **Belum** |
 
 ## Checklist operator
