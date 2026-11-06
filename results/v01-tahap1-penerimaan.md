@@ -15,8 +15,7 @@ Diverifikasi di PC pengembang Windows 11 (Python 3.14, dependency dari
 | Alur chat lewat `AgentCore` sungguhan (thread + loop asli) ke server tiruan lokal | **Sudah** |
 | Lock instance tunggal: dua proses OS terpisah, yang kedua ditolak (Windows) | **Sudah** |
 | Kompilasi `Nibras.exe` dengan mingw-w64 (MSYS2, `-municode`) | **Sudah** (41 KB). Gagal pada percobaan pertama: `undefined reference to WinMain`; diperbaiki dengan `-municode` |
-| `build_bundle.ps1` (dependency dari lock, `--require-hashes`) dan pemasangan ke `D:
-ibras-test\` (NTFS internal) | **Sudah** (bundle 765 MB) |
+| `build_bundle.ps1` (dependency dari lock, `--require-hashes`) dan pemasangan ke folder uji di drive D: (NTFS internal) | **Sudah** (bundle 765 MB) |
 | `Nibras.exe` dijalankan dari folder uji: dialog setup pertama tampil, lalu jendela chat tema gelap | **Sudah** (dialog diisi oleh orang di PC, bukan agen) |
 | Instance kedua ditolak lock dan tidak membuka jendela baru | **Sudah**, setelah perbaikan: sebelumnya selalu muncul kotak pesan karena `import win32gui` gagal di bundle (`.pth` pywin32 tidak diproses). Diganti `ctypes` |
 | Penutupan dari jendela: proses keluar 0,3 detik, `clean_shutdown=1`, audit `vault_open` dan `vault_lock`, empat DB `journal_mode=delete` dan `quick_check=ok`, `Temp/` kosong | **Sudah** |
