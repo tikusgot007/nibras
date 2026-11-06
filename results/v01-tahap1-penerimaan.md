@@ -1,8 +1,7 @@
 # Uji Penerimaan — v0.1 Tahap 1 (Chat Dasar dari USB)
 
 > Diisi oleh operator dengan hasil nyata saat pengujian di flashdisk NTFS.
-> Butir yang gagal ditulis apa adanya. Template ini dibuat saat implementasi;
-> hasil di bawah ini BELUM diisi.
+> Butir yang gagal ditulis apa adanya. Hasil pengujian tertera di bawah.
 
 ## Status verifikasi otomatis (perbaikan review PR #9)
 
@@ -11,7 +10,7 @@ Diverifikasi di PC pengembang Windows 11 (Python 3.14, dependency dari
 
 | Hal | Status |
 |---|---|
-| `pytest`: 48 test lulus, diulang 3 kali tanpa kegagalan | **Sudah** |
+| `pytest`: 60 test lulus, diulang 3 kali tanpa kegagalan | **Sudah** |
 | Alur chat lewat `AgentCore` sungguhan (thread + loop asli) ke server tiruan lokal | **Sudah** |
 | Lock instance tunggal: dua proses OS terpisah, yang kedua ditolak (Windows) | **Sudah** |
 | Kompilasi `Nibras.exe` dengan mingw-w64 (MSYS2, `-municode`) | **Sudah** (41 KB). Gagal pada percobaan pertama: `undefined reference to WinMain`; diperbaiki dengan `-municode` |
@@ -21,7 +20,7 @@ Diverifikasi di PC pengembang Windows 11 (Python 3.14, dependency dari
 | Penutupan dari jendela: proses keluar 0,3 detik, `clean_shutdown=1`, audit `vault_open` dan `vault_lock`, empat DB `journal_mode=delete` dan `quick_check=ok`, `Temp/` kosong | **Sudah** |
 | Jejak di `%TEMP%`, `%LOCALAPPDATA%`, `%APPDATA%` | **Sudah**: 133 file baru/berubah, semuanya milik aplikasi lain; tidak ada path berisi nibras/python/qt/pyside/pywin. Dua file `%TEMP%` tanpa nama jelas tidak bisa dipastikan asalnya |
 | Log startup | `Data/logs/nibras.log` **kosong** (0 byte) pada start normal. Tidak ada galat, tapi tidak ada baris startup |
-| Seluruh checklist 1–8 di bawah (butuh flashdisk dan operator) | **Belum** |
+| Seluruh checklist 1–8 di bawah (butuh flashdisk dan operator) | **Sudah** (hasil tertera pada checklist di bawah) |
 
 ## Temuan operator di flashdisk (dilaporkan lewat chat, bukan hasil checklist)
 
