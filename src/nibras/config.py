@@ -8,11 +8,12 @@ commits.
 
 from __future__ import annotations
 
-# Provider defaults. The model ``aan-hermes`` is served through the user's
-# 9Router-compatible endpoint and routes to Gemini 3.8 Flash there.
-DEFAULT_BASE_URL = "https://9r90.itroute.web.id/v1"
-DEFAULT_MODEL = "aan-hermes"
-# Gemini 3.8 Flash context window: 1,000,000 tokens.
+# Provider defaults. The repository is public, so no endpoint URL or model
+# name is hard-coded: the user fills both in Settings at first setup.
+DEFAULT_BASE_URL = ""
+DEFAULT_MODEL = ""
+# Starting value for the model's context window (tokens); the user adjusts
+# it in Settings to match the chosen model.
 DEFAULT_CONTEXT_WINDOW = 1_000_000
 
 DEFAULT_AUTO_LOCK_MINUTES = 30

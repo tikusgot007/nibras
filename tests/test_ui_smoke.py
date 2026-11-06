@@ -11,7 +11,7 @@ from PySide6.QtWidgets import QApplication
 
 os.environ.setdefault("QT_QPA_PLATFORM", "offscreen")
 
-from nibras.config import DEFAULT_SETTINGS
+from nibras.config import DEFAULT_SETTINGS, KEY_MODEL
 from nibras.core.agent import AgentCore
 from nibras.ui.dialogs import PassphraseDialog, SettingsDialog
 from nibras.ui.main_window import MainWindow
@@ -33,9 +33,10 @@ def test_markdown_renders_code_with_highlight():
 
 
 def test_main_window_builds_offscreen(qapp, data_dir: Path):
-    core = AgentCore(data_dir, api_key="", settings=dict(DEFAULT_SETTINGS))
+    settings = {**DEFAULT_SETTINGS, KEY_MODEL: "test-model"}
+    core = AgentCore(data_dir, api_key="", settings=settings)
     saved: list = []
-    window = MainWindow(core, dict(DEFAULT_SETTINGS), False,
+    window = MainWindow(core, dict(settings), False,
                         on_settings_saved=lambda *a: saved.append(a),
                         on_safe_close=lambda: None)
     try:
@@ -44,7 +45,7 @@ def test_main_window_builds_offscreen(qapp, data_dir: Path):
         qapp.processEvents()
         assert window.isVisible()
         assert window.windowTitle() == "Nibras"
-        assert "aan-hermes" in window._status_model.text()
+        assert "test-model" in window._status_model.text()
     finally:
         window.close()
         core.stop()

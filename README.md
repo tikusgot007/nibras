@@ -44,7 +44,7 @@ Skrip memverifikasi drive target benar-benar flashdisk USB (BusType USB) dan ber
 2. Setup pertama: buat passphrase brankas, lalu isi base URL provider, nama model, dan API key. **Tidak ada pemulihan passphrase yang lupa.**
 3. Chat seperti biasa. Riwayat tersimpan di flashdisk dan terbawa ke PC lain.
 
-Default provider: base URL `https://9r90.itroute.web.id/v1`, model `aan-hermes`, context window 1.000.000 token. API key tidak pernah ditulis di log, database, atau commit.
+Provider: base URL, nama model, dan context window diisi pengguna di Pengaturan (tidak ada default pribadi di repo publik). API key tidak pernah ditulis di log, database, atau commit.
 
 ## Struktur Repo
 

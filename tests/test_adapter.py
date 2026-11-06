@@ -48,7 +48,7 @@ def make_handler(state: MockState):
 
         def do_GET(self):
             if self.path == "/v1/models":
-                self._send_json(200, {"data": [{"id": "aan-hermes"}]})
+                self._send_json(200, {"data": [{"id": "test-model"}]})
             else:
                 self._send_json(404, {"error": "not found"})
 
@@ -105,7 +105,7 @@ def make_adapter(mock_server, **overrides):
     port = server.server_address[1]
     return OpenAICompatibleAdapter(
         base_url=overrides.get("base_url", f"http://127.0.0.1:{port}/v1"),
-        model=overrides.get("model", "aan-hermes"),
+        model=overrides.get("model", "test-model"),
         api_key="sk-test-tidak-asli",
         context_window=overrides.get("context_window", 1000),
     )
@@ -160,7 +160,7 @@ async def test_no_retry_mid_stream(mock_server):
 
 def test_context_trim_keeps_latest():
     adapter = OpenAICompatibleAdapter(
-        base_url="http://127.0.0.1:9/v1", model="aan-hermes",
+        base_url="http://127.0.0.1:9/v1", model="test-model",
         api_key="sk-test", context_window=60,
     )
     msgs = [CanonicalMessage(role="system", content="s" * 40)]
@@ -176,7 +176,7 @@ def test_context_trim_keeps_latest():
 
 def test_context_no_trim_when_fits():
     adapter = OpenAICompatibleAdapter(
-        base_url="http://127.0.0.1:9/v1", model="aan-hermes",
+        base_url="http://127.0.0.1:9/v1", model="test-model",
         api_key="sk-test", context_window=1_000_000,
     )
     msgs = [CanonicalMessage(role="user", content="Halo")]
