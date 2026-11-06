@@ -14,7 +14,9 @@ migration mechanism. Only the Agent Core thread may access these databases
 
 from __future__ import annotations
 
+import shutil
 import sqlite3
+from datetime import datetime, timezone
 from pathlib import Path
 
 # PRAGMA values required by D-01. ``synchronous=FULL`` reads back as 2.
@@ -44,6 +46,28 @@ CREATE TABLE IF NOT EXISTS audit_log (
 );
 """
 
+CORE_SCHEMA_V2 = """
+CREATE TABLE IF NOT EXISTS provider_profiles (
+    id TEXT PRIMARY KEY,
+    kind TEXT NOT NULL,
+    name TEXT NOT NULL,
+    base_url TEXT NOT NULL DEFAULT '',
+    created_at TEXT NOT NULL
+);
+CREATE TABLE IF NOT EXISTS provider_models (
+    id TEXT PRIMARY KEY,
+    profile_id TEXT NOT NULL REFERENCES provider_profiles(id) ON DELETE CASCADE,
+    name TEXT NOT NULL,
+    context_window INTEGER NOT NULL DEFAULT 128000,
+    can_stream INTEGER NOT NULL DEFAULT 1,
+    can_tools INTEGER NOT NULL DEFAULT 0,
+    can_vision INTEGER NOT NULL DEFAULT 0,
+    created_at TEXT NOT NULL
+);
+CREATE INDEX IF NOT EXISTS idx_provider_models_profile
+    ON provider_models(profile_id);
+"""
+
 CONVERSATIONS_SCHEMA_V1 = """
 CREATE TABLE IF NOT EXISTS conversations (
     id TEXT PRIMARY KEY,
@@ -68,7 +92,7 @@ EMPTY_SCHEMA_V1 = ""
 
 # name -> (current version, {version: sql})
 SCHEMAS: dict[str, tuple[int, dict[int, str]]] = {
-    "core.db": (1, {1: CORE_SCHEMA_V1}),
+    "core.db": (2, {1: CORE_SCHEMA_V1, 2: CORE_SCHEMA_V2}),
     "conversations.db": (1, {1: CONVERSATIONS_SCHEMA_V1}),
     "memory.db": (1, {1: EMPTY_SCHEMA_V1}),
     "index.db": (1, {1: EMPTY_SCHEMA_V1}),
@@ -124,9 +148,27 @@ class Databases:
     def open_all(self) -> "Databases":
         for name in self.NAMES:
             conn = connect(self.data_dir / name)
+            if name == "core.db" and get_schema_version(conn) == 1:
+                self._backup_v1(conn)
             migrate(conn, name)
             self._conns[name] = conn
         return self
+
+    def _backup_v1(self, conn: sqlite3.Connection) -> None:
+        """Backup core.db and vault.bin to Backups/ before migrating from v1."""
+        backups = self.data_dir.parent / "Backups"
+        backups.mkdir(parents=True, exist_ok=True)
+        ts = datetime.now(timezone.utc).strftime("%Y%m%d_%H%M%S")
+        dest_db = backups / f"core_backup_v1_{ts}.db"
+        bck = sqlite3.connect(str(dest_db))
+        try:
+            conn.backup(bck)
+        finally:
+            bck.close()
+
+        vault_file = self.data_dir / "vault.bin"
+        if vault_file.exists():
+            shutil.copy2(vault_file, backups / f"vault_backup_v1_{ts}.bin")
 
     def __getitem__(self, name: str) -> sqlite3.Connection:
         return self._conns[name]

@@ -21,7 +21,8 @@ def test_pragma_four_databases(data_dir: Path):
             assert conn.execute("PRAGMA journal_mode").fetchone()[0] == "delete"
             # synchronous=FULL reads back as 2.
             assert conn.execute("PRAGMA synchronous").fetchone()[0] == 2
-            assert get_schema_version(conn) == 1
+            expected_version = 2 if name == "core.db" else 1
+            assert get_schema_version(conn) == expected_version
     finally:
         dbs.close()
 
@@ -35,11 +36,11 @@ def test_migration_from_version_0(data_dir: Path):
     conn.execute("INSERT INTO schema_version (version) VALUES (0)")
     conn.commit()
     assert get_schema_version(conn) == 0
-    assert migrate(conn, "core.db") == 1
-    assert get_schema_version(conn) == 1
+    assert migrate(conn, "core.db") == 2
+    assert get_schema_version(conn) == 2
     tables = {r[0] for r in conn.execute(
         "SELECT name FROM sqlite_master WHERE type='table'").fetchall()}
-    assert {"settings", "session", "audit_log"} <= tables
+    assert {"settings", "session", "audit_log", "provider_profiles", "provider_models"} <= tables
     conn.close()
 
 

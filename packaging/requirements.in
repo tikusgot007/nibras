@@ -3,6 +3,7 @@
 # Lock ditargetkan ke Windows amd64 + Python 3.14 (Python Embeddable bundle).
 PySide6==6.12.0
 openai==3.46.0
+anthropic==2.6.0
 markdown-it-py==4.2.0
 Pygments==2.21.0
 cryptography==50.0.2

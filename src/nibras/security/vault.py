@@ -241,6 +241,37 @@ def vault_exists(path: Path) -> bool:
     return Path(path).is_file()
 
 
+def get_profile_api_key(payload: dict, profile_id: str) -> str:
+    """Retrieve API key for profile_id. No fallback between profiles."""
+    if not profile_id or not isinstance(payload, dict):
+        return ""
+    keys = payload.get("api_keys")
+    if isinstance(keys, dict) and profile_id in keys:
+        val = keys[profile_id]
+        return str(val) if isinstance(val, (str, int, float)) else ""
+    return ""
+
+
+def set_profile_api_key(payload: dict, profile_id: str, api_key: str) -> None:
+    """Store API key for profile_id in vault payload."""
+    keys = payload.setdefault("api_keys", {})
+    if not isinstance(keys, dict):
+        keys = {}
+        payload["api_keys"] = keys
+    keys[profile_id] = api_key
+
+
+def delete_profile_api_key(payload: dict, profile_id: str) -> None:
+    """Remove API key for profile_id from vault payload."""
+    keys = payload.get("api_keys")
+    if isinstance(keys, dict):
+        keys.pop(profile_id, None)
+
+
+def has_profile_api_key(payload: dict, profile_id: str) -> bool:
+    return bool(get_profile_api_key(payload, profile_id).strip())
+
+
 def _wipe(buf: bytearray | bytes) -> None:
     """Best-effort overwrite of a key buffer (D-39 honest note: Python
     cannot guarantee the key is truly gone from RAM)."""

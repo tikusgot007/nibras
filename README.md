@@ -6,9 +6,13 @@ Nibras adalah asisten AI pribadi yang berjalan langsung dari USB Flash Drive di 
 
 ## Status
 
-🧭 **Desain MVP selesai.** Saat ini proyek berada di **Fase 0**, yaitu prototipe untuk menguji risiko teknis sebelum MVP dibangun.
-
-**v0.1 Tahap 1 (chat dasar dari USB)** sedang dikerjakan di branch `v01/tahap1`: chat dengan satu provider OpenAI-Compatible, riwayat tersimpan di flashdisk, brankas API key (Argon2id + AES-256-GCM).
+🧭 **Desain MVP selesai.** Saat ini proyek berada di **v0.1 Tahap 2 (provider lengkap dan fallback)**:
+- Dukungan tiga jenis provider: OpenAI, Anthropic, dan OpenAI-Compatible dengan profil dan model tersimpan di `core.db`.
+- API key tersimpan aman di brankas per profil.
+- Satu model aktif global, dengan opsi model cadangan (fallback).
+- Fallback transparan dengan persetujuan pengguna per satu pesan (D-64).
+- Mode Dashboard khusus untuk manajemen profil/model dan pengaturan.
+- Status bar informatif (model aktif, kesiapan provider, hitung mundur brankas, indikator online).
 
 ## Menjalankan test (PC dev)
 
