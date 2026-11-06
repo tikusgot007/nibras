@@ -126,3 +126,46 @@ def test_first_message_without_a_conversation_is_sent_and_shown(
     finally:
         core.stop()
         window.close()
+
+
+def _window(data_dir: Path):
+    settings = {**DEFAULT_SETTINGS, KEY_MODEL: "test-model"}
+    core = AgentCore(data_dir, api_key="", settings=settings)
+    window = MainWindow(core, dict(settings), False,
+                        on_settings_saved=lambda *a: None,
+                        on_safe_close=lambda: None)
+    return core, window
+
+
+def test_reloaded_history_marks_interrupted_cancelled_and_failed(qapp, data_dir: Path):
+    """Finding from acceptance item 5: an interrupted answer reloaded from
+    history was an empty card with no explanation."""
+    core, window = _window(data_dir)
+    try:
+        window._current_conversation = "c1"
+        window._show_messages("c1", [
+            {"id": "m1", "role": "user", "content": "halo", "status": "done"},
+            {"id": "m2", "role": "assistant", "content": "", "status": "interrupted"},
+            {"id": "m3", "role": "assistant", "content": "sebagian", "status": "cancelled"},
+            {"id": "m4", "role": "assistant", "content": "x", "status": "failed"},
+            {"id": "m5", "role": "assistant", "content": "ok", "status": "done"},
+        ])
+        label = {mid: window._chat.card(mid)._status.text() for mid in ("m1", "m2", "m3", "m4", "m5")}
+        assert label["m1"] == "" and label["m5"] == ""  # normal messages: no mark
+        assert "Terputus" in label["m2"] and "tidak dilanjutkan" in label["m2"]
+        assert "Dibatalkan" in label["m3"]
+        assert "Gagal" in label["m4"]
+    finally:
+        window.close()
+        core.stop()
+
+
+def test_cancelled_answer_is_marked_when_it_finishes(qapp, data_dir: Path):
+    core, window = _window(data_dir)
+    try:
+        card = window._chat.add_message("m9", "assistant", "setengah")
+        window._on_message_finished("m9", "cancelled")
+        assert "Dibatalkan" in card._status.text()
+    finally:
+        window.close()
+        core.stop()

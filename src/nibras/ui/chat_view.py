@@ -23,6 +23,15 @@ from .markdown import render_markdown
 
 RENDER_EVERY_TOKENS = 10
 
+# Visible mark for messages that did not finish normally (D-08, D-44). Without
+# it, an interrupted answer reloaded from history was an empty, unexplained card.
+STATUS_LABELS = {
+    "interrupted": "Terputus: sesi berakhir sebelum jawaban selesai "
+                   "(tidak dilanjutkan otomatis).",
+    "cancelled": "Dibatalkan.",
+    "failed": "Gagal. Tekan Kirim lagi untuk mencoba ulang.",
+}
+
 
 class AutoHeightBrowser(QTextBrowser):
     """QTextBrowser whose height always matches its laid-out document.
@@ -130,9 +139,11 @@ class ChatView(QScrollArea):
             card.deleteLater()
         self._cards.clear()
 
-    def add_message(self, message_id: str, role: str, content: str) -> MessageCard:
+    def add_message(self, message_id: str, role: str, content: str,
+                    status: str = "") -> MessageCard:
         card = MessageCard(role)
         card.set_text(content)
+        card.set_status(STATUS_LABELS.get(status, ""))
         self._layout.insertWidget(self._layout.count() - 1, card)
         self._cards[message_id] = card
         self._scroll_to_bottom()

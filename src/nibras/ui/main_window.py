@@ -33,7 +33,7 @@ from ..config import (
     KEY_MODEL,
 )
 from ..core.agent import AgentCore
-from .chat_view import ChatView
+from .chat_view import STATUS_LABELS, ChatView
 from .dialogs import PassphraseDialog, SettingsDialog
 
 
@@ -195,7 +195,8 @@ class MainWindow(QMainWindow):
             return
         self._chat.clear()
         for msg in messages:
-            self._chat.add_message(msg["id"], msg["role"], msg["content"])
+            self._chat.add_message(msg["id"], msg["role"], msg["content"],
+                                   msg.get("status", ""))
 
     # -- sending -------------------------------------------------------------
     def _send_current(self) -> None:
@@ -258,7 +259,7 @@ class MainWindow(QMainWindow):
         self._send_btn.setEnabled(True)
         card = self._chat.card(message_id)
         if card is not None:
-            card.finish()
+            card.finish(STATUS_LABELS.get(status, ""))
         self._core.request_load_conversations.emit()
 
     @Slot(str, str)
