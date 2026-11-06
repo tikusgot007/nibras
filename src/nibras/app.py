@@ -28,11 +28,12 @@ from PySide6.QtWidgets import QApplication, QMessageBox
 from . import config
 from .config import DEFAULT_SETTINGS
 from .core.agent import AgentCore
-from .paths import app_dir, data_dir, ensure_layout, find_usb_root, temp_dir
+from .paths import app_dir, backups_dir, data_dir, ensure_layout, find_usb_root, temp_dir
 from .security import vault as vault_mod
 from .security.vault import VaultError
 from .storage.databases import Databases
 from .storage.lock import SingleInstanceLock, write_clean_shutdown
+from .storage.migration_v2 import migrate_tahap1_to_tahap2
 from .storage.recovery import run_recovery
 from .ui.dialogs import PassphraseDialog
 from .ui.main_window import MainWindow
@@ -54,7 +55,7 @@ def setup_logging(data: Path) -> None:
     # Never log secrets: only event names are logged, never values. The HTTP
     # client logs every request URL at INFO (the user's private endpoint), so
     # those loggers are raised to WARNING.
-    for noisy in ("httpx", "httpx2", "httpcore", "httpcore2", "openai"):
+    for noisy in ("httpx", "httpx2", "httpcore", "httpcore2", "openai", "anthropic"):
         logging.getLogger(noisy).setLevel(logging.WARNING)
 
 
@@ -109,6 +110,7 @@ def bring_existing_to_front() -> bool:
         return False
     try:
         import ctypes
+        from ctypes import wintypes
 
         user32 = ctypes.windll.user32
         hwnd = _find_nibras_window()
@@ -116,6 +118,24 @@ def bring_existing_to_front() -> bool:
             return False
         user32.ShowWindow(hwnd, 9)  # SW_RESTORE
         user32.SetForegroundWindow(hwnd)
+
+        # Brief follow-up #8: if Windows restricts focus, flash taskbar
+        class FLASHWINFO(ctypes.Structure):
+            _fields_ = [
+                ("cbSize", wintypes.UINT),
+                ("hwnd", wintypes.HWND),
+                ("dwFlags", wintypes.DWORD),
+                ("uCount", wintypes.UINT),
+                ("dwTimeout", wintypes.DWORD),
+            ]
+
+        finfo = FLASHWINFO()
+        finfo.cbSize = ctypes.sizeof(FLASHWINFO)
+        finfo.hwnd = hwnd
+        finfo.dwFlags = 3 | 12  # FLASHW_ALL | FLASHW_TIMERNOFG
+        finfo.uCount = 5
+        finfo.dwTimeout = 0
+        user32.FlashWindowEx(ctypes.byref(finfo))
         return True
     except Exception:  # noqa: BLE001 - best effort only
         log.exception("bring_existing_to_front gagal")
@@ -139,16 +159,16 @@ class Application:
         self.lock: SingleInstanceLock | None = None
         self.core: AgentCore | None = None
         self.window: MainWindow | None = None
-        # While the vault is open the app holds only the DERIVED KEY (never
-        # the passphrase). The API key is handed to the Core and not kept here.
         self._session: vault_mod.VaultSession | None = None
-        self._api_key = ""
+        self._vault_payload: dict = {}
         self._settings: dict = dict(DEFAULT_SETTINGS)
         self._shutting_down = False
 
     # -- startup -------------------------------------------------------------
     def run(self, qt_app: QApplication) -> int:
         setup_logging(self.data)
+        log.info("Nibras dimulai (root=%s)", self.root)
+
         self.lock = SingleInstanceLock(self.data)
         if not self.lock.acquire():
             if not bring_existing_to_front():
@@ -174,27 +194,27 @@ class Application:
             self._shutdown()
             return 0
 
-        self.core = AgentCore(self.data, self._api_key, self._settings)
-        api_key_set = bool(self._api_key)
-        self._api_key = ""  # the Core owns the key from here on
+        api_keys = self._vault_payload.get("api_keys", {})
+        if not api_keys and "api_key" in self._vault_payload:
+            api_keys = {"default": self._vault_payload["api_key"]}
+
+        self.core = AgentCore(self.data, api_keys, self._settings)
         self.core.start()
         load_fonts(app_dir(self.root) / "fonts")
         self.window = MainWindow(
-            self.core, self._settings, api_key_set,
+            self.core,
+            self._settings,
+            api_key_set=bool(self._vault_payload.get("api_key") or self._vault_payload.get("api_keys")),
             on_settings_saved=self._on_settings_saved,
             on_safe_close=self.safe_close,
+            has_api_key_fn=self.has_api_key,
+            on_save_api_key=self.save_profile_api_key,
         )
         self.window.setStyleSheet(QSS)
         self.window.show()
         return qt_app.exec()
 
     def _prepare_databases(self) -> dict:
-        """Open the databases, run recovery on the PREVIOUS session's state,
-        and only then mark the current session as not-yet-clean (D-08).
-
-        Order matters: marking first would make every startup look like a
-        crash. The marker is set back to clean only by a full shutdown.
-        """
         self.dbs = Databases(self.data).open_all()
         report = run_recovery(self.dbs, self.temp)
         write_clean_shutdown(self.dbs["core.db"], False)
@@ -227,9 +247,9 @@ class Application:
             dlg.pass1.clear()
             dlg.pass2.clear()
             vault_mod.create_vault(vault_path, passphrase, {"api_key": ""})
-            self._session, _payload = vault_mod.unlock_vault(vault_path, passphrase)
+            self._session, payload = vault_mod.unlock_vault(vault_path, passphrase)
             del passphrase
-            self._api_key = ""
+            self._vault_payload = payload
             return True
         while True:
             dlg = PassphraseDialog(first_setup=False)
@@ -244,10 +264,53 @@ class Application:
                 continue
             finally:
                 del passphrase
-            self._api_key = str(payload.get("api_key", ""))
+            self._vault_payload = payload
+
+            # Migrate Tahap 1 data if applicable (D-64, brief item 7)
+            self._vault_payload = migrate_tahap1_to_tahap2(
+                conn=self.dbs["core.db"],
+                vault_path=vault_path,
+                session=self._session,
+                payload=self._vault_payload,
+                data_dir=self.data,
+                backups_dir=backups_dir(self.root),
+            )
             return True
 
-    # -- settings / lock / unlock callbacks (from the UI) --------------------
+    # -- settings / lock / unlock callbacks ------------------------------------
+    def has_api_key(self, profile_id: str) -> bool:
+        return vault_mod.has_profile_api_key(self._vault_payload, profile_id)
+
+    def save_profile_api_key(self, profile_id: str, key: str) -> None:
+        if self._session is None or not self._session.is_open:
+            return
+        vault_path = self.data / "vault.bin"
+        try:
+            payload = vault_mod.read_with_session(vault_path, self._session)
+            vault_mod.set_profile_api_key(payload, profile_id, key)
+            vault_mod.save_with_session(vault_path, self._session, payload)
+            self._vault_payload = payload
+        except VaultError as exc:
+            log.exception("Gagal menyimpan API key profil di vault: %s", exc)
+
+    def _save_api_key(self, api_key: str) -> None:
+        """Re-encrypt the vault with the held key: same salt and Argon2
+        parameters from the header, no new Argon2 run, no UI freeze."""
+        if self._session is None or not self._session.is_open:
+            QMessageBox.warning(
+                None, "Nibras",
+                "Vault terkunci, API key baru belum disimpan. Buka vault dulu, "
+                "lalu simpan ulang pengaturannya.")
+            return
+        vault_path = self.data / "vault.bin"
+        try:
+            payload = vault_mod.read_with_session(vault_path, self._session)
+            payload["api_key"] = api_key
+            vault_mod.save_with_session(vault_path, self._session, payload)
+            self._vault_payload = payload
+        except VaultError as exc:
+            QMessageBox.warning(None, "Nibras", str(exc))
+
     def _on_settings_saved(self, kind: str, *args) -> None:
         if kind == "settings":
             _settings, api_key = args
@@ -268,36 +331,24 @@ class Application:
             finally:
                 del passphrase
             self._session = session
+            self._vault_payload = payload
+            self._api_key = ""
             if self.core is not None:
-                # The Core rebuilds its adapter with the reopened key.
-                self.core.request_unlock.emit(str(payload.get("api_key", "")))
-            del payload
+                api_key_str = str(payload.get("api_key", ""))
+                api_keys_dict = payload.get("api_keys")
+                if isinstance(api_keys_dict, dict) and len(api_keys_dict) > 1:
+                    self.core.request_unlock.emit(api_keys_dict)
+                else:
+                    self.core.request_unlock.emit(api_key_str)
             if self.window is not None:
                 self.window.unlock_vault()
 
-    def _save_api_key(self, api_key: str) -> None:
-        """Re-encrypt the vault with the held key: same salt and Argon2
-        parameters from the header, no new Argon2 run, no UI freeze."""
-        if self._session is None or not self._session.is_open:
-            QMessageBox.warning(
-                None, "Nibras",
-                "Vault terkunci, API key baru belum disimpan. Buka vault dulu, "
-                "lalu simpan ulang pengaturannya.")
-            return
-        vault_path = self.data / "vault.bin"
-        try:
-            payload = vault_mod.read_with_session(vault_path, self._session)
-            payload["api_key"] = api_key
-            vault_mod.save_with_session(vault_path, self._session, payload)
-        except VaultError as exc:
-            QMessageBox.warning(None, "Nibras", str(exc))
-
     def _forget_secrets(self) -> None:
-        """Vault locked: wipe the derived key and drop any key copy held here."""
         if self._session is not None:
             self._session.wipe()
             self._session = None
         self._api_key = ""
+        self._vault_payload.clear()
 
     # -- shutdown --------------------------------------------------------------
     def safe_close(self) -> None:
@@ -307,13 +358,10 @@ class Application:
         if self.window is not None:
             self.window.setEnabled(False)
         self._shutdown()
-        # exit(), not quit(): quit() first sends a close event to every window
-        # and MainWindow.closeEvent always ignores it (it routes the X button
-        # here), so the quit was cancelled and the app stayed on screen,
-        # disabled, after the shutdown had already finished.
         QApplication.exit(0)
 
     def _shutdown(self) -> None:
+        log.info("Nibras ditutup dengan bersih.")
         self._forget_secrets()
         if self.core is not None:
             self.core.stop()
@@ -346,7 +394,7 @@ def main(argv: list[str] | None = None) -> int:
     app = Application(root)
     try:
         return app.run(qt_app)
-    except Exception:  # noqa: BLE001 - last-resort: never crash silently
+    except Exception:
         log.exception("startup gagal")
         QMessageBox.critical(None, "Nibras",
                              "Nibras gagal dijalankan. Lihat Data/logs/nibras.log.")

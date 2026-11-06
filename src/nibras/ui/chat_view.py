@@ -11,7 +11,9 @@ from __future__ import annotations
 from PySide6.QtCore import Qt
 from PySide6.QtWidgets import (
     QFrame,
+    QHBoxLayout,
     QLabel,
+    QPushButton,
     QScrollArea,
     QTextBrowser,
     QVBoxLayout,
@@ -118,6 +120,55 @@ class MessageCard(QFrame):
     def set_status(self, status: str) -> None:
         self._status.setText(status)
 
+    def offer_fallback(
+        self,
+        fallback_label: str,
+        error_text: str,
+        on_approve,
+        on_reject,
+    ) -> None:
+        """Display fallback approval card (D-64)."""
+        card = QFrame()
+        card.setObjectName("fallbackCard")
+        card_layout = QVBoxLayout(card)
+        card_layout.setContentsMargins(12, 10, 12, 10)
+
+        err_lbl = QLabel(f"Provider aktif gagal: {error_text}")
+        err_lbl.setWordWrap(True)
+        err_lbl.setStyleSheet("color: #e06c75; font-weight: bold;")
+        card_layout.addWidget(err_lbl)
+
+        question = QLabel(f"Pakai cadangan untuk pesan ini? ({fallback_label})")
+        question.setWordWrap(True)
+        card_layout.addWidget(question)
+
+        btn_row = QHBoxLayout()
+        btn_approve = QPushButton("Gunakan Cadangan")
+        btn_approve.setStyleSheet("background-color: #98c379; color: #1e1e24; font-weight: bold; padding: 6px 12px;")
+        btn_reject = QPushButton("Tolak")
+        btn_reject.setStyleSheet("background-color: #3b4048; color: #abb2bf; padding: 6px 12px;")
+
+        def _do_approve():
+            btn_approve.setEnabled(False)
+            btn_reject.setEnabled(False)
+            question.setText(f"Menggunakan cadangan: {fallback_label}...")
+            on_approve()
+
+        def _do_reject():
+            card.deleteLater()
+            self.set_status("Gagal (cadangan ditolak). Tekan Kirim untuk mencoba lagi.")
+            on_reject()
+
+        btn_approve.clicked.connect(_do_approve)
+        btn_reject.clicked.connect(_do_reject)
+
+        btn_row.addWidget(btn_approve)
+        btn_row.addWidget(btn_reject)
+        btn_row.addStretch(1)
+        card_layout.addLayout(btn_row)
+
+        self.layout().addWidget(card)
+
     def _render(self) -> None:
         self.browser.setHtml(render_markdown(self._text))  # also refits the height
 
@@ -151,6 +202,19 @@ class ChatView(QScrollArea):
 
     def card(self, message_id: str) -> MessageCard | None:
         return self._cards.get(message_id)
+
+    def offer_fallback(
+        self,
+        message_id: str,
+        fallback_label: str,
+        error_text: str,
+        on_approve,
+        on_reject,
+    ) -> None:
+        c = self.card(message_id)
+        if c:
+            c.offer_fallback(fallback_label, error_text, on_approve, on_reject)
+            self._scroll_to_bottom()
 
     def _scroll_to_bottom(self) -> None:
         bar = self.verticalScrollBar()

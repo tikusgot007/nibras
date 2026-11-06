@@ -7,6 +7,8 @@ in plain text and never written anywhere except the vault, by the caller.
 from __future__ import annotations
 
 from PySide6.QtWidgets import (
+    QCheckBox,
+    QComboBox,
     QDialog,
     QDialogButtonBox,
     QFormLayout,
@@ -126,3 +128,164 @@ class PassphraseDialog(QDialog):
 
     def passphrase(self) -> str:
         return self.pass1.text()
+
+
+class ProfileEditDialog(QDialog):
+    """Add or edit a provider profile (D-15)."""
+
+    KINDS = [
+        ("openai", "OpenAI Official"),
+        ("anthropic", "Anthropic"),
+        ("openai_compatible", "OpenAI-Compatible"),
+    ]
+
+    def __init__(
+        self,
+        profile: dict | None = None,
+        has_api_key: bool = False,
+        parent: QWidget | None = None,
+    ):
+        super().__init__(parent)
+        self.profile = profile or {}
+        is_edit = bool(profile and profile.get("id"))
+        self.setWindowTitle("Edit Profil Provider" if is_edit else "Tambah Profil Provider")
+
+        layout = QVBoxLayout(self)
+        form = QFormLayout()
+
+        self.kind_combo = QComboBox()
+        for k_val, k_label in self.KINDS:
+            self.kind_combo.addItem(k_label, k_val)
+        if profile and profile.get("kind"):
+            idx = self.kind_combo.findData(profile["kind"])
+            if idx >= 0:
+                self.kind_combo.setCurrentIndex(idx)
+        if is_edit:
+            self.kind_combo.setEnabled(False)  # kind is fixed once created
+        form.addRow("Jenis Provider:", self.kind_combo)
+
+        self.name_edit = QLineEdit(profile.get("name", "") if profile else "")
+        self.name_edit.setPlaceholderText("Contoh: OpenAI Kantor, Claude Pribadi, Ollama")
+        form.addRow("Nama Tampilan:", self.name_edit)
+
+        self.base_url_edit = QLineEdit(profile.get("base_url", "") if profile else "")
+        self.base_url_edit.setPlaceholderText("https://... (hanya untuk OpenAI-Compatible)")
+        form.addRow("Base URL:", self.base_url_edit)
+
+        self.api_key_edit = QLineEdit()
+        self.api_key_edit.setEchoMode(QLineEdit.Password)
+        if has_api_key:
+            self.api_key_edit.setPlaceholderText("Sudah tersimpan di vault (isi untuk mengganti)")
+        else:
+            self.api_key_edit.setPlaceholderText("Masukkan API key...")
+        form.addRow("API Key:", self.api_key_edit)
+
+        layout.addLayout(form)
+
+        info_lbl = QLabel(
+            "API key tersimpan di brankas terenkripsi di USB, tidak pernah ditampilkan atau dicatat."
+        )
+        info_lbl.setObjectName("muted")
+        layout.addWidget(info_lbl)
+
+        buttons = QDialogButtonBox(QDialogButtonBox.Save | QDialogButtonBox.Cancel)
+        buttons.accepted.connect(self._on_save)
+        buttons.rejected.connect(self.reject)
+        layout.addWidget(buttons)
+
+        self.kind_combo.currentIndexChanged.connect(self._update_url_visibility)
+        self._update_url_visibility()
+
+    def _update_url_visibility(self) -> None:
+        kind = self.kind_combo.currentData()
+        self.base_url_edit.setEnabled(kind == "openai_compatible")
+
+    def _on_save(self) -> None:
+        if not self.name_edit.text().strip():
+            QMessageBox.warning(self, "Nibras", "Nama tampilan profil tidak boleh kosong.")
+            return
+        kind = self.kind_combo.currentData()
+        if kind == "openai_compatible" and not self.base_url_edit.text().strip():
+            QMessageBox.warning(self, "Nibras", "Base URL wajib diisi untuk OpenAI-Compatible.")
+            return
+        self.accept()
+
+    def result_profile(self) -> dict:
+        data = {
+            "kind": self.kind_combo.currentData(),
+            "name": self.name_edit.text().strip(),
+            "base_url": self.base_url_edit.text().strip() if self.kind_combo.currentData() == "openai_compatible" else "",
+        }
+        if self.profile and self.profile.get("id"):
+            data["id"] = self.profile["id"]
+        return data
+
+    def result_api_key(self) -> str:
+        return self.api_key_edit.text().strip()
+
+
+class ModelEditDialog(QDialog):
+    """Add or edit a model under a profile."""
+
+    def __init__(
+        self,
+        profile_id: str,
+        model: dict | None = None,
+        parent: QWidget | None = None,
+    ):
+        super().__init__(parent)
+        self.profile_id = profile_id
+        self.model = model or {}
+        is_edit = bool(model and model.get("id"))
+        self.setWindowTitle("Edit Model" if is_edit else "Tambah Model")
+
+        layout = QVBoxLayout(self)
+        form = QFormLayout()
+
+        self.name_edit = QLineEdit(model.get("name", "") if model else "")
+        self.name_edit.setPlaceholderText("Contoh: gpt-4o, claude-3-7-sonnet")
+        form.addRow("Nama Model:", self.name_edit)
+
+        self.context_window = QSpinBox()
+        self.context_window.setRange(1024, 10_000_000)
+        self.context_window.setSingleStep(4096)
+        self.context_window.setValue(int(model.get("context_window", 128000) if model else 128000))
+        form.addRow("Context Window (token):", self.context_window)
+
+        self.can_stream = QCheckBox("Streaming (teks bertahap)")
+        self.can_stream.setChecked(bool(model.get("can_stream", True) if model else True))
+        form.addRow("Kemampuan Streaming:", self.can_stream)
+
+        self.can_tools = QCheckBox("Tool Calling (pemanggilan fungsi)")
+        self.can_tools.setChecked(bool(model.get("can_tools", False) if model else False))
+        form.addRow("Kemampuan Tools:", self.can_tools)
+
+        self.can_vision = QCheckBox("Vision (pemrosesan gambar)")
+        self.can_vision.setChecked(bool(model.get("can_vision", False) if model else False))
+        form.addRow("Kemampuan Vision:", self.can_vision)
+
+        layout.addLayout(form)
+
+        buttons = QDialogButtonBox(QDialogButtonBox.Save | QDialogButtonBox.Cancel)
+        buttons.accepted.connect(self._on_save)
+        buttons.rejected.connect(self.reject)
+        layout.addWidget(buttons)
+
+    def _on_save(self) -> None:
+        if not self.name_edit.text().strip():
+            QMessageBox.warning(self, "Nibras", "Nama model tidak boleh kosong.")
+            return
+        self.accept()
+
+    def result_model(self) -> dict:
+        data = {
+            "profile_id": self.profile_id,
+            "name": self.name_edit.text().strip(),
+            "context_window": self.context_window.value(),
+            "can_stream": self.can_stream.isChecked(),
+            "can_tools": self.can_tools.isChecked(),
+            "can_vision": self.can_vision.isChecked(),
+        }
+        if self.model and self.model.get("id"):
+            data["id"] = self.model["id"]
+        return data
