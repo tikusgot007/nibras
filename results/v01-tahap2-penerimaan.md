@@ -9,7 +9,7 @@ Diverifikasi di PC pengembang Windows 11 (Python 3.14.8, PySide6 6.12.0, depende
 
 | Hal | Status | Keterangan |
 |---|---|---|
-| `pytest` | **Lulus** | 72 test lulus 100% tanpa kegagalan |
+| `pytest` | **Lulus** | 75 test lulus 100% tanpa kegagalan |
 | Adapter OpenAI & streaming | **Lulus** | Streaming SSE, retry sebelum token pertama, otentikasi Bearer token |
 | Adapter Anthropic & streaming | **Lulus** | Streaming SSE, ekstraksi parameter `system`, translasi pesan kanonikal, retry |
 | Lazy import SDK (D-59) | **Lulus** | `anthropic` tidak diimpor ke `sys.modules` saat startup bila model aktif bukan Anthropic |
