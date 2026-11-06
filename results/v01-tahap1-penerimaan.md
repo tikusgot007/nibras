@@ -45,10 +45,10 @@ setelah aplikasi dibuka ulang (terlihat di tangkapan layar operator).
 Pengamatan bukan bug (tahap ini memang belum punya alat): Nibras tidak bisa
 melihat drive PC karena Tools/PowerShell baru ada di Tahap 4.
 
-Lulus (dilaporkan operator): butir 4 (passphrase salah) dan butir 5 (cabut saat streaming).
+Lulus (dilaporkan operator): butir 4 (passphrase salah), 5 (cabut saat streaming), dan 6 (dua instance di flashdisk).
 
-Belum diuji atau belum dilaporkan: butir 6 (dua instance di flashdisk F:), 8 (waktu
-cold-start), 3 (tutup lalu buka lagi, secara tidak langsung terlihat berjalan), dan butir 2 untuk tombol `Esc`.
+Belum diuji atau belum dilaporkan: butir 8 (waktu cold-start), 3 (tutup lalu buka
+lagi, secara tidak langsung terlihat berjalan), 7 (jejak di PC host untuk F:), dan butir 2 untuk tombol `Esc`.
 
 ## Checklist operator
 
@@ -83,8 +83,8 @@ cold-start), 3 (tutup lalu buka lagi, secara tidak langsung terlihat berjalan), 
 - Hasil: **LULUS**. Laporan pemulihan tampil (tangkapan layar operator: DB semua OK, Temp/ dibersihkan, 1 pesan terputus). Data flashdisk: 1 pesan asisten berstatus `interrupted`, tidak dilanjutkan. Tampilan awalnya kartu kosong tanpa keterangan (celah, diperbaiki di `f76b3e9`); setelah kode terbaru dipasang, operator mengonfirmasi keterangan "Terputus" muncul. Catatan: teks yang belum sempat tersimpan (penyimpanan parsial tiap 2 detik) hilang saat dicabut; pesan ini isinya kosong.
 
 ## 6. Jalankan Nibras.exe dua kali
-- [ ] Instance kedua menampilkan jendela pertama, tidak membuka jendela baru
-- Hasil:
+- [x] Instance kedua menampilkan jendela pertama, tidak membuka jendela baru
+- Hasil: **LULUS** di flashdisk F:. Operator: tidak ada jendela baru. Data proses: hanya 1 `pythonw` dari F: setelah peluncuran kedua. Belum dikonfirmasi operator apakah jendela pertama naik ke depan (Windows dapat menolak fokus dari proses latar).
 
 ## 7. Jejak di PC host
 - [ ] Setelah ditutup, tidak ada file Nibras baru di %TEMP% dan %LOCALAPPDATA%
