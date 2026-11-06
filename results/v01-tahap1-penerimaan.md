@@ -50,7 +50,9 @@ melihat drive PC karena Tools/PowerShell baru ada di Tahap 4.
 
 Lulus (dilaporkan operator): butir 2 (chat panjang, Batalkan, Esc), 3 (tutup dan buka lagi), 4 (passphrase salah), 5 (cabut saat streaming), dan 6 (dua instance di flashdisk).
 
-Belum diuji atau belum dilaporkan: butir 8 (waktu cold-start) dan 7 (jejak di PC host untuk F:).
+Dilaporkan sebagai angka tunggal: butir 8 (waktu cold-start) 11 detik termasuk mengetik passphrase, tanpa pemecahan per tahap.
+
+Belum diuji: butir 7 (jejak di PC host untuk F:).
 
 ## Checklist operator
 
@@ -93,5 +95,6 @@ Belum diuji atau belum dilaporkan: butir 8 (waktu cold-start) dan 7 (jejak di PC
 - Hasil:
 
 ## 8. Waktu cold-start (setelah colok ulang)
-- Waktu sampai jendela tampil:
-- Waktu sampai provider siap:
+- Waktu sampai jendela tampil: **tidak dipisah**
+- Waktu sampai provider siap: **tidak dipisah**
+- Hasil: operator melaporkan **11 detik** secara keseluruhan, **termasuk mengetik passphrase**, diukur manual. Tidak dipecah per tahap, dan belum dikonfirmasi tersendiri bahwa flashdisk dicabut-colok tepat sebelum run ini. Jadi angka ini bukan perbandingan langsung dengan Uji #2 (`usb3-cold`: T3 median 2,54 detik, T6 median 16,26 detik, tanpa mengetik passphrase). Karena jendela tampil lebih dulu dan SDK dimuat di latar belakang (D-59), waktu sampai jendela tampil kemungkinan jauh di bawah 11 detik, tetapi itu belum diukur. Untuk angka per tahap perlu pengukuran terpisah.
