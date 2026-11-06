@@ -134,6 +134,109 @@ def open_vault(path: Path, passphrase: str) -> dict:
     return payload
 
 
+class VaultSession:
+    """The derived key (NOT the passphrase) while the vault is open (D-39).
+
+    The application keeps only this object after unlock. It lets Settings
+    re-encrypt the payload without asking for the passphrase again and
+    without re-running Argon2 (no UI freeze). :meth:`wipe` zeroes the key
+    when the vault locks; afterwards every operation raises VaultError.
+    Honest note (D-39): Python cannot guarantee no other copy of the key
+    remains in RAM; this removes the references the application controls.
+    """
+
+    def __init__(self, key: bytearray, salt: bytes, params: dict):
+        self._key: bytearray | None = key
+        self.salt = salt
+        self.params = dict(params)
+
+    @property
+    def is_open(self) -> bool:
+        return self._key is not None
+
+    def key(self) -> bytearray:
+        if self._key is None:
+            raise VaultError("Vault terkunci.")
+        return self._key
+
+    def wipe(self) -> None:
+        if self._key is not None:
+            _wipe(self._key)
+            self._key = None
+
+
+def _parse(raw: bytes) -> tuple[bytes, dict, bytes, bytes]:
+    """Validate the header; return (salt, params, nonce, ciphertext)."""
+    if len(raw) < HEADER_LEN or raw[:8] != MAGIC:
+        raise VaultError("File vault rusak atau bukan file vault Nibras.")
+    if raw[8] != VERSION:
+        raise VaultError("Versi file vault tidak dikenali.")
+    salt = raw[9:25]
+    time_cost, memory_cost, lanes = struct.unpack(">IIB", raw[25:34])
+    params = {"time_cost": time_cost, "memory_cost": memory_cost, "lanes": lanes}
+    return salt, params, raw[34:46], raw[46:]
+
+
+def _decrypt_payload(key, nonce: bytes, ct: bytes) -> dict:
+    try:
+        pt = AESGCM(bytes(key)).decrypt(nonce, ct, None)
+    except InvalidTag as exc:
+        raise VaultError("Passphrase salah. Silakan coba lagi.") from exc
+    try:
+        payload = json.loads(pt.decode("utf-8"))
+    except (ValueError, UnicodeDecodeError) as exc:
+        raise VaultError("File vault rusak (isi tidak bisa dibaca).") from exc
+    if not isinstance(payload, dict):
+        raise VaultError("File vault rusak (format isi salah).")
+    return payload
+
+
+def _read_raw(path: Path) -> bytes:
+    try:
+        return Path(path).read_bytes()
+    except OSError as exc:
+        raise VaultError(f"Tidak bisa membaca file vault: {exc}") from exc
+
+
+def unlock_vault(path: Path, passphrase: str) -> tuple[VaultSession, dict]:
+    """Open the vault with the passphrase. Returns (session, payload); the
+    caller keeps the session and drops the passphrase."""
+    salt, params, nonce, ct = _parse(_read_raw(path))
+    key = bytearray(_derive_key(passphrase, salt, params["time_cost"],
+                                params["memory_cost"], params["lanes"]))
+    try:
+        payload = _decrypt_payload(key, nonce, ct)
+    except VaultError:
+        _wipe(key)
+        raise
+    return VaultSession(key, salt, params), payload
+
+
+def read_with_session(path: Path, session: VaultSession) -> dict:
+    """Decrypt the current payload with the held key (no Argon2)."""
+    salt, _params, nonce, ct = _parse(_read_raw(path))
+    if salt != session.salt:
+        raise VaultError("File vault berubah di luar aplikasi. Buka ulang vault.")
+    return _decrypt_payload(session.key(), nonce, ct)
+
+
+def save_with_session(path: Path, session: VaultSession, payload: dict) -> None:
+    """Re-encrypt the payload with the held key: same salt and Argon2
+    parameters (from the vault header), fresh random nonce, no Argon2 run."""
+    key = session.key()
+    nonce = os.urandom(NONCE_LEN)
+    ct = AESGCM(bytes(key)).encrypt(nonce, json.dumps(payload).encode("utf-8"), None)
+    header = struct.pack(
+        ">8sB16sIIB12s", MAGIC, VERSION, session.salt,
+        session.params["time_cost"], session.params["memory_cost"],
+        session.params["lanes"], nonce,
+    )
+    path = Path(path)
+    tmp = path.with_suffix(".tmp")
+    tmp.write_bytes(header + ct)
+    os.replace(tmp, path)
+
+
 def vault_exists(path: Path) -> bool:
     return Path(path).is_file()
 
