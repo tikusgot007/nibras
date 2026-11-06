@@ -121,6 +121,7 @@ class AgentCore(QObject):
         self._adapter: ProviderAdapter | None = None
         self._active_model_info: dict | None = None
         self._current_task: asyncio.Task | None = None
+        self._check_task: asyncio.Task | None = None
         self._tasks: set[asyncio.Task] = set()
         self._locked = False
         self._ready = threading.Event()
@@ -175,11 +176,19 @@ class AgentCore(QObject):
             raise RuntimeError("Agent Core gagal dimulai.") from self._start_error
 
     def stop(self) -> None:
-        """Stop the loop, let the Core thread clean up, and join it."""
+        """Stop running tasks, let the Core thread clean up, and join it."""
         thread, loop = self._thread, self._loop
         if thread is None:
             return
         if loop is not None and thread.isRunning():
+            try:
+                future = asyncio.run_coroutine_threadsafe(self._cancel_and_wait_tasks(), loop)
+                try:
+                    future.result(timeout=5.0)
+                except Exception:
+                    pass
+            except Exception:
+                pass
             try:
                 loop.call_soon_threadsafe(loop.stop)
             except RuntimeError:
@@ -187,6 +196,26 @@ class AgentCore(QObject):
         if not thread.wait(STOP_TIMEOUT_MS):
             log.error("Core thread tidak berhenti dalam %d ms", STOP_TIMEOUT_MS)
         self._thread = None
+
+    async def _cancel_and_wait_tasks(self) -> None:
+        """Cancel check_provider, current send/fallback request, and any pending tasks."""
+        tasks_to_cancel: list[asyncio.Task] = []
+        if self._check_task is not None and not self._check_task.done():
+            self._check_task.cancel()
+            tasks_to_cancel.append(self._check_task)
+        if self._current_task is not None and not self._current_task.done():
+            self._current_task.cancel()
+            tasks_to_cancel.append(self._current_task)
+
+        curr = asyncio.current_task()
+        loop = self._loop or asyncio.get_running_loop()
+        for t in asyncio.all_tasks(loop):
+            if t is not curr and not t.done():
+                t.cancel()
+                tasks_to_cancel.append(t)
+
+        if tasks_to_cancel:
+            await asyncio.gather(*tasks_to_cancel, return_exceptions=True)
 
     # -- Core thread -----------------------------------------------------------
     def _thread_main(self) -> None:
@@ -199,7 +228,7 @@ class AgentCore(QObject):
             asyncio.set_event_loop(loop)
             self._loop = loop
             self._build_active_adapter()
-            self._spawn(self._check_provider())
+            self._spawn_check_provider()
         except BaseException as exc:
             log.exception("Core gagal dimulai")
             self._start_error = exc
@@ -213,7 +242,7 @@ class AgentCore(QObject):
             self._teardown(loop)
 
     def _teardown(self, loop: asyncio.AbstractEventLoop) -> None:
-        pending = [t for t in self._tasks if not t.done()]
+        pending = [t for t in asyncio.all_tasks(loop) if not t.done()]
         for task in pending:
             task.cancel()
         if pending:
@@ -242,6 +271,10 @@ class AgentCore(QObject):
         if loop is not None:
             try:
                 loop.run_until_complete(loop.shutdown_asyncgens())
+            except Exception:
+                pass
+            try:
+                loop.run_until_complete(loop.shutdown_default_executor())
             except Exception:
                 pass
             loop.close()
@@ -306,6 +339,12 @@ class AgentCore(QObject):
             and self._settings.get("provider.model", "").strip()
         )
 
+    def _spawn_check_provider(self) -> asyncio.Task:
+        if self._check_task is not None and not self._check_task.done():
+            self._check_task.cancel()
+        self._check_task = self._spawn(self._check_provider())
+        return self._check_task
+
     async def _check_provider(self) -> None:
         adapter = self._adapter
         if adapter is None or not self._active_model_info:
@@ -314,8 +353,13 @@ class AgentCore(QObject):
         if not adapter.api_key.strip():
             self.provider_ready.emit(False)
             return
-        is_ready = await adapter.check_ready()
-        self.provider_ready.emit(is_ready)
+        try:
+            is_ready = await adapter.check_ready()
+            self.provider_ready.emit(is_ready)
+        except asyncio.CancelledError:
+            raise
+        except Exception:
+            self.provider_ready.emit(False)
 
     # -- request plumbing ------------------------------------------------------
     def _post(self, fn, *args) -> None:
@@ -392,7 +436,7 @@ class AgentCore(QObject):
         self._locked = False
         self._build_active_adapter()
         audit.record(self._dbs["core.db"], "vault_unlock")
-        self._spawn(self._check_provider())
+        self._spawn_check_provider()
 
     def _do_load_profiles(self) -> None:
         conn = self._dbs["core.db"]
@@ -422,7 +466,7 @@ class AgentCore(QObject):
         self._do_load_profiles()
         if self._active_model_info and self._active_model_info.get("profile_id") == pid:
             self._build_active_adapter()
-            self._spawn(self._check_provider())
+            self._spawn_check_provider()
 
     def _do_delete_profile(self, profile_id: str) -> None:
         conn = self._dbs["core.db"]
@@ -430,7 +474,7 @@ class AgentCore(QObject):
         self._api_keys.pop(profile_id, None)
         self._do_load_profiles()
         self._build_active_adapter()
-        self._spawn(self._check_provider())
+        self._spawn_check_provider()
 
     def _do_save_model(self, model_data: dict) -> None:
         conn = self._dbs["core.db"]
@@ -448,21 +492,21 @@ class AgentCore(QObject):
         self._do_load_profiles()
         if self._active_model_info and self._active_model_info.get("id") == mid:
             self._build_active_adapter()
-            self._spawn(self._check_provider())
+            self._spawn_check_provider()
 
     def _do_delete_model(self, model_id: str) -> None:
         conn = self._dbs["core.db"]
         profiles.delete_model(conn, model_id)
         self._do_load_profiles()
         self._build_active_adapter()
-        self._spawn(self._check_provider())
+        self._spawn_check_provider()
 
     def _do_set_active_model(self, model_id: str) -> None:
         conn = self._dbs["core.db"]
         profiles.set_active_model(conn, model_id)
         self._build_active_adapter()
         self._do_load_profiles()
-        self._spawn(self._check_provider())
+        self._spawn_check_provider()
 
     def _do_set_fallback_model(self, model_id: str) -> None:
         conn = self._dbs["core.db"]
@@ -483,7 +527,7 @@ class AgentCore(QObject):
             self._api_key = api_key
             self._api_keys["default"] = api_key
         self._build_active_adapter()
-        self._spawn(self._check_provider())
+        self._spawn_check_provider()
 
     # -- chat send pipeline ----------------------------------------------------
     async def _do_send(self, conversation_id: str, text: str) -> None:

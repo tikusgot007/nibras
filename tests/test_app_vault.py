@@ -172,19 +172,21 @@ def test_window_lock_reaches_application_and_core(
 
 
 def test_application_unlock_with_multiple_profile_keys_and_no_cross_fallback(
-        qapp, root_dir: Path, monkeypatch):
+        qapp, root_dir: Path, mock_server, monkeypatch):
     """Review finding 1 & 2 & 5: Application sends dict of profile keys on unlock,
     each profile receives only its own key, and unconfigured profile gets empty string."""
     monkeypatch.setattr(app_mod.QMessageBox, "warning", lambda *a, **k: None)
+    server, _ = mock_server
+    port = server.server_address[1]
     app = Application(root_dir)
     dbs = Databases(app.data).open_all()
     conn = dbs["core.db"]
     from nibras.storage.profiles import create_profile, create_model, set_active_model
-    p1 = create_profile(conn, kind="openai_compatible", name="P1", base_url="http://127.0.0.1:8001/v1")
+    p1 = create_profile(conn, kind="openai_compatible", name="P1", base_url=f"http://127.0.0.1:{port}/v1")
     m1 = create_model(conn, profile_id=p1["id"], name="m1")
-    p2 = create_profile(conn, kind="openai_compatible", name="P2", base_url="http://127.0.0.1:8002/v1")
+    p2 = create_profile(conn, kind="openai_compatible", name="P2", base_url=f"http://127.0.0.1:{port}/v1")
     m2 = create_model(conn, profile_id=p2["id"], name="m2")
-    p3 = create_profile(conn, kind="openai_compatible", name="P3", base_url="http://127.0.0.1:8003/v1")
+    p3 = create_profile(conn, kind="openai_compatible", name="P3", base_url=f"http://127.0.0.1:{port}/v1")
     m3 = create_model(conn, profile_id=p3["id"], name="m3")
     set_active_model(conn, m1["id"])
     dbs.close()
@@ -239,4 +241,12 @@ def test_application_unlock_with_multiple_profile_keys_and_no_cross_fallback(
         assert core._get_api_key_for_profile(p3["id"]) == ""
     finally:
         core.stop()
+        app._forget_secrets()
+        app.core = None
+        if app.window is not None:
+            app.window.close()
+            app.window = None
+        if app.dbs is not None:
+            app.dbs.close()
+            app.dbs = None
 
