@@ -2,6 +2,8 @@
 
 from __future__ import annotations
 
+import subprocess
+import sys
 from pathlib import Path
 
 from nibras.storage import conversations
@@ -62,3 +64,30 @@ def test_clean_shutdown_skips_recovery(root_dir: Path):
         assert report["interrupted_messages"] == 0
     finally:
         dbs.close()
+
+
+_CHILD = (
+    "import sys; sys.path.insert(0, sys.argv[1]);"
+    "from pathlib import Path;"
+    "from nibras.storage.lock import SingleInstanceLock;"
+    "sys.exit(0 if SingleInstanceLock(Path(sys.argv[2])).acquire() else 3)"
+)
+
+
+def _child_acquire(data_dir: Path) -> int:
+    src = str(Path(__file__).resolve().parent.parent / "src")
+    return subprocess.run(
+        [sys.executable, "-c", _CHILD, src, str(data_dir)], timeout=60
+    ).returncode
+
+
+def test_second_process_is_rejected_while_first_holds_lock(data_dir: Path):
+    """A real second OS process (a second Nibras.exe) must be refused."""
+    first = SingleInstanceLock(data_dir)
+    assert first.acquire() is True
+    try:
+        assert _child_acquire(data_dir) == 3
+    finally:
+        first.release()
+    # After release another process can take it.
+    assert _child_acquire(data_dir) == 0

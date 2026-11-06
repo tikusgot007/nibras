@@ -30,6 +30,10 @@ class SingleInstanceLock:
             if os.name == "nt":
                 import msvcrt
 
+                # msvcrt.locking locks bytes at the CURRENT position, and
+                # "a+b" opens at end-of-file. Without seek(0) two instances
+                # lock different bytes and both succeed. Always lock byte 0.
+                self._fh.seek(0)
                 msvcrt.locking(self._fh.fileno(), msvcrt.LK_NBLCK, 1)
             else:
                 import fcntl
