@@ -4,6 +4,24 @@
 > Butir yang gagal ditulis apa adanya. Template ini dibuat saat implementasi;
 > hasil di bawah ini BELUM diisi.
 
+## Status verifikasi otomatis (perbaikan review PR #9)
+
+Diverifikasi di PC pengembang Windows 11 (Python 3.14, dependency dari
+`requirements.lock` dengan hash), bukan di flashdisk:
+
+| Hal | Status |
+|---|---|
+| `pytest`: 48 test lulus, diulang 3 kali tanpa kegagalan | **Sudah** |
+| Alur chat lewat `AgentCore` sungguhan (thread + loop asli) ke server tiruan lokal | **Sudah** |
+| Lock instance tunggal: dua proses OS terpisah, yang kedua ditolak (Windows) | **Sudah** |
+| Kompilasi `Nibras.exe` dengan mingw-w64 | **Belum** (mingw-w64 belum terpasang di PC ini) |
+| `build_bundle.ps1` dan pemasangan ke folder uji di drive internal NTFS | **Belum** |
+| Menjalankan `Nibras.exe` dari folder uji: jendela, setup pertama, log startup | **Belum** |
+| Jejak di `%TEMP%` dan `%LOCALAPPDATA%` saat aplikasi berjalan | **Belum** |
+| Seluruh checklist 1–8 di bawah (butuh flashdisk dan operator) | **Belum** |
+
+## Checklist operator
+
 - Tanggal pengujian:
 - PC pengujian (Windows, CPU/RAM):
 - Flashdisk (merek, USB 2.0/3.x, NTFS):
