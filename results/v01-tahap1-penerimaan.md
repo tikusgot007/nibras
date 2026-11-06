@@ -23,6 +23,32 @@ Diverifikasi di PC pengembang Windows 11 (Python 3.14, dependency dari
 | Log startup | `Data/logs/nibras.log` **kosong** (0 byte) pada start normal. Tidak ada galat, tapi tidak ada baris startup |
 | Seluruh checklist 1–8 di bawah (butuh flashdisk dan operator) | **Belum** |
 
+## Temuan operator di flashdisk (dilaporkan lewat chat, bukan hasil checklist)
+
+Dipasang ke flashdisk USB (NTFS) dan dicoba oleh operator. Bug yang ditemukan
+lalu diperbaiki di branch ini; operator mengonfirmasi hasilnya "sudah oke"
+setelah kode terbaru dipasang ke flashdisk (konfirmasi lisan, tanpa angka).
+
+| Temuan | Penyebab | Perbaikan |
+|---|---|---|
+| Provider menggantung "menyiapkan AI…", pesan tertahan | Default `base_url`/model kosong (repo publik); tidak ada pengecekan ulang setelah Pengaturan disimpan | `da8c21c` |
+| Enter membuat baris baru, bukan mengirim | Tidak ada penanganan tombol di kotak pesan | `a278d94` |
+| Pesan pengguna tidak tampil, hanya balasan | Kartu pengguna tidak pernah ditambahkan saat kirim | `a600a20` |
+| Balasan lama terpotong satu-dua baris | Tinggi kartu dihitung sebelum dokumen ditata ke lebar sebenarnya | `a600a20` |
+| Pesan pertama (tanpa percakapan) tidak pernah terkirim | `_pending_text` tidak dikirim setelah percakapan dibuat | `a600a20` |
+
+Bukti dari data di flashdisk (dibaca saja): `clean_shutdown=1` setelah tiap
+penutupan; 5 pesan pengguna; balasan 3 `done`, 1 `cancelled` (Batalkan dicoba),
+1 **`failed` (penyebabnya belum diselidiki)**; riwayat percakapan tampil lagi
+setelah aplikasi dibuka ulang (terlihat di tangkapan layar operator).
+
+Pengamatan bukan bug (tahap ini memang belum punya alat): Nibras tidak bisa
+melihat drive PC karena Tools/PowerShell baru ada di Tahap 4.
+
+Belum diuji atau belum dilaporkan: butir 4 (passphrase salah), 5 (cabut saat
+streaming), 6 (dua instance di flashdisk F:), 8 (waktu cold-start), dan butir 2
+untuk tombol `Esc`.
+
 ## Checklist operator
 
 - Tanggal pengujian:
