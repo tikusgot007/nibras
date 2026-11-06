@@ -14,6 +14,6 @@ if (-not $gcc) {
 $outDirFull = Join-Path $root $OutDir
 New-Item -ItemType Directory -Force -Path $outDirFull | Out-Null
 $exe = Join-Path $outDirFull "Nibras.exe"
-& x86_64-w64-mingw32-gcc -mwindows -O2 -Wall -o $exe (Join-Path $root "launcher\nibras.c")
+& x86_64-w64-mingw32-gcc -municode -mwindows -O2 -Wall -o $exe (Join-Path $root "launcher\nibras.c")
 if ($LASTEXITCODE -ne 0) { throw "Kompilasi launcher gagal." }
 Write-Host "Launcher jadi: $exe"

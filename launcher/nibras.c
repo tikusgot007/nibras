@@ -16,12 +16,16 @@
  * - Runs App\python\pythonw.exe -m nibras (no console).
  *
  * Build (on Windows, mingw-w64):
- *   x86_64-w64-mingw32-gcc -mwindows -O2 -o Nibras.exe nibras.c
+ *   x86_64-w64-mingw32-gcc -municode -mwindows -O2 -o Nibras.exe nibras.c
  * See launcher/build_launcher.ps1.
  */
 
+#ifndef UNICODE
 #define UNICODE
+#endif
+#ifndef _UNICODE
 #define _UNICODE
+#endif
 #include <windows.h>
 #include <stdio.h>
 
