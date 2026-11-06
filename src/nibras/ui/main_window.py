@@ -9,7 +9,7 @@ from __future__ import annotations
 
 import time
 
-from PySide6.QtCore import Qt, QTimer, Slot
+from PySide6.QtCore import Qt, QTimer, Signal, Slot
 from PySide6.QtGui import QKeySequence, QShortcut
 from PySide6.QtWidgets import (
     QHBoxLayout,
@@ -34,6 +34,25 @@ from ..config import (
 from ..core.agent import AgentCore
 from .chat_view import ChatView
 from .dialogs import PassphraseDialog, SettingsDialog
+
+
+class MessageInput(QTextEdit):
+    """Message box: Enter sends, Shift+Enter inserts a new line.
+
+    A plain QTextEdit inserts a line break on Enter. While an IME is
+    composing (e.g. Japanese/Chinese input) Qt hands Enter to the input
+    method first, so it never reaches here and does not send by mistake.
+    """
+
+    submitted = Signal()
+
+    def keyPressEvent(self, event) -> None:  # noqa: N802 - Qt naming
+        if (event.key() in (Qt.Key_Return, Qt.Key_Enter)
+                and not (event.modifiers() & Qt.ShiftModifier)):
+            event.accept()
+            self.submitted.emit()
+            return
+        super().keyPressEvent(event)
 
 
 class MainWindow(QMainWindow):
@@ -94,7 +113,8 @@ class MainWindow(QMainWindow):
         self._notice.setObjectName("muted")
         center_layout.addWidget(self._notice)
         input_row = QHBoxLayout()
-        self._input = QTextEdit()
+        self._input = MessageInput()
+        self._input.submitted.connect(self._send_current)
         self._input.setPlaceholderText(
             "Tulis pesan... (Enter untuk kirim, Shift+Enter baris baru)")
         self._input.setMaximumHeight(110)
