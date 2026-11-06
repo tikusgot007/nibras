@@ -4,7 +4,7 @@
 
 Dokumen ini adalah **sumber kebenaran desain** proyek Nibras. Setiap implementasi wajib mengikuti keputusan di sini. Jika implementasi perlu menyimpang, hentikan pekerjaan dan ajukan revisi keputusan. Jangan menyimpang diam-diam.
 
-**Status:** Desain MVP selesai. **Fase 0 selesai** (lihat D-57 sampai D-59 dan bagian 12). v0.1 dibangun dalam 5 tahap. **Tahap 1 (chat dasar) selesai** (PR #9; uji penerimaan: `results/v01-tahap1-penerimaan.md`). Berikutnya: Tahap 2 (provider lengkap dan biaya).
+**Status:** Desain MVP selesai. **Fase 0 selesai** (lihat D-57 sampai D-59 dan bagian 12). v0.1 dibangun dalam 5 tahap. **Tahap 1 (chat dasar) selesai** (PR #9; uji penerimaan: `results/v01-tahap1-penerimaan.md`). Berikutnya: Tahap 2 (provider lengkap, lihat D-63 dan D-64).
 
 **Arti status:**
 - **Disetujui:** keputusan final.
@@ -117,6 +117,7 @@ USB:\
 | D-60 | **Launcher `Nibras.exe` ditulis dalam C dan dikompilasi dengan mingw-w64.** Tugasnya hanya: menentukan root flashdisk dari lokasi exe, menolak berjalan jika volume bukan NTFS (`MessageBox` berisi panduan), mengatur environment proses anak (`PYTHONHOME`, `PYTHONNOUSERSITE`, `PYTHONDONTWRITEBYTECODE`, `TEMP`/`TMP` dan cache Qt ke `Temp/`), lalu menjalankan `App\python\pythonw.exe -m nibras` tanpa console. Alasan: binary sekecil mungkin, tanpa runtime tambahan, dan pemeriksaan lain dilakukan di Python. Menyelesaikan "Ditunda: bahasa implementasi launcher" | Disetujui |
 | D-61 | **Dependency dikunci.** Daftar langsung di `packaging/requirements.in`. Versi lengkap beserta hash di `packaging/requirements.lock` (dibuat dengan `pip-compile --generate-hashes` untuk Windows amd64 dan versi Python bundle). Build memakai `pip install --require-hashes --target`. Versi Python Embeddable beserta SHA-256 file zip-nya juga dikunci di skrip build | Disetujui |
 | D-62 | **Struktur kode repo:** `src/nibras/` untuk aplikasi (subpaket `ui`, `core` untuk Agent Core, `storage`, `security` untuk vault dan audit log, `providers`), `launcher/` untuk source `Nibras.exe`, `packaging/` untuk skrip build dan lock file, `tests/` untuk unit test `pytest`. Hasil build ditulis ke folder yang di-ignore git, lalu disalin ke flashdisk dengan skrip | Disetujui |
+| D-64 | **Fallback provider selalu lewat persetujuan, satu pesan sekali.** Pengguna boleh menetapkan satu profil dan model cadangan. Kalau provider aktif gagal setelah retry D-21 habis, UI menampilkan kartu "Pakai cadangan untuk pesan ini?". Persetujuan hanya berlaku untuk pengiriman pesan itu. Pengiriman berikutnya kembali ke model aktif. Tidak ada perpindahan provider otomatis, dan tidak ada routing dinamis (bagian 1: satu model global aktif). SDK provider cadangan baru diimpor setelah fallback disetujui (D-59). Kalau ditolak, pesan berstatus `failed` dan bisa dicoba lagi | Disetujui |
 
 ### Prinsip turunan
 - Semua dependency di-bundle saat build. **Tidak ada `pip install` di PC host.**
@@ -145,7 +146,7 @@ Sekitar 0,5–0,9 GB. Rekomendasinya USB 3.x berkapasitas minimal 32 GB dengan p
 | D-20 | Risk level ditentukan dari baseline statis per tool ditambah aturan konteks deterministik di Policy Engine. Model boleh mengusulkan kenaikan, tetapi tidak boleh menurunkan. Tool atau skill baru default L2 | Disetujui |
 | D-21 | Retry dibedakan berdasarkan jenis kegagalan dan sifat tindakan, ditambah anggaran per tugas | Disetujui |
 | D-22 | Konteks disusun berlapis dengan anggaran per lapisan, diurutkan dari yang paling stabil | Disetujui |
-| D-23 | Proactive Initiative bertingkat | Disetujui |
+| D-23 | Proactive Initiative bertingkat | Disetujui, sebagian diubah oleh D-63 |
 
 ### Rincian D-21: retry dan recovery
 - **Kegagalan teknis** (jaringan, timeout, rate limit) pada tindakan idempotent di-retry otomatis dengan jeda bertahap, maksimal 3 kali.
@@ -231,18 +232,19 @@ Policy Engine, Plan Executor (mencocokkan setiap tindakan dengan rencana yang di
 
 | ID | Keputusan | Status |
 |---|---|---|
-| D-32 | Pembagian tahap: Fase 0, v0.1, v0.2, dan v0.3+ seperti di bawah | Disetujui |
+| D-32 | Pembagian tahap: Fase 0, v0.1, v0.2, dan v0.3+ seperti di bawah | Disetujui, butir "Biaya" v0.1 diubah oleh D-63 |
+| D-63 | **Tidak ada pemantauan biaya, token, atau budget di v0.1.** Nibras dipakai pribadi, dan pemakaian serta sisa kuota dipantau langsung di dashboard provider. Pengguna disarankan memasang batas belanja (spending limit) di provider jika tersedia. Akibatnya: butir "Biaya" v0.1 dihapus, "biaya hari ini dibanding budget" dihapus dari status bar (D-42), dan bagian "Budget & Usage" dihapus dari dashboard (D-46). Yang **tetap** ada: anggaran per tugas (D-21) berupa jumlah langkah dan waktu, dibuat di Tahap 4 sebagai pengaman AI yang berputar-putar, bukan sebagai pemantauan. Anggaran harian inisiatif proaktif (D-23) dihitung dalam **jumlah panggilan API**, bukan token. Jika Nibras dibagikan ke orang lain, keputusan ini ditinjau ulang (sejalan dengan D-57) | Disetujui |
 
 ### Fase 0: prototipe uji risiko
 Prototipe kecil yang terpisah dari aplikasi. Rincian ujinya ada di D-52.
 
 ### v0.1 (MVP): asisten inti yang andal
-Dibangun dalam 5 tahap. Di akhir setiap tahap, aplikasi bisa dicoba dari flashdisk: (1) chat dasar dengan satu provider OpenAI-compatible, (2) provider lengkap dan biaya, (3) memori, (4) tools dan Policy Engine, (5) project, persona, PC Profile, backup/restore, dan dashboard lengkap.
+Dibangun dalam 5 tahap. Di akhir setiap tahap, aplikasi bisa dicoba dari flashdisk: (1) chat dasar dengan satu provider OpenAI-compatible, (2) provider lengkap dan fallback (biaya dihapus oleh D-63), (3) memori, (4) tools dan Policy Engine, (5) project, persona, PC Profile, backup/restore, dan dashboard lengkap.
 
 - **Fondasi:** launcher, pemeriksaan NTFS, lock dan recovery, backup dan restore.
 - **Keamanan:** vault, passphrase, auto-lock, Policy Engine, audit log.
 - **Provider:** OpenAI, Anthropic, OpenAI-Compatible, beserta fallback dengan persetujuan.
-- **Biaya:** token tracking, cost estimation, budget limit (Hard Stop, Ask Permission, Soft Limit).
+- ~~**Biaya:** token tracking, cost estimation, budget limit (Hard Stop, Ask Permission, Soft Limit).~~ Dihapus oleh D-63.
 - **UI:** chat dan dashboard dasar.
 - **Organisasi:** project, conversation, dan 4 persona bawaan yang instruksinya dapat diedit.
 - **AI Core:** seluruh D-18 sampai D-23.
@@ -327,11 +329,11 @@ Aturan ini hanya boleh **menaikkan** risk level, tidak pernah menurunkan.
 | ID | Keputusan | Status |
 |---|---|---|
 | D-41 | Layout: sidebar kiri (project dan conversation), chat di tengah, panel kanan yang dapat diciutkan (rencana aktif, aktivitas tool, memori yang dipakai). Dashboard dibuka sebagai mode tersendiri | Disetujui |
-| D-42 | Status bar: model aktif, status provider, biaya hari ini dibanding budget, status vault beserta sisa waktu auto-lock, PC Profile aktif, status online atau offline | Disetujui |
+| D-42 | Status bar: model aktif, status provider, biaya hari ini dibanding budget, status vault beserta sisa waktu auto-lock, PC Profile aktif, status online atau offline | Disetujui, butir biaya dihapus oleh D-63 |
 | D-43 | Kartu persetujuan di chat: tindakan, target, parameter, label risk level, dan dampak, dengan tombol Setujui, Edit, dan Tolak. L3 mewajibkan pengguna melihat detail lengkap (diff atau script) dan mencentang konfirmasi. Langkah di kartu rencana dapat diedit | Disetujui |
 | D-44 | Transparansi tool: ringkasan aktivitas yang dapat dibuka per respons, penanda konten eksternal, dan tombol **Batalkan** yang selalu terlihat selama tugas berjalan | Disetujui |
 | D-45 | Memori: chip usulan (Simpan, Ubah, Tolak), Memory Inbox, dan Memory Browser (filter, edit, arsip, riwayat versi) | Disetujui |
-| D-46 | Isi dashboard: Provider & Model, Budget & Usage, Memory, Personas, Projects, PC Profiles, Backup & Restore, Security (vault, audit log, izin workspace), Settings | Disetujui |
+| D-46 | Isi dashboard: Provider & Model, Budget & Usage, Memory, Personas, Projects, PC Profiles, Backup & Restore, Security (vault, audit log, izin workspace), Settings | Disetujui, "Budget & Usage" dihapus oleh D-63 |
 | D-47 | **Startup:** layar pemeriksaan, passphrase, laporan pemulihan (jika ada), konfirmasi PC (jika ragu), lalu chat. **Shutdown:** tombol "Tutup & Aman Dilepas" dengan indikator progres. Menutup jendela sama dengan shutdown penuh. Tidak ada system tray | Disetujui |
 | D-48 | Bahasa UI: Indonesia dan Inggris. Bahasa respons AI terdeteksi otomatis. Tema mengikuti Windows. Shortcut `Ctrl+N` (chat baru), `Ctrl+K` (cari), dan `Esc` (batalkan tugas) | Disetujui |
 | D-49 | Notifikasi proaktif ditampilkan sebagai banner kecil di panel kanan, bukan popup. Jumlahnya dibatasi per sesi, dan setiap kategori dapat dimatikan | Disetujui |
