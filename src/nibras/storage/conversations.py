@@ -80,6 +80,24 @@ def list_messages(conn: sqlite3.Connection, conversation_id: str) -> list[dict]:
     ]
 
 
+def get_message(conn: sqlite3.Connection, message_id: str) -> dict | None:
+    row = conn.execute(
+        "SELECT id, conversation_id, role, content, status, created_at FROM messages "
+        "WHERE id = ?",
+        (message_id,),
+    ).fetchone()
+    if not row:
+        return None
+    return {
+        "id": row[0],
+        "conversation_id": row[1],
+        "role": row[2],
+        "content": row[3],
+        "status": row[4],
+        "created_at": row[5],
+    }
+
+
 def rename_conversation(conn: sqlite3.Connection, conv_id: str, title: str) -> None:
     conn.execute(
         "UPDATE conversations SET title = ? WHERE id = ?", (title, conv_id)
