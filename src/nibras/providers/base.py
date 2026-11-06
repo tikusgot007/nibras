@@ -10,7 +10,7 @@ from __future__ import annotations
 from abc import ABC, abstractmethod
 from dataclasses import dataclass
 
-from ..core.messages import CanonicalMessage
+from ..core.messages import CanonicalMessage, estimate_tokens
 
 
 @dataclass(frozen=True)
@@ -32,6 +32,29 @@ class ProviderAdapter(ABC):
         self.model = model
         self.api_key = api_key
         self.context_window = context_window
+
+    def trim_messages(self, messages: list[CanonicalMessage]) -> tuple[list[CanonicalMessage], bool]:
+        """Return (messages_to_send, truncated_flag)."""
+        budget = self.context_window
+        if budget <= 0:
+            return list(messages), False
+        # Reserve ~10% of the window for the reply.
+        budget = int(budget * 0.9)
+        system = [m for m in messages if m.role == "system"]
+        rest = [m for m in messages if m.role != "system"]
+        total = sum(estimate_tokens(m.content) for m in messages)
+        if total <= budget:
+            return list(messages), False
+        kept: list[CanonicalMessage] = []
+        used = sum(estimate_tokens(m.content) for m in system)
+        for msg in reversed(rest):
+            cost = estimate_tokens(msg.content)
+            if used + cost > budget and kept:
+                break
+            kept.append(msg)
+            used += cost
+        kept.reverse()
+        return system + kept, True
 
     @property
     @abstractmethod
