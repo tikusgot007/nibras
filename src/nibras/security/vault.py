@@ -242,11 +242,14 @@ def vault_exists(path: Path) -> bool:
 
 
 def get_profile_api_key(payload: dict, profile_id: str) -> str:
-    """Retrieve API key for profile_id, with fallback to legacy api_key."""
+    """Retrieve API key for profile_id. No fallback between profiles."""
+    if not profile_id or not isinstance(payload, dict):
+        return ""
     keys = payload.get("api_keys")
     if isinstance(keys, dict) and profile_id in keys:
-        return str(keys[profile_id])
-    return str(payload.get("api_key", ""))
+        val = keys[profile_id]
+        return str(val) if isinstance(val, (str, int, float)) else ""
+    return ""
 
 
 def set_profile_api_key(payload: dict, profile_id: str, api_key: str) -> None:

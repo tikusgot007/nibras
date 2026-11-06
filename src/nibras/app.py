@@ -195,10 +195,10 @@ class Application:
             return 0
 
         api_keys = self._vault_payload.get("api_keys", {})
-        if not api_keys and "api_key" in self._vault_payload:
-            api_keys = {"default": self._vault_payload["api_key"]}
+        if not isinstance(api_keys, dict):
+            api_keys = {}
 
-        self.core = AgentCore(self.data, api_keys, self._settings)
+        self.core = AgentCore(self.data, settings=self._settings, api_keys=api_keys)
         self.core.start()
         load_fonts(app_dir(self.root) / "fonts")
         self.window = MainWindow(
@@ -334,12 +334,12 @@ class Application:
             self._vault_payload = payload
             self._api_key = ""
             if self.core is not None:
-                api_key_str = str(payload.get("api_key", ""))
                 api_keys_dict = payload.get("api_keys")
-                if isinstance(api_keys_dict, dict) and len(api_keys_dict) > 1:
+                if isinstance(api_keys_dict, dict):
                     self.core.request_unlock.emit(api_keys_dict)
                 else:
-                    self.core.request_unlock.emit(api_key_str)
+                    legacy_key = str(payload.get("api_key", ""))
+                    self.core.request_unlock.emit(legacy_key)
             if self.window is not None:
                 self.window.unlock_vault()
 

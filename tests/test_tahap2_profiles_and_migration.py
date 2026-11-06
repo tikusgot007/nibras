@@ -249,13 +249,17 @@ def test_tahap1_to_tahap2_migration(root_dir: Path):
         assert active["profile_id"] == prof["id"]
         assert active["id"] == m["id"]
 
-        # 6. Verify vault payload has the profile key and kept legacy key
+        # 6. Verify vault payload has the profile key and legacy api_key was removed
         assert get_profile_api_key(updated_payload, prof["id"]) == "sk-legacy-test-key"
-        assert updated_payload.get("api_key") == "sk-legacy-test-key"
+        assert "api_key" not in updated_payload
+        # Unknown or unconfigured profile must return empty string (no fallback!)
+        assert get_profile_api_key(updated_payload, "profil_tanpa_key") == ""
+        assert has_profile_api_key(updated_payload, "profil_tanpa_key") is False
 
         # Verify reading vault from disk has updated payload
         disk_payload = open_vault(vault_path, "operator-pass")
         assert get_profile_api_key(disk_payload, prof["id"]) == "sk-legacy-test-key"
+        assert "api_key" not in disk_payload
 
         # 7. Idempotence: calling migration again returns same payload without modifying
         second_call = migrate_tahap1_to_tahap2(

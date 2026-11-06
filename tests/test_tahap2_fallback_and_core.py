@@ -40,6 +40,7 @@ class ServerState:
         self.mode = mode
         self.response_text = response_text
         self.requests = 0
+        self.last_body: dict | None = None
 
 
 def make_mock_handler(state: ServerState):
@@ -63,6 +64,13 @@ def make_mock_handler(state: ServerState):
 
         def do_POST(self):
             state.requests += 1
+            length = int(self.headers.get("Content-Length", 0))
+            if length > 0:
+                raw = self.rfile.read(length)
+                try:
+                    state.last_body = json.loads(raw.decode("utf-8"))
+                except Exception:
+                    state.last_body = None
             if state.mode == "fail":
                 self._send_json(500, {"error": {"message": "primary boom"}})
                 return
@@ -236,3 +244,97 @@ def test_fallback_rejection(qapp, data_dir: Path, twin_servers):
 
     finally:
         core.stop()
+
+
+def test_send_rejected_when_profile_has_no_api_key(qapp, data_dir: Path, twin_servers):
+    """Review finding 2 & 5: When active profile has no API key, sending is rejected
+    with clear error message without attempting network request."""
+    (srv1, state1), _ = twin_servers
+    p1_port = srv1.server_address[1]
+
+    dbs = Databases(data_dir).open_all()
+    conn = dbs["core.db"]
+    prof = create_profile(conn, kind="openai_compatible", name="Tanpa Key", base_url=f"http://127.0.0.1:{p1_port}/v1")
+    mod = create_model(conn, profile_id=prof["id"], name="model-tanpa-key")
+    set_active_model(conn, mod["id"])
+    dbs.close()
+
+    # Pass empty api_keys
+    core = AgentCore(data_dir, settings=DEFAULT_SETTINGS, api_keys={})
+    failed = []
+    created_convs = []
+    core.message_failed.connect(lambda m, e: failed.append((m, e)))
+    core.conversation_created.connect(lambda c: created_convs.append(c))
+
+    core.start()
+    try:
+        core.request_new_conversation.emit()
+        wait_until(lambda: len(created_convs) > 0, what="conversation_created")
+        conv_id = created_convs[0]
+
+        # Send should fail immediately because key is missing
+        core.request_send.emit(conv_id, "Halo")
+        wait_until(lambda: len(failed) == 1, timeout=5.0, what="message_failed due to missing key")
+
+        assert "API key untuk profil ini belum diisi" in failed[0][1]
+        assert state1.requests == 0  # No network requests were made
+    finally:
+        core.stop()
+
+
+def test_context_excludes_failed_interrupted_and_empty_messages(qapp, data_dir: Path, twin_servers):
+    """Review finding 3: Chat history sent to provider must NOT include failed,
+    interrupted, or empty content messages."""
+    from nibras.storage import conversations
+
+    _, (srv2, state2) = twin_servers
+    p2_port = srv2.server_address[1]
+
+    dbs = Databases(data_dir).open_all()
+    conn_core = dbs["core.db"]
+    prof = create_profile(conn_core, kind="openai_compatible", name="Working", base_url=f"http://127.0.0.1:{p2_port}/v1")
+    mod = create_model(conn_core, profile_id=prof["id"], name="model-ok")
+    set_active_model(conn_core, mod["id"])
+
+    # Pre-populate conversations.db with mixed messages
+    conn_conv = dbs["conversations.db"]
+    conv_id = conversations.create_conversation(conn_conv, "Test Conv")
+    # 1. Valid user message
+    conversations.add_message(conn_conv, conv_id, "user", "Pesan 1 valid", status="done")
+    # 2. Valid assistant message
+    conversations.add_message(conn_conv, conv_id, "assistant", "Balasan 1 valid", status="done")
+    # 3. Interrupted message (should be excluded)
+    conversations.add_message(conn_conv, conv_id, "assistant", "Terputus di tengah", status="interrupted")
+    # 4. Failed message (should be excluded)
+    conversations.add_message(conn_conv, conv_id, "assistant", "Gagal total", status="failed")
+    # 5. Empty content message (should be excluded)
+    conversations.add_message(conn_conv, conv_id, "assistant", "   ", status="cancelled")
+
+    dbs.close()
+
+    core = AgentCore(data_dir, settings=DEFAULT_SETTINGS, api_keys={prof["id"]: "valid-key"})
+    finished = []
+    core.message_finished.connect(lambda m, s: finished.append((m, s)))
+
+    core.start()
+    try:
+        # Send new message
+        core.request_send.emit(conv_id, "Pesan 2 valid")
+        wait_until(lambda: len(finished) == 1, timeout=10.0, what="message_finished")
+
+        # Verify what the mock server received in the request body
+        body = state2.last_body
+        assert body is not None
+        msgs = body.get("messages", [])
+        # Only valid messages with content should be present
+        contents = [m["content"] for m in msgs]
+        assert "Pesan 1 valid" in contents
+        assert "Balasan 1 valid" in contents
+        assert "Pesan 2 valid" in contents
+        assert "Terputus di tengah" not in contents
+        assert "Gagal total" not in contents
+        assert "   " not in contents
+        assert "" not in contents
+    finally:
+        core.stop()
+

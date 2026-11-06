@@ -42,10 +42,10 @@ class AnthropicAdapter(ProviderAdapter):
         self, messages: list[CanonicalMessage]
     ) -> tuple[str | None, list[dict]]:
         """Separate system messages from conversational messages."""
-        system_parts = [m.content for m in messages if m.role == "system"]
+        system_parts = [m.content for m in messages if m.role == "system" and m.content.strip()]
         system_text = "\n\n".join(system_parts) if system_parts else None
 
-        chat_messages = [m for m in messages if m.role != "system"]
+        chat_messages = [m for m in messages if m.role != "system" and bool(m.content.strip())]
         payload_messages: list[dict] = []
         for m in chat_messages:
             role = "user" if m.role == "user" else "assistant"
@@ -54,12 +54,18 @@ class AnthropicAdapter(ProviderAdapter):
             else:
                 payload_messages.append({"role": role, "content": m.content})
 
+        # Anthropic requires the conversation to begin with a user message
+        while payload_messages and payload_messages[0]["role"] != "user":
+            payload_messages.pop(0)
+
         if not payload_messages:
-            payload_messages.append({"role": "user", "content": ""})
+            payload_messages.append({"role": "user", "content": "Halo"})
 
         return system_text, payload_messages
 
     async def check_ready(self) -> bool:
+        if not self.api_key.strip():
+            return False
         try:
             client = self._client()
             try:

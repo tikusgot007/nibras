@@ -95,9 +95,11 @@ def migrate_tahap1_to_tahap2(
     )
     set_active_model(conn, model["id"])
 
-    # Migrate API key into payload["api_keys"][profile_id]
+    # Migrate API key into payload["api_keys"][profile_id] and remove legacy api_key
     legacy_key = str(payload.get("api_key", ""))
-    set_profile_api_key(payload, profile["id"], legacy_key)
+    if legacy_key:
+        set_profile_api_key(payload, profile["id"], legacy_key)
+    payload.pop("api_key", None)
     save_with_session(vault_path, session, payload)
 
     log.info("Migrasi Tahap 1 selesai: profile_id=%s, model_id=%s", profile["id"], model["id"])

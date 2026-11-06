@@ -97,11 +97,22 @@ class AgentCore(QObject):
         super().__init__()
         self._data_dir = Path(data_dir)
         self._api_keys: dict[str, str] = {}
-        if api_keys:
-            self._api_keys.update(api_keys)
-        if api_key:
+        if isinstance(api_key, dict):
+            for k, v in api_key.items():
+                if isinstance(v, (str, int, float)):
+                    self._api_keys[str(k)] = str(v)
+            self._api_key = ""
+        elif isinstance(api_key, str) and api_key:
+            self._api_key = api_key
             self._api_keys["default"] = api_key
-        self._api_key = api_key
+        else:
+            self._api_key = ""
+
+        if isinstance(api_keys, dict):
+            for k, v in api_keys.items():
+                if isinstance(v, (str, int, float)):
+                    self._api_keys[str(k)] = str(v)
+
         self._settings = dict(settings or {})
         self._dbs: Databases | None = None
         self._loop: asyncio.AbstractEventLoop | None = None
@@ -237,12 +248,12 @@ class AgentCore(QObject):
         self._loop = None
 
     def _get_api_key_for_profile(self, profile_id: str) -> str:
-        if profile_id in self._api_keys:
-            return self._api_keys[profile_id]
-        if "default" in self._api_keys:
-            return self._api_keys["default"]
-        if len(self._api_keys) == 1:
-            return next(iter(self._api_keys.values()))
+        """Get API key strictly for profile_id with no fallback between profiles."""
+        if not profile_id:
+            return ""
+        val = self._api_keys.get(profile_id, "")
+        if isinstance(val, (str, int, float)):
+            return str(val)
         return ""
 
     def _build_active_adapter(self) -> None:
@@ -298,6 +309,9 @@ class AgentCore(QObject):
     async def _check_provider(self) -> None:
         adapter = self._adapter
         if adapter is None or not self._active_model_info:
+            self.provider_ready.emit(False)
+            return
+        if not adapter.api_key.strip():
             self.provider_ready.emit(False)
             return
         is_ready = await adapter.check_ready()
@@ -481,6 +495,10 @@ class AgentCore(QObject):
                 "", "Provider belum diatur. Buka Pengaturan, isi Base URL dan "
                     "Nama model, lalu coba lagi.")
             return
+        if not self._adapter.api_key.strip():
+            self.message_failed.emit(
+                "", "API key untuk profil ini belum diisi. Buka Dashboard > Provider & Model untuk mengisi API key.")
+            return
         if self._current_task is not None:
             log.warning("Pengiriman diabaikan: masih ada jawaban yang berjalan")
             return
@@ -510,7 +528,9 @@ class AgentCore(QObject):
         canonical = [
             CanonicalMessage(role=m["role"], content=m["content"])
             for m in history
-            if m["id"] != assistant_id and m["status"] != "interrupted"
+            if m["id"] != assistant_id
+            and m["status"] not in ("interrupted", "failed")
+            and bool(m.get("content", "").strip())
         ]
         to_send, truncated = adapter.trim_messages(canonical)
         if truncated:
@@ -578,6 +598,13 @@ class AgentCore(QObject):
             return
 
         fb_key = self._get_api_key_for_profile(fallback_info["profile_id"])
+        if not fb_key.strip():
+            self.message_failed.emit(
+                assistant_id,
+                "API key untuk profil cadangan belum diisi. Buka Dashboard > Provider & Model untuk mengisi API key.",
+            )
+            return
+
         fb_adapter = create_adapter(
             kind=fallback_info["profile_kind"],
             model=fallback_info["name"],

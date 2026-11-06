@@ -19,6 +19,7 @@ from nibras.app import Application
 from nibras.config import DEFAULT_SETTINGS, KEY_BASE_URL, KEY_CONTEXT_WINDOW, KEY_MODEL
 from nibras.core.agent import AgentCore
 from nibras.security import vault as vault_mod
+from nibras.storage.databases import Databases
 from nibras.ui.main_window import MainWindow
 from tests.test_adapter import mock_server  # noqa: F401  (pytest fixture)
 from tests.test_agent_core import wait_until
@@ -168,3 +169,74 @@ def test_window_lock_reaches_application_and_core(
     finally:
         core.stop()
         window.close()
+
+
+def test_application_unlock_with_multiple_profile_keys_and_no_cross_fallback(
+        qapp, root_dir: Path, monkeypatch):
+    """Review finding 1 & 2 & 5: Application sends dict of profile keys on unlock,
+    each profile receives only its own key, and unconfigured profile gets empty string."""
+    monkeypatch.setattr(app_mod.QMessageBox, "warning", lambda *a, **k: None)
+    app = Application(root_dir)
+    dbs = Databases(app.data).open_all()
+    conn = dbs["core.db"]
+    from nibras.storage.profiles import create_profile, create_model, set_active_model
+    p1 = create_profile(conn, kind="openai_compatible", name="P1", base_url="http://127.0.0.1:8001/v1")
+    m1 = create_model(conn, profile_id=p1["id"], name="m1")
+    p2 = create_profile(conn, kind="openai_compatible", name="P2", base_url="http://127.0.0.1:8002/v1")
+    m2 = create_model(conn, profile_id=p2["id"], name="m2")
+    p3 = create_profile(conn, kind="openai_compatible", name="P3", base_url="http://127.0.0.1:8003/v1")
+    m3 = create_model(conn, profile_id=p3["id"], name="m3")
+    set_active_model(conn, m1["id"])
+    dbs.close()
+
+    path = app.data / "vault.bin"
+    payload = {
+        "api_keys": {
+            p1["id"]: "KEY-PROFIL-1",
+            p2["id"]: "KEY-PROFIL-2",
+        }
+    }
+    vault_mod.create_vault(path, PASSPHRASE, payload, params=FAST)
+    app._session, app._vault_payload = vault_mod.unlock_vault(path, PASSPHRASE)
+
+    # Core constructed the same way as app.py (keyword args, passing api_keys)
+    core = AgentCore(app.data, settings=DEFAULT_SETTINGS, api_keys=app._vault_payload.get("api_keys"))
+    core.start()
+    app.core = core
+    try:
+        # Check keys in core
+        assert core._get_api_key_for_profile(p1["id"]) == "KEY-PROFIL-1"
+        assert core._get_api_key_for_profile(p2["id"]) == "KEY-PROFIL-2"
+        # Profile without key MUST be empty string, never a fallback to other keys or dict
+        assert core._get_api_key_for_profile(p3["id"]) == ""
+        assert app.has_api_key(p1["id"]) is True
+        assert app.has_api_key(p2["id"]) is True
+        assert app.has_api_key(p3["id"]) is False
+
+        # Active adapter for p1 has KEY-PROFIL-1
+        assert core._adapter is not None
+        assert core._adapter.api_key == "KEY-PROFIL-1"
+
+        # Switch to p2
+        core.request_set_active_model.emit(m2["id"])
+        wait_until(lambda: core._adapter is not None and core._adapter.api_key == "KEY-PROFIL-2", what="p2 active")
+        assert core._adapter.api_key == "KEY-PROFIL-2"
+
+        # Switch to p3 (no key)
+        core.request_set_active_model.emit(m3["id"])
+        wait_until(lambda: core._adapter is not None and core._adapter.api_key == "", what="p3 active")
+        assert core._adapter.api_key == ""
+
+        # Lock and unlock via application
+        core.request_lock_vault.emit()
+        app._on_settings_saved("lock")
+        wait_until(lambda: core._locked is True, what="core locked")
+
+        app._on_settings_saved("unlock", PASSPHRASE)
+        wait_until(lambda: core._locked is False, what="core unlocked")
+        assert core._get_api_key_for_profile(p1["id"]) == "KEY-PROFIL-1"
+        assert core._get_api_key_for_profile(p2["id"]) == "KEY-PROFIL-2"
+        assert core._get_api_key_for_profile(p3["id"]) == ""
+    finally:
+        core.stop()
+

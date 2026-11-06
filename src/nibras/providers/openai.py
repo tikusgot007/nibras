@@ -43,6 +43,8 @@ class OpenAIAdapter(ProviderAdapter):
         return [{"role": m.role, "content": m.content} for m in messages]
 
     async def check_ready(self) -> bool:
+        if not self.api_key.strip():
+            return False
         try:
             client = self._client()
             try:
