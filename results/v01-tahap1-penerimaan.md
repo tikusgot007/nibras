@@ -52,7 +52,9 @@ Lulus (dilaporkan operator): butir 2 (chat panjang, Batalkan, Esc), 3 (tutup dan
 
 Dilaporkan sebagai angka tunggal: butir 8 (waktu cold-start) 11 detik termasuk mengetik passphrase, tanpa pemecahan per tahap.
 
-Belum diuji: butir 7 (jejak di PC host untuk F:).
+Lulus (diperiksa agen): butir 7 (jejak di PC host, run dari flashdisk).
+
+Belum dikonfirmasi operator: butir 1 (peringatan "tidak ada pemulihan passphrase" dan passphrase diketik dua kali).
 
 ## Checklist operator
 
@@ -91,8 +93,8 @@ Belum diuji: butir 7 (jejak di PC host untuk F:).
 - Hasil: **LULUS** di flashdisk F:. Operator: tidak ada jendela baru. Data proses: hanya 1 `pythonw` dari F: setelah peluncuran kedua. Belum dikonfirmasi operator apakah jendela pertama naik ke depan (Windows dapat menolak fokus dari proses latar).
 
 ## 7. Jejak di PC host
-- [ ] Setelah ditutup, tidak ada file Nibras baru di %TEMP% dan %LOCALAPPDATA%
-- Hasil:
+- [x] Setelah ditutup, tidak ada file Nibras baru di %TEMP% dan %LOCALAPPDATA%
+- Hasil: **LULUS** (diperiksa agen, run dari flashdisk F:, sejak 09:27 lokal setelah aplikasi ditutup dengan tombol). 33 file baru/berubah di %TEMP%, %LOCALAPPDATA%, dan %APPDATA% di luar folder Claude, semuanya milik aplikasi lain (Brave, hermes, 9router, Windows); 0 path berisi nibras/python/qt/pyside/pywin/argon/openai; tidak ada file baru di root %TEMP%. `F:\Temp` kosong setelah ditutup. Batasan: pencocokan memakai kata kunci dan waktu ubah, bukan pelacakan proses, dan folder aplikasi Claude dikecualikan.
 
 ## 8. Waktu cold-start (setelah colok ulang)
 - Waktu sampai jendela tampil: **tidak dipisah**
