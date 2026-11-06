@@ -286,6 +286,10 @@ class AgentCore(QObject):
         conn.commit()
         # A locked Core never takes a key: it only comes back via request_unlock.
         self.update_settings(settings, None if self._locked else (api_key or None))
+        if not self._locked:
+            # New URL/model/key: the earlier readiness result is stale. Without
+            # this the UI keeps "menyiapkan AI" and holds messages forever.
+            self._spawn(self._check_provider())
 
     def _do_cancel(self) -> None:
         if self._current_task is not None:

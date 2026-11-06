@@ -275,6 +275,8 @@ class MainWindow(QMainWindow):
         self._status_model.setText(f"Model: {new_settings.get(KEY_MODEL, '')}")
         if api_key:
             self._api_key_set = True
+        self._provider_ready = False
+        self._status_provider.setText("Provider: menyiapkan AI…")
         self._core.request_update_settings.emit(new_settings, api_key)
         self._on_settings_saved("settings", new_settings, api_key)
 

@@ -259,3 +259,24 @@ def test_databases_are_opened_in_the_core_thread(harness: Harness):
     conn = harness.core._dbs["conversations.db"]
     with pytest.raises(sqlite3.ProgrammingError):
         conn.execute("SELECT 1")  # wrong thread -> proves it belongs to the Core thread
+
+
+def test_provider_is_rechecked_after_settings_are_saved(
+        qapp, data_dir: Path, mock_server):  # noqa: F811
+    """First setup on a public repo starts with NO base_url/model. After the
+    user saves them in Settings the Core must re-check the provider, or the
+    UI stays on "menyiapkan AI" and holds every message forever."""
+    server, _state = mock_server
+    port = server.server_address[1]
+    empty = {**DEFAULT_SETTINGS, KEY_BASE_URL: "", KEY_MODEL: ""}
+    core = AgentCore(data_dir, api_key=API_KEY, settings=empty)
+    provider: list[bool] = []
+    core.provider_ready.connect(provider.append)
+    core.start()
+    try:
+        wait_until(lambda: provider == [False], what="provider_ready(False) saat belum diatur")
+        core.request_update_settings.emit(
+            {KEY_BASE_URL: f"http://127.0.0.1:{port}/v1", KEY_MODEL: "test-model"}, "")
+        wait_until(lambda: provider == [False, True], what="provider_ready(True) setelah simpan")
+    finally:
+        core.stop()
