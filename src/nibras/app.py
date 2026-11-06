@@ -127,9 +127,7 @@ class Application:
             self.lock.release()
             return 1
 
-        self.dbs = Databases(self.data).open_all()
-        write_clean_shutdown(self.dbs["core.db"], False)
-        report = run_recovery(self.dbs, self.temp)
+        report = self._prepare_databases()
         if not report["clean_shutdown"]:
             self._show_recovery_report(report)
         self._settings = load_settings(self.dbs["core.db"])
@@ -149,6 +147,18 @@ class Application:
         self.window.setStyleSheet(QSS)
         self.window.show()
         return qt_app.exec()
+
+    def _prepare_databases(self) -> dict:
+        """Open the databases, run recovery on the PREVIOUS session's state,
+        and only then mark the current session as not-yet-clean (D-08).
+
+        Order matters: marking first would make every startup look like a
+        crash. The marker is set back to clean only by a full shutdown.
+        """
+        self.dbs = Databases(self.data).open_all()
+        report = run_recovery(self.dbs, self.temp)
+        write_clean_shutdown(self.dbs["core.db"], False)
+        return report
 
     def _show_recovery_report(self, report: dict) -> None:
         lines = ["Nibras mendeteksi sesi sebelumnya tidak ditutup dengan bersih."]

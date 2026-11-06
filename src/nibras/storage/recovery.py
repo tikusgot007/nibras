@@ -17,8 +17,11 @@ from .lock import read_clean_shutdown
 
 def run_recovery(dbs: Databases, temp_dir: Path) -> dict:
     """Run recovery checks. Returns a report with what was found and done."""
+    previous = read_clean_shutdown(dbs["core.db"])
     report: dict = {
-        "clean_shutdown": read_clean_shutdown(dbs["core.db"]),
+        # No recorded previous session (first launch) is not a crash.
+        "clean_shutdown": previous is not False,
+        "first_run": previous is None,
         "quick_check": {},
         "temp_cleaned": False,
         "interrupted_messages": 0,

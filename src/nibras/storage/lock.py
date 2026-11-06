@@ -76,11 +76,15 @@ class SingleInstanceLock:
         self._locked = False
 
 
-def read_clean_shutdown(conn) -> bool:
+def read_clean_shutdown(conn) -> bool | None:
+    """Previous session state: True = clean, False = NOT clean, None = no
+    previous session recorded (first launch on this Data/)."""
     row = conn.execute(
         "SELECT value FROM session WHERE key = 'clean_shutdown'"
     ).fetchone()
-    return bool(row and row[0] == "1")
+    if row is None:
+        return None
+    return row[0] == "1"
 
 
 def write_clean_shutdown(conn, clean: bool) -> None:
