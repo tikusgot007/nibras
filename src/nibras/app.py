@@ -67,23 +67,55 @@ def probe_data_writable(data: Path) -> bool:
         return False
 
 
+def _find_nibras_window() -> int:
+    """Windows only: handle of the running Nibras main window, or 0.
+
+    Matches the title AND a Qt window class, so an Explorer window that
+    happens to be named "Nibras" is never mistaken for the app. Uses ctypes
+    only: pywin32's .pth is not processed by the Python Embeddable bundle,
+    so ``import win32gui`` fails there.
+    """
+    import ctypes
+    from ctypes import wintypes
+
+    user32 = ctypes.windll.user32
+    found: list[int] = []
+    enum_proc_type = ctypes.WINFUNCTYPE(wintypes.BOOL, wintypes.HWND, wintypes.LPARAM)
+
+    def _each(hwnd, _lparam):
+        title = ctypes.create_unicode_buffer(256)
+        user32.GetWindowTextW(hwnd, title, 256)
+        if title.value == "Nibras":
+            cls = ctypes.create_unicode_buffer(256)
+            user32.GetClassNameW(hwnd, cls, 256)
+            if cls.value.startswith("Qt"):
+                found.append(hwnd)
+                return False
+        return True
+
+    user32.EnumWindows(enum_proc_type(_each), 0)
+    return found[0] if found else 0
+
+
 def bring_existing_to_front() -> bool:
     """Windows only: show the first instance's window. Returns True if
-    a window was found and brought forward."""
+    a window was found and restored (bringing it to the foreground is best
+    effort: Windows may refuse that for a background process)."""
     if sys.platform != "win32":
         return False
     try:
-        import win32con
-        import win32gui
+        import ctypes
 
-        hwnd = win32gui.FindWindow(None, "Nibras")
-        if hwnd:
-            win32gui.ShowWindow(hwnd, win32con.SW_RESTORE)
-            win32gui.SetForegroundWindow(hwnd)
-            return True
+        user32 = ctypes.windll.user32
+        hwnd = _find_nibras_window()
+        if not hwnd:
+            return False
+        user32.ShowWindow(hwnd, 9)  # SW_RESTORE
+        user32.SetForegroundWindow(hwnd)
+        return True
     except Exception:  # noqa: BLE001 - best effort only
-        pass
-    return False
+        log.exception("bring_existing_to_front gagal")
+        return False
 
 
 def load_settings(conn) -> dict:
