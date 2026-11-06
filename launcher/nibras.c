@@ -65,9 +65,14 @@ int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance,
 
     /* NTFS check (D-58): never format or convert. */
     wchar_t volume_root[MAX_PATH];
-    if (!path_join(volume_root, MAX_PATH, root, L"")) {
-        show_error(L"Path flashdisk terlalu panjang.");
+    if (!GetVolumePathNameW(root, volume_root, MAX_PATH)) {
+        show_error(L"Tidak bisa menentukan volume flashdisk.");
         return 1;
+    }
+    /* ensure trailing backslash */
+    size_t vlen = wcslen(volume_root);
+    if (vlen > 0 && volume_root[vlen-1] != L'\\') {
+        if (vlen + 1 < MAX_PATH) { volume_root[vlen]=L'\\'; volume_root[vlen+1]=L'\0'; }
     }
     wchar_t fs_name[MAX_PATH];
     if (!GetVolumeInformationW(volume_root, NULL, 0, NULL, NULL, NULL,
