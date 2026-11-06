@@ -36,6 +36,9 @@ setelah kode terbaru dipasang ke flashdisk (konfirmasi lisan, tanpa angka).
 | Pesan pengguna tidak tampil, hanya balasan | Kartu pengguna tidak pernah ditambahkan saat kirim | `a600a20` |
 | Balasan lama terpotong satu-dua baris | Tinggi kartu dihitung sebelum dokumen ditata ke lebar sebenarnya | `a600a20` |
 | Pesan pertama (tanpa percakapan) tidak pernah terkirim | `_pending_text` tidak dikirim setelah percakapan dibuat | `a600a20` |
+| Kartu pesan terputus/dibatalkan/gagal kosong tanpa keterangan setelah dibuka ulang | Status pesan tidak diteruskan ke tampilan | `f76b3e9` |
+| "Tutup & Aman Dilepas" membuat aplikasi macet: shutdown selesai, widget nonaktif, proses tidak keluar | `QApplication.quit()` mengirim close event dan `closeEvent` selalu `ignore()`, sehingga quit dibatalkan jendelanya sendiri. Diganti `QApplication.exit(0)`; test memakai `exec()` sungguhan (gagal pada kode lama) | `1110580` |
+| Log di flashdisk memuat URL endpoint pribadi di tiap request | Logger HTTP mencatat URL pada level INFO | `1110580` |
 
 Bukti dari data di flashdisk (dibaca saja): `clean_shutdown=1` setelah tiap
 penutupan; 5 pesan pengguna; balasan 3 `done`, 1 `cancelled` (Batalkan dicoba),
@@ -45,10 +48,9 @@ setelah aplikasi dibuka ulang (terlihat di tangkapan layar operator).
 Pengamatan bukan bug (tahap ini memang belum punya alat): Nibras tidak bisa
 melihat drive PC karena Tools/PowerShell baru ada di Tahap 4.
 
-Lulus (dilaporkan operator): butir 2 (chat panjang, Batalkan, Esc), 4 (passphrase salah), 5 (cabut saat streaming), dan 6 (dua instance di flashdisk).
+Lulus (dilaporkan operator): butir 2 (chat panjang, Batalkan, Esc), 3 (tutup dan buka lagi), 4 (passphrase salah), 5 (cabut saat streaming), dan 6 (dua instance di flashdisk).
 
-Belum diuji atau belum dilaporkan: butir 8 (waktu cold-start), 3 (tutup lalu buka
-lagi, secara tidak langsung terlihat berjalan), dan 7 (jejak di PC host untuk F:).
+Belum diuji atau belum dilaporkan: butir 8 (waktu cold-start) dan 7 (jejak di PC host untuk F:).
 
 ## Checklist operator
 
@@ -68,9 +70,9 @@ lagi, secara tidak langsung terlihat berjalan), dan 7 (jejak di PC host untuk F:
 - Hasil: **LULUS** (dilaporkan operator di flashdisk, tanpa angka responsivitas). Data flashdisk mencatat jawaban berstatus `cancelled`; data tidak membedakan Batalkan dari `Esc`. Tinggi kartu panjang sempat salah di versi awal (diperbaiki di `a600a20`).
 
 ## 3. Tutup & buka lagi
-- [ ] Ditutup via tombol "Tutup & Aman Dilepas"
-- [ ] Dibuka lagi: riwayat percakapan masih ada
-- Hasil:
+- [x] Ditutup via tombol "Tutup & Aman Dilepas"
+- [x] Dibuka lagi: riwayat percakapan masih ada
+- Hasil: **LULUS** setelah perbaikan `1110580`. Sebelumnya tombol itu membuat aplikasi macet (lihat tabel temuan). Setelah perbaikan operator melaporkan "pass"; data flashdisk: proses hilang, lock bebas, `clean_shutdown=1`, audit `vault_open` lalu `vault_lock`. Riwayat setelah dibuka ulang: terlihat di tangkapan layar operator sebelumnya (kartu pengguna dan balasan tampil); data memuat 2 percakapan dan 18 pesan.
 
 ## 4. Passphrase salah
 - [x] Ditolak dengan pesan jelas, aplikasi tidak crash
