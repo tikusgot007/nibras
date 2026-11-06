@@ -60,3 +60,23 @@ def test_crash_means_report_next_start(root_dir: Path):
         assert all(v == "ok" for v in report["quick_check"].values())
     finally:
         after._shutdown()
+
+
+def test_http_client_loggers_do_not_write_request_urls(root_dir: Path):
+    """The HTTP client logs 'POST <url>' at INFO. The log lives on the USB stick
+    and the URL is the user's private endpoint, so it must not be recorded."""
+    import logging
+
+    from nibras.app import setup_logging
+
+    root = logging.getLogger()
+    before = list(root.handlers)
+    try:
+        setup_logging(root_dir / "Data")
+        for name in ("httpx", "httpx2", "httpcore", "openai"):
+            assert logging.getLogger(name).getEffectiveLevel() >= logging.WARNING, name
+    finally:
+        for h in list(root.handlers):
+            if h not in before:
+                h.close()
+                root.removeHandler(h)

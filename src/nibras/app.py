@@ -51,7 +51,11 @@ def setup_logging(data: Path) -> None:
     handler.setFormatter(logging.Formatter(
         "%(asctime)s %(levelname)s %(name)s: %(message)s"))
     logging.basicConfig(level=logging.INFO, handlers=[handler])
-    # Never log secrets: only event names are logged, never values.
+    # Never log secrets: only event names are logged, never values. The HTTP
+    # client logs every request URL at INFO (the user's private endpoint), so
+    # those loggers are raised to WARNING.
+    for noisy in ("httpx", "httpx2", "httpcore", "httpcore2", "openai"):
+        logging.getLogger(noisy).setLevel(logging.WARNING)
 
 
 def probe_data_writable(data: Path) -> bool:
@@ -303,7 +307,11 @@ class Application:
         if self.window is not None:
             self.window.setEnabled(False)
         self._shutdown()
-        QApplication.quit()
+        # exit(), not quit(): quit() first sends a close event to every window
+        # and MainWindow.closeEvent always ignores it (it routes the X button
+        # here), so the quit was cancelled and the app stayed on screen,
+        # disabled, after the shutdown had already finished.
+        QApplication.exit(0)
 
     def _shutdown(self) -> None:
         self._forget_secrets()
