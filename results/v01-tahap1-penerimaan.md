@@ -45,10 +45,10 @@ setelah aplikasi dibuka ulang (terlihat di tangkapan layar operator).
 Pengamatan bukan bug (tahap ini memang belum punya alat): Nibras tidak bisa
 melihat drive PC karena Tools/PowerShell baru ada di Tahap 4.
 
-Lulus (dilaporkan operator): butir 4 (passphrase salah).
+Lulus (dilaporkan operator): butir 4 (passphrase salah) dan butir 5 (cabut saat streaming).
 
-Belum diuji atau belum dilaporkan: butir 5 (cabut saat streaming), 6 (dua
-instance di flashdisk F:), 8 (waktu cold-start), dan butir 2 untuk tombol `Esc`.
+Belum diuji atau belum dilaporkan: butir 6 (dua instance di flashdisk F:), 8 (waktu
+cold-start), 3 (tutup lalu buka lagi, secara tidak langsung terlihat berjalan), dan butir 2 untuk tombol `Esc`.
 
 ## Checklist operator
 
@@ -77,10 +77,10 @@ instance di flashdisk F:), 8 (waktu cold-start), dan butir 2 untuk tombol `Esc`.
 - Hasil: **LULUS** (dilaporkan operator di chat, tanpa data pendukung; penolakan passphrase tidak meninggalkan jejak di database)
 
 ## 5. Cabut flashdisk saat streaming
-- [ ] Flashdisk dicabut di tengah streaming, lalu dicolok lagi
-- [ ] Laporan pemulihan tampil saat dibuka lagi
-- [ ] Pesan yang terputus ditandai (tidak dilanjutkan otomatis)
-- Hasil:
+- [x] Flashdisk dicabut di tengah streaming, lalu dicolok lagi
+- [x] Laporan pemulihan tampil saat dibuka lagi
+- [x] Pesan yang terputus ditandai (tidak dilanjutkan otomatis)
+- Hasil: **LULUS**. Laporan pemulihan tampil (tangkapan layar operator: DB semua OK, Temp/ dibersihkan, 1 pesan terputus). Data flashdisk: 1 pesan asisten berstatus `interrupted`, tidak dilanjutkan. Tampilan awalnya kartu kosong tanpa keterangan (celah, diperbaiki di `f76b3e9`); setelah kode terbaru dipasang, operator mengonfirmasi keterangan "Terputus" muncul. Catatan: teks yang belum sempat tersimpan (penyimpanan parsial tiap 2 detik) hilang saat dicabut; pesan ini isinya kosong.
 
 ## 6. Jalankan Nibras.exe dua kali
 - [ ] Instance kedua menampilkan jendela pertama, tidak membuka jendela baru
