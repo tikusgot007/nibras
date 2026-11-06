@@ -4,7 +4,7 @@
 
 Dokumen ini adalah **sumber kebenaran desain** proyek Nibras. Setiap implementasi wajib mengikuti keputusan di sini. Jika implementasi perlu menyimpang, hentikan pekerjaan dan ajukan revisi keputusan. Jangan menyimpang diam-diam.
 
-**Status:** Desain MVP selesai. **Fase 0 selesai** (lihat D-57 sampai D-59 dan bagian 12). v0.1 dibangun dalam 5 tahap. Tahap 1 (chat dasar) sedang dikerjakan: `docs/briefs/v01-tahap1-chat-dasar.md`.
+**Status:** Desain MVP selesai. **Fase 0 selesai** (lihat D-57 sampai D-59 dan bagian 12). v0.1 dibangun dalam 5 tahap. **Tahap 1 (chat dasar) selesai** (PR #9; uji penerimaan: `results/v01-tahap1-penerimaan.md`). Berikutnya: Tahap 2 (provider lengkap dan biaya).
 
 **Arti status:**
 - **Disetujui:** keputusan final.
