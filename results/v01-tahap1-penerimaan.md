@@ -54,7 +54,7 @@ Dilaporkan sebagai angka tunggal: butir 8 (waktu cold-start) 11 detik termasuk m
 
 Lulus (diperiksa agen): butir 7 (jejak di PC host, run dari flashdisk).
 
-Belum dikonfirmasi operator: butir 1 (peringatan "tidak ada pemulihan passphrase" dan passphrase diketik dua kali).
+Tidak dikonfirmasi operator: butir 1 bagian peringatan "tidak ada pemulihan passphrase" dan passphrase diketik dua kali (operator lupa; hanya ada bukti dari kode dan test). Mengamatinya butuh vault baru, yaitu setup pertama di data kosong.
 
 ## Checklist operator
 
@@ -64,8 +64,8 @@ Belum dikonfirmasi operator: butir 1 (peringatan "tidak ada pemulihan passphrase
 
 ## 1. Setup pertama
 - [ ] Passphrase dibuat (diketik 2x), peringatan "tidak ada pemulihan" tampil
-- [ ] base_url, model, API key terisi; jendela chat terbuka
-- Hasil:
+- [x] base_url, model, API key terisi; jendela chat terbuka
+- Hasil: **SEBAGIAN**. Bagian kedua terbukti: pengaturan tersimpan, vault terbentuk, jendela chat terbuka dan berbalas dengan provider. Bagian pertama (peringatan "tidak ada pemulihan passphrase" dan passphrase diketik 2x) **tidak dikonfirmasi**: operator lupa memperhatikannya. Bukti pengganti, bukan pengamatan: kode `PassphraseDialog(first_setup=True)` memuat teks peringatan dan dua kolom passphrase, dan `test_passphrase_dialog_requires_match` menguji bahwa dua isian yang berbeda ditolak.
 
 ## 2. Chat panjang (kode + tabel)
 - [x] Jawaban panjang tampil utuh (kode + tabel ter-render)
